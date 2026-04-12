@@ -7227,7 +7227,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -7309,7 +7308,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -7443,7 +7441,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -7547,7 +7544,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -7697,7 +7693,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -7847,7 +7842,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -7951,7 +7945,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -8056,7 +8049,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -8230,7 +8222,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -8344,7 +8335,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -9807,7 +9797,6 @@
             "description": "The default template email message."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -9944,7 +9933,6 @@
             "description": "The default template email message."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -10173,7 +10161,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -10360,7 +10347,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -10529,7 +10515,6 @@
             "description": "The custom message in the email that will be sent to the signers."
           },
           "metadata": {
-            "maxItems": 10,
             "type": "object",
             "additionalProperties": {
               "type": "object"
@@ -13860,23 +13845,156 @@
         },
         "description": "Specific metadata about the event."
       },
-      "faxFiles_200": {
+      "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestBulkSendWithTemplateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestCreateEmbeddedRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestCreateEmbeddedWithTemplateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestEditRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestEditEmbeddedRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestEditEmbeddedWithTemplateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestEditWithTemplateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestSendRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SignatureRequestSendWithTemplateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "TemplateCreateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "TemplateCreateEmbeddedDraftRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "UnclaimedDraftCreateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "UnclaimedDraftCreateEmbeddedRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadata": {
+        "maxItems": 10,
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer's order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "FaxResponseMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "Fax Metadata"
+      },
+      "SignatureRequestResponseMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "The metadata attached to the signature request."
+      },
+      "TemplateResponseMetadata": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object"
+        },
+        "description": "The metadata attached to the template."
+      },
+      "FaxFiles200": {
         "type": "string",
         "format": "binary"
       },
-      "signatureRequestFiles_200": {
+      "SignatureRequestFiles200": {
         "type": "string",
         "format": "binary"
       },
-      "signatureRequestFiles_200_Response_application_zip": {
-        "type": "string",
-        "format": "binary"
-      },
-      "templateFiles_200": {
-        "type": "string",
-        "format": "binary"
-      },
-      "templateFiles_200_Response_application_zip": {
+      "TemplateFiles200": {
         "type": "string",
         "format": "binary"
       },
