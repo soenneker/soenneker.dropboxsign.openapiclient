@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.DropboxSign.OpenApiClient.Models
 {
     /// <summary>
-    /// This allows the requester to specify the types allowed for creating a signature.**NOTE:** If `signing_options` are not defined in the request, the allowed types will default to those specified in the account settings.
+    /// This allows the requester to specify the types allowed for creating a signature and specify another signing options.**NOTE:** If `signing_options` are not defined in the request, the allowed types will default to those specified in the account settings.**NOTE:** If `force_advanced_signature_details` is set, allowed types has to be defined too.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubSigningOptions : IAdditionalDataHolder, IParsable
@@ -19,6 +19,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions_default_type? DefaultType { get; set; }
         /// <summary>Allows drawing the signature</summary>
         public bool? Draw { get; set; }
+        /// <summary>Turning on advanced signature details for the signature request</summary>
+        public bool? ForceAdvancedSignatureDetails { get; set; }
         /// <summary>Allows using a smartphone to email the signature</summary>
         public bool? Phone { get; set; }
         /// <summary>Allows typing the signature</summary>
@@ -52,6 +54,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             {
                 { "default_type", n => { DefaultType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions_default_type>(); } },
                 { "draw", n => { Draw = n.GetBoolValue(); } },
+                { "force_advanced_signature_details", n => { ForceAdvancedSignatureDetails = n.GetBoolValue(); } },
                 { "phone", n => { Phone = n.GetBoolValue(); } },
                 { "type", n => { Type = n.GetBoolValue(); } },
                 { "upload", n => { Upload = n.GetBoolValue(); } },
@@ -66,6 +69,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions_default_type>("default_type", DefaultType);
             writer.WriteBoolValue("draw", Draw);
+            writer.WriteBoolValue("force_advanced_signature_details", ForceAdvancedSignatureDetails);
             writer.WriteBoolValue("phone", Phone);
             writer.WriteBoolValue("type", Type);
             writer.WriteBoolValue("upload", Upload);

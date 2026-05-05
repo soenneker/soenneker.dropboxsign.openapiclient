@@ -166,7 +166,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner> Signers { get; set; }
 #endif
-        /// <summary>This allows the requester to specify the types allowed for creating a signature.**NOTE:** If `signing_options` are not defined in the request, the allowed types will default to those specified in the account settings.</summary>
+        /// <summary>This allows the requester to specify the types allowed for creating a signature and specify another signing options.**NOTE:** If `signing_options` are not defined in the request, the allowed types will default to those specified in the account settings.**NOTE:** If `force_advanced_signature_details` is set, allowed types has to be defined too.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions? SigningOptions { get; set; }
