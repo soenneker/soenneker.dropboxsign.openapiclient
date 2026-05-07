@@ -38,14 +38,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>The new default template email subject.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -90,7 +82,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "cc_roles", n => { CcRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "form_fields", n => { FormFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUpdateFormField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubUpdateFormField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience.CreateFromDiscriminatorValue); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
             };
@@ -105,7 +96,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("cc_roles", CcRoles);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUpdateFormField>("form_fields", FormFields);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>("signer_experience", SignerExperience);
             writer.WriteStringValue("subject", Subject);
             writer.WriteStringValue("title", Title);
             writer.WriteAdditionalData(AdditionalData);

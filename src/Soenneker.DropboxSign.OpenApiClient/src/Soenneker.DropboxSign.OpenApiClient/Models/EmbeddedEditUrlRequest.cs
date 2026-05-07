@@ -50,14 +50,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public bool? ShowPreview { get; set; }
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
         public bool? ShowProgressStepper { get; set; }
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>Whether this is a test, locked templates will only be available for editing if this is set to `true`. Defaults to `false`.</summary>
         public bool? TestMode { get; set; }
         /// <summary>
@@ -94,7 +86,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "preview_only", n => { PreviewOnly = n.GetBoolValue(); } },
                 { "show_preview", n => { ShowPreview = n.GetBoolValue(); } },
                 { "show_progress_stepper", n => { ShowProgressStepper = n.GetBoolValue(); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience.CreateFromDiscriminatorValue); } },
                 { "test_mode", n => { TestMode = n.GetBoolValue(); } },
             };
         }
@@ -114,7 +105,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("preview_only", PreviewOnly);
             writer.WriteBoolValue("show_preview", ShowPreview);
             writer.WriteBoolValue("show_progress_stepper", ShowProgressStepper);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>("signer_experience", SignerExperience);
             writer.WriteBoolValue("test_mode", TestMode);
             writer.WriteAdditionalData(AdditionalData);
         }

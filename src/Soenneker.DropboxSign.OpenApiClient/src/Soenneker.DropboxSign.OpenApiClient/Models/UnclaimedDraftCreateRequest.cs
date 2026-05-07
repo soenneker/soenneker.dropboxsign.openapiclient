@@ -118,14 +118,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #endif
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
         public bool? ShowProgressStepper { get; set; }
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>Add Signers to your Unclaimed Draft Signature Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -207,7 +199,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata.CreateFromDiscriminatorValue); } },
                 { "show_progress_stepper", n => { ShowProgressStepper = n.GetBoolValue(); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience.CreateFromDiscriminatorValue); } },
                 { "signers", n => { Signers = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_options", n => { SigningOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions.CreateFromDiscriminatorValue); } },
                 { "signing_redirect_url", n => { SigningRedirectUrl = n.GetStringValue(); } },
@@ -241,7 +232,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata>("metadata", Metadata);
             writer.WriteBoolValue("show_progress_stepper", ShowProgressStepper);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>("signer_experience", SignerExperience);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner>("signers", Signers);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>("signing_options", SigningOptions);
             writer.WriteStringValue("signing_redirect_url", SigningRedirectUrl);

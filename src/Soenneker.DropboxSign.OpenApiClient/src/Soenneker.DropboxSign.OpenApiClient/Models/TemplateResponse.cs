@@ -89,14 +89,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase> NamedFormFields { get; set; }
 #endif
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>An array of the designated signer roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -160,7 +152,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata.CreateFromDiscriminatorValue); } },
                 { "named_form_fields", n => { NamedFormFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience.CreateFromDiscriminatorValue); } },
                 { "signer_roles", n => { SignerRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "template_id", n => { TemplateId = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -186,7 +177,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>("named_form_fields", NamedFormFields);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience>("signer_experience", SignerExperience);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole>("signer_roles", SignerRoles);
             writer.WriteStringValue("template_id", TemplateId);
             writer.WriteStringValue("title", Title);

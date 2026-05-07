@@ -6843,9 +6843,6 @@
             "type": "boolean",
             "description": "Whether this is a test, locked templates will only be available for editing if this is set to `true`. Defaults to `false`.",
             "default": false
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -7159,7 +7156,8 @@
               "enum": [
                 "user_activity",
                 "document_status",
-                "sms_activity"
+                "sms_activity",
+                "fax_usage"
               ],
               "type": "string",
               "additionalProperties": false
@@ -7475,9 +7473,6 @@
             "description": "Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer's information during signing.\n\n**NOTE:** Keep your signer's information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.",
             "default": false
           },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
-          },
           "expires_at": {
             "type": "integer",
             "description": "When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.",
@@ -7579,9 +7574,6 @@
             "type": "boolean",
             "description": "Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer's information during signing.\n\n**NOTE:** Keep your signer's information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.",
             "default": false
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -7730,9 +7722,6 @@
             "type": "integer",
             "description": "When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.",
             "nullable": true
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -7880,9 +7869,6 @@
             "type": "integer",
             "description": "When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.",
             "nullable": true
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -7980,9 +7966,6 @@
             "type": "boolean",
             "description": "Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer's information during signing.\n\n**NOTE:** Keep your signer's information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.",
             "default": false
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -8083,9 +8066,6 @@
             "maxLength": 255,
             "type": "string",
             "description": "The title you want to assign to the SignatureRequest."
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         },
         "description": ""
@@ -8208,8 +8188,7 @@
             "type": "boolean",
             "description": "Send with a value of `true` if you wish to enable\n[Qualified Electronic Signatures](https://www.hellosign.com/features/qualified-electronic-signatures) (QES),\nwhich requires a face-to-face call to verify the signer's identity.<br>\n**NOTE:** QES is only available on the Premium API plan as an add-on purchase.\nCannot be used in `test_mode`. Only works on requests with one signer.",
             "default": false,
-            "deprecated": true,
-            "x-hideOn": "doc"
+            "deprecated": true
           },
           "is_eid": {
             "type": "boolean",
@@ -8259,9 +8238,6 @@
             "type": "integer",
             "description": "When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.",
             "nullable": true
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -8321,8 +8297,7 @@
             "type": "boolean",
             "description": "Send with a value of `true` if you wish to enable\n[Qualified Electronic Signatures](https://www.hellosign.com/features/qualified-electronic-signatures) (QES),\nwhich requires a face-to-face call to verify the signer's identity.<br>\n**NOTE:** QES is only available on the Premium API plan as an add-on purchase.\nCannot be used in `test_mode`. Only works on requests with one signer.",
             "default": false,
-            "deprecated": true,
-            "x-hideOn": "doc"
+            "deprecated": true
           },
           "is_eid": {
             "type": "boolean",
@@ -8369,9 +8344,6 @@
             "maxLength": 255,
             "type": "string",
             "description": "The title you want to assign to the SignatureRequest."
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         },
         "description": ""
@@ -9476,23 +9448,6 @@
           }
         }
       },
-      "SubSignerExperience": {
-        "type": "object",
-        "properties": {
-          "form_view": {
-            "enum": [
-              "disabled",
-              "enabled",
-              "enabled_by_default",
-              "forced"
-            ],
-            "type": "string",
-            "additionalProperties": false,
-            "description": "Changes the form view setting experienced by the signer. Supported versions are:\n - `disabled` - Form view is disabled, and the signer cannot change it\n - `enabled` - Form view is disabled initially, the signer can turn it on using a toggle\n - `enabled_by_default` - Form view is enabled initially. The signer car turn it off using a toggle\n - `forced` - Form view is enabled initially. The signer cannot change it, the toggle is hidden."
-          }
-        },
-        "description": "Configuration options for modifying the settings of the signer application. Supports changing the form view behavior."
-      },
       "SubTemplateRole": {
         "type": "object",
         "properties": {
@@ -9833,9 +9788,6 @@
             "type": "boolean",
             "description": "Enable the detection of predefined PDF fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`).",
             "default": false
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -9984,9 +9936,6 @@
             "type": "boolean",
             "description": "Enable the detection of predefined PDF fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`).",
             "default": false
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -10034,9 +9983,6 @@
               "$ref": "#/components/schemas/SubUpdateFormField"
             },
             "description": "A list of document form fields to update. The endpoint will not create or remove any fields. Every field must be identified by `api_id`, and the only supported change is renaming the field."
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         }
       },
@@ -10224,9 +10170,6 @@
             "type": "integer",
             "description": "When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.\n\n**NOTE:** This does not correspond to the **expires_at** returned in the response.",
             "nullable": true
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SubSignerExperience"
           }
         },
         "description": ""
@@ -11641,7 +11584,8 @@
               "enum": [
                 "user_activity",
                 "document_status",
-                "sms_activity"
+                "sms_activity",
+                "fax_usage"
               ],
               "type": "string",
               "additionalProperties": false
@@ -11788,9 +11732,6 @@
             "type": "string",
             "description": "The ID of the Bulk Send job which sent the signature request, if applicable.",
             "nullable": true
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SignatureRequestSignerExperience"
           }
         },
         "description": "Contains information about a signature request.",
@@ -12301,27 +12242,6 @@
         "description": "An array of signature objects, 1 for each signer.",
         "x-internal-class": true
       },
-      "SignatureRequestSignerExperience": {
-        "required": [
-          "form_view"
-        ],
-        "type": "object",
-        "properties": {
-          "form_view": {
-            "enum": [
-              "disabled",
-              "enabled",
-              "enabled_by_default",
-              "forced"
-            ],
-            "type": "string",
-            "additionalProperties": false,
-            "description": "Changes the form view setting experienced by the signer. Supported versions are:\n - `disabled` - Form view is disabled, and the signer cannot change it\n - `enabled` - Form view is disabled initially, the signer can turn it on using a toggle\n - `enabled_by_default` - Form view is enabled initially. The signer car turn it off using a toggle\n - `forced` - Form view is enabled initially. The signer cannot change it, the toggle is hidden."
-          }
-        },
-        "description": "Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.",
-        "x-internal-class": true
-      },
       "TeamResponse": {
         "type": "object",
         "properties": {
@@ -12551,9 +12471,6 @@
               "$ref": "#/components/schemas/SignatureRequestResponseAttachment"
             },
             "description": "Signer attachments."
-          },
-          "signer_experience": {
-            "$ref": "#/components/schemas/SignatureRequestSignerExperience"
           }
         },
         "description": "Contains information about the templates you and your team have created.",

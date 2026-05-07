@@ -77,14 +77,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSendWithTemplateRequest_metadata Metadata { get; set; }
 #endif
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>Add Signers to your Templated-based Signature Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -170,7 +162,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "is_qualified_signature", n => { IsQualifiedSignature = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSendWithTemplateRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSendWithTemplateRequest_metadata.CreateFromDiscriminatorValue); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience.CreateFromDiscriminatorValue); } },
                 { "signers", n => { Signers = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_options", n => { SigningOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions.CreateFromDiscriminatorValue); } },
                 { "signing_redirect_url", n => { SigningRedirectUrl = n.GetStringValue(); } },
@@ -197,7 +188,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("is_qualified_signature", IsQualifiedSignature);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSendWithTemplateRequest_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>("signer_experience", SignerExperience);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>("signers", Signers);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>("signing_options", SigningOptions);
             writer.WriteStringValue("signing_redirect_url", SigningRedirectUrl);

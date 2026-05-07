@@ -20,5 +20,9 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         #pragma warning disable CS1591
         Sms_activity,
         #pragma warning restore CS1591
+        [EnumMember(Value = "fax_usage")]
+        #pragma warning disable CS1591
+        Fax_usage,
+        #pragma warning restore CS1591
     }
 }

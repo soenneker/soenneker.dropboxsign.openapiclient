@@ -112,14 +112,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata Metadata { get; set; }
 #endif
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>An array of the designated signer roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -186,7 +178,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "merge_fields", n => { MergeFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata.CreateFromDiscriminatorValue); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience.CreateFromDiscriminatorValue); } },
                 { "signer_roles", n => { SignerRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "test_mode", n => { TestMode = n.GetBoolValue(); } },
@@ -214,7 +205,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>("merge_fields", MergeFields);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata>("metadata", Metadata);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>("signer_experience", SignerExperience);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>("signer_roles", SignerRoles);
             writer.WriteStringValue("subject", Subject);
             writer.WriteBoolValue("test_mode", TestMode);

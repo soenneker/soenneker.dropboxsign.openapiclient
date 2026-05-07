@@ -130,14 +130,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public bool? ShowPreview { get; set; }
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
         public bool? ShowProgressStepper { get; set; }
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>An array of the designated signer roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -212,7 +204,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata.CreateFromDiscriminatorValue); } },
                 { "show_preview", n => { ShowPreview = n.GetBoolValue(); } },
                 { "show_progress_stepper", n => { ShowProgressStepper = n.GetBoolValue(); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience.CreateFromDiscriminatorValue); } },
                 { "signer_roles", n => { SignerRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "skip_me_now", n => { SkipMeNow = n.GetBoolValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
@@ -247,7 +238,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata>("metadata", Metadata);
             writer.WriteBoolValue("show_preview", ShowPreview);
             writer.WriteBoolValue("show_progress_stepper", ShowProgressStepper);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>("signer_experience", SignerExperience);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>("signer_roles", SignerRoles);
             writer.WriteBoolValue("skip_me_now", SkipMeNow);
             writer.WriteStringValue("subject", Subject);

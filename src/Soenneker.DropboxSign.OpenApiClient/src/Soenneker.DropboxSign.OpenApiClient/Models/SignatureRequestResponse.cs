@@ -137,14 +137,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures> Signatures { get; set; }
 #endif
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>The URL you want the signer redirected to after they successfully sign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -231,7 +223,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "response_data", n => { ResponseData = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseDataBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseDataBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signature_request_id", n => { SignatureRequestId = n.GetStringValue(); } },
                 { "signatures", n => { Signatures = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience.CreateFromDiscriminatorValue); } },
                 { "signing_redirect_url", n => { SigningRedirectUrl = n.GetStringValue(); } },
                 { "signing_url", n => { SigningUrl = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
@@ -266,7 +257,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseDataBase>("response_data", ResponseData);
             writer.WriteStringValue("signature_request_id", SignatureRequestId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures>("signatures", Signatures);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestSignerExperience>("signer_experience", SignerExperience);
             writer.WriteStringValue("signing_redirect_url", SigningRedirectUrl);
             writer.WriteStringValue("signing_url", SigningUrl);
             writer.WriteStringValue("subject", Subject);

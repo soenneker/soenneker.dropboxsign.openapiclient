@@ -128,14 +128,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #endif
         /// <summary>Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer&apos;s information during signing.**NOTE:** Keep your signer&apos;s information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.</summary>
         public bool? PopulateAutoFillFields { get; set; }
-        /// <summary>Configuration options for modifying the settings of the signer application. Supports changing the form view behavior.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience? SignerExperience { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience SignerExperience { get; set; }
-#endif
         /// <summary>Add Signers to your Signature Request.This endpoint requires either **signers** or **grouped_signers**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -215,7 +207,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata.CreateFromDiscriminatorValue); } },
                 { "populate_auto_fill_fields", n => { PopulateAutoFillFields = n.GetBoolValue(); } },
-                { "signer_experience", n => { SignerExperience = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience.CreateFromDiscriminatorValue); } },
                 { "signers", n => { Signers = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_options", n => { SigningOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions.CreateFromDiscriminatorValue); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
@@ -249,7 +240,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata>("metadata", Metadata);
             writer.WriteBoolValue("populate_auto_fill_fields", PopulateAutoFillFields);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignerExperience>("signer_experience", SignerExperience);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>("signers", Signers);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>("signing_options", SigningOptions);
             writer.WriteStringValue("subject", Subject);
