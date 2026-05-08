@@ -12,7 +12,6 @@ using Soenneker.DropboxSign.OpenApiClient.Template.Files_as_file_url;
 using Soenneker.DropboxSign.OpenApiClient.Template.Item;
 using Soenneker.DropboxSign.OpenApiClient.Template.List;
 using Soenneker.DropboxSign.OpenApiClient.Template.Remove_user;
-using Soenneker.DropboxSign.OpenApiClient.Template.Update;
 using Soenneker.DropboxSign.OpenApiClient.Template.Update_files;
 using System.Collections.Generic;
 using System.IO;
@@ -70,11 +69,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Template
         public global::Soenneker.DropboxSign.OpenApiClient.Template.Remove_user.Remove_userRequestBuilder Remove_user
         {
             get => new global::Soenneker.DropboxSign.OpenApiClient.Template.Remove_user.Remove_userRequestBuilder(PathParameters, RequestAdapter);
-        }
-        /// <summary>The update property</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Template.Update.UpdateRequestBuilder Update
-        {
-            get => new global::Soenneker.DropboxSign.OpenApiClient.Template.Update.UpdateRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The update_files property</summary>
         public global::Soenneker.DropboxSign.OpenApiClient.Template.Update_files.Update_filesRequestBuilder Update_files

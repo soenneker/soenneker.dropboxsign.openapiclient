@@ -6055,110 +6055,6 @@
         ]
       }
     },
-    "/template/update/{template_id}": {
-      "post": {
-        "tags": [
-          "Template"
-        ],
-        "summary": "Update Template",
-        "description": "Update template fields. Every field is optional and the endpoint will only change whatever is provided. The fields not included in the request payload will remain unchanged.",
-        "operationId": "templateUpdate",
-        "parameters": [
-          {
-            "name": "template_id",
-            "in": "path",
-            "description": "The ID of the template to update.",
-            "required": true,
-            "schema": {
-              "type": "string"
-            },
-            "example": "f57db65d3f933b5316d398057a36176831451a35"
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/TemplateUpdateRequest"
-              },
-              "examples": {
-                "example": {
-                  "$ref": "#/components/examples/TemplateUpdateRequest"
-                }
-              }
-            },
-            "multipart/form-data": {
-              "schema": {
-                "$ref": "#/components/schemas/TemplateUpdateRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "successful operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/TemplateGetResponse"
-                },
-                "examples": {
-                  "example": {
-                    "$ref": "#/components/examples/TemplateGetResponse"
-                  }
-                }
-              }
-            }
-          },
-          "4XX": {
-            "description": "failed_operation",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ErrorResponse"
-                },
-                "examples": {
-                  "400_example": {
-                    "$ref": "#/components/examples/Error400Response"
-                  },
-                  "401_example": {
-                    "$ref": "#/components/examples/Error401Response"
-                  },
-                  "402_example": {
-                    "$ref": "#/components/examples/Error402Response"
-                  },
-                  "403_example": {
-                    "$ref": "#/components/examples/Error403Response"
-                  },
-                  "429_example": {
-                    "$ref": "#/components/examples/Error429Response"
-                  },
-                  "404_example": {
-                    "$ref": "#/components/examples/Error404Response"
-                  },
-                  "409_example": {
-                    "$ref": "#/components/examples/Error409Response"
-                  },
-                  "4XX_example": {
-                    "$ref": "#/components/examples/Error4XXResponse"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "api_key": [ ]
-          },
-          {
-            "oauth2": [
-              "template_access"
-            ]
-          }
-        ]
-      }
-    },
     "/template/update_files/{template_id}": {
       "post": {
         "tags": [
@@ -9950,39 +9846,6 @@
             "type": "string",
             "description": "The id or email address of the Account to remove access to the Template. The account id prevails if both are provided.",
             "format": "email"
-          }
-        }
-      },
-      "TemplateUpdateRequest": {
-        "type": "object",
-        "properties": {
-          "cc_roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The CC roles that must be assigned when using the template to send a signature request."
-          },
-          "title": {
-            "type": "string",
-            "description": "The title you want to assign to the SignatureRequest."
-          },
-          "subject": {
-            "maxLength": 200,
-            "type": "string",
-            "description": "The new default template email subject."
-          },
-          "message": {
-            "maxLength": 5000,
-            "type": "string",
-            "description": "The new default template email message."
-          },
-          "form_fields": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/SubUpdateFormField"
-            },
-            "description": "A list of document form fields to update. The endpoint will not create or remove any fields. Every field must be identified by `api_id`, and the only supported change is renaming the field."
           }
         }
       },
@@ -14219,12 +14082,6 @@
         "summary": "Default Example",
         "value": {
           "$ref": "examples/json/TemplateRemoveUserRequest.json"
-        }
-      },
-      "TemplateUpdateRequest": {
-        "summary": "Default Example",
-        "value": {
-          "$ref": "examples/json/TemplateUpdateRequest.json"
         }
       },
       "TemplateUpdateFilesRequest": {
