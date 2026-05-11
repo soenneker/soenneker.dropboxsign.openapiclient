@@ -8712,22 +8712,6 @@
         ],
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
-      "SubUpdateFormField": {
-        "required": [
-          "api_id"
-        ],
-        "type": "object",
-        "properties": {
-          "api_id": {
-            "type": "string",
-            "description": "The unique ID for this field. The endpoint will update an existing field with matching `api_id`, and warn you if no matches are found"
-          },
-          "name": {
-            "type": "string",
-            "description": "The new name of the field. If not passed the name will remain unchanged."
-          }
-        }
-      },
       "SubFormFieldsPerDocumentHyperlink": {
         "type": "object",
         "allOf": [
