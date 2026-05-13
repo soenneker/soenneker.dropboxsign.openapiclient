@@ -8547,449 +8547,419 @@
         }
       },
       "SubFormFieldsPerDocumentCheckbox": {
+        "required": [
+          "type",
+          "is_checked"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type",
-              "is_checked"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A yes/no checkbox. Use the `SubFormFieldsPerDocumentCheckbox` class.",
-                "default": "checkbox"
-              },
-              "group": {
-                "type": "string",
-                "description": "String referencing group defined in `form_field_groups` parameter."
-              },
-              "is_checked": {
-                "type": "boolean",
-                "description": "`true` for checking the checkbox field by default, otherwise `false`."
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A yes/no checkbox. Use the `SubFormFieldsPerDocumentCheckbox` class.",
+            "default": "checkbox"
+          },
+          "group": {
+            "type": "string",
+            "description": "String referencing group defined in `form_field_groups` parameter."
+          },
+          "is_checked": {
+            "type": "boolean",
+            "description": "`true` for checking the checkbox field by default, otherwise `false`."
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentCheckboxMerge": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A checkbox field that has default value set using pre-filled data. Use the `SubFormFieldsPerDocumentCheckboxMerge` class.",
-                "default": "checkbox-merge"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A checkbox field that has default value set using pre-filled data. Use the `SubFormFieldsPerDocumentCheckboxMerge` class.",
+            "default": "checkbox-merge"
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentDateSigned": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A date. Use the `SubFormFieldsPerDocumentDateSigned` class.",
-                "default": "date_signed"
-              },
-              "font_family": {
-                "enum": [
-                  "helvetica",
-                  "arial",
-                  "courier",
-                  "calibri",
-                  "cambria",
-                  "georgia",
-                  "times",
-                  "trebuchet",
-                  "verdana",
-                  "roboto",
-                  "robotoMono",
-                  "notoSans",
-                  "notoSerif",
-                  "notoCJK-JP-Regular",
-                  "notoHebrew-Regular",
-                  "notoSanThaiMerged"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "Font family for the field."
-              },
-              "font_size": {
-                "type": "integer",
-                "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-                "default": 12
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A date. Use the `SubFormFieldsPerDocumentDateSigned` class.",
+            "default": "date_signed"
+          },
+          "font_family": {
+            "enum": [
+              "helvetica",
+              "arial",
+              "courier",
+              "calibri",
+              "cambria",
+              "georgia",
+              "times",
+              "trebuchet",
+              "verdana",
+              "roboto",
+              "robotoMono",
+              "notoSans",
+              "notoSerif",
+              "notoCJK-JP-Regular",
+              "notoHebrew-Regular",
+              "notoSanThaiMerged"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Font family for the field."
+          },
+          "font_size": {
+            "type": "integer",
+            "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+            "default": 12
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentDropdown": {
+        "required": [
+          "type",
+          "options"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type",
-              "options"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "An input field for dropdowns. Use the `SubFormFieldsPerDocumentDropdown` class.",
-                "default": "dropdown"
-              },
-              "options": {
-                "minItems": 1,
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "description": "Array of string values representing dropdown values."
-              },
-              "content": {
-                "type": "string",
-                "description": "Selected value in `options` array. Value must exist in array."
-              },
-              "font_family": {
-                "enum": [
-                  "helvetica",
-                  "arial",
-                  "courier",
-                  "calibri",
-                  "cambria",
-                  "georgia",
-                  "times",
-                  "trebuchet",
-                  "verdana",
-                  "roboto",
-                  "robotoMono",
-                  "notoSans",
-                  "notoSerif",
-                  "notoCJK-JP-Regular",
-                  "notoHebrew-Regular",
-                  "notoSanThaiMerged"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "Font family for the field."
-              },
-              "font_size": {
-                "type": "integer",
-                "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-                "default": 12
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "An input field for dropdowns. Use the `SubFormFieldsPerDocumentDropdown` class.",
+            "default": "dropdown"
+          },
+          "options": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Array of string values representing dropdown values."
+          },
+          "content": {
+            "type": "string",
+            "description": "Selected value in `options` array. Value must exist in array."
+          },
+          "font_family": {
+            "enum": [
+              "helvetica",
+              "arial",
+              "courier",
+              "calibri",
+              "cambria",
+              "georgia",
+              "times",
+              "trebuchet",
+              "verdana",
+              "roboto",
+              "robotoMono",
+              "notoSans",
+              "notoSerif",
+              "notoCJK-JP-Regular",
+              "notoHebrew-Regular",
+              "notoSanThaiMerged"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Font family for the field."
+          },
+          "font_size": {
+            "type": "integer",
+            "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+            "default": 12
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentHyperlink": {
+        "required": [
+          "type",
+          "content",
+          "content_url"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type",
-              "content",
-              "content_url"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A hyperlink field. Use the `SubFormFieldsPerDocumentHyperlink` class.",
-                "default": "hyperlink"
-              },
-              "content": {
-                "type": "string",
-                "description": "Link Text."
-              },
-              "content_url": {
-                "type": "string",
-                "description": "Link URL."
-              },
-              "font_family": {
-                "enum": [
-                  "helvetica",
-                  "arial",
-                  "courier",
-                  "calibri",
-                  "cambria",
-                  "georgia",
-                  "times",
-                  "trebuchet",
-                  "verdana",
-                  "roboto",
-                  "robotoMono",
-                  "notoSans",
-                  "notoSerif",
-                  "notoCJK-JP-Regular",
-                  "notoHebrew-Regular",
-                  "notoSanThaiMerged"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "Font family for the field."
-              },
-              "font_size": {
-                "type": "integer",
-                "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-                "default": 12
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A hyperlink field. Use the `SubFormFieldsPerDocumentHyperlink` class.",
+            "default": "hyperlink"
+          },
+          "content": {
+            "type": "string",
+            "description": "Link Text."
+          },
+          "content_url": {
+            "type": "string",
+            "description": "Link URL."
+          },
+          "font_family": {
+            "enum": [
+              "helvetica",
+              "arial",
+              "courier",
+              "calibri",
+              "cambria",
+              "georgia",
+              "times",
+              "trebuchet",
+              "verdana",
+              "roboto",
+              "robotoMono",
+              "notoSans",
+              "notoSerif",
+              "notoCJK-JP-Regular",
+              "notoHebrew-Regular",
+              "notoSanThaiMerged"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Font family for the field."
+          },
+          "font_size": {
+            "type": "integer",
+            "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+            "default": 12
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentInitials": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "An input field for initials. Use the `SubFormFieldsPerDocumentInitials` class.",
-                "default": "initials"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "An input field for initials. Use the `SubFormFieldsPerDocumentInitials` class.",
+            "default": "initials"
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentRadio": {
+        "required": [
+          "type",
+          "group",
+          "is_checked"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type",
-              "group",
-              "is_checked"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "An input field for radios. Use the `SubFormFieldsPerDocumentRadio` class.",
-                "default": "radio"
-              },
-              "group": {
-                "type": "string",
-                "description": "String referencing group defined in `form_field_groups` parameter."
-              },
-              "is_checked": {
-                "type": "boolean",
-                "description": "`true` for checking the radio field by default, otherwise `false`. Only one radio field per group can be `true`."
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "An input field for radios. Use the `SubFormFieldsPerDocumentRadio` class.",
+            "default": "radio"
+          },
+          "group": {
+            "type": "string",
+            "description": "String referencing group defined in `form_field_groups` parameter."
+          },
+          "is_checked": {
+            "type": "boolean",
+            "description": "`true` for checking the radio field by default, otherwise `false`. Only one radio field per group can be `true`."
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentSignature": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A signature input field. Use the `SubFormFieldsPerDocumentSignature` class.",
-                "default": "signature"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A signature input field. Use the `SubFormFieldsPerDocumentSignature` class.",
+            "default": "signature"
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentText": {
+        "required": [
+          "type",
+          "options"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type",
-              "options"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A text input field. Use the `SubFormFieldsPerDocumentText` class.",
-                "default": "text"
-              },
-              "placeholder": {
-                "type": "string",
-                "description": "Placeholder value for text field."
-              },
-              "auto_fill_type": {
-                "type": "string",
-                "description": "Auto fill type for populating fields automatically. Check out the list of [auto fill types](/api/reference/constants/#auto-fill-types) to learn more about the possible values."
-              },
-              "link_id": {
-                "type": "string",
-                "description": "Link two or more text fields. Enter data into one linked text field, which automatically fill all other linked text fields."
-              },
-              "masked": {
-                "type": "boolean",
-                "description": "Masks entered data. For more information see [Masking sensitive information](https://faq.hellosign.com/hc/en-us/articles/360040742811-Masking-sensitive-information). `true` for masking the data in a text field, otherwise `false`."
-              },
-              "validation_type": {
-                "enum": [
-                  "numbers_only",
-                  "letters_only",
-                  "phone_number",
-                  "bank_routing_number",
-                  "bank_account_number",
-                  "email_address",
-                  "zip_code",
-                  "social_security_number",
-                  "employer_identification_number",
-                  "custom_regex"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "Each text field may contain a `validation_type` parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.\n\n**NOTE:** When using `custom_regex` you are required to pass a second parameter `validation_custom_regex` and you can optionally provide `validation_custom_regex_format_label` for the error message the user will see in case of an invalid value."
-              },
-              "validation_custom_regex": {
-                "type": "string"
-              },
-              "validation_custom_regex_format_label": {
-                "type": "string"
-              },
-              "content": {
-                "type": "string",
-                "description": "Content of a `me_now` text field"
-              },
-              "font_family": {
-                "enum": [
-                  "helvetica",
-                  "arial",
-                  "courier",
-                  "calibri",
-                  "cambria",
-                  "georgia",
-                  "times",
-                  "trebuchet",
-                  "verdana",
-                  "roboto",
-                  "robotoMono",
-                  "notoSans",
-                  "notoSerif",
-                  "notoCJK-JP-Regular",
-                  "notoHebrew-Regular",
-                  "notoSanThaiMerged"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "Font family for the field."
-              },
-              "font_size": {
-                "type": "integer",
-                "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-                "default": 12
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A text input field. Use the `SubFormFieldsPerDocumentText` class.",
+            "default": "text"
+          },
+          "placeholder": {
+            "type": "string",
+            "description": "Placeholder value for text field."
+          },
+          "auto_fill_type": {
+            "type": "string",
+            "description": "Auto fill type for populating fields automatically. Check out the list of [auto fill types](/api/reference/constants/#auto-fill-types) to learn more about the possible values."
+          },
+          "link_id": {
+            "type": "string",
+            "description": "Link two or more text fields. Enter data into one linked text field, which automatically fill all other linked text fields."
+          },
+          "masked": {
+            "type": "boolean",
+            "description": "Masks entered data. For more information see [Masking sensitive information](https://faq.hellosign.com/hc/en-us/articles/360040742811-Masking-sensitive-information). `true` for masking the data in a text field, otherwise `false`."
+          },
+          "validation_type": {
+            "enum": [
+              "numbers_only",
+              "letters_only",
+              "phone_number",
+              "bank_routing_number",
+              "bank_account_number",
+              "email_address",
+              "zip_code",
+              "social_security_number",
+              "employer_identification_number",
+              "custom_regex"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Each text field may contain a `validation_type` parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.\n\n**NOTE:** When using `custom_regex` you are required to pass a second parameter `validation_custom_regex` and you can optionally provide `validation_custom_regex_format_label` for the error message the user will see in case of an invalid value."
+          },
+          "validation_custom_regex": {
+            "type": "string"
+          },
+          "validation_custom_regex_format_label": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string",
+            "description": "Content of a `me_now` text field"
+          },
+          "font_family": {
+            "enum": [
+              "helvetica",
+              "arial",
+              "courier",
+              "calibri",
+              "cambria",
+              "georgia",
+              "times",
+              "trebuchet",
+              "verdana",
+              "roboto",
+              "robotoMono",
+              "notoSans",
+              "notoSerif",
+              "notoCJK-JP-Regular",
+              "notoHebrew-Regular",
+              "notoSanThaiMerged"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Font family for the field."
+          },
+          "font_size": {
+            "type": "integer",
+            "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+            "default": 12
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentTextMerge": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
-          },
-          {
-            "required": [
-              "type"
-            ],
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A text field that has default text set using pre-filled data. Use the `SubFormFieldsPerDocumentTextMerge` class.",
-                "default": "text-merge"
-              },
-              "font_family": {
-                "enum": [
-                  "helvetica",
-                  "arial",
-                  "courier",
-                  "calibri",
-                  "cambria",
-                  "georgia",
-                  "times",
-                  "trebuchet",
-                  "verdana",
-                  "roboto",
-                  "robotoMono",
-                  "notoSans",
-                  "notoSerif",
-                  "notoCJK-JP-Regular",
-                  "notoHebrew-Regular",
-                  "notoSanThaiMerged"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "Font family for the field."
-              },
-              "font_size": {
-                "type": "integer",
-                "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-                "default": 12
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A text field that has default text set using pre-filled data. Use the `SubFormFieldsPerDocumentTextMerge` class.",
+            "default": "text-merge"
+          },
+          "font_family": {
+            "enum": [
+              "helvetica",
+              "arial",
+              "courier",
+              "calibri",
+              "cambria",
+              "georgia",
+              "times",
+              "trebuchet",
+              "verdana",
+              "roboto",
+              "robotoMono",
+              "notoSans",
+              "notoSerif",
+              "notoCJK-JP-Regular",
+              "notoHebrew-Regular",
+              "notoSanThaiMerged"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Font family for the field."
+          },
+          "font_size": {
+            "type": "integer",
+            "description": "The initial px font size for the field contents. Can be any integer value between `7` and `49`.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+            "default": 12
+          }
+        },
         "description": "This class extends `SubFormFieldsPerDocumentBase`."
       },
       "SubFormFieldsPerDocumentTypeEnum": {
@@ -11185,27 +11155,142 @@
       "BulkSendJobGetResponseSignatureRequests": {
         "title": "BulkSendJobGetResponseSignatureRequests",
         "type": "object",
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/SignatureRequestResponse"
+        "properties": {
+          "test_mode": {
+            "type": "boolean",
+            "description": "Whether this is a test signature request. Test requests have no legal value. Defaults to `false`.",
+            "default": false
           },
-          {
+          "signature_request_id": {
+            "type": "string",
+            "description": "The id of the SignatureRequest."
+          },
+          "requester_email_address": {
+            "type": "string",
+            "description": "The email address of the initiator of the SignatureRequest.",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "description": "The title the specified Account uses for the SignatureRequest."
+          },
+          "original_title": {
+            "type": "string",
+            "description": "Default Label for account."
+          },
+          "subject": {
+            "type": "string",
+            "description": "The subject in the email that was initially sent to the signers.",
+            "nullable": true
+          },
+          "message": {
+            "type": "string",
+            "description": "The custom message in the email that was initially sent to the signers.",
+            "nullable": true
+          },
+          "metadata": {
             "type": "object",
-            "properties": {
-              "bulk_send_job_id": {
-                "type": "string",
-                "description": "The id of the BulkSendJob."
-              },
-              "metadata": {
-                "type": "object",
-                "additionalProperties": {
-                  "type": "object"
-                },
-                "description": "The metadata attached to the signature request."
-              }
-            }
+            "additionalProperties": {
+              "type": "object"
+            },
+            "description": "The metadata attached to the signature request."
+          },
+          "created_at": {
+            "type": "integer",
+            "description": "Time the signature request was created."
+          },
+          "expires_at": {
+            "type": "integer",
+            "description": "The time when the signature request will expire unsigned signatures. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.",
+            "nullable": true
+          },
+          "is_complete": {
+            "type": "boolean",
+            "description": "Whether or not the SignatureRequest has been fully executed by all signers."
+          },
+          "is_declined": {
+            "type": "boolean",
+            "description": "Whether or not the SignatureRequest has been declined by a signer."
+          },
+          "has_error": {
+            "type": "boolean",
+            "description": "Whether or not an error occurred (either during the creation of the SignatureRequest or during one of the signings)."
+          },
+          "files_url": {
+            "type": "string",
+            "description": "The URL where a copy of the request's documents can be downloaded."
+          },
+          "signing_url": {
+            "type": "string",
+            "description": "The URL where a signer, after authenticating, can sign the documents. This should only be used by users with existing Dropbox Sign accounts as they will be required to log in before signing.",
+            "nullable": true
+          },
+          "details_url": {
+            "type": "string",
+            "description": "The URL where the requester and the signers can view the current status of the SignatureRequest."
+          },
+          "cc_email_addresses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of email addresses that were CCed on the SignatureRequest. They will receive a copy of the final PDF once all the signers have signed."
+          },
+          "signing_redirect_url": {
+            "type": "string",
+            "description": "The URL you want the signer redirected to after they successfully sign.",
+            "nullable": true
+          },
+          "final_copy_uri": {
+            "type": "string",
+            "description": "The path where the completed document can be downloaded",
+            "nullable": true
+          },
+          "template_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Templates IDs used in this SignatureRequest (if any).",
+            "nullable": true
+          },
+          "custom_fields": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SignatureRequestResponseCustomFieldBase"
+            },
+            "description": "An array of Custom Field objects containing the name and type of each custom field.\n\n* Text Field uses `SignatureRequestResponseCustomFieldText`\n* Checkbox Field uses `SignatureRequestResponseCustomFieldCheckbox`",
+            "nullable": true
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SignatureRequestResponseAttachment"
+            },
+            "description": "Signer attachments.",
+            "nullable": true
+          },
+          "response_data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
+            },
+            "description": "An array of form field objects containing the name, value, and type of each textbox or checkmark field filled in by the signers.",
+            "nullable": true
+          },
+          "signatures": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SignatureRequestResponseSignatures"
+            },
+            "description": "An array of signature objects, 1 for each signer."
+          },
+          "bulk_send_job_id": {
+            "type": "string",
+            "description": "The ID of the Bulk Send job which sent the signature request, if applicable.",
+            "nullable": true
           }
-        ],
+        },
         "x-internal-class": true
       },
       "EmbeddedEditUrlResponseEmbedded": {
@@ -11672,22 +11757,19 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseCustomFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this Custom Field. Only 'text' and 'checkbox' are currently supported.",
-                "default": "checkbox"
-              },
-              "value": {
-                "type": "boolean",
-                "description": "A true/false for checkbox fields"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this Custom Field. Only 'text' and 'checkbox' are currently supported.",
+            "default": "checkbox"
+          },
+          "value": {
+            "type": "boolean",
+            "description": "A true/false for checkbox fields"
+          }
+        },
         "description": "This class extends `SignatureRequestResponseCustomFieldBase`."
       },
       "SignatureRequestResponseCustomFieldText": {
@@ -11698,22 +11780,19 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseCustomFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this Custom Field. Only 'text' and 'checkbox' are currently supported.",
-                "default": "text"
-              },
-              "value": {
-                "type": "string",
-                "description": "A text string for text fields"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this Custom Field. Only 'text' and 'checkbox' are currently supported.",
+            "default": "text"
+          },
+          "value": {
+            "type": "string",
+            "description": "A text string for text fields"
+          }
+        },
         "description": "This class extends `SignatureRequestResponseCustomFieldBase`."
       },
       "SignatureRequestResponseCustomFieldTypeEnum": {
@@ -11788,208 +11867,181 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A yes/no checkbox",
-                "default": "checkbox"
-              },
-              "value": {
-                "type": "boolean",
-                "description": "The value of the form field."
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A yes/no checkbox",
+            "default": "checkbox"
+          },
+          "value": {
+            "type": "boolean",
+            "description": "The value of the form field."
+          }
+        }
       },
       "SignatureRequestResponseDataValueCheckboxMerge": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A checkbox field that has default value set by the api",
-                "default": "checkbox-merge"
-              },
-              "value": {
-                "type": "string",
-                "description": "The value of the form field."
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A checkbox field that has default value set by the api",
+            "default": "checkbox-merge"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the form field."
+          }
+        }
       },
       "SignatureRequestResponseDataValueDateSigned": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A date",
-                "default": "date_signed"
-              },
-              "value": {
-                "type": "string",
-                "description": "The value of the form field."
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A date",
+            "default": "date_signed"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the form field."
+          }
+        }
       },
       "SignatureRequestResponseDataValueDropdown": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "An input field for dropdowns",
-                "default": "dropdown"
-              },
-              "value": {
-                "type": "string",
-                "description": "The value of the form field."
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "An input field for dropdowns",
+            "default": "dropdown"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the form field."
+          }
+        }
       },
       "SignatureRequestResponseDataValueInitials": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "An input field for initials",
-                "default": "initials"
-              },
-              "value": {
-                "type": "string",
-                "description": "The value of the form field."
-              },
-              "is_signed": {
-                "type": "boolean",
-                "description": "This field contains the boolean true if the field is signed.",
-                "nullable": true
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "An input field for initials",
+            "default": "initials"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the form field."
+          },
+          "is_signed": {
+            "type": "boolean",
+            "description": "This field contains the boolean true if the field is signed.",
+            "nullable": true
+          }
+        }
       },
       "SignatureRequestResponseDataValueRadio": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "An input field for radios",
-                "default": "radio"
-              },
-              "value": {
-                "type": "boolean",
-                "description": "The value of the form field."
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "An input field for radios",
+            "default": "radio"
+          },
+          "value": {
+            "type": "boolean",
+            "description": "The value of the form field."
+          }
+        }
       },
       "SignatureRequestResponseDataValueSignature": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A signature input field",
-                "default": "signature"
-              },
-              "value": {
-                "type": "string",
-                "description": "The value of the form field."
-              },
-              "is_signed": {
-                "type": "boolean",
-                "description": "This field contains the boolean true if the field is signed.",
-                "nullable": true
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A signature input field",
+            "default": "signature"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the form field."
+          },
+          "is_signed": {
+            "type": "boolean",
+            "description": "This field contains the boolean true if the field is signed.",
+            "nullable": true
+          }
+        }
       },
       "SignatureRequestResponseDataValueText": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A text input field",
-                "default": "text"
-              },
-              "value": {
-                "type": "string",
-                "description": "The value of the form field."
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A text input field",
+            "default": "text"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the form field."
+          }
+        }
       },
       "SignatureRequestResponseDataValueTextMerge": {
         "type": "object",
         "allOf": [
           {
             "$ref": "#/components/schemas/SignatureRequestResponseDataBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "A text field that has default text set by the api",
-                "default": "text-merge"
-              },
-              "value": {
-                "type": "string",
-                "description": "The value of the form field."
-              }
-            }
           }
-        ]
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "A text field that has default text set by the api",
+            "default": "text-merge"
+          },
+          "value": {
+            "type": "string",
+            "description": "The value of the form field."
+          }
+        }
       },
       "SignatureRequestResponseSignatures": {
         "type": "object",
@@ -12533,18 +12585,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentCustomFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this Custom Field. Only `text` and `checkbox` are currently supported.\n\n* Text uses `TemplateResponseDocumentCustomFieldText`\n* Checkbox uses `TemplateResponseDocumentCustomFieldCheckbox`",
-                "default": "checkbox"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this Custom Field. Only `text` and `checkbox` are currently supported.\n\n* Text uses `TemplateResponseDocumentCustomFieldText`\n* Checkbox uses `TemplateResponseDocumentCustomFieldCheckbox`",
+            "default": "checkbox"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentCustomFieldBase`"
       },
       "TemplateResponseDocumentCustomFieldText": {
@@ -12555,33 +12604,30 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentCustomFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this Custom Field. Only `text` and `checkbox` are currently supported.\n\n* Text uses `TemplateResponseDocumentCustomFieldText`\n* Checkbox uses `TemplateResponseDocumentCustomFieldCheckbox`",
-                "default": "text"
-              },
-              "avg_text_length": {
-                "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
-              },
-              "isMultiline": {
-                "type": "boolean",
-                "description": "Whether this form field is multiline text."
-              },
-              "originalFontSize": {
-                "type": "integer",
-                "description": "Original font size used in this form field's text."
-              },
-              "fontFamily": {
-                "type": "string",
-                "description": "Font family used in this form field's text."
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this Custom Field. Only `text` and `checkbox` are currently supported.\n\n* Text uses `TemplateResponseDocumentCustomFieldText`\n* Checkbox uses `TemplateResponseDocumentCustomFieldCheckbox`",
+            "default": "text"
+          },
+          "avg_text_length": {
+            "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
+          },
+          "isMultiline": {
+            "type": "boolean",
+            "description": "Whether this form field is multiline text."
+          },
+          "originalFontSize": {
+            "type": "integer",
+            "description": "Original font size used in this form field's text."
+          },
+          "fontFamily": {
+            "type": "string",
+            "description": "Font family used in this form field's text."
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentCustomFieldBase`"
       },
       "TemplateResponseDocumentFieldGroup": {
@@ -12680,23 +12726,20 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "checkbox"
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
-                "nullable": true
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "checkbox"
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
+            "nullable": true
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentFormFieldDateSigned": {
@@ -12707,23 +12750,20 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "date_signed"
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
-                "nullable": true
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "date_signed"
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
+            "nullable": true
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentFormFieldDropdown": {
@@ -12734,23 +12774,20 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "dropdown"
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
-                "nullable": true
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "dropdown"
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
+            "nullable": true
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentFormFieldHyperlink": {
@@ -12761,38 +12798,35 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "hyperlink"
-              },
-              "avg_text_length": {
-                "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
-              },
-              "isMultiline": {
-                "type": "boolean",
-                "description": "Whether this form field is multiline text."
-              },
-              "originalFontSize": {
-                "type": "integer",
-                "description": "Original font size used in this form field's text."
-              },
-              "fontFamily": {
-                "type": "string",
-                "description": "Font family used in this form field's text."
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
-                "nullable": true
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "hyperlink"
+          },
+          "avg_text_length": {
+            "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
+          },
+          "isMultiline": {
+            "type": "boolean",
+            "description": "Whether this form field is multiline text."
+          },
+          "originalFontSize": {
+            "type": "integer",
+            "description": "Original font size used in this form field's text."
+          },
+          "fontFamily": {
+            "type": "string",
+            "description": "Font family used in this form field's text."
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
+            "nullable": true
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentFormFieldInitials": {
@@ -12803,23 +12837,20 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "initials"
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
-                "nullable": true
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "initials"
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
+            "nullable": true
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentFormFieldRadio": {
@@ -12831,22 +12862,19 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "radio"
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields."
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "radio"
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields."
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentFormFieldSignature": {
@@ -12857,23 +12885,20 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "signature"
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
-                "nullable": true
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "signature"
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
+            "nullable": true
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentFormFieldText": {
@@ -12884,66 +12909,63 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
-                "default": "text"
-              },
-              "avg_text_length": {
-                "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
-              },
-              "isMultiline": {
-                "type": "boolean",
-                "description": "Whether this form field is multiline text."
-              },
-              "originalFontSize": {
-                "type": "integer",
-                "description": "Original font size used in this form field's text."
-              },
-              "fontFamily": {
-                "type": "string",
-                "description": "Font family used in this form field's text."
-              },
-              "validation_type": {
-                "enum": [
-                  "numbers_only",
-                  "letters_only",
-                  "phone_number",
-                  "bank_routing_number",
-                  "bank_account_number",
-                  "email_address",
-                  "zip_code",
-                  "social_security_number",
-                  "employer_identification_number",
-                  "custom_regex"
-                ],
-                "type": "string",
-                "additionalProperties": false,
-                "description": "Each text field may contain a `validation_type` parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.",
-                "nullable": true
-              },
-              "validation_custom_regex": {
-                "type": "string",
-                "description": "When `validation_type` is set to `custom_regex`, this specifies the custom regular expression pattern that will be used to validate the text field.",
-                "nullable": true
-              },
-              "validation_custom_regex_format_label": {
-                "type": "string",
-                "description": "When `validation_type` is set to `custom_regex`, this specifies the error message displayed to the signer when the text does not match the provided regex pattern.",
-                "nullable": true
-              },
-              "group": {
-                "type": "string",
-                "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
-                "nullable": true
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentFormFieldText`\n* Dropdown Field uses `TemplateResponseDocumentFormFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentFormFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentFormFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentFormFieldRadio`\n* Signature Field uses `TemplateResponseDocumentFormFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentFormFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentFormFieldInitials`",
+            "default": "text"
+          },
+          "avg_text_length": {
+            "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
+          },
+          "isMultiline": {
+            "type": "boolean",
+            "description": "Whether this form field is multiline text."
+          },
+          "originalFontSize": {
+            "type": "integer",
+            "description": "Original font size used in this form field's text."
+          },
+          "fontFamily": {
+            "type": "string",
+            "description": "Font family used in this form field's text."
+          },
+          "validation_type": {
+            "enum": [
+              "numbers_only",
+              "letters_only",
+              "phone_number",
+              "bank_routing_number",
+              "bank_account_number",
+              "email_address",
+              "zip_code",
+              "social_security_number",
+              "employer_identification_number",
+              "custom_regex"
+            ],
+            "type": "string",
+            "additionalProperties": false,
+            "description": "Each text field may contain a `validation_type` parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.",
+            "nullable": true
+          },
+          "validation_custom_regex": {
+            "type": "string",
+            "description": "When `validation_type` is set to `custom_regex`, this specifies the custom regular expression pattern that will be used to validate the text field.",
+            "nullable": true
+          },
+          "validation_custom_regex_format_label": {
+            "type": "string",
+            "description": "When `validation_type` is set to `custom_regex`, this specifies the error message displayed to the signer when the text does not match the provided regex pattern.",
+            "nullable": true
+          },
+          "group": {
+            "type": "string",
+            "description": "The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.",
+            "nullable": true
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentFormFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldBase": {
@@ -13019,18 +13041,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "checkbox"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "checkbox"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldDateSigned": {
@@ -13041,18 +13060,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "date_signed"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "date_signed"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldDropdown": {
@@ -13063,18 +13079,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "dropdown"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "dropdown"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldHyperlink": {
@@ -13085,18 +13098,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "hyperlink"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "hyperlink"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldInitials": {
@@ -13107,18 +13117,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "initials"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "initials"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldRadio": {
@@ -13129,18 +13136,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "radio"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "radio"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldSignature": {
@@ -13151,18 +13155,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "signature"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "signature"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseDocumentStaticFieldText": {
@@ -13173,18 +13174,15 @@
         "allOf": [
           {
             "$ref": "#/components/schemas/TemplateResponseDocumentStaticFieldBase"
-          },
-          {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string",
-                "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
-                "default": "text"
-              }
-            }
           }
         ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses `TemplateResponseDocumentStaticFieldText`\n* Dropdown Field uses `TemplateResponseDocumentStaticFieldDropdown`\n* Hyperlink Field uses `TemplateResponseDocumentStaticFieldHyperlink`\n* Checkbox Field uses `TemplateResponseDocumentStaticFieldCheckbox`\n* Radio Field uses `TemplateResponseDocumentStaticFieldRadio`\n* Signature Field uses `TemplateResponseDocumentStaticFieldSignature`\n* Date Signed Field uses `TemplateResponseDocumentStaticFieldDateSigned`\n* Initials Field uses `TemplateResponseDocumentStaticFieldInitials`",
+            "default": "text"
+          }
+        },
         "description": "This class extends `TemplateResponseDocumentStaticFieldBase`"
       },
       "TemplateResponseFieldAvgTextLength": {
