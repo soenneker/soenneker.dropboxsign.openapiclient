@@ -25,7 +25,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Fax Transmission Sent Timestamp</summary>
         public int? SentAt { get; set; }
         /// <summary>Fax Transmission Status Code</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission_status_code? StatusCode { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode? StatusCode { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission"/> and sets the default values.
         /// </summary>
@@ -53,7 +53,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             {
                 { "recipient", n => { Recipient = n.GetStringValue(); } },
                 { "sent_at", n => { SentAt = n.GetIntValue(); } },
-                { "status_code", n => { StatusCode = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission_status_code>(); } },
+                { "status_code", n => { StatusCode = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode>(); } },
             };
         }
         /// <summary>
@@ -65,7 +65,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("recipient", Recipient);
             writer.WriteIntValue("sent_at", SentAt);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission_status_code>("status_code", StatusCode);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode>("status_code", StatusCode);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -16,7 +16,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default type shown (limited to the listed types)</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions_default_type? DefaultType { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType? DefaultType { get; set; }
         /// <summary>Allows drawing the signature</summary>
         public bool? Draw { get; set; }
         /// <summary>Turning on advanced signature details for the signature request</summary>
@@ -33,6 +33,11 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public SubSigningOptions()
         {
             AdditionalData = new Dictionary<string, object>();
+            Draw = false;
+            ForceAdvancedSignatureDetails = false;
+            Phone = false;
+            Type = false;
+            Upload = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +57,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_type", n => { DefaultType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions_default_type>(); } },
+                { "default_type", n => { DefaultType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType>(); } },
                 { "draw", n => { Draw = n.GetBoolValue(); } },
                 { "force_advanced_signature_details", n => { ForceAdvancedSignatureDetails = n.GetBoolValue(); } },
                 { "phone", n => { Phone = n.GetBoolValue(); } },
@@ -67,7 +72,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions_default_type>("default_type", DefaultType);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType>("default_type", DefaultType);
             writer.WriteBoolValue("draw", Draw);
             writer.WriteBoolValue("force_advanced_signature_details", ForceAdvancedSignatureDetails);
             writer.WriteBoolValue("phone", Phone);

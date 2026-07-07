@@ -31,7 +31,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string EmailAddress { get; set; }
 #endif
         /// <summary>A role member will take in a new Team.**NOTE:** This parameter is used only if `team_id` is provided.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamAddMemberRequest_role? Role { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamAddMemberRequestRole? Role { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TeamAddMemberRequest"/> and sets the default values.
         /// </summary>
@@ -59,7 +59,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             {
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamAddMemberRequest_role>(); } },
+                { "role", n => { Role = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamAddMemberRequestRole>(); } },
             };
         }
         /// <summary>
@@ -71,7 +71,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteStringValue("email_address", EmailAddress);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamAddMemberRequest_role>("role", Role);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamAddMemberRequestRole>("role", Role);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

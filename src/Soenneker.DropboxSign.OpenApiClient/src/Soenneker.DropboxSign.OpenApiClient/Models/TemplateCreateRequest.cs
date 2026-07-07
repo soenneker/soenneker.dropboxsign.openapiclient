@@ -107,10 +107,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>An array of the designated signer roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -146,6 +146,9 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public TemplateCreateRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowReassign = false;
+            TestMode = false;
+            UsePreexistingFields = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -177,7 +180,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "form_fields_per_document", n => { FormFieldsPerDocument = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "merge_fields", n => { MergeFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "signer_roles", n => { SignerRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "test_mode", n => { TestMode = n.GetBoolValue(); } },
@@ -204,7 +207,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>("form_fields_per_document", FormFieldsPerDocument);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>("merge_fields", MergeFields);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateRequestMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>("signer_roles", SignerRoles);
             writer.WriteStringValue("subject", Subject);
             writer.WriteBoolValue("test_mode", TestMode);

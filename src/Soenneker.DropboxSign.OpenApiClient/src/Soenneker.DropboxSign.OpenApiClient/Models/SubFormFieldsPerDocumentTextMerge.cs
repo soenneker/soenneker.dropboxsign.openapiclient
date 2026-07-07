@@ -14,7 +14,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     public partial class SubFormFieldsPerDocumentTextMerge : global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase, IParsable
     {
         /// <summary>Font family for the field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextMerge_font_family? FontFamily { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextMergeFontFamily? FontFamily { get; set; }
         /// <summary>The initial px font size for the field contents. Can be any integer value between `7` and `49`.**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.</summary>
         public int? FontSize { get; set; }
         /// <summary>
@@ -22,6 +22,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// </summary>
         public SubFormFieldsPerDocumentTextMerge() : base()
         {
+            FontSize = 12;
             Type = "text-merge";
         }
         /// <summary>
@@ -42,7 +43,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
-                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextMerge_font_family>(); } },
+                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextMergeFontFamily>(); } },
                 { "font_size", n => { FontSize = n.GetIntValue(); } },
             };
         }
@@ -54,7 +55,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextMerge_font_family>("font_family", FontFamily);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextMergeFontFamily>("font_family", FontFamily);
             writer.WriteIntValue("font_size", FontSize);
         }
     }

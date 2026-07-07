@@ -38,6 +38,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public TemplateAddUserRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            SkipNotification = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

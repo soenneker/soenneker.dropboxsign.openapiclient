@@ -30,7 +30,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string ContentUrl { get; set; }
 #endif
         /// <summary>Font family for the field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlink_font_family? FontFamily { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlinkFontFamily? FontFamily { get; set; }
         /// <summary>The initial px font size for the field contents. Can be any integer value between `7` and `49`.**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.</summary>
         public int? FontSize { get; set; }
         /// <summary>
@@ -38,6 +38,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// </summary>
         public SubFormFieldsPerDocumentHyperlink() : base()
         {
+            FontSize = 12;
             Type = "hyperlink";
         }
         /// <summary>
@@ -60,7 +61,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             {
                 { "content", n => { Content = n.GetStringValue(); } },
                 { "content_url", n => { ContentUrl = n.GetStringValue(); } },
-                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlink_font_family>(); } },
+                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlinkFontFamily>(); } },
                 { "font_size", n => { FontSize = n.GetIntValue(); } },
             };
         }
@@ -74,7 +75,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             base.Serialize(writer);
             writer.WriteStringValue("content", Content);
             writer.WriteStringValue("content_url", ContentUrl);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlink_font_family>("font_family", FontFamily);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlinkFontFamily>("font_family", FontFamily);
             writer.WriteIntValue("font_size", FontSize);
         }
     }

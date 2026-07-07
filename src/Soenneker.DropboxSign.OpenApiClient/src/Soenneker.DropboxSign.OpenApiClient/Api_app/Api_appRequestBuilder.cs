@@ -26,14 +26,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Api_app
         }
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.api_app.item collection</summary>
         /// <param name="position">The client id of the API App to retrieve.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Api_app.Item.WithClient_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Api_app.Item.WithClient_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Api_app.Item.WithClientItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Api_app.Item.WithClientItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("client_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Api_app.Item.WithClient_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("clientId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Api_app.Item.WithClientItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

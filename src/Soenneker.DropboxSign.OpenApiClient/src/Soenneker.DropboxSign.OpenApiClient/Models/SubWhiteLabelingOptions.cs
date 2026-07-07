@@ -24,7 +24,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string HeaderBackgroundColor { get; set; }
 #endif
         /// <summary>The legal_version property</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions_legal_version? LegalVersion { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptionsLegalVersion? LegalVersion { get; set; }
         /// <summary>The link_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,7 +130,6 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             AdditionalData = new Dictionary<string, object>();
             HeaderBackgroundColor = "#1a1a1a";
-            LegalVersion = global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions_legal_version.Terms1;
             LinkColor = "#0061FE";
             PageBackgroundColor = "#f7f8f9";
             PrimaryButtonColor = "#0061FE";
@@ -163,7 +162,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "header_background_color", n => { HeaderBackgroundColor = n.GetStringValue(); } },
-                { "legal_version", n => { LegalVersion = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions_legal_version>(); } },
+                { "legal_version", n => { LegalVersion = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptionsLegalVersion>(); } },
                 { "link_color", n => { LinkColor = n.GetStringValue(); } },
                 { "page_background_color", n => { PageBackgroundColor = n.GetStringValue(); } },
                 { "primary_button_color", n => { PrimaryButtonColor = n.GetStringValue(); } },
@@ -187,7 +186,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("header_background_color", HeaderBackgroundColor);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions_legal_version>("legal_version", LegalVersion);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptionsLegalVersion>("legal_version", LegalVersion);
             writer.WriteStringValue("link_color", LinkColor);
             writer.WriteStringValue("page_background_color", PageBackgroundColor);
             writer.WriteStringValue("primary_button_color", PrimaryButtonColor);

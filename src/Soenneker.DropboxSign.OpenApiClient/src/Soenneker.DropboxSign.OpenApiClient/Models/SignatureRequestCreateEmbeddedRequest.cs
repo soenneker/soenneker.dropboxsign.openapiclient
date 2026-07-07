@@ -121,10 +121,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer&apos;s information during signing.**NOTE:** Keep your signer&apos;s information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.</summary>
         public bool? PopulateAutoFillFields { get; set; }
@@ -170,6 +170,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public SignatureRequestCreateEmbeddedRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowDecline = false;
+            AllowReassign = false;
+            HideTextTags = false;
+            PopulateAutoFillFields = false;
+            TestMode = false;
+            UseTextTags = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -205,7 +211,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "grouped_signers", n => { GroupedSigners = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestGroupedSigners>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestGroupedSigners.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hide_text_tags", n => { HideTextTags = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "populate_auto_fill_fields", n => { PopulateAutoFillFields = n.GetBoolValue(); } },
                 { "signers", n => { Signers = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_options", n => { SigningOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions.CreateFromDiscriminatorValue); } },
@@ -238,7 +244,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestGroupedSigners>("grouped_signers", GroupedSigners);
             writer.WriteBoolValue("hide_text_tags", HideTextTags);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestCreateEmbeddedRequestMetadataProperty>("metadata", Metadata);
             writer.WriteBoolValue("populate_auto_fill_fields", PopulateAutoFillFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>("signers", Signers);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>("signing_options", SigningOptions);

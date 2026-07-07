@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Unclaimed_draft.Edit_and_resend
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.unclaimed_draft.edit_and_resend.item collection</summary>
         /// <param name="position">The ID of the signature request to edit and resend.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Unclaimed_draft.Edit_and_resend.Item.WithSignature_request_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Unclaimed_draft.Edit_and_resend.Item.WithSignature_request_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Unclaimed_draft.Edit_and_resend.Item.WithSignatureRequestItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Unclaimed_draft.Edit_and_resend.Item.WithSignatureRequestItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("signature_request_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Unclaimed_draft.Edit_and_resend.Item.WithSignature_request_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("signatureRequestId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Unclaimed_draft.Edit_and_resend.Item.WithSignatureRequestItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

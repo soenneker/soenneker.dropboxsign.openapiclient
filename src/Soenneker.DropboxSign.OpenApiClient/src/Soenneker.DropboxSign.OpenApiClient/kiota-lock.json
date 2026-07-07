@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "9AB23DB1BDBBB21EABDA0BA70A70AC69AFB9179FB6DC3ACF77DB5E6E36A8C26AE2D0B959CB85453341B7A12594AA3722495F6FD5645056E2804F4FEFF8483891",
+  "descriptionHash": "25281750526F350FC48DA222EFAE0D0F96DF20C49B042279F9D54AEF09D949E116CCE4B4FE694768DD520F47AF8603124EB3728850F7130D7D1C489E7EA9C7B2",
   "descriptionLocation": "../../../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.31.1",
+  "kiotaVersion": "1.33.0",
   "clientClassName": "DropboxSignOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.DropboxSign.OpenApiClient",
@@ -30,5 +30,6 @@
   ],
   "includePatterns": [],
   "excludePatterns": [],
-  "disabledValidationRules": []
+  "disabledValidationRules": [],
+  "allowedExternalOrigins": []
 }

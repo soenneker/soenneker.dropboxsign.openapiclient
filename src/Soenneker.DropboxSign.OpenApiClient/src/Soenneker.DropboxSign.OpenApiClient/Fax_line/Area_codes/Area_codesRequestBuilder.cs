@@ -102,13 +102,13 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax_line.Area_codes
 #endif
             /// <summary>Filter area codes by country</summary>
             [QueryParameter("country")]
-            public global::Soenneker.DropboxSign.OpenApiClient.Fax_line.Area_codes.GetCountryQueryParameterType? Country { get; set; }
+            public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineAreaCodeGetCountryParameter? Country { get; set; }
             /// <summary>Filter area codes by province</summary>
             [QueryParameter("province")]
-            public global::Soenneker.DropboxSign.OpenApiClient.Fax_line.Area_codes.GetProvinceQueryParameterType? Province { get; set; }
+            public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineAreaCodeGetProvinceParameter? Province { get; set; }
             /// <summary>Filter area codes by state</summary>
             [QueryParameter("state")]
-            public global::Soenneker.DropboxSign.OpenApiClient.Fax_line.Area_codes.GetStateQueryParameterType? State { get; set; }
+            public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineAreaCodeGetStateParameter? State { get; set; }
         }
     }
 }

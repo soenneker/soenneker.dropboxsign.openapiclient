@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Signature_request.Remind
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.signature_request.remind.item collection</summary>
         /// <param name="position">The id of the SignatureRequest to send a reminder for.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Remind.Item.WithSignature_request_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Remind.Item.WithSignature_request_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Remind.Item.WithSignatureRequestItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Remind.Item.WithSignatureRequestItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("signature_request_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Remind.Item.WithSignature_request_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("signatureRequestId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Remind.Item.WithSignatureRequestItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

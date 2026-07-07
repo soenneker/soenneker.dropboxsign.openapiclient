@@ -39,7 +39,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string NewOwnerEmailAddress { get; set; }
 #endif
         /// <summary>A new role member will take in a new Team.**NOTE:** This parameter is used only if `new_team_id` is provided.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequest_new_role? NewRole { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequestNewRole? NewRole { get; set; }
         /// <summary>Id of the new Team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +76,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "email_address", n => { EmailAddress = n.GetStringValue(); } },
                 { "new_owner_email_address", n => { NewOwnerEmailAddress = n.GetStringValue(); } },
-                { "new_role", n => { NewRole = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequest_new_role>(); } },
+                { "new_role", n => { NewRole = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequestNewRole>(); } },
                 { "new_team_id", n => { NewTeamId = n.GetStringValue(); } },
             };
         }
@@ -90,7 +90,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteStringValue("email_address", EmailAddress);
             writer.WriteStringValue("new_owner_email_address", NewOwnerEmailAddress);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequest_new_role>("new_role", NewRole);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequestNewRole>("new_role", NewRole);
             writer.WriteStringValue("new_team_id", NewTeamId);
             writer.WriteAdditionalData(AdditionalData);
         }

@@ -51,10 +51,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Fax Metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponse_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponse_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Fax Original Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -126,7 +126,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "files_url", n => { FilesUrl = n.GetStringValue(); } },
                 { "final_copy_uri", n => { FinalCopyUri = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponse_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponse_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "original_title", n => { OriginalTitle = n.GetStringValue(); } },
                 { "sender", n => { Sender = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
@@ -146,7 +146,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("files_url", FilesUrl);
             writer.WriteStringValue("final_copy_uri", FinalCopyUri);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponse_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty>("metadata", Metadata);
             writer.WriteStringValue("original_title", OriginalTitle);
             writer.WriteStringValue("sender", Sender);
             writer.WriteStringValue("subject", Subject);

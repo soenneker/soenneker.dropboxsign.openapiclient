@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Team.Members
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.team.members.item collection</summary>
         /// <param name="position">The id of the team that a member list is being requested from.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Team.Members.Item.WithTeam_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Team.Members.Item.WithTeam_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Team.Members.Item.WithTeamItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Team.Members.Item.WithTeamItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("team_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Team.Members.Item.WithTeam_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("teamId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Team.Members.Item.WithTeamItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

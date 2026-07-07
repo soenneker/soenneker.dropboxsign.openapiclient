@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax.Files
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.fax.files.item collection</summary>
         /// <param name="position">Fax ID</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Fax.Files.Item.WithFax_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Fax.Files.Item.WithFax_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Fax.Files.Item.WithFaxItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Fax.Files.Item.WithFaxItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("fax_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Fax.Files.Item.WithFax_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("faxId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Fax.Files.Item.WithFaxItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

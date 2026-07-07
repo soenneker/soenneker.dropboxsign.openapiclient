@@ -123,10 +123,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Add Signers to your Signature Request.This endpoint requires either **signers** or **grouped_signers**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -178,6 +178,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public SignatureRequestEditRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowDecline = false;
+            AllowReassign = false;
+            HideTextTags = false;
+            IsEid = false;
+            TestMode = false;
+            UseTextTags = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -214,7 +220,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "hide_text_tags", n => { HideTextTags = n.GetBoolValue(); } },
                 { "is_eid", n => { IsEid = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "signers", n => { Signers = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_options", n => { SigningOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions.CreateFromDiscriminatorValue); } },
                 { "signing_redirect_url", n => { SigningRedirectUrl = n.GetStringValue(); } },
@@ -248,7 +254,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("hide_text_tags", HideTextTags);
             writer.WriteBoolValue("is_eid", IsEid);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>("signers", Signers);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>("signing_options", SigningOptions);
             writer.WriteStringValue("signing_redirect_url", SigningRedirectUrl);

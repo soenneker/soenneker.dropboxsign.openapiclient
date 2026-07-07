@@ -30,7 +30,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string Content { get; set; }
 #endif
         /// <summary>Font family for the field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText_font_family? FontFamily { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextFontFamily? FontFamily { get; set; }
         /// <summary>The initial px font size for the field contents. Can be any integer value between `7` and `49`.**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.</summary>
         public int? FontSize { get; set; }
         /// <summary>Link two or more text fields. Enter data into one linked text field, which automatically fill all other linked text fields.</summary>
@@ -68,12 +68,13 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string ValidationCustomRegexFormatLabel { get; set; }
 #endif
         /// <summary>Each text field may contain a `validation_type` parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.**NOTE:** When using `custom_regex` you are required to pass a second parameter `validation_custom_regex` and you can optionally provide `validation_custom_regex_format_label` for the error message the user will see in case of an invalid value.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText_validation_type? ValidationType { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType? ValidationType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText"/> and sets the default values.
         /// </summary>
         public SubFormFieldsPerDocumentText() : base()
         {
+            FontSize = 12;
             Type = "text";
         }
         /// <summary>
@@ -96,14 +97,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             {
                 { "auto_fill_type", n => { AutoFillType = n.GetStringValue(); } },
                 { "content", n => { Content = n.GetStringValue(); } },
-                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText_font_family>(); } },
+                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextFontFamily>(); } },
                 { "font_size", n => { FontSize = n.GetIntValue(); } },
                 { "link_id", n => { LinkId = n.GetStringValue(); } },
                 { "masked", n => { Masked = n.GetBoolValue(); } },
                 { "placeholder", n => { Placeholder = n.GetStringValue(); } },
                 { "validation_custom_regex", n => { ValidationCustomRegex = n.GetStringValue(); } },
                 { "validation_custom_regex_format_label", n => { ValidationCustomRegexFormatLabel = n.GetStringValue(); } },
-                { "validation_type", n => { ValidationType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText_validation_type>(); } },
+                { "validation_type", n => { ValidationType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType>(); } },
             };
         }
         /// <summary>
@@ -116,14 +117,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             base.Serialize(writer);
             writer.WriteStringValue("auto_fill_type", AutoFillType);
             writer.WriteStringValue("content", Content);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText_font_family>("font_family", FontFamily);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextFontFamily>("font_family", FontFamily);
             writer.WriteIntValue("font_size", FontSize);
             writer.WriteStringValue("link_id", LinkId);
             writer.WriteBoolValue("masked", Masked);
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteStringValue("validation_custom_regex", ValidationCustomRegex);
             writer.WriteStringValue("validation_custom_regex_format_label", ValidationCustomRegexFormatLabel);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText_validation_type>("validation_type", ValidationType);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType>("validation_type", ValidationType);
         }
     }
 }

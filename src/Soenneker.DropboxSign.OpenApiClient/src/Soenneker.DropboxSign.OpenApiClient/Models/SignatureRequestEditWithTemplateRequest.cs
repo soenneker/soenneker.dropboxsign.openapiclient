@@ -19,10 +19,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Add CC email recipients. Required when a CC role exists for the Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC>? Ccs { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>? Ccs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC> Ccs { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc> Ccs { get; set; }
 #endif
         /// <summary>Client id of the app to associate with the signature request. Used to apply the branding and callback url defined for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -69,10 +69,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Add Signers to your Templated-based Signature Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -130,6 +130,9 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public SignatureRequestEditWithTemplateRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowDecline = false;
+            IsEid = false;
+            TestMode = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -150,14 +153,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "allow_decline", n => { AllowDecline = n.GetBoolValue(); } },
-                { "ccs", n => { Ccs = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ccs", n => { Ccs = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "file_urls", n => { FileUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "files", n => { Files = n.GetCollectionOfPrimitiveValues<byte[]>()?.AsList(); } },
                 { "is_eid", n => { IsEid = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "signers", n => { Signers = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_options", n => { SigningOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions.CreateFromDiscriminatorValue); } },
                 { "signing_redirect_url", n => { SigningRedirectUrl = n.GetStringValue(); } },
@@ -175,14 +178,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allow_decline", AllowDecline);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC>("ccs", Ccs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>("ccs", Ccs);
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>("custom_fields", CustomFields);
             writer.WriteCollectionOfPrimitiveValues<byte[]>("files", Files);
             writer.WriteCollectionOfPrimitiveValues<string>("file_urls", FileUrls);
             writer.WriteBoolValue("is_eid", IsEid);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>("signers", Signers);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>("signing_options", SigningOptions);
             writer.WriteStringValue("signing_redirect_url", SigningRedirectUrl);

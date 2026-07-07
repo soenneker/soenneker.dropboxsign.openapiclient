@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Signature_request.Edit_embedded_wi
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.signature_request.edit_embedded_with_template.item collection</summary>
         /// <param name="position">The id of the SignatureRequest to edit.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Edit_embedded_with_template.Item.WithSignature_request_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Edit_embedded_with_template.Item.WithSignature_request_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Edit_embedded_with_template.Item.WithSignatureRequestItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Edit_embedded_with_template.Item.WithSignatureRequestItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("signature_request_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Edit_embedded_with_template.Item.WithSignature_request_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("signatureRequestId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Signature_request.Edit_embedded_with_template.Item.WithSignatureRequestItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

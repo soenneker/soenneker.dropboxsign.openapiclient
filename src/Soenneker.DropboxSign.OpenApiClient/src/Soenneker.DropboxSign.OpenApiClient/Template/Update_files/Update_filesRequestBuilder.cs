@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Template.Update_files
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.template.update_files.item collection</summary>
         /// <param name="position">The ID of the template whose files to update.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Template.Update_files.Item.WithTemplate_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Template.Update_files.Item.WithTemplate_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Template.Update_files.Item.WithTemplateItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Template.Update_files.Item.WithTemplateItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("template_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Template.Update_files.Item.WithTemplate_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("templateId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Template.Update_files.Item.WithTemplateItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

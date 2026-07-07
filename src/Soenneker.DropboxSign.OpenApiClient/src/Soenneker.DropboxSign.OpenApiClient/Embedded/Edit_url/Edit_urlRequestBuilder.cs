@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.embedded.edit_url.item collection</summary>
         /// <param name="position">The id of the template to edit.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url.Item.WithTemplate_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url.Item.WithTemplate_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url.Item.WithTemplateItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url.Item.WithTemplateItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("template_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url.Item.WithTemplate_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("templateId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url.Item.WithTemplateItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

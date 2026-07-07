@@ -23,10 +23,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Add CC email recipients. Required when a CC role exists for the Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC>? Ccs { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>? Ccs { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC> Ccs { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc> Ccs { get; set; }
 #endif
         /// <summary>Client id of the app used to create the draft. Used to apply the branding and callback url defined for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -95,10 +95,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer&apos;s information during signing.**NOTE:** Keep your signer&apos;s information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.</summary>
         public bool? PopulateAutoFillFields { get; set; }
@@ -182,6 +182,19 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public UnclaimedDraftCreateEmbeddedWithTemplateRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowCcs = false;
+            AllowDecline = false;
+            AllowReassign = false;
+            ForceSignerRoles = false;
+            ForceSubjectMessage = false;
+            HoldRequest = false;
+            IsForEmbeddedSigning = false;
+            PopulateAutoFillFields = false;
+            PreviewOnly = false;
+            ShowPreview = false;
+            ShowProgressStepper = true;
+            SkipMeNow = false;
+            TestMode = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -204,7 +217,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "allow_ccs", n => { AllowCcs = n.GetBoolValue(); } },
                 { "allow_decline", n => { AllowDecline = n.GetBoolValue(); } },
                 { "allow_reassign", n => { AllowReassign = n.GetBoolValue(); } },
-                { "ccs", n => { Ccs = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ccs", n => { Ccs = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "editor_options", n => { EditorOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions.CreateFromDiscriminatorValue); } },
@@ -216,7 +229,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "hold_request", n => { HoldRequest = n.GetBoolValue(); } },
                 { "is_for_embedded_signing", n => { IsForEmbeddedSigning = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "populate_auto_fill_fields", n => { PopulateAutoFillFields = n.GetBoolValue(); } },
                 { "preview_only", n => { PreviewOnly = n.GetBoolValue(); } },
                 { "requester_email_address", n => { RequesterEmailAddress = n.GetStringValue(); } },
@@ -243,7 +256,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("allow_ccs", AllowCcs);
             writer.WriteBoolValue("allow_decline", AllowDecline);
             writer.WriteBoolValue("allow_reassign", AllowReassign);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCC>("ccs", Ccs);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>("ccs", Ccs);
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>("custom_fields", CustomFields);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions>("editor_options", EditorOptions);
@@ -255,7 +268,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("hold_request", HoldRequest);
             writer.WriteBoolValue("is_for_embedded_signing", IsForEmbeddedSigning);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataProperty>("metadata", Metadata);
             writer.WriteBoolValue("populate_auto_fill_fields", PopulateAutoFillFields);
             writer.WriteBoolValue("preview_only", PreviewOnly);
             writer.WriteStringValue("requester_email_address", RequesterEmailAddress);

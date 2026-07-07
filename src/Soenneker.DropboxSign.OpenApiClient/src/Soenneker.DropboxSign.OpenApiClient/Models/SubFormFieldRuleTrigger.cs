@@ -23,7 +23,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>&quot;Different field types allow different `operator` values:- Field type of **text**:  - **is**: exact match  - **not**: not exact match  - **match**: regular expression, without /. Example:    - OK `[a-zA-Z0-9]`    - Not OK `/[a-zA-Z0-9]/`- Field type of **dropdown**:  - **is**: exact match, single value  - **not**: not exact match, single value  - **any**: exact match, array of values.  - **none**: not exact match, array of values.- Field type of **checkbox**:  - **is**: exact match, single value  - **not**: not exact match, single value- Field type of **radio**:  - **is**: exact match, single value  - **not**: not exact match, single value&quot;</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger_operator? Operator { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTriggerOperator? Operator { get; set; }
         /// <summary>&quot;**value** or **values** is required, but not both.The value to match against **operator**.- When **operator** is one of the following, **value** must be `String`:  - `is`  - `not`  - `match`Otherwise,- **checkbox**: When **type** of trigger is **checkbox**, **value** must be `0` or `1`- **radio**: When **type** of trigger is **radio**, **value** must be `1`&quot;</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -66,7 +66,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger_operator>(); } },
+                { "operator", n => { Operator = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTriggerOperator>(); } },
                 { "value", n => { Value = n.GetStringValue(); } },
                 { "values", n => { Values = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -79,7 +79,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger_operator>("operator", Operator);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTriggerOperator>("operator", Operator);
             writer.WriteStringValue("value", Value);
             writer.WriteCollectionOfPrimitiveValues<string>("values", Values);
             writer.WriteAdditionalData(AdditionalData);

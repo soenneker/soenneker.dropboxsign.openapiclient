@@ -23,7 +23,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string Name { get; set; }
 #endif
         /// <summary>The type of merge field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField_type? Type { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeFieldType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField"/> and sets the default values.
         /// </summary>
@@ -50,7 +50,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeFieldType>(); } },
             };
         }
         /// <summary>
@@ -61,7 +61,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeFieldType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

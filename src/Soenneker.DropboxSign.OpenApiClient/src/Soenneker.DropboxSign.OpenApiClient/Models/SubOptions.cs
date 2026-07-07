@@ -23,6 +23,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public SubOptions()
         {
             AdditionalData = new Dictionary<string, object>();
+            CanInsertEverywhere = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

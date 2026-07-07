@@ -36,10 +36,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>An array of the designated CC roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCCRole>? CcRoles { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole>? CcRoles { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCCRole> CcRoles { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole> CcRoles { get; set; }
 #endif
         /// <summary>Deprecated. Use `custom_fields` inside the [documents](https://developers.hellosign.com/api/reference/operation/templateGet/#!c=200&amp;path=template/documents&amp;t=response) array instead.</summary>
         [Obsolete("")]
@@ -75,10 +75,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The metadata attached to the template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Deprecated. Use `form_fields` inside the [documents](https://developers.hellosign.com/api/reference/operation/templateGet/#!c=200&amp;path=template/documents&amp;t=response) array instead.</summary>
         [Obsolete("")]
@@ -143,14 +143,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "accounts", n => { Accounts = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "can_edit", n => { CanEdit = n.GetBoolValue(); } },
-                { "cc_roles", n => { CcRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCCRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCCRole.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "cc_roles", n => { CcRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "documents", n => { Documents = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "is_creator", n => { IsCreator = n.GetBoolValue(); } },
                 { "is_embedded", n => { IsEmbedded = n.GetBoolValue(); } },
                 { "is_locked", n => { IsLocked = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "named_form_fields", n => { NamedFormFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signer_roles", n => { SignerRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "template_id", n => { TemplateId = n.GetStringValue(); } },
@@ -168,14 +168,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount>("accounts", Accounts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment>("attachments", Attachments);
             writer.WriteBoolValue("can_edit", CanEdit);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCCRole>("cc_roles", CcRoles);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole>("cc_roles", CcRoles);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>("custom_fields", CustomFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument>("documents", Documents);
             writer.WriteBoolValue("is_creator", IsCreator);
             writer.WriteBoolValue("is_embedded", IsEmbedded);
             writer.WriteBoolValue("is_locked", IsLocked);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty>("metadata", Metadata);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>("named_form_fields", NamedFormFields);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole>("signer_roles", SignerRoles);
             writer.WriteStringValue("template_id", TemplateId);

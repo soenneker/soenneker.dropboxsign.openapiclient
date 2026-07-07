@@ -17,14 +17,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Embedded.Sign_url
     {
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.embedded.sign_url.item collection</summary>
         /// <param name="position">The id of the signature to get a signature url for.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Embedded.Sign_url.Item.WithSignature_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Embedded.Sign_url.Item.WithSignature_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Embedded.Sign_url.Item.WithSignatureItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Embedded.Sign_url.Item.WithSignatureItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("signature_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Embedded.Sign_url.Item.WithSignature_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("signatureId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Embedded.Sign_url.Item.WithSignatureItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

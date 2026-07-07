@@ -33,7 +33,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string City { get; set; }
 #endif
         /// <summary>Country of the area code</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineCreateRequest_country? Country { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineCreateRequestCountry? Country { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineCreateRequest"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "account_id", n => { AccountId = n.GetStringValue(); } },
                 { "area_code", n => { AreaCode = n.GetIntValue(); } },
                 { "city", n => { City = n.GetStringValue(); } },
-                { "country", n => { Country = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineCreateRequest_country>(); } },
+                { "country", n => { Country = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineCreateRequestCountry>(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("account_id", AccountId);
             writer.WriteIntValue("area_code", AreaCode);
             writer.WriteStringValue("city", City);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineCreateRequest_country>("country", Country);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineCreateRequestCountry>("country", Country);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

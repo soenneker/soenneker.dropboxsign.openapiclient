@@ -22,7 +22,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string Content { get; set; }
 #endif
         /// <summary>Font family for the field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDropdown_font_family? FontFamily { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDropdownFontFamily? FontFamily { get; set; }
         /// <summary>The initial px font size for the field contents. Can be any integer value between `7` and `49`.**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.</summary>
         public int? FontSize { get; set; }
         /// <summary>Array of string values representing dropdown values.</summary>
@@ -38,6 +38,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// </summary>
         public SubFormFieldsPerDocumentDropdown() : base()
         {
+            FontSize = 12;
             Type = "dropdown";
         }
         /// <summary>
@@ -59,7 +60,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
                 { "content", n => { Content = n.GetStringValue(); } },
-                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDropdown_font_family>(); } },
+                { "font_family", n => { FontFamily = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDropdownFontFamily>(); } },
                 { "font_size", n => { FontSize = n.GetIntValue(); } },
                 { "options", n => { Options = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -73,7 +74,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteStringValue("content", Content);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDropdown_font_family>("font_family", FontFamily);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDropdownFontFamily>("font_family", FontFamily);
             writer.WriteIntValue("font_size", FontSize);
             writer.WriteCollectionOfPrimitiveValues<string>("options", Options);
         }

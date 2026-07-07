@@ -23,7 +23,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string ErrorMsg { get; set; }
 #endif
-        /// <summary>Name of the error.</summary>
+        /// <summary>Name of the error. See the `x-error-codes` catalog in openapi file for a complete list of possible error codes with detailed information including HTTP status codes, causes, remediation steps, and retry guidance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ErrorName { get; set; }

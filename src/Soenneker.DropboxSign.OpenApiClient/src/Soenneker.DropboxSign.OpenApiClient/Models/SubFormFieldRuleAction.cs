@@ -33,7 +33,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>`true` to hide the target field when rule is satisfied, otherwise `false`.</summary>
         public bool? Hidden { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction_type? Type { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleActionType? Type { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction"/> and sets the default values.
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "field_id", n => { FieldId = n.GetStringValue(); } },
                 { "group_id", n => { GroupId = n.GetStringValue(); } },
                 { "hidden", n => { Hidden = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleActionType>(); } },
             };
         }
         /// <summary>
@@ -75,7 +75,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("field_id", FieldId);
             writer.WriteStringValue("group_id", GroupId);
             writer.WriteBoolValue("hidden", Hidden);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleActionType>("type", Type);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

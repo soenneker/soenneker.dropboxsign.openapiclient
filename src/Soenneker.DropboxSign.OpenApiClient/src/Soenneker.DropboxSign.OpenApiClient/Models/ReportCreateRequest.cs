@@ -25,10 +25,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The type(s) of the report you are requesting. Allowed values are `user_activity` and `document_status`. User activity reports contain list of all users and their activity during the specified date range. Document status report contain a list of signature requests created in the specified time range (and their status).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequest_report_type?>? ReportType { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequestReportTypeItem?>? ReportType { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequest_report_type?> ReportType { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequestReportTypeItem?> ReportType { get; set; }
 #endif
         /// <summary>The (inclusive) start date for the report data in `MM/DD/YYYY` format.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -64,7 +64,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "end_date", n => { EndDate = n.GetStringValue(); } },
-                { "report_type", n => { ReportType = n.GetCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequest_report_type>()?.AsList(); } },
+                { "report_type", n => { ReportType = n.GetCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequestReportTypeItem>()?.AsList(); } },
                 { "start_date", n => { StartDate = n.GetStringValue(); } },
             };
         }
@@ -76,7 +76,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("end_date", EndDate);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequest_report_type>("report_type", ReportType);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.ReportCreateRequestReportTypeItem>("report_type", ReportType);
             writer.WriteStringValue("start_date", StartDate);
             writer.WriteAdditionalData(AdditionalData);
         }

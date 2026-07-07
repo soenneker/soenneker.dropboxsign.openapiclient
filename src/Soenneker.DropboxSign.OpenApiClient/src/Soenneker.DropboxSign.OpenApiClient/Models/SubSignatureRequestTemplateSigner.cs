@@ -55,7 +55,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string SmsPhoneNumber { get; set; }
 #endif
         /// <summary>Specifies the feature used with the `sms_phone_number`. Default `authentication`.If `authentication`, signer is sent a verification code via SMS that is required to access the document.If `delivery`, a link to complete the signature request is delivered via SMS (_and_ email).</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner_sms_phone_number_type? SmsPhoneNumberType { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSignerSmsPhoneNumberType? SmsPhoneNumberType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner"/> and sets the default values.
         /// </summary>
@@ -86,7 +86,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "pin", n => { Pin = n.GetStringValue(); } },
                 { "role", n => { Role = n.GetStringValue(); } },
                 { "sms_phone_number", n => { SmsPhoneNumber = n.GetStringValue(); } },
-                { "sms_phone_number_type", n => { SmsPhoneNumberType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner_sms_phone_number_type>(); } },
+                { "sms_phone_number_type", n => { SmsPhoneNumberType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSignerSmsPhoneNumberType>(); } },
             };
         }
         /// <summary>
@@ -101,7 +101,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("pin", Pin);
             writer.WriteStringValue("role", Role);
             writer.WriteStringValue("sms_phone_number", SmsPhoneNumber);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner_sms_phone_number_type>("sms_phone_number_type", SmsPhoneNumberType);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSignerSmsPhoneNumberType>("sms_phone_number_type", SmsPhoneNumberType);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

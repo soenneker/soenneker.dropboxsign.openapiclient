@@ -58,6 +58,13 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public EmbeddedEditUrlRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowEditCcs = false;
+            ForceSignerRoles = false;
+            ForceSubjectMessage = false;
+            PreviewOnly = false;
+            ShowPreview = false;
+            ShowProgressStepper = true;
+            TestMode = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

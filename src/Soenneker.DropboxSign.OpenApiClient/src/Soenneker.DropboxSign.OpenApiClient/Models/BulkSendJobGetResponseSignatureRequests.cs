@@ -91,10 +91,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The metadata attached to the signature request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequests_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequestsMetadata? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequests_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequestsMetadata Metadata { get; set; }
 #endif
         /// <summary>Default Label for account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -184,6 +184,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public BulkSendJobGetResponseSignatureRequests()
         {
             AdditionalData = new Dictionary<string, object>();
+            TestMode = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -216,7 +217,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "is_complete", n => { IsComplete = n.GetBoolValue(); } },
                 { "is_declined", n => { IsDeclined = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequests_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequests_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequestsMetadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequestsMetadata.CreateFromDiscriminatorValue); } },
                 { "original_title", n => { OriginalTitle = n.GetStringValue(); } },
                 { "requester_email_address", n => { RequesterEmailAddress = n.GetStringValue(); } },
                 { "response_data", n => { ResponseData = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseDataBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseDataBase.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -250,7 +251,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("is_complete", IsComplete);
             writer.WriteBoolValue("is_declined", IsDeclined);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequests_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequestsMetadata>("metadata", Metadata);
             writer.WriteStringValue("original_title", OriginalTitle);
             writer.WriteStringValue("requester_email_address", RequesterEmailAddress);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseDataBase>("response_data", ResponseData);

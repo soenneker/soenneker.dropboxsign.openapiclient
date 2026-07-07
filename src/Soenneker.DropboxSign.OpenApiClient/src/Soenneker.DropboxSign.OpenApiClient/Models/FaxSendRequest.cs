@@ -86,6 +86,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public FaxSendRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            TestMode = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value

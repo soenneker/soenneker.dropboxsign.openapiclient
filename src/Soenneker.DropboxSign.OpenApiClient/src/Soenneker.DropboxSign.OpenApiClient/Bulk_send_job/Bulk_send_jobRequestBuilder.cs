@@ -23,14 +23,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Bulk_send_job
         }
         /// <summary>Gets an item from the Soenneker.DropboxSign.OpenApiClient.bulk_send_job.item collection</summary>
         /// <param name="position">The id of the BulkSendJob to retrieve.</param>
-        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Item.WithBulk_send_job_ItemRequestBuilder"/></returns>
-        public global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Item.WithBulk_send_job_ItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Item.WithBulkSendJobItemRequestBuilder"/></returns>
+        public global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Item.WithBulkSendJobItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("bulk_send_job_id", position);
-                return new global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Item.WithBulk_send_job_ItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("bulkSendJobId", position);
+                return new global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Item.WithBulkSendJobItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

@@ -131,10 +131,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer&apos;s information during signing.**NOTE:** Keep your signer&apos;s information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.</summary>
         public bool? PopulateAutoFillFields { get; set; }
@@ -195,7 +195,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Whether this is a test, the signature request created from this draft will not be legally binding if set to `true`. Defaults to `false`.</summary>
         public bool? TestMode { get; set; }
         /// <summary>The type of the draft. By default this is `request_signature`, but you can set it to `send_document` if you want to self sign a document and download it.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_type? Type { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestType? Type { get; set; }
         /// <summary>Set `use_text_tags` to `true` to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or `false`). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`). Currently we only support use of either `use_text_tags` or `use_preexisting_fields` parameter, not both.</summary>
         public bool? UsePreexistingFields { get; set; }
         /// <summary>Set `use_text_tags` to `true` to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or `false`). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`). Currently we only support use of either `use_text_tags` or `use_preexisting_fields` parameter, not both.</summary>
@@ -206,6 +206,20 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public UnclaimedDraftCreateEmbeddedRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowCcs = true;
+            AllowDecline = false;
+            AllowReassign = false;
+            ForceSignerPage = false;
+            ForceSubjectMessage = false;
+            HideTextTags = false;
+            HoldRequest = false;
+            IsForEmbeddedSigning = false;
+            PopulateAutoFillFields = false;
+            ShowProgressStepper = true;
+            SkipMeNow = false;
+            TestMode = false;
+            UsePreexistingFields = false;
+            UseTextTags = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -246,7 +260,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "hold_request", n => { HoldRequest = n.GetBoolValue(); } },
                 { "is_for_embedded_signing", n => { IsForEmbeddedSigning = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "populate_auto_fill_fields", n => { PopulateAutoFillFields = n.GetBoolValue(); } },
                 { "requester_email_address", n => { RequesterEmailAddress = n.GetStringValue(); } },
                 { "requesting_redirect_url", n => { RequestingRedirectUrl = n.GetStringValue(); } },
@@ -258,7 +272,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "skip_me_now", n => { SkipMeNow = n.GetBoolValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "test_mode", n => { TestMode = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestType>(); } },
                 { "use_preexisting_fields", n => { UsePreexistingFields = n.GetBoolValue(); } },
                 { "use_text_tags", n => { UseTextTags = n.GetBoolValue(); } },
             };
@@ -291,7 +305,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("hold_request", HoldRequest);
             writer.WriteBoolValue("is_for_embedded_signing", IsForEmbeddedSigning);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty>("metadata", Metadata);
             writer.WriteBoolValue("populate_auto_fill_fields", PopulateAutoFillFields);
             writer.WriteStringValue("requester_email_address", RequesterEmailAddress);
             writer.WriteStringValue("requesting_redirect_url", RequestingRedirectUrl);
@@ -303,7 +317,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("skip_me_now", SkipMeNow);
             writer.WriteStringValue("subject", Subject);
             writer.WriteBoolValue("test_mode", TestMode);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestType>("type", Type);
             writer.WriteBoolValue("use_preexisting_fields", UsePreexistingFields);
             writer.WriteBoolValue("use_text_tags", UseTextTags);
             writer.WriteAdditionalData(AdditionalData);

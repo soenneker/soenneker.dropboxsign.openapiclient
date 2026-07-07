@@ -121,10 +121,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>&quot;This allows the requester to enable the editor/preview experience.- `show_preview=true`: Allows requesters to enable the editor/preview experience.- `show_preview=false`: Allows requesters to disable the editor/preview experience.&quot;</summary>
         public bool? ShowPreview { get; set; }
@@ -166,6 +166,15 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public TemplateCreateEmbeddedDraftRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowCcs = true;
+            AllowReassign = false;
+            ForceSignerRoles = false;
+            ForceSubjectMessage = false;
+            ShowPreview = false;
+            ShowProgressStepper = true;
+            SkipMeNow = false;
+            TestMode = false;
+            UsePreexistingFields = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -201,7 +210,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "form_fields_per_document", n => { FormFieldsPerDocument = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "merge_fields", n => { MergeFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "show_preview", n => { ShowPreview = n.GetBoolValue(); } },
                 { "show_progress_stepper", n => { ShowProgressStepper = n.GetBoolValue(); } },
                 { "signer_roles", n => { SignerRoles = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole.CreateFromDiscriminatorValue)?.AsList(); } },
@@ -235,7 +244,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>("form_fields_per_document", FormFieldsPerDocument);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>("merge_fields", MergeFields);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty>("metadata", Metadata);
             writer.WriteBoolValue("show_preview", ShowPreview);
             writer.WriteBoolValue("show_progress_stepper", ShowProgressStepper);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubTemplateRole>("signer_roles", SignerRoles);

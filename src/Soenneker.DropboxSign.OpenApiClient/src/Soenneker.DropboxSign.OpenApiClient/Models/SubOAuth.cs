@@ -26,10 +26,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>A list of [OAuth scopes](/api/reference/tag/OAuth) to be granted to the app. (Required if `oauth[callback_url]` is provided).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth_scopes?>? Scopes { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuthScopesItem?>? Scopes { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth_scopes?> Scopes { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuthScopesItem?> Scopes { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth"/> and sets the default values.
@@ -57,7 +57,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "callback_url", n => { CallbackUrl = n.GetStringValue(); } },
-                { "scopes", n => { Scopes = n.GetCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth_scopes>()?.AsList(); } },
+                { "scopes", n => { Scopes = n.GetCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuthScopesItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -68,7 +68,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("callback_url", CallbackUrl);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth_scopes>("scopes", Scopes);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuthScopesItem>("scopes", Scopes);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -58,7 +58,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string ValidationCustomRegexFormatLabel { get; set; }
 #endif
         /// <summary>Each text field may contain a `validation_type` parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldText_validation_type? ValidationType { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldTextValidationType? ValidationType { get; set; }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldText"/> and sets the default values.
         /// </summary>
@@ -91,7 +91,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "originalFontSize", n => { OriginalFontSize = n.GetIntValue(); } },
                 { "validation_custom_regex", n => { ValidationCustomRegex = n.GetStringValue(); } },
                 { "validation_custom_regex_format_label", n => { ValidationCustomRegexFormatLabel = n.GetStringValue(); } },
-                { "validation_type", n => { ValidationType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldText_validation_type>(); } },
+                { "validation_type", n => { ValidationType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldTextValidationType>(); } },
             };
         }
         /// <summary>
@@ -109,7 +109,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteIntValue("originalFontSize", OriginalFontSize);
             writer.WriteStringValue("validation_custom_regex", ValidationCustomRegex);
             writer.WriteStringValue("validation_custom_regex_format_label", ValidationCustomRegexFormatLabel);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldText_validation_type>("validation_type", ValidationType);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldTextValidationType>("validation_type", ValidationType);
         }
     }
 }

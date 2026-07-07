@@ -111,10 +111,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty? Metadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty Metadata { get; set; }
 #endif
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
         public bool? ShowProgressStepper { get; set; }
@@ -153,7 +153,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Whether this is a test, the signature request created from this draft will not be legally binding if set to `true`. Defaults to `false`.</summary>
         public bool? TestMode { get; set; }
         /// <summary>The type of unclaimed draft to create. Use `send_document` to create a claimable file, and `request_signature` for a claimable signature request. If the type is `request_signature` then signers name and email_address are not optional.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_type? Type { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestType? Type { get; set; }
         /// <summary>Set `use_text_tags` to `true` to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or `false`). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`). Currently we only support use of either `use_text_tags` or `use_preexisting_fields` parameter, not both.</summary>
         public bool? UsePreexistingFields { get; set; }
         /// <summary>Set `use_text_tags` to `true` to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or `false`). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`). Currently we only support use of either `use_text_tags` or `use_preexisting_fields` parameter, not both.</summary>
@@ -164,6 +164,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public UnclaimedDraftCreateRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            AllowDecline = false;
+            HideTextTags = false;
+            ShowProgressStepper = true;
+            TestMode = false;
+            UsePreexistingFields = false;
+            UseTextTags = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -197,14 +203,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "form_fields_per_document", n => { FormFieldsPerDocument = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hide_text_tags", n => { HideTextTags = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata.CreateFromDiscriminatorValue); } },
+                { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "show_progress_stepper", n => { ShowProgressStepper = n.GetBoolValue(); } },
                 { "signers", n => { Signers = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "signing_options", n => { SigningOptions = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions.CreateFromDiscriminatorValue); } },
                 { "signing_redirect_url", n => { SigningRedirectUrl = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
                 { "test_mode", n => { TestMode = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_type>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestType>(); } },
                 { "use_preexisting_fields", n => { UsePreexistingFields = n.GetBoolValue(); } },
                 { "use_text_tags", n => { UseTextTags = n.GetBoolValue(); } },
             };
@@ -230,14 +236,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>("form_fields_per_document", FormFieldsPerDocument);
             writer.WriteBoolValue("hide_text_tags", HideTextTags);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_metadata>("metadata", Metadata);
+            writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty>("metadata", Metadata);
             writer.WriteBoolValue("show_progress_stepper", ShowProgressStepper);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner>("signers", Signers);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions>("signing_options", SigningOptions);
             writer.WriteStringValue("signing_redirect_url", SigningRedirectUrl);
             writer.WriteStringValue("subject", Subject);
             writer.WriteBoolValue("test_mode", TestMode);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequest_type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestType>("type", Type);
             writer.WriteBoolValue("use_preexisting_fields", UsePreexistingFields);
             writer.WriteBoolValue("use_text_tags", UseTextTags);
             writer.WriteAdditionalData(AdditionalData);
