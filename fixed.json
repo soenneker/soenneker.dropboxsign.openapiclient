@@ -1310,7 +1310,7 @@
             "content": {
               "application/pdf": {
                 "schema": {
-                  "$ref": "#/components/schemas/FaxFiles200ResponseResponsePdf"
+                  "$ref": "#/components/schemas/FaxFiles200PdfResponseSchema"
                 }
               }
             }
@@ -3224,12 +3224,12 @@
             "content": {
               "application/pdf": {
                 "schema": {
-                  "$ref": "#/components/schemas/SignatureRequestFiles200ResponseResponsePdf"
+                  "$ref": "#/components/schemas/SignatureRequestFiles200PdfResponseSchema"
                 }
               },
               "application/zip": {
                 "schema": {
-                  "$ref": "#/components/schemas/SignatureRequestFiles200ResponseResponseZip2"
+                  "$ref": "#/components/schemas/SignatureRequestFiles200ZipResponseSchema"
                 }
               }
             }
@@ -5432,12 +5432,12 @@
             "content": {
               "application/pdf": {
                 "schema": {
-                  "$ref": "#/components/schemas/TemplateFiles200ResponseResponsePdf"
+                  "$ref": "#/components/schemas/TemplateFiles200PdfResponseSchema"
                 }
               },
               "application/zip": {
                 "schema": {
-                  "$ref": "#/components/schemas/TemplateFiles200ResponseResponseZip2"
+                  "$ref": "#/components/schemas/TemplateFiles200ZipResponseSchema"
                 }
               }
             }
@@ -14465,23 +14465,23 @@
         },
         "description": "The metadata attached to the signature request."
       },
-      "FaxFiles200Response": {
+      "FaxFiles200PdfResponse": {
         "type": "string",
         "format": "binary"
       },
-      "SignatureRequestFiles200Response": {
+      "SignatureRequestFiles200PdfResponse": {
         "type": "string",
         "format": "binary"
       },
-      "SignatureRequestFiles200ResponseResponseZip": {
+      "SignatureRequestFiles200ZipResponse": {
         "type": "string",
         "format": "binary"
       },
-      "TemplateFiles200Response": {
+      "TemplateFiles200PdfResponse": {
         "type": "string",
         "format": "binary"
       },
-      "TemplateFiles200ResponseResponseZip": {
+      "TemplateFiles200ZipResponse": {
         "type": "string",
         "format": "binary"
       },
@@ -14489,23 +14489,23 @@
         "type": "object",
         "description": "Placeholder schema for path example refs"
       },
-      "FaxFiles200ResponseResponsePdf": {
+      "FaxFiles200PdfResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "SignatureRequestFiles200ResponseResponsePdf": {
+      "SignatureRequestFiles200PdfResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "SignatureRequestFiles200ResponseResponseZip2": {
+      "SignatureRequestFiles200ZipResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "TemplateFiles200ResponseResponsePdf": {
+      "TemplateFiles200PdfResponseSchema": {
         "type": "string",
         "format": "binary"
       },
-      "TemplateFiles200ResponseResponseZip2": {
+      "TemplateFiles200ZipResponseSchema": {
         "type": "string",
         "format": "binary"
       },
