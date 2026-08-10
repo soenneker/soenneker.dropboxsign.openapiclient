@@ -118,6 +118,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public bool? HideTextTags { get; set; }
         /// <summary>The request from this draft will not automatically send to signers post-claim if set to `true`. Requester must [release](/api/reference/operation/signatureRequestReleaseHold/) the request from hold when ready to send. Defaults to `false`.</summary>
         public bool? HoldRequest { get; set; }
+        /// <summary>Sent with a value of `true` to ignore the validation errors from text tags extraction. Defaults to `false`.</summary>
+        public bool? IgnoreTextTagsExtractionErrors { get; set; }
         /// <summary>The request created from this draft will also be signable in embedded mode if set to `true`. Defaults to `false`.</summary>
         public bool? IsForEmbeddedSigning { get; set; }
         /// <summary>The custom message in the email that will be sent to the signers.</summary>
@@ -213,6 +215,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             ForceSubjectMessage = false;
             HideTextTags = false;
             HoldRequest = false;
+            IgnoreTextTagsExtractionErrors = false;
             IsForEmbeddedSigning = false;
             PopulateAutoFillFields = false;
             ShowProgressStepper = true;
@@ -258,6 +261,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "form_fields_per_document", n => { FormFieldsPerDocument = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hide_text_tags", n => { HideTextTags = n.GetBoolValue(); } },
                 { "hold_request", n => { HoldRequest = n.GetBoolValue(); } },
+                { "ignore_text_tags_extraction_errors", n => { IgnoreTextTagsExtractionErrors = n.GetBoolValue(); } },
                 { "is_for_embedded_signing", n => { IsForEmbeddedSigning = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -303,6 +307,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>("form_fields_per_document", FormFieldsPerDocument);
             writer.WriteBoolValue("hide_text_tags", HideTextTags);
             writer.WriteBoolValue("hold_request", HoldRequest);
+            writer.WriteBoolValue("ignore_text_tags_extraction_errors", IgnoreTextTagsExtractionErrors);
             writer.WriteBoolValue("is_for_embedded_signing", IsForEmbeddedSigning);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty>("metadata", Metadata);

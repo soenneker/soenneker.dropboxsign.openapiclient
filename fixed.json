@@ -7534,6 +7534,11 @@
             "description": "Send with a value of \u0060true\u0060 if you wish to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document. Defaults to disabled, or \u0060false\u0060.",
             "default": false
           },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
+            "default": false
+          },
           "populate_auto_fill_fields": {
             "type": "boolean",
             "description": "Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer\u0027s information during signing.\n\n**NOTE:** Keep your signer\u0027s information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.",
@@ -7776,6 +7781,11 @@
             "description": "Send with a value of \u0060true\u0060 if you wish to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document. Defaults to disabled, or \u0060false\u0060.",
             "default": false
           },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
+            "default": false
+          },
           "expires_at": {
             "type": "integer",
             "description": "When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.",
@@ -7912,6 +7922,11 @@
           "use_text_tags": {
             "type": "boolean",
             "description": "Send with a value of \u0060true\u0060 if you wish to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document. Defaults to disabled, or \u0060false\u0060.",
+            "default": false
+          },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
             "default": false
           },
           "populate_auto_fill_fields": {
@@ -8274,6 +8289,11 @@
           "use_text_tags": {
             "type": "boolean",
             "description": "Send with a value of \u0060true\u0060 if you wish to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document. Defaults to disabled, or \u0060false\u0060.",
+            "default": false
+          },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
             "default": false
           },
           "expires_at": {
@@ -9684,6 +9704,11 @@
             "type": "boolean",
             "description": "Enable the detection of predefined PDF fields by setting the \u0060use_preexisting_fields\u0060 to \u0060true\u0060 (defaults to disabled, or \u0060false\u0060).",
             "default": false
+          },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
+            "default": false
           }
         }
       },
@@ -9827,6 +9852,11 @@
           "use_preexisting_fields": {
             "type": "boolean",
             "description": "Enable the detection of predefined PDF fields by setting the \u0060use_preexisting_fields\u0060 to \u0060true\u0060 (defaults to disabled, or \u0060false\u0060).",
+            "default": false
+          },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
             "default": false
           }
         }
@@ -10013,6 +10043,11 @@
           "use_text_tags": {
             "type": "boolean",
             "description": "Set \u0060use_text_tags\u0060 to \u0060true\u0060 to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or \u0060false\u0060). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the \u0060use_preexisting_fields\u0060 to \u0060true\u0060 (defaults to disabled, or \u0060false\u0060). Currently we only support use of either \u0060use_text_tags\u0060 or \u0060use_preexisting_fields\u0060 parameter, not both.",
+            "default": false
+          },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
             "default": false
           },
           "expires_at": {
@@ -10204,6 +10239,11 @@
           "use_text_tags": {
             "type": "boolean",
             "description": "Set \u0060use_text_tags\u0060 to \u0060true\u0060 to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or \u0060false\u0060). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the \u0060use_preexisting_fields\u0060 to \u0060true\u0060 (defaults to disabled, or \u0060false\u0060). Currently we only support use of either \u0060use_text_tags\u0060 or \u0060use_preexisting_fields\u0060 parameter, not both.",
+            "default": false
+          },
+          "ignore_text_tags_extraction_errors": {
+            "type": "boolean",
+            "description": "Sent with a value of \u0060true\u0060 to ignore the validation errors from text tags extraction. Defaults to \u0060false\u0060.",
             "default": false
           },
           "populate_auto_fill_fields": {

@@ -110,6 +110,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #endif
         /// <summary>Enables automatic Text Tag removal when set to true.**NOTE:** Removing text tags this way can cause unwanted clipping. We recommend leaving this setting on `false` and instead hiding your text tags using white text or a similar approach. See the [Text Tags Walkthrough](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) for more information.</summary>
         public bool? HideTextTags { get; set; }
+        /// <summary>Sent with a value of `true` to ignore the validation errors from text tags extraction. Defaults to `false`.</summary>
+        public bool? IgnoreTextTagsExtractionErrors { get; set; }
         /// <summary>Send with a value of `true` if you wish to enable[electronic identification (eID)](https://www.hellosign.com/features/electronic-id),which requires the signer to verify their identity with an eID provider to sign a document.&lt;br&gt;**NOTE:** You need the eID add-on to use this feature. Please [contact sales](https://sign.dropbox.com/form/contact-sales) for more information. Cannot be used in `test_mode`. Only works on requests with one signer.</summary>
         public bool? IsEid { get; set; }
         /// <summary>The custom message in the email that will be sent to the signers.</summary>
@@ -181,6 +183,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             AllowDecline = false;
             AllowReassign = false;
             HideTextTags = false;
+            IgnoreTextTagsExtractionErrors = false;
             IsEid = false;
             TestMode = false;
             UseTextTags = false;
@@ -218,6 +221,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "form_fields_per_document", n => { FormFieldsPerDocument = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "grouped_signers", n => { GroupedSigners = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestGroupedSigners>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestGroupedSigners.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hide_text_tags", n => { HideTextTags = n.GetBoolValue(); } },
+                { "ignore_text_tags_extraction_errors", n => { IgnoreTextTagsExtractionErrors = n.GetBoolValue(); } },
                 { "is_eid", n => { IsEid = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -252,6 +256,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>("form_fields_per_document", FormFieldsPerDocument);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestGroupedSigners>("grouped_signers", GroupedSigners);
             writer.WriteBoolValue("hide_text_tags", HideTextTags);
+            writer.WriteBoolValue("ignore_text_tags_extraction_errors", IgnoreTextTagsExtractionErrors);
             writer.WriteBoolValue("is_eid", IsEid);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditRequestMetadataProperty>("metadata", Metadata);

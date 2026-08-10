@@ -102,6 +102,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase> FormFieldsPerDocument { get; set; }
 #endif
+        /// <summary>Sent with a value of `true` to ignore the validation errors from text tags extraction. Defaults to `false`.</summary>
+        public bool? IgnoreTextTagsExtractionErrors { get; set; }
         /// <summary>Add merge fields to the template. Merge fields are placed by the user creating the template and used to pre-fill data by passing values into signature requests with the `custom_fields` parameter.If the signature request using that template *does not* pass a value into a merge field, then an empty field remains in the document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -170,6 +172,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             AllowReassign = false;
             ForceSignerRoles = false;
             ForceSubjectMessage = false;
+            IgnoreTextTagsExtractionErrors = false;
             ShowPreview = false;
             ShowProgressStepper = true;
             SkipMeNow = false;
@@ -208,6 +211,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "form_field_groups", n => { FormFieldGroups = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "form_field_rules", n => { FormFieldRules = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "form_fields_per_document", n => { FormFieldsPerDocument = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "ignore_text_tags_extraction_errors", n => { IgnoreTextTagsExtractionErrors = n.GetBoolValue(); } },
                 { "merge_fields", n => { MergeFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -242,6 +246,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>("form_field_groups", FormFieldGroups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule>("form_field_rules", FormFieldRules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>("form_fields_per_document", FormFieldsPerDocument);
+            writer.WriteBoolValue("ignore_text_tags_extraction_errors", IgnoreTextTagsExtractionErrors);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>("merge_fields", MergeFields);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty>("metadata", Metadata);

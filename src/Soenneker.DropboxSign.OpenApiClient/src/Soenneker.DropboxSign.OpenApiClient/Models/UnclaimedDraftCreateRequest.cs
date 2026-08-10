@@ -100,6 +100,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #endif
         /// <summary>Send with a value of `true` if you wish to enable automatic Text Tag removal. Defaults to `false`. When using Text Tags it is preferred that you set this to `false` and hide your tags with white text or something similar because the automatic removal system can cause unwanted clipping. See the [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) walkthrough for more details.</summary>
         public bool? HideTextTags { get; set; }
+        /// <summary>Sent with a value of `true` to ignore the validation errors from text tags extraction. Defaults to `false`.</summary>
+        public bool? IgnoreTextTagsExtractionErrors { get; set; }
         /// <summary>The custom message in the email that will be sent to the signers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -166,6 +168,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             AdditionalData = new Dictionary<string, object>();
             AllowDecline = false;
             HideTextTags = false;
+            IgnoreTextTagsExtractionErrors = false;
             ShowProgressStepper = true;
             TestMode = false;
             UsePreexistingFields = false;
@@ -202,6 +205,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "form_field_rules", n => { FormFieldRules = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "form_fields_per_document", n => { FormFieldsPerDocument = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hide_text_tags", n => { HideTextTags = n.GetBoolValue(); } },
+                { "ignore_text_tags_extraction_errors", n => { IgnoreTextTagsExtractionErrors = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "show_progress_stepper", n => { ShowProgressStepper = n.GetBoolValue(); } },
@@ -235,6 +239,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule>("form_field_rules", FormFieldRules);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>("form_fields_per_document", FormFieldsPerDocument);
             writer.WriteBoolValue("hide_text_tags", HideTextTags);
+            writer.WriteBoolValue("ignore_text_tags_extraction_errors", IgnoreTextTagsExtractionErrors);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateRequestMetadataProperty>("metadata", Metadata);
             writer.WriteBoolValue("show_progress_stepper", ShowProgressStepper);
