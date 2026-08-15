@@ -14,7 +14,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>&quot;Template object with parameters: `template_id`, `edit_url`, `expires_at`.&quot;</summary>
+        /// <summary>Template object with parameters: `template_id`, `edit_url`, `expires_at`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftResponseTemplate? Template { get; set; }

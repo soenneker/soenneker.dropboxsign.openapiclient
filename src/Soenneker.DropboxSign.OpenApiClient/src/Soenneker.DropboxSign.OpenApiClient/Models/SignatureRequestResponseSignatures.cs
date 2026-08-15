@@ -117,7 +117,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string SmsPhoneNumber { get; set; }
 #endif
-        /// <summary>&quot;The current status of the signature. eg: awaiting_signature, signed, declined.&quot;</summary>
+        /// <summary>The current status of the signature. eg: awaiting_signature, signed, declined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? StatusCode { get; set; }

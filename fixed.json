@@ -42,11 +42,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -135,6 +147,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -210,11 +233,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -294,11 +329,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -383,11 +430,23 @@
                 "$ref": "#/components/schemas/ApiAppCreateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -470,6 +529,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -564,11 +634,23 @@
                 "$ref": "#/components/schemas/ApiAppUpdateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -647,6 +729,20 @@
           }
         ],
         "responses": {
+          "204": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            }
+          },
           "4XX": {
             "description": "failed_operation",
             "content": {
@@ -724,6 +820,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -821,6 +928,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -909,6 +1027,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -998,11 +1127,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1085,6 +1226,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1170,6 +1322,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1243,6 +1406,20 @@
           }
         ],
         "responses": {
+          "204": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            }
+          },
           "4XX": {
             "description": "failed_operation",
             "content": {
@@ -1307,6 +1484,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/pdf": {
                 "schema": {
@@ -1379,11 +1567,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1484,6 +1684,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1555,11 +1766,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1637,6 +1860,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1709,9 +1943,32 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Fallback media schema"
+                }
+              }
+            }
+          },
           "4XX": {
             "description": "failed_operation",
             "content": {
@@ -1803,6 +2060,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1874,11 +2142,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -1969,6 +2249,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2045,11 +2336,23 @@
                 "$ref": "#/components/schemas/FaxSendRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2124,11 +2427,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2201,11 +2516,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2278,11 +2605,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2359,11 +2698,23 @@
                 "$ref": "#/components/schemas/SignatureRequestBulkCreateEmbeddedWithTemplateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2446,11 +2797,23 @@
                 "$ref": "#/components/schemas/SignatureRequestBulkSendWithTemplateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2517,7 +2880,7 @@
           "Signature Request"
         ],
         "summary": "Cancel Incomplete Signature Request",
-        "description": "\u0022Cancels an incomplete signature request. This action is **not reversible**.\n\nThe request will be canceled and signers will no longer be able to sign. If they try to access the signature request they will receive a HTTP 410 status code indicating that the resource has been deleted. Cancelation is asynchronous and a successful call to this endpoint will return an empty 200 OK response if the signature request is eligible to be canceled and has been successfully queued.\n\nThis 200 OK response does not indicate a successful cancelation of the signature request itself. The cancelation is confirmed via the \u0060signature_request_canceled\u0060 event. It is recommended that a [callback handler](/api/reference/tag/Callbacks-and-Events) be implemented to listen for the \u0060signature_request_canceled\u0060 event. This callback will be sent only when the cancelation has completed successfully. If a callback handler has been configured and the event has not been received within 60 minutes of making the call, check the status of the request in the [API Dashboard](https://app.hellosign.com/apidashboard) and retry the cancelation if necessary.\n\nTo be eligible for cancelation, a signature request must have been sent successfully, must not yet have been signed by all signers, and you must either be the sender or own the API app under which it was sent. A partially signed signature request can be canceled.\n\n**NOTE:** To remove your access to a completed signature request, use the endpoint: \u0060POST /signature_request/remove/[:signature_request_id]\u0060.\u0022",
+        "description": "Cancels an incomplete signature request. This action is **not reversible**.\n\nThe request will be canceled and signers will no longer be able to sign. If they try to access the signature request they will receive a HTTP 410 status code indicating that the resource has been deleted. Cancelation is asynchronous and a successful call to this endpoint will return an empty 200 OK response if the signature request is eligible to be canceled and has been successfully queued.\n\nThis 200 OK response does not indicate a successful cancelation of the signature request itself. The cancelation is confirmed via the \u0060signature_request_canceled\u0060 event. It is recommended that a [callback handler](/api/reference/tag/Callbacks-and-Events) be implemented to listen for the \u0060signature_request_canceled\u0060 event. This callback will be sent only when the cancelation has completed successfully. If a callback handler has been configured and the event has not been received within 60 minutes of making the call, check the status of the request in the [API Dashboard](https://app.hellosign.com/apidashboard) and retry the cancelation if necessary.\n\nTo be eligible for cancelation, a signature request must have been sent successfully, must not yet have been signed by all signers, and you must either be the sender or own the API app under which it was sent. A partially signed signature request can be canceled.\n\n**NOTE:** To remove your access to a completed signature request, use the endpoint: \u0060POST /signature_request/remove/[:signature_request_id]\u0060.",
         "operationId": "SignatureRequestCancel",
         "parameters": [
           {
@@ -2532,6 +2895,28 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Fallback media schema"
+                }
+              }
+            }
+          },
           "4XX": {
             "description": "failed_operation",
             "content": {
@@ -2613,11 +2998,23 @@
                 "$ref": "#/components/schemas/SignatureRequestCreateEmbeddedRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2702,11 +3099,23 @@
                 "$ref": "#/components/schemas/SignatureRequestCreateEmbeddedWithTemplateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2806,11 +3215,23 @@
                 "$ref": "#/components/schemas/SignatureRequestEditRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -2914,11 +3335,23 @@
                 "$ref": "#/components/schemas/SignatureRequestEditEmbeddedRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3018,11 +3451,23 @@
                 "$ref": "#/components/schemas/SignatureRequestEditEmbeddedWithTemplateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3122,11 +3567,23 @@
                 "$ref": "#/components/schemas/SignatureRequestEditWithTemplateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3221,6 +3678,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/pdf": {
                 "schema": {
@@ -3310,6 +3778,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3408,6 +3887,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3497,6 +3987,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3608,6 +4109,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3691,6 +4203,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3782,11 +4305,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -3874,6 +4409,28 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Fallback media schema"
+                }
+              }
+            }
+          },
           "4XX": {
             "description": "failed_operation",
             "content": {
@@ -3949,11 +4506,23 @@
                 "$ref": "#/components/schemas/SignatureRequestSendRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4039,11 +4608,23 @@
                 "$ref": "#/components/schemas/SignatureRequestSendWithTemplateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4133,11 +4714,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4234,11 +4827,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4318,11 +4923,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4388,6 +5005,20 @@
         "description": "Deletes your Team. Can only be invoked when you have a Team with only one member (yourself).",
         "operationId": "TeamDelete",
         "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            }
+          },
           "4XX": {
             "description": "failed_operation",
             "content": {
@@ -4442,6 +5073,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4519,11 +5161,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4602,6 +5256,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4682,6 +5347,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4782,6 +5458,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4864,11 +5551,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "201": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -4971,6 +5670,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5062,11 +5772,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5160,11 +5882,23 @@
                 "$ref": "#/components/schemas/TemplateCreateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5261,11 +5995,23 @@
                 "$ref": "#/components/schemas/TemplateCreateEmbeddedDraftRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5349,6 +6095,28 @@
           }
         ],
         "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "description": "Fallback media schema"
+                }
+              }
+            }
+          },
           "4XX": {
             "description": "failed_operation",
             "content": {
@@ -5429,6 +6197,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/pdf": {
                 "schema": {
@@ -5517,6 +6296,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5614,6 +6404,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5702,6 +6503,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5810,6 +6622,17 @@
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -5901,11 +6724,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -6002,11 +6837,23 @@
                 "$ref": "#/components/schemas/TemplateUpdateFilesRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -6103,11 +6950,23 @@
                 "$ref": "#/components/schemas/UnclaimedDraftCreateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -6198,11 +7057,23 @@
                 "$ref": "#/components/schemas/UnclaimedDraftCreateEmbeddedRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -6291,11 +7162,23 @@
                 "$ref": "#/components/schemas/UnclaimedDraftCreateEmbeddedWithTemplateRequest"
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -6390,11 +7273,23 @@
                 }
               }
             }
-          }
+          },
+          "required": true
         },
         "responses": {
           "200": {
             "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
             "content": {
               "application/json": {
                 "schema": {
@@ -7264,7 +8159,7 @@
           },
           "signer_file": {
             "type": "string",
-            "description": "\u0022\u0060signer_file\u0060 is a CSV file defining values and options for signer fields. Required unless a \u0060signer_list\u0060 is used, you may not use both. The CSV can have the following columns:\n\n- \u0060name\u0060: the name of the signer filling the role of RoleName\n- \u0060email_address\u0060: email address of the signer filling the role of RoleName\n- \u0060pin\u0060: the 4- to 12-character access code that will secure this signer\u0027s signature page (optional)\n- \u0060sms_phone_number\u0060: An E.164 formatted phone number that will receive a code via SMS to access this signer\u0027s signature page. (optional)\n\n    By using the feature, you agree you are responsible for obtaining a signer\u0027s consent to receive text messages from Dropbox Sign related to this signature request and confirm you have obtained such consent from all signers prior to enabling SMS delivery for this signature request. [Learn more](https://faq.hellosign.com/hc/en-us/articles/15815316468877-Dropbox-Sign-SMS-tools-add-on).\n\n    **NOTE:** Not available in test mode and requires a Standard plan or higher.\n- \u0060*_field\u0060: any column with a _field\\\u0022 suffix will be treated as a custom field (optional)\n\n    You may only specify field values here, any other options should be set in the custom_fields request parameter.\n\nExample CSV:\n\n\u0060\u0060\u0060\nname, email_address, pin, company_field\nGeorge, george@example.com, d79a3td, ABC Corp\nMary, mary@example.com, gd9as5b, 123 LLC\n\u0060\u0060\u0060\u0022",
+            "description": "\u0060signer_file\u0060 is a CSV file defining values and options for signer fields. Required unless a \u0060signer_list\u0060 is used, you may not use both. The CSV can have the following columns:\n\n- \u0060name\u0060: the name of the signer filling the role of RoleName\n- \u0060email_address\u0060: email address of the signer filling the role of RoleName\n- \u0060pin\u0060: the 4- to 12-character access code that will secure this signer\u0027s signature page (optional)\n- \u0060sms_phone_number\u0060: An E.164 formatted phone number that will receive a code via SMS to access this signer\u0027s signature page. (optional)\n\n    By using the feature, you agree you are responsible for obtaining a signer\u0027s consent to receive text messages from Dropbox Sign related to this signature request and confirm you have obtained such consent from all signers prior to enabling SMS delivery for this signature request. [Learn more](https://faq.hellosign.com/hc/en-us/articles/15815316468877-Dropbox-Sign-SMS-tools-add-on).\n\n    **NOTE:** Not available in test mode and requires a Standard plan or higher.\n- \u0060*_field\u0060: any column with a _field\u0022 suffix will be treated as a custom field (optional)\n\n    You may only specify field values here, any other options should be set in the custom_fields request parameter.\n\nExample CSV:\n\n\u0060\u0060\u0060\nname, email_address, pin, company_field\nGeorge, george@example.com, d79a3td, ABC Corp\nMary, mary@example.com, gd9as5b, 123 LLC\n\u0060\u0060\u0060",
             "format": "binary"
           },
           "signer_list": {
@@ -7341,7 +8236,7 @@
           },
           "signer_file": {
             "type": "string",
-            "description": "\u0022\u0060signer_file\u0060 is a CSV file defining values and options for signer fields. Required unless a \u0060signer_list\u0060 is used, you may not use both. The CSV can have the following columns:\n\n- \u0060name\u0060: the name of the signer filling the role of RoleName\n- \u0060email_address\u0060: email address of the signer filling the role of RoleName\n- \u0060pin\u0060: the 4- to 12-character access code that will secure this signer\u0027s signature page (optional)\n- \u0060sms_phone_number\u0060: An E.164 formatted phone number that will receive a code via SMS to access this signer\u0027s signature page. (optional)\n\n    By using the feature, you agree you are responsible for obtaining a signer\u0027s consent to receive text messages from Dropbox Sign related to this signature request and confirm you have obtained such consent from all signers prior to enabling SMS delivery for this signature request. [Learn more](https://faq.hellosign.com/hc/en-us/articles/15815316468877-Dropbox-Sign-SMS-tools-add-on).\n\n    **NOTE:** Not available in test mode and requires a Standard plan or higher.\n- \u0060*_field\u0060: any column with a _field\\\u0022 suffix will be treated as a custom field (optional)\n\n    You may only specify field values here, any other options should be set in the custom_fields request parameter.\n\nExample CSV:\n\n\u0060\u0060\u0060\nname, email_address, pin, company_field\nGeorge, george@example.com, d79a3td, ABC Corp\nMary, mary@example.com, gd9as5b, 123 LLC\n\u0060\u0060\u0060\u0022",
+            "description": "\u0060signer_file\u0060 is a CSV file defining values and options for signer fields. Required unless a \u0060signer_list\u0060 is used, you may not use both. The CSV can have the following columns:\n\n- \u0060name\u0060: the name of the signer filling the role of RoleName\n- \u0060email_address\u0060: email address of the signer filling the role of RoleName\n- \u0060pin\u0060: the 4- to 12-character access code that will secure this signer\u0027s signature page (optional)\n- \u0060sms_phone_number\u0060: An E.164 formatted phone number that will receive a code via SMS to access this signer\u0027s signature page. (optional)\n\n    By using the feature, you agree you are responsible for obtaining a signer\u0027s consent to receive text messages from Dropbox Sign related to this signature request and confirm you have obtained such consent from all signers prior to enabling SMS delivery for this signature request. [Learn more](https://faq.hellosign.com/hc/en-us/articles/15815316468877-Dropbox-Sign-SMS-tools-add-on).\n\n    **NOTE:** Not available in test mode and requires a Standard plan or higher.\n- \u0060*_field\u0060: any column with a _field\u0022 suffix will be treated as a custom field (optional)\n\n    You may only specify field values here, any other options should be set in the custom_fields request parameter.\n\nExample CSV:\n\n\u0060\u0060\u0060\nname, email_address, pin, company_field\nGeorge, george@example.com, d79a3td, ABC Corp\nMary, mary@example.com, gd9as5b, 123 LLC\n\u0060\u0060\u0060",
             "format": "binary"
           },
           "signer_list": {
@@ -7496,7 +8391,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "hide_text_tags": {
             "type": "boolean",
@@ -7734,7 +8629,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "hide_text_tags": {
             "type": "boolean",
@@ -7886,7 +8781,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "hide_text_tags": {
             "type": "boolean",
@@ -8238,7 +9133,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "hide_text_tags": {
             "type": "boolean",
@@ -8584,7 +9479,7 @@
           },
           "requirement": {
             "type": "string",
-            "description": "\u0022Examples: \u0060require_0-1\u0060 \u0060require_1\u0060 \u0060require_1-ormore\u0060\n\n- Check out the list of [acceptable \u0060requirement\u0060 checkbox type values](/api/reference/constants/#checkbox-field-grouping).\n- Check out the list of [acceptable \u0060requirement\u0060 radio type fields](/api/reference/constants/#radio-field-grouping).\n- Radio groups require **at least** two fields per group.\u0022"
+            "description": "Examples: \u0060require_0-1\u0060 \u0060require_1\u0060 \u0060require_1-ormore\u0060\n\n- Check out the list of [acceptable \u0060requirement\u0060 checkbox type values](/api/reference/constants/#checkbox-field-grouping).\n- Check out the list of [acceptable \u0060requirement\u0060 radio type fields](/api/reference/constants/#radio-field-grouping).\n- Radio groups require **at least** two fields per group."
           }
         }
       },
@@ -8665,7 +9560,7 @@
           },
           "value": {
             "type": "string",
-            "description": "\u0022**value** or **values** is required, but not both.\n\nThe value to match against **operator**.\n\n- When **operator** is one of the following, **value** must be \u0060String\u0060:\n  - \u0060is\u0060\n  - \u0060not\u0060\n  - \u0060match\u0060\n\nOtherwise,\n- **checkbox**: When **type** of trigger is **checkbox**, **value** must be \u00600\u0060 or \u00601\u0060\n- **radio**: When **type** of trigger is **radio**, **value** must be \u00601\u0060\u0022"
+            "description": "**value** or **values** is required, but not both.\n\nThe value to match against **operator**.\n\n- When **operator** is one of the following, **value** must be \u0060String\u0060:\n  - \u0060is\u0060\n  - \u0060not\u0060\n  - \u0060match\u0060\n\nOtherwise,\n- **checkbox**: When **type** of trigger is **checkbox**, **value** must be \u00600\u0060 or \u00601\u0060\n- **radio**: When **type** of trigger is **radio**, **value** must be \u00601\u0060"
           },
           "values": {
             "type": "array",
@@ -9192,7 +10087,7 @@
             "description": "Location coordinates of the field in pixels."
           }
         },
-        "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022",
+        "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060",
         "discriminator": {
           "propertyName": "type",
           "mapping": {
@@ -9662,7 +10557,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "merge_fields": {
             "type": "array",
@@ -9796,7 +10691,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "merge_fields": {
             "type": "array",
@@ -9815,7 +10710,7 @@
           },
           "show_preview": {
             "type": "boolean",
-            "description": "\u0022This allows the requester to enable the editor/preview experience.\n\n- \u0060show_preview=true\u0060: Allows requesters to enable the editor/preview experience.\n- \u0060show_preview=false\u0060: Allows requesters to disable the editor/preview experience.\u0022",
+            "description": "This allows the requester to enable the editor/preview experience.\n\n- \u0060show_preview=true\u0060: Allows requesters to enable the editor/preview experience.\n- \u0060show_preview=false\u0060: Allows requesters to disable the editor/preview experience.",
             "default": false
           },
           "show_progress_stepper": {
@@ -9988,7 +10883,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "hide_text_tags": {
             "type": "boolean",
@@ -10156,7 +11051,7 @@
             "items": {
               "$ref": "#/components/schemas/SubFormFieldsPerDocumentBase"
             },
-            "description": "\u0022The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060\u0022"
+            "description": "The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)\n\n**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.\n\n* Text Field use \u0060SubFormFieldsPerDocumentText\u0060\n* Dropdown Field use \u0060SubFormFieldsPerDocumentDropdown\u0060\n* Hyperlink Field use \u0060SubFormFieldsPerDocumentHyperlink\u0060\n* Checkbox Field use \u0060SubFormFieldsPerDocumentCheckbox\u0060\n* Radio Field use \u0060SubFormFieldsPerDocumentRadio\u0060\n* Signature Field use \u0060SubFormFieldsPerDocumentSignature\u0060\n* Date Signed Field use \u0060SubFormFieldsPerDocumentDateSigned\u0060\n* Initials Field use \u0060SubFormFieldsPerDocumentInitials\u0060\n* Text Merge Field use \u0060SubFormFieldsPerDocumentTextMerge\u0060\n* Checkbox Merge Field use \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060"
           },
           "hide_text_tags": {
             "type": "boolean",
@@ -10192,7 +11087,7 @@
           },
           "show_preview": {
             "type": "boolean",
-            "description": "\u0022This allows the requester to enable the editor/preview experience.\n\n- \u0060show_preview=true\u0060: Allows requesters to enable the editor/preview experience.\n- \u0060show_preview=false\u0060: Allows requesters to disable the editor/preview experience.\u0022"
+            "description": "This allows the requester to enable the editor/preview experience.\n\n- \u0060show_preview=true\u0060: Allows requesters to enable the editor/preview experience.\n- \u0060show_preview=false\u0060: Allows requesters to disable the editor/preview experience."
           },
           "show_progress_stepper": {
             "type": "boolean",
@@ -10346,7 +11241,7 @@
           },
           "preview_only": {
             "type": "boolean",
-            "description": "\u0022This allows the requester to enable the preview experience (i.e. does not allow the requester\u0027s end user to add any additional fields via the editor).\n\n- \u0060preview_only=true\u0060: Allows requesters to enable the preview only experience.\n- \u0060preview_only=false\u0060: Allows requesters to disable the preview only experience.\n\n**NOTE:** This parameter overwrites \u0060show_preview=1\u0060 (if set).\u0022",
+            "description": "This allows the requester to enable the preview experience (i.e. does not allow the requester\u0027s end user to add any additional fields via the editor).\n\n- \u0060preview_only=true\u0060: Allows requesters to enable the preview only experience.\n- \u0060preview_only=false\u0060: Allows requesters to disable the preview only experience.\n\n**NOTE:** This parameter overwrites \u0060show_preview=1\u0060 (if set).",
             "default": false
           },
           "requester_email_address": {
@@ -10360,7 +11255,7 @@
           },
           "show_preview": {
             "type": "boolean",
-            "description": "\u0022This allows the requester to enable the editor/preview experience.\n\n- \u0060show_preview=true\u0060: Allows requesters to enable the editor/preview experience.\n- \u0060show_preview=false\u0060: Allows requesters to disable the editor/preview experience.\u0022",
+            "description": "This allows the requester to enable the editor/preview experience.\n\n- \u0060show_preview=true\u0060: Allows requesters to enable the editor/preview experience.\n- \u0060show_preview=false\u0060: Allows requesters to disable the editor/preview experience.",
             "default": false
           },
           "show_progress_stepper": {
@@ -11845,9 +12740,6 @@
         }
       },
       "SignatureRequestResponseDataBase": {
-        "required": [
-          "type"
-        ],
         "type": "object",
         "properties": {
           "api_id": {
@@ -12159,7 +13051,7 @@
           },
           "status_code": {
             "type": "string",
-            "description": "\u0022The current status of the signature. eg: awaiting_signature, signed, declined.\u0022"
+            "description": "The current status of the signature. eg: awaiting_signature, signed, declined."
           },
           "decline_reason": {
             "type": "string",
@@ -12540,7 +13432,7 @@
             "deprecated": true
           }
         },
-        "description": "\u0022Template object with parameters: \u0060template_id\u0060, \u0060edit_url\u0060, \u0060expires_at\u0060.\u0022",
+        "description": "Template object with parameters: \u0060template_id\u0060, \u0060edit_url\u0060, \u0060expires_at\u0060.",
         "x-internal-class": true
       },
       "TemplateCreateResponseTemplate": {
@@ -12551,7 +13443,7 @@
             "description": "The id of the Template."
           }
         },
-        "description": "\u0022Template object with parameters: \u0060template_id\u0060.\u0022",
+        "description": "Template object with parameters: \u0060template_id\u0060.",
         "x-internal-class": true
       },
       "TemplateResponseDocument": {
@@ -12727,7 +13619,7 @@
         "properties": {
           "requirement": {
             "type": "string",
-            "description": "\u0022Examples: \u0060require_0-1\u0060 \u0060require_1\u0060 \u0060require_1-ormore\u0060\n\n- Check out the list of [acceptable \u0060requirement\u0060 checkbox type values](/api/reference/constants/#checkbox-field-grouping).\n- Check out the list of [acceptable \u0060requirement\u0060 radio type fields](/api/reference/constants/#radio-field-grouping).\n- Radio groups require **at least** two fields per group.\u0022"
+            "description": "Examples: \u0060require_0-1\u0060 \u0060require_1\u0060 \u0060require_1-ormore\u0060\n\n- Check out the list of [acceptable \u0060requirement\u0060 checkbox type values](/api/reference/constants/#checkbox-field-grouping).\n- Check out the list of [acceptable \u0060requirement\u0060 radio type fields](/api/reference/constants/#radio-field-grouping).\n- Radio groups require **at least** two fields per group."
           },
           "groupLabel": {
             "type": "string",
@@ -14949,7 +15841,7 @@
         ],
         "type": "string",
         "additionalProperties": false,
-        "description": "\u0022Different field types allow different \u0060operator\u0060 values:\n- Field type of **text**:\n  - **is**: exact match\n  - **not**: not exact match\n  - **match**: regular expression, without /. Example:\n    - OK \u0060[a-zA-Z0-9]\u0060\n    - Not OK \u0060/[a-zA-Z0-9]/\u0060\n- Field type of **dropdown**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value\n  - **any**: exact match, array of values.\n  - **none**: not exact match, array of values.\n- Field type of **checkbox**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value\n- Field type of **radio**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value\u0022",
+        "description": "Different field types allow different \u0060operator\u0060 values:\n- Field type of **text**:\n  - **is**: exact match\n  - **not**: not exact match\n  - **match**: regular expression, without /. Example:\n    - OK \u0060[a-zA-Z0-9]\u0060\n    - Not OK \u0060/[a-zA-Z0-9]/\u0060\n- Field type of **dropdown**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value\n  - **any**: exact match, array of values.\n  - **none**: not exact match, array of values.\n- Field type of **checkbox**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value\n- Field type of **radio**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value",
         "x-ms-enum": {
           "name": "SubFormFieldRuleTriggerOperator",
           "modelAsString": false,
@@ -15540,7 +16432,8 @@
           "signature_request_access",
           "template_access",
           "team_access",
-          "api_app_access"
+          "api_app_access",
+          ""
         ],
         "type": "string",
         "additionalProperties": false,
@@ -17548,12 +18441,6 @@
       "oauth2": {
         "type": "http",
         "description": "You can use an Access Token issued through an OAuth flow to send calls to the Dropbox Sign API from your app. The access scopes required by this endpoint are listed in the gray box above. See [Authentication](/api/reference/authentication) for more information.\n\u274C **Not supported** by Try it console.",
-        "scheme": "bearer",
-        "bearerFormat": "JWT"
-      },
-      "assets_jwt": {
-        "type": "http",
-        "description": "JWT used for assets upload",
         "scheme": "bearer",
         "bearerFormat": "JWT"
       }

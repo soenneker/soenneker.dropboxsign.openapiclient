@@ -102,7 +102,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #endif
         /// <summary>Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer&apos;s information during signing.**NOTE:** Keep your signer&apos;s information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.</summary>
         public bool? PopulateAutoFillFields { get; set; }
-        /// <summary>&quot;This allows the requester to enable the preview experience (i.e. does not allow the requester&apos;s end user to add any additional fields via the editor).- `preview_only=true`: Allows requesters to enable the preview only experience.- `preview_only=false`: Allows requesters to disable the preview only experience.**NOTE:** This parameter overwrites `show_preview=1` (if set).&quot;</summary>
+        /// <summary>This allows the requester to enable the preview experience (i.e. does not allow the requester&apos;s end user to add any additional fields via the editor).- `preview_only=true`: Allows requesters to enable the preview only experience.- `preview_only=false`: Allows requesters to disable the preview only experience.**NOTE:** This parameter overwrites `show_preview=1` (if set).</summary>
         public bool? PreviewOnly { get; set; }
         /// <summary>The email address of the user that should be designated as the requester of this draft.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -120,7 +120,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string RequestingRedirectUrl { get; set; }
 #endif
-        /// <summary>&quot;This allows the requester to enable the editor/preview experience.- `show_preview=true`: Allows requesters to enable the editor/preview experience.- `show_preview=false`: Allows requesters to disable the editor/preview experience.&quot;</summary>
+        /// <summary>This allows the requester to enable the editor/preview experience.- `show_preview=true`: Allows requesters to enable the editor/preview experience.- `show_preview=false`: Allows requesters to disable the editor/preview experience.</summary>
         public bool? ShowPreview { get; set; }
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
         public bool? ShowProgressStepper { get; set; }

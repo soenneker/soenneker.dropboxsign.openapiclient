@@ -8,7 +8,7 @@ using System;
 namespace Soenneker.DropboxSign.OpenApiClient.Models
 {
     /// <summary>
-    /// &quot;Template object with parameters: `template_id`, `edit_url`, `expires_at`.&quot;
+    /// Template object with parameters: `template_id`, `edit_url`, `expires_at`.
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateCreateEmbeddedDraftResponseTemplate : IAdditionalDataHolder, IParsable

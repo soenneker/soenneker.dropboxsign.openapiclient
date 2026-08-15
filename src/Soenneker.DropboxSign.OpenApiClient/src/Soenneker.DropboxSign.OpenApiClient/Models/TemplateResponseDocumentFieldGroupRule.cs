@@ -23,7 +23,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string GroupLabel { get; set; }
 #endif
-        /// <summary>&quot;Examples: `require_0-1` `require_1` `require_1-ormore`- Check out the list of [acceptable `requirement` checkbox type values](/api/reference/constants/#checkbox-field-grouping).- Check out the list of [acceptable `requirement` radio type fields](/api/reference/constants/#radio-field-grouping).- Radio groups require **at least** two fields per group.&quot;</summary>
+        /// <summary>Examples: `require_0-1` `require_1` `require_1-ormore`- Check out the list of [acceptable `requirement` checkbox type values](/api/reference/constants/#checkbox-field-grouping).- Check out the list of [acceptable `requirement` radio type fields](/api/reference/constants/#radio-field-grouping).- Radio groups require **at least** two fields per group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? Requirement { get; set; }

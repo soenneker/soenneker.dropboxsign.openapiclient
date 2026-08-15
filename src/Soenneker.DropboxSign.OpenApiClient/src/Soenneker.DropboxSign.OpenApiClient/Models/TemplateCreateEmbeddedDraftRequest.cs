@@ -94,7 +94,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule> FormFieldRules { get; set; }
 #endif
-        /// <summary>&quot;The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.* Text Field use `SubFormFieldsPerDocumentText`* Dropdown Field use `SubFormFieldsPerDocumentDropdown`* Hyperlink Field use `SubFormFieldsPerDocumentHyperlink`* Checkbox Field use `SubFormFieldsPerDocumentCheckbox`* Radio Field use `SubFormFieldsPerDocumentRadio`* Signature Field use `SubFormFieldsPerDocumentSignature`* Date Signed Field use `SubFormFieldsPerDocumentDateSigned`* Initials Field use `SubFormFieldsPerDocumentInitials`* Text Merge Field use `SubFormFieldsPerDocumentTextMerge`* Checkbox Merge Field use `SubFormFieldsPerDocumentCheckboxMerge`&quot;</summary>
+        /// <summary>The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.* Text Field use `SubFormFieldsPerDocumentText`* Dropdown Field use `SubFormFieldsPerDocumentDropdown`* Hyperlink Field use `SubFormFieldsPerDocumentHyperlink`* Checkbox Field use `SubFormFieldsPerDocumentCheckbox`* Radio Field use `SubFormFieldsPerDocumentRadio`* Signature Field use `SubFormFieldsPerDocumentSignature`* Date Signed Field use `SubFormFieldsPerDocumentDateSigned`* Initials Field use `SubFormFieldsPerDocumentInitials`* Text Merge Field use `SubFormFieldsPerDocumentTextMerge`* Checkbox Merge Field use `SubFormFieldsPerDocumentCheckboxMerge`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>? FormFieldsPerDocument { get; set; }
@@ -128,7 +128,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateCreateEmbeddedDraftRequestMetadataProperty Metadata { get; set; }
 #endif
-        /// <summary>&quot;This allows the requester to enable the editor/preview experience.- `show_preview=true`: Allows requesters to enable the editor/preview experience.- `show_preview=false`: Allows requesters to disable the editor/preview experience.&quot;</summary>
+        /// <summary>This allows the requester to enable the editor/preview experience.- `show_preview=true`: Allows requesters to enable the editor/preview experience.- `show_preview=false`: Allows requesters to disable the editor/preview experience.</summary>
         public bool? ShowPreview { get; set; }
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
         public bool? ShowProgressStepper { get; set; }

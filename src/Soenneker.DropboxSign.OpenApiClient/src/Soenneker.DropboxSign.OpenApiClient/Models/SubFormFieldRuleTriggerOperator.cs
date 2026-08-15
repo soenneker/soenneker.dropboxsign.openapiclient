@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 using System;
 namespace Soenneker.DropboxSign.OpenApiClient.Models
 {
-    /// <summary>&quot;Different field types allow different `operator` values:- Field type of **text**:  - **is**: exact match  - **not**: not exact match  - **match**: regular expression, without /. Example:    - OK `[a-zA-Z0-9]`    - Not OK `/[a-zA-Z0-9]/`- Field type of **dropdown**:  - **is**: exact match, single value  - **not**: not exact match, single value  - **any**: exact match, array of values.  - **none**: not exact match, array of values.- Field type of **checkbox**:  - **is**: exact match, single value  - **not**: not exact match, single value- Field type of **radio**:  - **is**: exact match, single value  - **not**: not exact match, single value&quot;</summary>
+    /// <summary>Different field types allow different `operator` values:- Field type of **text**:  - **is**: exact match  - **not**: not exact match  - **match**: regular expression, without /. Example:    - OK `[a-zA-Z0-9]`    - Not OK `/[a-zA-Z0-9]/`- Field type of **dropdown**:  - **is**: exact match, single value  - **not**: not exact match, single value  - **any**: exact match, array of values.  - **none**: not exact match, array of values.- Field type of **checkbox**:  - **is**: exact match, single value  - **not**: not exact match, single value- Field type of **radio**:  - **is**: exact match, single value  - **not**: not exact match, single value</summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public enum SubFormFieldRuleTriggerOperator
     {
