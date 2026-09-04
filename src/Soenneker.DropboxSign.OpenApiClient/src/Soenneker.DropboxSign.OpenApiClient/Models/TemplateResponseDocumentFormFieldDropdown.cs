@@ -21,6 +21,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string Group { get; set; }
 #endif
+        /// <summary>The options available for this dropdown form field.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Options { get; set; }
+#nullable restore
+#else
+        public List<string> Options { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldDropdown"/> and sets the default values.
         /// </summary>
@@ -47,6 +55,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>(base.GetFieldDeserializers())
             {
                 { "group", n => { Group = n.GetStringValue(); } },
+                { "options", n => { Options = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -58,6 +67,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteStringValue("group", Group);
+            writer.WriteCollectionOfPrimitiveValues<string>("options", Options);
         }
     }
 }

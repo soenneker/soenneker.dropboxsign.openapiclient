@@ -12740,6 +12740,9 @@
         }
       },
       "SignatureRequestResponseDataBase": {
+        "required": [
+          "type"
+        ],
         "type": "object",
         "properties": {
           "api_id": {
@@ -13757,6 +13760,13 @@
             "type": "string",
             "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
             "nullable": true
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The options available for this dropdown form field."
           }
         },
         "description": "This class extends \u0060TemplateResponseDocumentFormFieldBase\u0060"
@@ -15049,6 +15059,13 @@
             "type": "string",
             "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
             "nullable": true
+          },
+          "options": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The options available for this dropdown form field."
           }
         }
       },
@@ -16834,7 +16851,14 @@
           "template_created",
           "template_error",
           "callback_test",
-          "signature_request_signer_removed"
+          "signature_request_signer_removed",
+          "fax_received",
+          "fax_sent",
+          "fax_on_hold",
+          "fax_busy",
+          "fax_no_answer",
+          "fax_disconnected",
+          "fax_blacklisted"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -16934,6 +16958,34 @@
             {
               "value": "signature_request_signer_removed",
               "name": "SignatureRequestSignerRemoved"
+            },
+            {
+              "value": "fax_received",
+              "name": "FaxReceived"
+            },
+            {
+              "value": "fax_sent",
+              "name": "FaxSent"
+            },
+            {
+              "value": "fax_on_hold",
+              "name": "FaxOnHold"
+            },
+            {
+              "value": "fax_busy",
+              "name": "FaxBusy"
+            },
+            {
+              "value": "fax_no_answer",
+              "name": "FaxNoAnswer"
+            },
+            {
+              "value": "fax_disconnected",
+              "name": "FaxDisconnected"
+            },
+            {
+              "value": "fax_blacklisted",
+              "name": "FaxBlacklisted"
             }
           ]
         }
@@ -18359,6 +18411,69 @@
         "summary": "Callback Test Event Example",
         "value": {
           "$ref": "examples/json/EventCallbackCallbackTest.json"
+        },
+        "x-fern-audiences": [
+          "events"
+        ]
+      },
+      "EventCallbackFaxReceived": {
+        "summary": "Fax Received Event Example",
+        "value": {
+          "$ref": "examples/json/EventCallbackFaxReceived.json"
+        },
+        "x-fern-audiences": [
+          "events"
+        ]
+      },
+      "EventCallbackFaxSent": {
+        "summary": "Fax Sent Event Example",
+        "value": {
+          "$ref": "examples/json/EventCallbackFaxSent.json"
+        },
+        "x-fern-audiences": [
+          "events"
+        ]
+      },
+      "EventCallbackFaxOnHold": {
+        "summary": "Fax On Hold Event Example",
+        "value": {
+          "$ref": "examples/json/EventCallbackFaxOnHold.json"
+        },
+        "x-fern-audiences": [
+          "events"
+        ]
+      },
+      "EventCallbackFaxBusy": {
+        "summary": "Fax Busy Event Example",
+        "value": {
+          "$ref": "examples/json/EventCallbackFaxBusy.json"
+        },
+        "x-fern-audiences": [
+          "events"
+        ]
+      },
+      "EventCallbackFaxNoAnswer": {
+        "summary": "Fax No Answer Event Example",
+        "value": {
+          "$ref": "examples/json/EventCallbackFaxNoAnswer.json"
+        },
+        "x-fern-audiences": [
+          "events"
+        ]
+      },
+      "EventCallbackFaxDisconnected": {
+        "summary": "Fax Disconnected Event Example",
+        "value": {
+          "$ref": "examples/json/EventCallbackFaxDisconnected.json"
+        },
+        "x-fern-audiences": [
+          "events"
+        ]
+      },
+      "EventCallbackFaxBlacklisted": {
+        "summary": "Fax Blacklisted Event Example",
+        "value": {
+          "$ref": "examples/json/EventCallbackFaxBlacklisted.json"
         },
         "x-fern-audiences": [
           "events"
