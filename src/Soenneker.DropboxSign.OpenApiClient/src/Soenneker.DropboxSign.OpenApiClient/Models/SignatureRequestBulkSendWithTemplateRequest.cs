@@ -40,6 +40,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField> CustomFields { get; set; }
 #endif
+        /// <summary>When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.</summary>
+        public int? ExpiresAt { get; set; }
         /// <summary>The custom message in the email that will be sent to the signers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -137,6 +139,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "ccs", n => { Ccs = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "expires_at", n => { ExpiresAt = n.GetIntValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestBulkSendWithTemplateRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestBulkSendWithTemplateRequestMetadataProperty.CreateFromDiscriminatorValue); } },
                 { "signer_file", n => { SignerFile = n.GetByteArrayValue(); } },
@@ -159,6 +162,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>("ccs", Ccs);
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>("custom_fields", CustomFields);
+            writer.WriteIntValue("expires_at", ExpiresAt);
             writer.WriteStringValue("message", Message);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestBulkSendWithTemplateRequestMetadataProperty>("metadata", Metadata);
             writer.WriteByteArrayValue("signer_file", SignerFile);

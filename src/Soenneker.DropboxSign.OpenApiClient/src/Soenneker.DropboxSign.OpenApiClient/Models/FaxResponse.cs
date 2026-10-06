@@ -80,6 +80,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string Subject { get; set; }
 #endif
+        /// <summary>Whether this is a test fax. Test faxes are not delivered to the recipient. Defaults to `false`.</summary>
+        public bool? TestMode { get; set; }
         /// <summary>Fax Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -102,6 +104,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public FaxResponse()
         {
             AdditionalData = new Dictionary<string, object>();
+            TestMode = false;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -130,6 +133,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "original_title", n => { OriginalTitle = n.GetStringValue(); } },
                 { "sender", n => { Sender = n.GetStringValue(); } },
                 { "subject", n => { Subject = n.GetStringValue(); } },
+                { "test_mode", n => { TestMode = n.GetBoolValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
                 { "transmissions", n => { Transmissions = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission>(global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission.CreateFromDiscriminatorValue)?.AsList(); } },
             };
@@ -150,6 +154,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("original_title", OriginalTitle);
             writer.WriteStringValue("sender", Sender);
             writer.WriteStringValue("subject", Subject);
+            writer.WriteBoolValue("test_mode", TestMode);
             writer.WriteStringValue("title", Title);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission>("transmissions", Transmissions);
             writer.WriteAdditionalData(AdditionalData);

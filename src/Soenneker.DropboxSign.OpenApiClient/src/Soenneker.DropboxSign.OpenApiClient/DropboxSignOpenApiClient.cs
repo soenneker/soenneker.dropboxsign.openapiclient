@@ -9,6 +9,7 @@ using Microsoft.Kiota.Serialization.Text;
 using Soenneker.DropboxSign.OpenApiClient.Account;
 using Soenneker.DropboxSign.OpenApiClient.Api_app;
 using Soenneker.DropboxSign.OpenApiClient.Bulk_send_job;
+using Soenneker.DropboxSign.OpenApiClient.Document;
 using Soenneker.DropboxSign.OpenApiClient.Embedded;
 using Soenneker.DropboxSign.OpenApiClient.Fax;
 using Soenneker.DropboxSign.OpenApiClient.Fax_line;
@@ -44,6 +45,11 @@ namespace Soenneker.DropboxSign.OpenApiClient
         public global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Bulk_send_jobRequestBuilder Bulk_send_job
         {
             get => new global::Soenneker.DropboxSign.OpenApiClient.Bulk_send_job.Bulk_send_jobRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The document property</summary>
+        public global::Soenneker.DropboxSign.OpenApiClient.Document.DocumentRequestBuilder Document
+        {
+            get => new global::Soenneker.DropboxSign.OpenApiClient.Document.DocumentRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The embedded property</summary>
         public global::Soenneker.DropboxSign.OpenApiClient.Embedded.EmbeddedRequestBuilder Embedded
