@@ -3252,7 +3252,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
                   "description": "Fallback media schema"
                 }
               }
@@ -4772,7 +4771,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
                   "description": "Fallback media schema"
                 }
               }
@@ -7084,7 +7082,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
                   "description": "Fallback media schema"
                 }
               }
@@ -9739,7 +9736,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
                   "description": "Fallback media schema"
                 }
               }
@@ -11963,7 +11959,6 @@
           "WY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FaxLineAreaCodeGetStateEnum",
           "modelAsString": false,
@@ -12192,7 +12187,6 @@
           "YT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FaxLineAreaCodeGetProvinceEnum",
           "modelAsString": false,
@@ -12259,7 +12253,6 @@
           "UK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FaxLineAreaCodeGetCountryEnum",
           "modelAsString": false,
@@ -14246,7 +14239,6 @@
           "text-merge"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentTypeEnum",
           "modelAsString": false,
@@ -14314,7 +14306,6 @@
           "notoSanThaiMerged"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentFontEnum",
           "modelAsString": false,
@@ -16613,9 +16604,7 @@
             "description": "An array of signature objects, 1 for each signer."
           },
           "bulk_send_job_id": {
-            "type": "string",
-            "description": "The ID of the Bulk Send job which sent the signature request, if applicable.",
-            "nullable": true
+            "$ref": "#/components/schemas/BulkSendJobGetResponseSignatureRequestsBulkSendJobId"
           }
         },
         "x-internal-class": true
@@ -17184,7 +17173,6 @@
           "checkbox"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SignatureRequestResponseCustomFieldTypeEnum",
           "modelAsString": false,
@@ -17257,7 +17245,6 @@
           "checkbox-merge"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SignatureRequestResponseDataTypeEnum",
           "modelAsString": false,
@@ -19762,149 +19749,111 @@
       "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestBulkSendWithTemplateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestBulkSendWithTemplateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestCreateEmbeddedRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestCreateEmbeddedRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestCreateEmbeddedWithTemplateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestCreateEmbeddedWithTemplateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditEmbeddedRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditEmbeddedRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditEmbeddedWithTemplateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditEmbeddedWithTemplateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditWithTemplateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditWithTemplateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestSendRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestSendRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestSendWithTemplateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestSendWithTemplateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "TemplateCreateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/TemplateCreateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "TemplateCreateEmbeddedDraftRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/TemplateCreateEmbeddedDraftRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "UnclaimedDraftCreateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnclaimedDraftCreateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "UnclaimedDraftCreateEmbeddedRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnclaimedDraftCreateEmbeddedRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadata": {
         "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "FaxResponseMetadata": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/FaxResponseMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Fax Metadata"
       },
       "SignatureRequestResponseMetadata": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestResponseMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "The metadata attached to the signature request."
       },
       "TemplateResponseMetadata": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/TemplateResponseMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "The metadata attached to the template."
       },
       "BulkSendJobGetResponseSignatureRequestsAllOf2Metadata": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/BulkSendJobGetResponseSignatureRequestsAllOf2MetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "The metadata attached to the signature request."
       },
       "FaxFiles200PdfResponse": {
@@ -19952,261 +19901,136 @@
         "format": "binary"
       },
       "EventCallbackResponseResponsePlainContent": {
-        "type": "string"
+        "type": "string",
+        "default": "Hello API Event Received"
+      },
+      "BulkSendJobGetResponseSignatureRequestsMetadata": {
+        "allOf": [
+          {
+            "type": "object",
+            "additionalProperties": {},
+            "description": "The metadata attached to the signature request."
+          },
+          {
+            "type": "object",
+            "additionalProperties": {},
+            "description": "The metadata attached to the signature request."
+          }
+        ]
+      },
+      "BulkSendJobGetResponseSignatureRequestsBulkSendJobId": {
+        "type": "string",
+        "description": "The ID of the Bulk Send job which sent the signature request, if applicable."
       },
       "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestBulkSendWithTemplateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestBulkSendWithTemplateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestCreateEmbeddedRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestCreateEmbeddedRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestCreateEmbeddedWithTemplateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestCreateEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditEmbeddedRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditEmbeddedRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditEmbeddedWithTemplateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestEditWithTemplateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestEditWithTemplateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestSendRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestSendRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestSendWithTemplateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/SignatureRequestSendWithTemplateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "TemplateCreateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/TemplateCreateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "TemplateCreateEmbeddedDraftRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/TemplateCreateEmbeddedDraftRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "UnclaimedDraftCreateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnclaimedDraftCreateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "UnclaimedDraftCreateEmbeddedRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnclaimedDraftCreateEmbeddedRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataProperty": {
+        "maxItems": 10,
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "BulkSendJobGetResponseSignatureRequestsMetadata": {
-        "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/BulkSendJobGetResponseSignatureRequestsMetadataAdditionalProperties"
-        },
-        "description": "The metadata attached to the signature request."
       },
       "FaxResponseMetadataProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/FaxResponseMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "Fax Metadata"
       },
       "SignatureRequestResponseMetadataProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/BulkSendJobGetResponseSignatureRequestsMetadataAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "The metadata attached to the signature request."
       },
       "TemplateResponseMetadataProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/TemplateResponseMetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "The metadata attached to the template."
       },
       "BulkSendJobGetResponseSignatureRequestsAllOf2MetadataProperty": {
         "type": "object",
-        "additionalProperties": {
-          "$ref": "#/components/schemas/BulkSendJobGetResponseSignatureRequestsAllOf2MetadataPropertyAdditionalProperties"
-        },
+        "additionalProperties": {},
         "description": "The metadata attached to the signature request."
-      },
-      "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestBulkSendWithTemplateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestCreateEmbeddedRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestCreateEmbeddedWithTemplateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditEmbeddedRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditEmbeddedWithTemplateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditWithTemplateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestSendRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestSendWithTemplateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "TemplateCreateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "TemplateCreateEmbeddedDraftRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "UnclaimedDraftCreateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "UnclaimedDraftCreateEmbeddedRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "FaxResponseMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestResponseMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "TemplateResponseMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "BulkSendJobGetResponseSignatureRequestsAllOf2MetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestBulkSendWithTemplateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestCreateEmbeddedRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestCreateEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditEmbeddedRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestEditWithTemplateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestSendRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "SignatureRequestSendWithTemplateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "TemplateCreateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "TemplateCreateEmbeddedDraftRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "UnclaimedDraftCreateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "UnclaimedDraftCreateEmbeddedRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "BulkSendJobGetResponseSignatureRequestsMetadataAdditionalProperties": {
-        "type": "object"
-      },
-      "FaxResponseMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "TemplateResponseMetadataPropertyAdditionalProperties": {
-        "type": "object"
-      },
-      "BulkSendJobGetResponseSignatureRequestsAllOf2MetadataPropertyAdditionalProperties": {
-        "type": "object"
       },
       "FaxLineCreateRequestCountry": {
         "enum": [
@@ -20215,7 +20039,6 @@
           "UK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Country of the area code",
         "x-ms-enum": {
           "name": "FaxLineCreateRequestCountry",
@@ -20244,7 +20067,6 @@
           "fax_usage"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ReportCreateRequestReportTypeItem",
           "modelAsString": false,
@@ -20278,7 +20100,6 @@
           "YYYY - MM - DD"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Allows requester to specify the date format (see list of allowed [formats](/api/reference/constants/#date-formats))\n\n**NOTE:** Only available for Premium and higher.",
         "x-enum-varnames": [
           "MMDDYYYY",
@@ -20325,7 +20146,6 @@
           "change-group-visibility"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SubFormFieldRuleActionType",
           "modelAsString": false,
@@ -20350,7 +20170,6 @@
           "not"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Different field types allow different \u0060operator\u0060 values:\n- Field type of **text**:\n  - **is**: exact match\n  - **not**: not exact match\n  - **match**: regular expression, without /. Example:\n    - OK \u0060[a-zA-Z0-9]\u0060\n    - Not OK \u0060/[a-zA-Z0-9]/\u0060\n- Field type of **dropdown**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value\n  - **any**: exact match, array of values.\n  - **none**: not exact match, array of values.\n- Field type of **checkbox**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value\n- Field type of **radio**:\n  - **is**: exact match, single value\n  - **not**: not exact match, single value",
         "x-ms-enum": {
           "name": "SubFormFieldRuleTriggerOperator",
@@ -20399,7 +20218,6 @@
           "notoSanThaiMerged"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Font family for the field.",
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentDateSignedFontFamily",
@@ -20492,7 +20310,6 @@
           "notoSanThaiMerged"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Font family for the field.",
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentDropdownFontFamily",
@@ -20585,7 +20402,6 @@
           "notoSanThaiMerged"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Font family for the field.",
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentHyperlinkFontFamily",
@@ -20672,7 +20488,6 @@
           "custom_regex"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Each text field may contain a \u0060validation_type\u0060 parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.\n\n**NOTE:** When using \u0060custom_regex\u0060 you are required to pass a second parameter \u0060validation_custom_regex\u0060 and you can optionally provide \u0060validation_custom_regex_format_label\u0060 for the error message the user will see in case of an invalid value.",
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentTextValidationType",
@@ -20741,7 +20556,6 @@
           "notoSanThaiMerged"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Font family for the field.",
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentTextFontFamily",
@@ -20834,7 +20648,6 @@
           "notoSanThaiMerged"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Font family for the field.",
         "x-ms-enum": {
           "name": "SubFormFieldsPerDocumentTextMergeFontFamily",
@@ -20913,7 +20726,6 @@
           "checkbox"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of merge field.",
         "x-enumDescriptions": {
           "text": "Sets merge [field type](/api/reference/constants/#field-types) to \u0060text\u0060.",
@@ -20946,7 +20758,6 @@
           ""
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SubOAuthScopesItem",
           "modelAsString": false,
@@ -20988,7 +20799,6 @@
           "delivery"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Specifies the feature used with the \u0060sms_phone_number\u0060. Default \u0060authentication\u0060.\n\nIf \u0060authentication\u0060, signer is sent a verification code via SMS that is required to access the document.\n\nIf \u0060delivery\u0060, a link to complete the signature request is delivered via SMS (_and_ email).",
         "x-ms-enum": {
           "name": "SubSignatureRequestSignerSmsPhoneNumberType",
@@ -21011,7 +20821,6 @@
           "delivery"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Specifies the feature used with the \u0060sms_phone_number\u0060. Default \u0060authentication\u0060.\n\nIf \u0060authentication\u0060, signer is sent a verification code via SMS that is required to access the document.\n\nIf \u0060delivery\u0060, a link to complete the signature request is delivered via SMS (_and_ email).",
         "x-ms-enum": {
           "name": "SubSignatureRequestTemplateSignerSmsPhoneNumberType",
@@ -21036,7 +20845,6 @@
           "upload"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The default type shown (limited to the listed types)",
         "x-ms-enum": {
           "name": "SubSigningOptionsDefaultType",
@@ -21067,7 +20875,6 @@
           "terms2"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SubWhiteLabelingOptionsLegalVersion",
           "modelAsString": false,
@@ -21091,7 +20898,6 @@
           "Admin"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "A role member will take in a new Team.\n\n**NOTE:** This parameter is used only if \u0060team_id\u0060 is provided.",
         "x-ms-enum": {
           "name": "TeamAddMemberRequestRole",
@@ -21112,7 +20918,6 @@
           "Admin"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "A new role member will take in a new Team.\n\n**NOTE:** This parameter is used only if \u0060new_team_id\u0060 is provided.",
         "x-ms-enum": {
           "name": "TeamRemoveMemberRequestNewRole",
@@ -21131,7 +20936,6 @@
           "request_signature"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of unclaimed draft to create. Use \u0060send_document\u0060 to create a claimable file, and \u0060request_signature\u0060 for a claimable signature request. If the type is \u0060request_signature\u0060 then signers name and email_address are not optional.",
         "x-ms-enum": {
           "name": "UnclaimedDraftCreateRequestType",
@@ -21154,7 +20958,6 @@
           "request_signature"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "The type of the draft. By default this is \u0060request_signature\u0060, but you can set it to \u0060send_document\u0060 if you want to self sign a document and download it.",
         "x-ms-enum": {
           "name": "UnclaimedDraftCreateEmbeddedRequestType",
@@ -21183,7 +20986,6 @@
           "error_bad_destination"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Fax Transmission Status Code",
         "x-ms-enum": {
           "name": "FaxResponseTransmissionStatusCode",
@@ -21232,7 +21034,6 @@
           "fax_usage"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "ReportResponseReportTypeItem",
           "modelAsString": false,
@@ -21270,7 +21071,6 @@
           "custom_regex"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Each text field may contain a \u0060validation_type\u0060 parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.",
         "nullable": true,
         "x-ms-enum": {
@@ -21354,7 +21154,6 @@
           "fax_blacklisted"
         ],
         "type": "string",
-        "additionalProperties": false,
         "description": "Type of callback event that was triggered.",
         "x-ms-enum": {
           "name": "EventCallbackRequestEventEventType",
@@ -21490,7 +21289,6 @@
           "UK"
         ],
         "type": "string",
-        "additionalProperties": false,
         "example": "US",
         "x-ms-enum": {
           "name": "FaxLineAreaCodeGetCountryParameter",
@@ -21566,7 +21364,6 @@
           "WY"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FaxLineAreaCodeGetStateParameter",
           "modelAsString": false,
@@ -21795,7 +21592,6 @@
           "YT"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "FaxLineAreaCodeGetProvinceParameter",
           "modelAsString": false,
@@ -21861,7 +21657,6 @@
           "zip"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "SignatureRequestFilesFileTypeParameter",
           "modelAsString": false,
@@ -21883,7 +21678,6 @@
           "zip"
         ],
         "type": "string",
-        "additionalProperties": false,
         "x-ms-enum": {
           "name": "TemplateFilesFileTypeParameter",
           "modelAsString": false,

@@ -88,7 +88,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 #else
         public string Message { get; set; }
 #endif
-        /// <summary>The metadata attached to the signature request.</summary>
+        /// <summary>The metadata property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobGetResponseSignatureRequestsMetadata? Metadata { get; set; }
