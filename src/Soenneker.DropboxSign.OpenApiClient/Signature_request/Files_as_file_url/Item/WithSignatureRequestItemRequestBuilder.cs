@@ -53,6 +53,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Signature_request.Files_as_file_ur
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.DropboxSign.OpenApiClient.Models.FileResponse>(requestInfo, global::Soenneker.DropboxSign.OpenApiClient.Models.FileResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

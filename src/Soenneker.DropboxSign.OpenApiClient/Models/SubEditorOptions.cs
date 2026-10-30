@@ -12,13 +12,24 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubEditorOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_edit_documents") is { } nullNodeAllowEditDocuments && nullNodeAllowEditDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEditDocuments = null;
+            if (parseNode.GetChildNode("allow_edit_signers") is { } nullNodeAllowEditSigners && nullNodeAllowEditSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEditSigners = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allows requesters to edit documents, including delete and add</summary>
-        public bool? AllowEditDocuments { get; set; }
+        public bool? AllowEditDocuments { get => _explicitNullValueAllowEditDocuments; set { _explicitNullValueAllowEditDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_edit_documents"); else _explicitNullProperties?.Remove("allow_edit_documents"); } }
+        private bool? _explicitNullValueAllowEditDocuments = default!;
         /// <summary>Allows requesters to edit the list of signers</summary>
-        public bool? AllowEditSigners { get; set; }
+        public bool? AllowEditSigners { get => _explicitNullValueAllowEditSigners; set { _explicitNullValueAllowEditSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_edit_signers"); else _explicitNullProperties?.Remove("allow_edit_signers"); } }
+        private bool? _explicitNullValueAllowEditSigners = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions"/> and sets the default values.
         /// </summary>
@@ -36,7 +47,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -59,6 +70,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allow_edit_documents", AllowEditDocuments);
             writer.WriteBoolValue("allow_edit_signers", AllowEditSigners);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

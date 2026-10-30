@@ -53,6 +53,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax_line.List
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineListResponse>(requestInfo, global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

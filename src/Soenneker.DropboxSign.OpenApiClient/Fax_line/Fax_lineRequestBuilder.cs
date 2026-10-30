@@ -85,6 +85,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax_line
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
@@ -108,6 +109,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax_line
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponse>(requestInfo, global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

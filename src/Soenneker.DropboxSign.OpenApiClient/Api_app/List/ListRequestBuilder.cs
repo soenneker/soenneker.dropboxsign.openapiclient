@@ -53,6 +53,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Api_app.List
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppListResponse>(requestInfo, global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppListResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

@@ -12,17 +12,32 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateResponseAccountQuota : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("api_signature_requests_left") is { } nullNodeApiSignatureRequestsLeft && nullNodeApiSignatureRequestsLeft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiSignatureRequestsLeft = null;
+            if (parseNode.GetChildNode("documents_left") is { } nullNodeDocumentsLeft && nullNodeDocumentsLeft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentsLeft = null;
+            if (parseNode.GetChildNode("sms_verifications_left") is { } nullNodeSmsVerificationsLeft && nullNodeSmsVerificationsLeft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsVerificationsLeft = null;
+            if (parseNode.GetChildNode("templates_left") is { } nullNodeTemplatesLeft && nullNodeTemplatesLeft.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplatesLeft = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>API signature requests remaining.</summary>
-        public int? ApiSignatureRequestsLeft { get; set; }
+        public int? ApiSignatureRequestsLeft { get => _explicitNullValueApiSignatureRequestsLeft; set { _explicitNullValueApiSignatureRequestsLeft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_signature_requests_left"); else _explicitNullProperties?.Remove("api_signature_requests_left"); } }
+        private int? _explicitNullValueApiSignatureRequestsLeft = default!;
         /// <summary>Signature requests remaining.</summary>
-        public int? DocumentsLeft { get; set; }
+        public int? DocumentsLeft { get => _explicitNullValueDocumentsLeft; set { _explicitNullValueDocumentsLeft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents_left"); else _explicitNullProperties?.Remove("documents_left"); } }
+        private int? _explicitNullValueDocumentsLeft = default!;
         /// <summary>SMS verifications remaining.</summary>
-        public int? SmsVerificationsLeft { get; set; }
+        public int? SmsVerificationsLeft { get => _explicitNullValueSmsVerificationsLeft; set { _explicitNullValueSmsVerificationsLeft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_verifications_left"); else _explicitNullProperties?.Remove("sms_verifications_left"); } }
+        private int? _explicitNullValueSmsVerificationsLeft = default!;
         /// <summary>API templates remaining.</summary>
-        public int? TemplatesLeft { get; set; }
+        public int? TemplatesLeft { get => _explicitNullValueTemplatesLeft; set { _explicitNullValueTemplatesLeft = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("templates_left"); else _explicitNullProperties?.Remove("templates_left"); } }
+        private int? _explicitNullValueTemplatesLeft = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota"/> and sets the default values.
         /// </summary>
@@ -38,7 +53,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -65,6 +80,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteIntValue("documents_left", DocumentsLeft);
             writer.WriteIntValue("sms_verifications_left", SmsVerificationsLeft);
             writer.WriteIntValue("templates_left", TemplatesLeft);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

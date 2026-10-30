@@ -12,118 +12,175 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SignatureRequestResponseSignatures : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("decline_reason") is { } nullNodeDeclineReason && nullNodeDeclineReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DeclineReason = null;
+            if (parseNode.GetChildNode("error") is { } nullNodeError && nullNodeError.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Error = null;
+            if (parseNode.GetChildNode("has_pin") is { } nullNodeHasPin && nullNodeHasPin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasPin = null;
+            if (parseNode.GetChildNode("has_sms_auth") is { } nullNodeHasSmsAuth && nullNodeHasSmsAuth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasSmsAuth = null;
+            if (parseNode.GetChildNode("has_sms_delivery") is { } nullNodeHasSmsDelivery && nullNodeHasSmsDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HasSmsDelivery = null;
+            if (parseNode.GetChildNode("last_reminded_at") is { } nullNodeLastRemindedAt && nullNodeLastRemindedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastRemindedAt = null;
+            if (parseNode.GetChildNode("last_viewed_at") is { } nullNodeLastViewedAt && nullNodeLastViewedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastViewedAt = null;
+            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("reassigned_by") is { } nullNodeReassignedBy && nullNodeReassignedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignedBy = null;
+            if (parseNode.GetChildNode("reassigned_from") is { } nullNodeReassignedFrom && nullNodeReassignedFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignedFrom = null;
+            if (parseNode.GetChildNode("reassignment_reason") is { } nullNodeReassignmentReason && nullNodeReassignmentReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReassignmentReason = null;
+            if (parseNode.GetChildNode("signature_id") is { } nullNodeSignatureId && nullNodeSignatureId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureId = null;
+            if (parseNode.GetChildNode("signed_at") is { } nullNodeSignedAt && nullNodeSignedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignedAt = null;
+            if (parseNode.GetChildNode("signer_email_address") is { } nullNodeSignerEmailAddress && nullNodeSignerEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerEmailAddress = null;
+            if (parseNode.GetChildNode("signer_group_guid") is { } nullNodeSignerGroupGuid && nullNodeSignerGroupGuid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerGroupGuid = null;
+            if (parseNode.GetChildNode("signer_name") is { } nullNodeSignerName && nullNodeSignerName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerName = null;
+            if (parseNode.GetChildNode("signer_role") is { } nullNodeSignerRole && nullNodeSignerRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerRole = null;
+            if (parseNode.GetChildNode("sms_phone_number") is { } nullNodeSmsPhoneNumber && nullNodeSmsPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPhoneNumber = null;
+            if (parseNode.GetChildNode("status_code") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reason provided by the signer for declining the request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DeclineReason { get; set; }
+        public string? DeclineReason { get => _explicitNullValueDeclineReason; set { _explicitNullValueDeclineReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decline_reason"); else _explicitNullProperties?.Remove("decline_reason"); } }
+        private string? _explicitNullValueDeclineReason = default!;
 #nullable restore
 #else
-        public string DeclineReason { get; set; }
+        public string DeclineReason { get => _explicitNullValueDeclineReason; set { _explicitNullValueDeclineReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("decline_reason"); else _explicitNullProperties?.Remove("decline_reason"); } }
+        private string _explicitNullValueDeclineReason = default!;
 #endif
         /// <summary>Error message pertaining to this signer, or null.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Error { get; set; }
+        public string? Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string? _explicitNullValueError = default!;
 #nullable restore
 #else
-        public string Error { get; set; }
+        public string Error { get => _explicitNullValueError; set { _explicitNullValueError = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error"); else _explicitNullProperties?.Remove("error"); } }
+        private string _explicitNullValueError = default!;
 #endif
         /// <summary>Boolean to indicate whether this signature requires a PIN to access.</summary>
-        public bool? HasPin { get; set; }
+        public bool? HasPin { get => _explicitNullValueHasPin; set { _explicitNullValueHasPin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_pin"); else _explicitNullProperties?.Remove("has_pin"); } }
+        private bool? _explicitNullValueHasPin = default!;
         /// <summary>Boolean to indicate whether this signature has SMS authentication enabled.</summary>
-        public bool? HasSmsAuth { get; set; }
+        public bool? HasSmsAuth { get => _explicitNullValueHasSmsAuth; set { _explicitNullValueHasSmsAuth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_sms_auth"); else _explicitNullProperties?.Remove("has_sms_auth"); } }
+        private bool? _explicitNullValueHasSmsAuth = default!;
         /// <summary>Boolean to indicate whether this signature has SMS delivery enabled.</summary>
-        public bool? HasSmsDelivery { get; set; }
+        public bool? HasSmsDelivery { get => _explicitNullValueHasSmsDelivery; set { _explicitNullValueHasSmsDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("has_sms_delivery"); else _explicitNullProperties?.Remove("has_sms_delivery"); } }
+        private bool? _explicitNullValueHasSmsDelivery = default!;
         /// <summary>The time the last reminder email was sent to the signer or null.</summary>
-        public int? LastRemindedAt { get; set; }
+        public int? LastRemindedAt { get => _explicitNullValueLastRemindedAt; set { _explicitNullValueLastRemindedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_reminded_at"); else _explicitNullProperties?.Remove("last_reminded_at"); } }
+        private int? _explicitNullValueLastRemindedAt = default!;
         /// <summary>The time that the document was last viewed by this signer or null.</summary>
-        public int? LastViewedAt { get; set; }
+        public int? LastViewedAt { get => _explicitNullValueLastViewedAt; set { _explicitNullValueLastViewedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last_viewed_at"); else _explicitNullProperties?.Remove("last_viewed_at"); } }
+        private int? _explicitNullValueLastViewedAt = default!;
         /// <summary>If signer order is assigned this is the 0-based index for this signer.</summary>
-        public int? Order { get; set; }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        private int? _explicitNullValueOrder = default!;
         /// <summary>Email address of original signer who reassigned to this signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReassignedBy { get; set; }
+        public string? ReassignedBy { get => _explicitNullValueReassignedBy; set { _explicitNullValueReassignedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassigned_by"); else _explicitNullProperties?.Remove("reassigned_by"); } }
+        private string? _explicitNullValueReassignedBy = default!;
 #nullable restore
 #else
-        public string ReassignedBy { get; set; }
+        public string ReassignedBy { get => _explicitNullValueReassignedBy; set { _explicitNullValueReassignedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassigned_by"); else _explicitNullProperties?.Remove("reassigned_by"); } }
+        private string _explicitNullValueReassignedBy = default!;
 #endif
         /// <summary>Previous signature identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReassignedFrom { get; set; }
+        public string? ReassignedFrom { get => _explicitNullValueReassignedFrom; set { _explicitNullValueReassignedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassigned_from"); else _explicitNullProperties?.Remove("reassigned_from"); } }
+        private string? _explicitNullValueReassignedFrom = default!;
 #nullable restore
 #else
-        public string ReassignedFrom { get; set; }
+        public string ReassignedFrom { get => _explicitNullValueReassignedFrom; set { _explicitNullValueReassignedFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassigned_from"); else _explicitNullProperties?.Remove("reassigned_from"); } }
+        private string _explicitNullValueReassignedFrom = default!;
 #endif
         /// <summary>Reason provided by original signer who reassigned to this signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReassignmentReason { get; set; }
+        public string? ReassignmentReason { get => _explicitNullValueReassignmentReason; set { _explicitNullValueReassignmentReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassignment_reason"); else _explicitNullProperties?.Remove("reassignment_reason"); } }
+        private string? _explicitNullValueReassignmentReason = default!;
 #nullable restore
 #else
-        public string ReassignmentReason { get; set; }
+        public string ReassignmentReason { get => _explicitNullValueReassignmentReason; set { _explicitNullValueReassignmentReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reassignment_reason"); else _explicitNullProperties?.Remove("reassignment_reason"); } }
+        private string _explicitNullValueReassignmentReason = default!;
 #endif
         /// <summary>Signature identifier.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignatureId { get; set; }
+        public string? SignatureId { get => _explicitNullValueSignatureId; set { _explicitNullValueSignatureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_id"); else _explicitNullProperties?.Remove("signature_id"); } }
+        private string? _explicitNullValueSignatureId = default!;
 #nullable restore
 #else
-        public string SignatureId { get; set; }
+        public string SignatureId { get => _explicitNullValueSignatureId; set { _explicitNullValueSignatureId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_id"); else _explicitNullProperties?.Remove("signature_id"); } }
+        private string _explicitNullValueSignatureId = default!;
 #endif
         /// <summary>Time that the document was signed or null.</summary>
-        public int? SignedAt { get; set; }
+        public int? SignedAt { get => _explicitNullValueSignedAt; set { _explicitNullValueSignedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signed_at"); else _explicitNullProperties?.Remove("signed_at"); } }
+        private int? _explicitNullValueSignedAt = default!;
         /// <summary>The email address of the signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignerEmailAddress { get; set; }
+        public string? SignerEmailAddress { get => _explicitNullValueSignerEmailAddress; set { _explicitNullValueSignerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_email_address"); else _explicitNullProperties?.Remove("signer_email_address"); } }
+        private string? _explicitNullValueSignerEmailAddress = default!;
 #nullable restore
 #else
-        public string SignerEmailAddress { get; set; }
+        public string SignerEmailAddress { get => _explicitNullValueSignerEmailAddress; set { _explicitNullValueSignerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_email_address"); else _explicitNullProperties?.Remove("signer_email_address"); } }
+        private string _explicitNullValueSignerEmailAddress = default!;
 #endif
         /// <summary>Signer Group GUID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignerGroupGuid { get; set; }
+        public string? SignerGroupGuid { get => _explicitNullValueSignerGroupGuid; set { _explicitNullValueSignerGroupGuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_group_guid"); else _explicitNullProperties?.Remove("signer_group_guid"); } }
+        private string? _explicitNullValueSignerGroupGuid = default!;
 #nullable restore
 #else
-        public string SignerGroupGuid { get; set; }
+        public string SignerGroupGuid { get => _explicitNullValueSignerGroupGuid; set { _explicitNullValueSignerGroupGuid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_group_guid"); else _explicitNullProperties?.Remove("signer_group_guid"); } }
+        private string _explicitNullValueSignerGroupGuid = default!;
 #endif
         /// <summary>The name of the signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignerName { get; set; }
+        public string? SignerName { get => _explicitNullValueSignerName; set { _explicitNullValueSignerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_name"); else _explicitNullProperties?.Remove("signer_name"); } }
+        private string? _explicitNullValueSignerName = default!;
 #nullable restore
 #else
-        public string SignerName { get; set; }
+        public string SignerName { get => _explicitNullValueSignerName; set { _explicitNullValueSignerName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_name"); else _explicitNullProperties?.Remove("signer_name"); } }
+        private string _explicitNullValueSignerName = default!;
 #endif
         /// <summary>The role of the signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignerRole { get; set; }
+        public string? SignerRole { get => _explicitNullValueSignerRole; set { _explicitNullValueSignerRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_role"); else _explicitNullProperties?.Remove("signer_role"); } }
+        private string? _explicitNullValueSignerRole = default!;
 #nullable restore
 #else
-        public string SignerRole { get; set; }
+        public string SignerRole { get => _explicitNullValueSignerRole; set { _explicitNullValueSignerRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_role"); else _explicitNullProperties?.Remove("signer_role"); } }
+        private string _explicitNullValueSignerRole = default!;
 #endif
         /// <summary>The SMS phone number used for authentication or signature request delivery.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsPhoneNumber { get; set; }
+        public string? SmsPhoneNumber { get => _explicitNullValueSmsPhoneNumber; set { _explicitNullValueSmsPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number"); else _explicitNullProperties?.Remove("sms_phone_number"); } }
+        private string? _explicitNullValueSmsPhoneNumber = default!;
 #nullable restore
 #else
-        public string SmsPhoneNumber { get; set; }
+        public string SmsPhoneNumber { get => _explicitNullValueSmsPhoneNumber; set { _explicitNullValueSmsPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number"); else _explicitNullProperties?.Remove("sms_phone_number"); } }
+        private string _explicitNullValueSmsPhoneNumber = default!;
 #endif
         /// <summary>The current status of the signature. eg: awaiting_signature, signed, declined.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StatusCode { get; set; }
+        public string? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
+        private string? _explicitNullValueStatusCode = default!;
 #nullable restore
 #else
-        public string StatusCode { get; set; }
+        public string StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
+        private string _explicitNullValueStatusCode = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures"/> and sets the default values.
@@ -140,7 +197,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseSignatures(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -197,6 +254,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("signer_role", SignerRole);
             writer.WriteStringValue("sms_phone_number", SmsPhoneNumber);
             writer.WriteStringValue("status_code", StatusCode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

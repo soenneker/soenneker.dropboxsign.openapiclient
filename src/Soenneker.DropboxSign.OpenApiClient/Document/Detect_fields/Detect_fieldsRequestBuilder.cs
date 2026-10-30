@@ -55,6 +55,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Document.Detect_fields
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponse>(requestInfo, global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

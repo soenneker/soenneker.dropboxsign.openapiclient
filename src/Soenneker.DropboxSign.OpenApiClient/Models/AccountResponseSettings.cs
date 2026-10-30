@@ -12,15 +12,28 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class AccountResponseSettings : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("signer_access_codes") is { } nullNodeSignerAccessCodes && nullNodeSignerAccessCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerAccessCodes = null;
+            if (parseNode.GetChildNode("sms_authentication") is { } nullNodeSmsAuthentication && nullNodeSmsAuthentication.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsAuthentication = null;
+            if (parseNode.GetChildNode("sms_delivery") is { } nullNodeSmsDelivery && nullNodeSmsDelivery.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsDelivery = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Returns `true` if _Custom access codes_ is enabled in Admin Console. [Read more](https://developers.hellosign.com/docs/sms-tools/walkthrough).</summary>
-        public bool? SignerAccessCodes { get; set; }
+        public bool? SignerAccessCodes { get => _explicitNullValueSignerAccessCodes; set { _explicitNullValueSignerAccessCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_access_codes"); else _explicitNullProperties?.Remove("signer_access_codes"); } }
+        private bool? _explicitNullValueSignerAccessCodes = default!;
         /// <summary>Returns `true` if _Signer authentication_ is enabled in Admin Console. [Read more](https://developers.hellosign.com/docs/sms-tools/walkthrough).</summary>
-        public bool? SmsAuthentication { get; set; }
+        public bool? SmsAuthentication { get => _explicitNullValueSmsAuthentication; set { _explicitNullValueSmsAuthentication = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_authentication"); else _explicitNullProperties?.Remove("sms_authentication"); } }
+        private bool? _explicitNullValueSmsAuthentication = default!;
         /// <summary>Returns `true` if _Text message_ is enabled in Admin Console. [Read more](https://developers.hellosign.com/docs/sms-tools/walkthrough).</summary>
-        public bool? SmsDelivery { get; set; }
+        public bool? SmsDelivery { get => _explicitNullValueSmsDelivery; set { _explicitNullValueSmsDelivery = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_delivery"); else _explicitNullProperties?.Remove("sms_delivery"); } }
+        private bool? _explicitNullValueSmsDelivery = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponseSettings"/> and sets the default values.
         /// </summary>
@@ -36,7 +49,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponseSettings CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponseSettings();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponseSettings(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,6 +74,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("signer_access_codes", SignerAccessCodes);
             writer.WriteBoolValue("sms_authentication", SmsAuthentication);
             writer.WriteBoolValue("sms_delivery", SmsDelivery);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

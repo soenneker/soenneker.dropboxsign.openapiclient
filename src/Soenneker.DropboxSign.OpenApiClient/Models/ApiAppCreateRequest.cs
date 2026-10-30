@@ -11,64 +11,92 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class ApiAppCreateRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("callback_url") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
+            if (parseNode.GetChildNode("custom_logo_file") is { } nullNodeCustomLogoFile && nullNodeCustomLogoFile.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomLogoFile = null;
+            if (parseNode.GetChildNode("domains") is { } nullNodeDomains && nullNodeDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domains = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("oauth") is { } nullNodeOauth && nullNodeOauth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Oauth = null;
+            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("white_labeling_options") is { } nullNodeWhiteLabelingOptions && nullNodeWhiteLabelingOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelingOptions = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The URL at which the ApiApp should receive event callbacks.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackUrl { get; set; }
+        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
+        private string? _explicitNullValueCallbackUrl = default!;
 #nullable restore
 #else
-        public string CallbackUrl { get; set; }
+        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
+        private string _explicitNullValueCallbackUrl = default!;
 #endif
         /// <summary>An image file to use as a custom logo in embedded contexts. (Only applies to some API plans)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public byte[]? CustomLogoFile { get; set; }
+        public byte[]? CustomLogoFile { get => _explicitNullValueCustomLogoFile; set { _explicitNullValueCustomLogoFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_logo_file"); else _explicitNullProperties?.Remove("custom_logo_file"); } }
+        private byte[]? _explicitNullValueCustomLogoFile = default!;
 #nullable restore
 #else
-        public byte[] CustomLogoFile { get; set; }
+        public byte[] CustomLogoFile { get => _explicitNullValueCustomLogoFile; set { _explicitNullValueCustomLogoFile = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_logo_file"); else _explicitNullProperties?.Remove("custom_logo_file"); } }
+        private byte[] _explicitNullValueCustomLogoFile = default!;
 #endif
         /// <summary>The domain names the ApiApp will be associated with.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Domains { get; set; }
+        public List<string>? Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        private List<string>? _explicitNullValueDomains = default!;
 #nullable restore
 #else
-        public List<string> Domains { get; set; }
+        public List<string> Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        private List<string> _explicitNullValueDomains = default!;
 #endif
         /// <summary>The name you want to assign to the ApiApp.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>OAuth related parameters.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth? Oauth { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth? Oauth { get => _explicitNullValueOauth; set { _explicitNullValueOauth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth"); else _explicitNullProperties?.Remove("oauth"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth? _explicitNullValueOauth = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth Oauth { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth Oauth { get => _explicitNullValueOauth; set { _explicitNullValueOauth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth"); else _explicitNullProperties?.Remove("oauth"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth _explicitNullValueOauth = default!;
 #endif
         /// <summary>Additional options supported by API App.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions? Options { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions Options { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions _explicitNullValueOptions = default!;
 #endif
         /// <summary>An array of elements and values serialized to a string, to be used to customize the app&apos;s signer page. (Only applies to some API plans)Take a look at our [white labeling guide](https://developers.hellosign.com/api/reference/premium-branding/) to learn more.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions? WhiteLabelingOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions? WhiteLabelingOptions { get => _explicitNullValueWhiteLabelingOptions; set { _explicitNullValueWhiteLabelingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("white_labeling_options"); else _explicitNullProperties?.Remove("white_labeling_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions? _explicitNullValueWhiteLabelingOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions WhiteLabelingOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions WhiteLabelingOptions { get => _explicitNullValueWhiteLabelingOptions; set { _explicitNullValueWhiteLabelingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("white_labeling_options"); else _explicitNullProperties?.Remove("white_labeling_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions _explicitNullValueWhiteLabelingOptions = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppCreateRequest"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppCreateRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppCreateRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOAuth>("oauth", Oauth);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions>("options", Options);
             writer.WriteObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptions>("white_labeling_options", WhiteLabelingOptions);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

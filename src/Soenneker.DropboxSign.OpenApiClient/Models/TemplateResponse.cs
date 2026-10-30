@@ -12,109 +12,159 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
+            if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
+            if (parseNode.GetChildNode("can_edit") is { } nullNodeCanEdit && nullNodeCanEdit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanEdit = null;
+            if (parseNode.GetChildNode("cc_roles") is { } nullNodeCcRoles && nullNodeCcRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcRoles = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("documents") is { } nullNodeDocuments && nullNodeDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Documents = null;
+            if (parseNode.GetChildNode("is_creator") is { } nullNodeIsCreator && nullNodeIsCreator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCreator = null;
+            if (parseNode.GetChildNode("is_embedded") is { } nullNodeIsEmbedded && nullNodeIsEmbedded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEmbedded = null;
+            if (parseNode.GetChildNode("is_locked") is { } nullNodeIsLocked && nullNodeIsLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocked = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("named_form_fields") is { } nullNodeNamedFormFields && nullNodeNamedFormFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NamedFormFields = null;
+            if (parseNode.GetChildNode("signer_roles") is { } nullNodeSignerRoles && nullNodeSignerRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignerRoles = null;
+            if (parseNode.GetChildNode("template_id") is { } nullNodeTemplateId && nullNodeTemplateId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateId = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("updated_at") is { } nullNodeUpdatedAt && nullNodeUpdatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UpdatedAt = null;
+        }
+
         /// <summary>An array of the Accounts that can use this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount>? Accounts { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount>? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount>? _explicitNullValueAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount> Accounts { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount> Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccount> _explicitNullValueAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Signer attachments.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment>? Attachments { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment>? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment> Attachments { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestResponseAttachment> _explicitNullValueAttachments = default!;
 #endif
         /// <summary>Indicates whether edit rights have been granted to you by the owner (always `true` if that&apos;s you).</summary>
-        public bool? CanEdit { get; set; }
+        public bool? CanEdit { get => _explicitNullValueCanEdit; set { _explicitNullValueCanEdit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_edit"); else _explicitNullProperties?.Remove("can_edit"); } }
+        private bool? _explicitNullValueCanEdit = default!;
         /// <summary>An array of the designated CC roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole>? CcRoles { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole>? CcRoles { get => _explicitNullValueCcRoles; set { _explicitNullValueCcRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_roles"); else _explicitNullProperties?.Remove("cc_roles"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole>? _explicitNullValueCcRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole> CcRoles { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole> CcRoles { get => _explicitNullValueCcRoles; set { _explicitNullValueCcRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_roles"); else _explicitNullProperties?.Remove("cc_roles"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseCcRole> _explicitNullValueCcRoles = default!;
 #endif
         /// <summary>Deprecated. Use `custom_fields` inside the [documents](https://developers.hellosign.com/api/reference/operation/templateGet/#!c=200&amp;path=template/documents&amp;t=response) array instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>? CustomFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase> CustomFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>An array describing each document associated with this Template. Includes form field data for each document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument>? Documents { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument>? Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument>? _explicitNullValueDocuments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument> Documents { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument> Documents { get => _explicitNullValueDocuments; set { _explicitNullValueDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("documents"); else _explicitNullProperties?.Remove("documents"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument> _explicitNullValueDocuments = default!;
 #endif
         /// <summary>`true` if you are the owner of this template, `false` if it&apos;s been shared with you by a team member.</summary>
-        public bool? IsCreator { get; set; }
+        public bool? IsCreator { get => _explicitNullValueIsCreator; set { _explicitNullValueIsCreator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_creator"); else _explicitNullProperties?.Remove("is_creator"); } }
+        private bool? _explicitNullValueIsCreator = default!;
         /// <summary>`true` if this template was created using an embedded flow, `false` if it was created on our website. Will be `null` when you are not the creator of the Template.</summary>
-        public bool? IsEmbedded { get; set; }
+        public bool? IsEmbedded { get => _explicitNullValueIsEmbedded; set { _explicitNullValueIsEmbedded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_embedded"); else _explicitNullProperties?.Remove("is_embedded"); } }
+        private bool? _explicitNullValueIsEmbedded = default!;
         /// <summary>Indicates whether the template is locked.If `true`, then the template was created outside your quota and can only be used in `test_mode`.If `false`, then the template is within your quota and can be used to create signature requests.</summary>
-        public bool? IsLocked { get; set; }
+        public bool? IsLocked { get => _explicitNullValueIsLocked; set { _explicitNullValueIsLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_locked"); else _explicitNullProperties?.Remove("is_locked"); } }
+        private bool? _explicitNullValueIsLocked = default!;
         /// <summary>The default message that will be sent to signers when using this Template to send a SignatureRequest. This can be overridden when sending the SignatureRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The metadata attached to the template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Deprecated. Use `form_fields` inside the [documents](https://developers.hellosign.com/api/reference/operation/templateGet/#!c=200&amp;path=template/documents&amp;t=response) array instead.</summary>
         [Obsolete("")]
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>? NamedFormFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>? NamedFormFields { get => _explicitNullValueNamedFormFields; set { _explicitNullValueNamedFormFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("named_form_fields"); else _explicitNullProperties?.Remove("named_form_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>? _explicitNullValueNamedFormFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase> NamedFormFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase> NamedFormFields { get => _explicitNullValueNamedFormFields; set { _explicitNullValueNamedFormFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("named_form_fields"); else _explicitNullProperties?.Remove("named_form_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase> _explicitNullValueNamedFormFields = default!;
 #endif
         /// <summary>An array of the designated signer roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole>? SignerRoles { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole>? SignerRoles { get => _explicitNullValueSignerRoles; set { _explicitNullValueSignerRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_roles"); else _explicitNullProperties?.Remove("signer_roles"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole>? _explicitNullValueSignerRoles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole> SignerRoles { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole> SignerRoles { get => _explicitNullValueSignerRoles; set { _explicitNullValueSignerRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signer_roles"); else _explicitNullProperties?.Remove("signer_roles"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseSignerRole> _explicitNullValueSignerRoles = default!;
 #endif
         /// <summary>The id of the Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TemplateId { get; set; }
+        public string? TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_id"); else _explicitNullProperties?.Remove("template_id"); } }
+        private string? _explicitNullValueTemplateId = default!;
 #nullable restore
 #else
-        public string TemplateId { get; set; }
+        public string TemplateId { get => _explicitNullValueTemplateId; set { _explicitNullValueTemplateId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_id"); else _explicitNullProperties?.Remove("template_id"); } }
+        private string _explicitNullValueTemplateId = default!;
 #endif
         /// <summary>The title of the Template. This will also be the default subject of the message sent to signers when using this Template to send a SignatureRequest. This can be overridden when sending the SignatureRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>Time the template was last updated.</summary>
-        public int? UpdatedAt { get; set; }
+        public int? UpdatedAt { get => _explicitNullValueUpdatedAt; set { _explicitNullValueUpdatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("updated_at"); else _explicitNullProperties?.Remove("updated_at"); } }
+        private int? _explicitNullValueUpdatedAt = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse"/> and sets the default values.
         /// </summary>
@@ -130,7 +180,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -181,6 +231,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("template_id", TemplateId);
             writer.WriteStringValue("title", Title);
             writer.WriteIntValue("updated_at", UpdatedAt);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

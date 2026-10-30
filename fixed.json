@@ -5950,11 +5950,19 @@
             "content": {
               "application/pdf": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SignatureRequestFiles200PdfResponseSchema"
                 }
               },
               "application/zip": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/SignatureRequestFiles200ZipResponseSchema"
                 }
               }
@@ -9892,11 +9900,19 @@
             "content": {
               "application/pdf": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/TemplateFiles200PdfResponseSchema"
                 }
               },
               "application/zip": {
                 "schema": {
+                  "type": "string",
+                  "format": "binary"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/TemplateFiles200ZipResponseSchema"
                 }
               }

@@ -13,26 +13,44 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubFormFieldsPerDocumentHyperlink : global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("content_url") is { } nullNodeContentUrl && nullNodeContentUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentUrl = null;
+            if (parseNode.GetChildNode("font_family") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("font_size") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+        }
+
         /// <summary>Link Text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string _explicitNullValueContent = default!;
 #endif
         /// <summary>Link URL.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ContentUrl { get; set; }
+        public string? ContentUrl { get => _explicitNullValueContentUrl; set { _explicitNullValueContentUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_url"); else _explicitNullProperties?.Remove("content_url"); } }
+        private string? _explicitNullValueContentUrl = default!;
 #nullable restore
 #else
-        public string ContentUrl { get; set; }
+        public string ContentUrl { get => _explicitNullValueContentUrl; set { _explicitNullValueContentUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_url"); else _explicitNullProperties?.Remove("content_url"); } }
+        private string _explicitNullValueContentUrl = default!;
 #endif
         /// <summary>Font family for the field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlinkFontFamily? FontFamily { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlinkFontFamily? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font_family"); else _explicitNullProperties?.Remove("font_family"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlinkFontFamily? _explicitNullValueFontFamily = default!;
         /// <summary>The initial px font size for the field contents. Can be any integer value between `7` and `49`.**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.</summary>
-        public int? FontSize { get; set; }
+        public int? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font_size"); else _explicitNullProperties?.Remove("font_size"); } }
+        private int? _explicitNullValueFontSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlink"/> and sets the default values.
         /// </summary>
@@ -49,7 +67,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlink CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlink();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlink(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,7 +94,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("content", Content);
             writer.WriteStringValue("content_url", ContentUrl);
             writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentHyperlinkFontFamily>("font_family", FontFamily);
-            writer.WriteIntValue("font_size", FontSize);
+            writer.WriteIntValue("font_size", FontSize);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

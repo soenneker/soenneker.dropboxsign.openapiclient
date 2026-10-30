@@ -13,16 +13,29 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubFormFieldsPerDocumentCheckbox : global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
+            if (parseNode.GetChildNode("is_checked") is { } nullNodeIsChecked && nullNodeIsChecked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsChecked = null;
+        }
+
         /// <summary>String referencing group defined in `form_field_groups` parameter.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Group { get; set; }
+        public string? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private string? _explicitNullValueGroup = default!;
 #nullable restore
 #else
-        public string Group { get; set; }
+        public string Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private string _explicitNullValueGroup = default!;
 #endif
         /// <summary>`true` for checking the checkbox field by default, otherwise `false`.</summary>
-        public bool? IsChecked { get; set; }
+        public bool? IsChecked { get => _explicitNullValueIsChecked; set { _explicitNullValueIsChecked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_checked"); else _explicitNullProperties?.Remove("is_checked"); } }
+        private bool? _explicitNullValueIsChecked = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentCheckbox"/> and sets the default values.
         /// </summary>
@@ -38,7 +51,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentCheckbox CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentCheckbox();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentCheckbox(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,7 +74,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteStringValue("group", Group);
-            writer.WriteBoolValue("is_checked", IsChecked);
+            writer.WriteBoolValue("is_checked", IsChecked);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

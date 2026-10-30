@@ -12,24 +12,37 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateResponseDocumentFieldGroupRule : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("groupLabel") is { } nullNodeGroupLabel && nullNodeGroupLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupLabel = null;
+            if (parseNode.GetChildNode("requirement") is { } nullNodeRequirement && nullNodeRequirement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Requirement = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Name of the group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupLabel { get; set; }
+        public string? GroupLabel { get => _explicitNullValueGroupLabel; set { _explicitNullValueGroupLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupLabel"); else _explicitNullProperties?.Remove("groupLabel"); } }
+        private string? _explicitNullValueGroupLabel = default!;
 #nullable restore
 #else
-        public string GroupLabel { get; set; }
+        public string GroupLabel { get => _explicitNullValueGroupLabel; set { _explicitNullValueGroupLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("groupLabel"); else _explicitNullProperties?.Remove("groupLabel"); } }
+        private string _explicitNullValueGroupLabel = default!;
 #endif
         /// <summary>Examples: `require_0-1` `require_1` `require_1-ormore`- Check out the list of [acceptable `requirement` checkbox type values](/api/reference/constants/#checkbox-field-grouping).- Check out the list of [acceptable `requirement` radio type fields](/api/reference/constants/#radio-field-grouping).- Radio groups require **at least** two fields per group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Requirement { get; set; }
+        public string? Requirement { get => _explicitNullValueRequirement; set { _explicitNullValueRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement"); else _explicitNullProperties?.Remove("requirement"); } }
+        private string? _explicitNullValueRequirement = default!;
 #nullable restore
 #else
-        public string Requirement { get; set; }
+        public string Requirement { get => _explicitNullValueRequirement; set { _explicitNullValueRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement"); else _explicitNullProperties?.Remove("requirement"); } }
+        private string _explicitNullValueRequirement = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroupRule"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroupRule CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroupRule();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroupRule(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("groupLabel", GroupLabel);
             writer.WriteStringValue("requirement", Requirement);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

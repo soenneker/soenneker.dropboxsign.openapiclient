@@ -12,11 +12,22 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubFieldOptions : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("date_format") is { } nullNodeDateFormat && nullNodeDateFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateFormat = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allows requester to specify the date format (see list of allowed [formats](/api/reference/constants/#date-formats))**NOTE:** Only available for Premium and higher.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptionsDateFormat? DateFormat { get; set; }
+#nullable enable
+        public string? DateFormat { get => _explicitNullValueDateFormat; set { _explicitNullValueDateFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_format"); else _explicitNullProperties?.Remove("date_format"); } }
+        private string? _explicitNullValueDateFormat = default!;
+#nullable restore
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions"/> and sets the default values.
         /// </summary>
@@ -32,7 +43,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,7 +53,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "date_format", n => { DateFormat = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptionsDateFormat>(); } },
+                { "date_format", n => { DateFormat = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -52,7 +63,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptionsDateFormat>("date_format", DateFormat);
+            writer.WriteStringValue("date_format", DateFormat);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

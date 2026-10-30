@@ -13,10 +13,22 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubFormFieldsPerDocumentDateSigned : global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("font_family") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("font_size") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+        }
+
         /// <summary>Font family for the field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSignedFontFamily? FontFamily { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSignedFontFamily? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font_family"); else _explicitNullProperties?.Remove("font_family"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSignedFontFamily? _explicitNullValueFontFamily = default!;
         /// <summary>The initial px font size for the field contents. Can be any integer value between `7` and `49`.**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.</summary>
-        public int? FontSize { get; set; }
+        public int? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font_size"); else _explicitNullProperties?.Remove("font_size"); } }
+        private int? _explicitNullValueFontSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSigned"/> and sets the default values.
         /// </summary>
@@ -33,7 +45,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSigned CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSigned();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSigned(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,7 +68,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             base.Serialize(writer);
             writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentDateSignedFontFamily>("font_family", FontFamily);
-            writer.WriteIntValue("font_size", FontSize);
+            writer.WriteIntValue("font_size", FontSize);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

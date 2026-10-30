@@ -12,24 +12,37 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WarningResponse : IAdditionalDataHolder, IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("warning_msg") is { } nullNodeWarningMsg && nullNodeWarningMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningMsg = null;
+            if (parseNode.GetChildNode("warning_name") is { } nullNodeWarningName && nullNodeWarningName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningName = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Warning message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarningMsg { get; set; }
+        public string? WarningMsg { get => _explicitNullValueWarningMsg; set { _explicitNullValueWarningMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_msg"); else _explicitNullProperties?.Remove("warning_msg"); } }
+        private string? _explicitNullValueWarningMsg = default!;
 #nullable restore
 #else
-        public string WarningMsg { get; set; }
+        public string WarningMsg { get => _explicitNullValueWarningMsg; set { _explicitNullValueWarningMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_msg"); else _explicitNullProperties?.Remove("warning_msg"); } }
+        private string _explicitNullValueWarningMsg = default!;
 #endif
         /// <summary>Warning name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarningName { get; set; }
+        public string? WarningName { get => _explicitNullValueWarningName; set { _explicitNullValueWarningName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_name"); else _explicitNullProperties?.Remove("warning_name"); } }
+        private string? _explicitNullValueWarningName = default!;
 #nullable restore
 #else
-        public string WarningName { get; set; }
+        public string WarningName { get => _explicitNullValueWarningName; set { _explicitNullValueWarningName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_name"); else _explicitNullProperties?.Remove("warning_name"); } }
+        private string _explicitNullValueWarningName = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse"/> and sets the default values.
@@ -46,7 +59,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,6 +82,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("warning_msg", WarningMsg);
             writer.WriteStringValue("warning_name", WarningName);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

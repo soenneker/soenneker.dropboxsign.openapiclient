@@ -11,50 +11,74 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TemplateResponseDocument : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("field_groups") is { } nullNodeFieldGroups && nullNodeFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldGroups = null;
+            if (parseNode.GetChildNode("form_fields") is { } nullNodeFormFields && nullNodeFormFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFields = null;
+            if (parseNode.GetChildNode("index") is { } nullNodeIndex && nullNodeIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Index = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("static_fields") is { } nullNodeStaticFields && nullNodeStaticFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StaticFields = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>An array of Form Field objects containing the name and type of each named field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>? CustomFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase> CustomFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>An array of Form Field Group objects.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup>? FieldGroups { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup>? FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_groups"); else _explicitNullProperties?.Remove("field_groups"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup>? _explicitNullValueFieldGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup> FieldGroups { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup> FieldGroups { get => _explicitNullValueFieldGroups; set { _explicitNullValueFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_groups"); else _explicitNullProperties?.Remove("field_groups"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup> _explicitNullValueFieldGroups = default!;
 #endif
         /// <summary>An array of Form Field objects containing the name and type of each named field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>? FormFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>? FormFields { get => _explicitNullValueFormFields; set { _explicitNullValueFormFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields"); else _explicitNullProperties?.Remove("form_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase>? _explicitNullValueFormFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase> FormFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase> FormFields { get => _explicitNullValueFormFields; set { _explicitNullValueFormFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields"); else _explicitNullProperties?.Remove("form_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase> _explicitNullValueFormFields = default!;
 #endif
         /// <summary>Document ordering, the lowest index is displayed first and the highest last (0-based indexing).</summary>
-        public int? Index { get; set; }
+        public int? Index { get => _explicitNullValueIndex; set { _explicitNullValueIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("index"); else _explicitNullProperties?.Remove("index"); } }
+        private int? _explicitNullValueIndex = default!;
         /// <summary>Name of the associated file.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>An array describing static overlay fields. **NOTE:** Only available for certain subscriptions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentStaticFieldBase>? StaticFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentStaticFieldBase>? StaticFields { get => _explicitNullValueStaticFields; set { _explicitNullValueStaticFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("static_fields"); else _explicitNullProperties?.Remove("static_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentStaticFieldBase>? _explicitNullValueStaticFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentStaticFieldBase> StaticFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentStaticFieldBase> StaticFields { get => _explicitNullValueStaticFields; set { _explicitNullValueStaticFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("static_fields"); else _explicitNullProperties?.Remove("static_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentStaticFieldBase> _explicitNullValueStaticFields = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument"/> and sets the default values.
@@ -71,7 +95,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocument(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteIntValue("index", Index);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentStaticFieldBase>("static_fields", StaticFields);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

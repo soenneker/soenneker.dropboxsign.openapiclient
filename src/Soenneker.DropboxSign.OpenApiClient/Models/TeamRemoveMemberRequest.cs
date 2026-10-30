@@ -11,42 +11,63 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class TeamRemoveMemberRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("new_owner_email_address") is { } nullNodeNewOwnerEmailAddress && nullNodeNewOwnerEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewOwnerEmailAddress = null;
+            if (parseNode.GetChildNode("new_role") is { } nullNodeNewRole && nullNodeNewRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewRole = null;
+            if (parseNode.GetChildNode("new_team_id") is { } nullNodeNewTeamId && nullNodeNewTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewTeamId = null;
+        }
+
         /// <summary>**account_id** or **email_address** is required. If both are provided, the account id prevails.Account id to remove from your Team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get; set; }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get; set; }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>**account_id** or **email_address** is required. If both are provided, the account id prevails.Email address of the Account to remove from your Team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get; set; }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The email address of an Account on this Team to receive all documents, templates, and API apps (if applicable) from the removed Account. If not provided, and on an Enterprise plan, this data will remain with the removed Account.**NOTE:** Only available for Enterprise plans.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewOwnerEmailAddress { get; set; }
+        public string? NewOwnerEmailAddress { get => _explicitNullValueNewOwnerEmailAddress; set { _explicitNullValueNewOwnerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_owner_email_address"); else _explicitNullProperties?.Remove("new_owner_email_address"); } }
+        private string? _explicitNullValueNewOwnerEmailAddress = default!;
 #nullable restore
 #else
-        public string NewOwnerEmailAddress { get; set; }
+        public string NewOwnerEmailAddress { get => _explicitNullValueNewOwnerEmailAddress; set { _explicitNullValueNewOwnerEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_owner_email_address"); else _explicitNullProperties?.Remove("new_owner_email_address"); } }
+        private string _explicitNullValueNewOwnerEmailAddress = default!;
 #endif
         /// <summary>A new role member will take in a new Team.**NOTE:** This parameter is used only if `new_team_id` is provided.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequestNewRole? NewRole { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequestNewRole? NewRole { get => _explicitNullValueNewRole; set { _explicitNullValueNewRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_role"); else _explicitNullProperties?.Remove("new_role"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequestNewRole? _explicitNullValueNewRole = default!;
         /// <summary>Id of the new Team.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? NewTeamId { get; set; }
+        public string? NewTeamId { get => _explicitNullValueNewTeamId; set { _explicitNullValueNewTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_team_id"); else _explicitNullProperties?.Remove("new_team_id"); } }
+        private string? _explicitNullValueNewTeamId = default!;
 #nullable restore
 #else
-        public string NewTeamId { get; set; }
+        public string NewTeamId { get => _explicitNullValueNewTeamId; set { _explicitNullValueNewTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("new_team_id"); else _explicitNullProperties?.Remove("new_team_id"); } }
+        private string _explicitNullValueNewTeamId = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequest"/> and sets the default values.
@@ -63,7 +84,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,6 +113,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("new_owner_email_address", NewOwnerEmailAddress);
             writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamRemoveMemberRequestNewRole>("new_role", NewRole);
             writer.WriteStringValue("new_team_id", NewTeamId);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

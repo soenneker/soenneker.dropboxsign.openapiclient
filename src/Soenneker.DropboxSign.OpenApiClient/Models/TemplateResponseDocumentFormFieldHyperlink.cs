@@ -13,34 +13,55 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class TemplateResponseDocumentFormFieldHyperlink : global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("avg_text_length") is { } nullNodeAvgTextLength && nullNodeAvgTextLength.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvgTextLength = null;
+            if (parseNode.GetChildNode("fontFamily") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
+            if (parseNode.GetChildNode("isMultiline") is { } nullNodeIsMultiline && nullNodeIsMultiline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMultiline = null;
+            if (parseNode.GetChildNode("originalFontSize") is { } nullNodeOriginalFontSize && nullNodeOriginalFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalFontSize = null;
+        }
+
         /// <summary>Average text length in this field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseFieldAvgTextLength? AvgTextLength { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseFieldAvgTextLength? AvgTextLength { get => _explicitNullValueAvgTextLength; set { _explicitNullValueAvgTextLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avg_text_length"); else _explicitNullProperties?.Remove("avg_text_length"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseFieldAvgTextLength? _explicitNullValueAvgTextLength = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseFieldAvgTextLength AvgTextLength { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseFieldAvgTextLength AvgTextLength { get => _explicitNullValueAvgTextLength; set { _explicitNullValueAvgTextLength = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avg_text_length"); else _explicitNullProperties?.Remove("avg_text_length"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseFieldAvgTextLength _explicitNullValueAvgTextLength = default!;
 #endif
         /// <summary>Font family used in this form field&apos;s text.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FontFamily { get; set; }
+        public string? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private string? _explicitNullValueFontFamily = default!;
 #nullable restore
 #else
-        public string FontFamily { get; set; }
+        public string FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fontFamily"); else _explicitNullProperties?.Remove("fontFamily"); } }
+        private string _explicitNullValueFontFamily = default!;
 #endif
         /// <summary>The name of the group this field is in. If this field is not a group, this defaults to `null` except for Radio fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Group { get; set; }
+        public string? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private string? _explicitNullValueGroup = default!;
 #nullable restore
 #else
-        public string Group { get; set; }
+        public string Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        private string _explicitNullValueGroup = default!;
 #endif
         /// <summary>Whether this form field is multiline text.</summary>
-        public bool? IsMultiline { get; set; }
+        public bool? IsMultiline { get => _explicitNullValueIsMultiline; set { _explicitNullValueIsMultiline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMultiline"); else _explicitNullProperties?.Remove("isMultiline"); } }
+        private bool? _explicitNullValueIsMultiline = default!;
         /// <summary>Original font size used in this form field&apos;s text.</summary>
-        public int? OriginalFontSize { get; set; }
+        public int? OriginalFontSize { get => _explicitNullValueOriginalFontSize; set { _explicitNullValueOriginalFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("originalFontSize"); else _explicitNullProperties?.Remove("originalFontSize"); } }
+        private int? _explicitNullValueOriginalFontSize = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldHyperlink"/> and sets the default values.
         /// </summary>
@@ -56,7 +77,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldHyperlink CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldHyperlink();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFormFieldHyperlink(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -85,7 +106,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("fontFamily", FontFamily);
             writer.WriteStringValue("group", Group);
             writer.WriteBoolValue("isMultiline", IsMultiline);
-            writer.WriteIntValue("originalFontSize", OriginalFontSize);
+            writer.WriteIntValue("originalFontSize", OriginalFontSize);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

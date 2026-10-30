@@ -11,197 +11,297 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class UnclaimedDraftCreateEmbeddedRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_ccs") is { } nullNodeAllowCcs && nullNodeAllowCcs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowCcs = null;
+            if (parseNode.GetChildNode("allow_decline") is { } nullNodeAllowDecline && nullNodeAllowDecline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowDecline = null;
+            if (parseNode.GetChildNode("allow_reassign") is { } nullNodeAllowReassign && nullNodeAllowReassign.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowReassign = null;
+            if (parseNode.GetChildNode("attachments") is { } nullNodeAttachments && nullNodeAttachments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attachments = null;
+            if (parseNode.GetChildNode("cc_email_addresses") is { } nullNodeCcEmailAddresses && nullNodeCcEmailAddresses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcEmailAddresses = null;
+            if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
+            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("editor_options") is { } nullNodeEditorOptions && nullNodeEditorOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditorOptions = null;
+            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("field_options") is { } nullNodeFieldOptions && nullNodeFieldOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FieldOptions = null;
+            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("file_urls") is { } nullNodeFileUrls && nullNodeFileUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileUrls = null;
+            if (parseNode.GetChildNode("force_signer_page") is { } nullNodeForceSignerPage && nullNodeForceSignerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceSignerPage = null;
+            if (parseNode.GetChildNode("force_subject_message") is { } nullNodeForceSubjectMessage && nullNodeForceSubjectMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceSubjectMessage = null;
+            if (parseNode.GetChildNode("form_field_groups") is { } nullNodeFormFieldGroups && nullNodeFormFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFieldGroups = null;
+            if (parseNode.GetChildNode("form_field_rules") is { } nullNodeFormFieldRules && nullNodeFormFieldRules.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFieldRules = null;
+            if (parseNode.GetChildNode("form_fields_per_document") is { } nullNodeFormFieldsPerDocument && nullNodeFormFieldsPerDocument.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFieldsPerDocument = null;
+            if (parseNode.GetChildNode("hide_text_tags") is { } nullNodeHideTextTags && nullNodeHideTextTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HideTextTags = null;
+            if (parseNode.GetChildNode("hold_request") is { } nullNodeHoldRequest && nullNodeHoldRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HoldRequest = null;
+            if (parseNode.GetChildNode("ignore_text_tags_extraction_errors") is { } nullNodeIgnoreTextTagsExtractionErrors && nullNodeIgnoreTextTagsExtractionErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IgnoreTextTagsExtractionErrors = null;
+            if (parseNode.GetChildNode("is_for_embedded_signing") is { } nullNodeIsForEmbeddedSigning && nullNodeIsForEmbeddedSigning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsForEmbeddedSigning = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("populate_auto_fill_fields") is { } nullNodePopulateAutoFillFields && nullNodePopulateAutoFillFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PopulateAutoFillFields = null;
+            if (parseNode.GetChildNode("requester_email_address") is { } nullNodeRequesterEmailAddress && nullNodeRequesterEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequesterEmailAddress = null;
+            if (parseNode.GetChildNode("requesting_redirect_url") is { } nullNodeRequestingRedirectUrl && nullNodeRequestingRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestingRedirectUrl = null;
+            if (parseNode.GetChildNode("show_preview") is { } nullNodeShowPreview && nullNodeShowPreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowPreview = null;
+            if (parseNode.GetChildNode("show_progress_stepper") is { } nullNodeShowProgressStepper && nullNodeShowProgressStepper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowProgressStepper = null;
+            if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
+            if (parseNode.GetChildNode("signing_options") is { } nullNodeSigningOptions && nullNodeSigningOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningOptions = null;
+            if (parseNode.GetChildNode("signing_redirect_url") is { } nullNodeSigningRedirectUrl && nullNodeSigningRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningRedirectUrl = null;
+            if (parseNode.GetChildNode("skip_me_now") is { } nullNodeSkipMeNow && nullNodeSkipMeNow.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipMeNow = null;
+            if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("use_preexisting_fields") is { } nullNodeUsePreexistingFields && nullNodeUsePreexistingFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsePreexistingFields = null;
+            if (parseNode.GetChildNode("use_text_tags") is { } nullNodeUseTextTags && nullNodeUseTextTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UseTextTags = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This allows the requester to specify whether the user is allowed to provide email addresses to CC when claiming the draft.</summary>
-        public bool? AllowCcs { get; set; }
+        public bool? AllowCcs { get => _explicitNullValueAllowCcs; set { _explicitNullValueAllowCcs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_ccs"); else _explicitNullProperties?.Remove("allow_ccs"); } }
+        private bool? _explicitNullValueAllowCcs = default!;
         /// <summary>Allows signers to decline to sign a document if `true`. Defaults to `false`.</summary>
-        public bool? AllowDecline { get; set; }
+        public bool? AllowDecline { get => _explicitNullValueAllowDecline; set { _explicitNullValueAllowDecline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_decline"); else _explicitNullProperties?.Remove("allow_decline"); } }
+        private bool? _explicitNullValueAllowDecline = default!;
         /// <summary>Allows signers to reassign their signature requests to other signers if set to `true`. Defaults to `false`.**NOTE:** Only available for Premium plan and higher.</summary>
-        public bool? AllowReassign { get; set; }
+        public bool? AllowReassign { get => _explicitNullValueAllowReassign; set { _explicitNullValueAllowReassign = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_reassign"); else _explicitNullProperties?.Remove("allow_reassign"); } }
+        private bool? _explicitNullValueAllowReassign = default!;
         /// <summary>A list describing the attachments</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment>? Attachments { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment>? Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment>? _explicitNullValueAttachments = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment> Attachments { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment> Attachments { get => _explicitNullValueAttachments; set { _explicitNullValueAttachments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attachments"); else _explicitNullProperties?.Remove("attachments"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment> _explicitNullValueAttachments = default!;
 #endif
         /// <summary>The email addresses that should be CCed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CcEmailAddresses { get; set; }
+        public List<string>? CcEmailAddresses { get => _explicitNullValueCcEmailAddresses; set { _explicitNullValueCcEmailAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_email_addresses"); else _explicitNullProperties?.Remove("cc_email_addresses"); } }
+        private List<string>? _explicitNullValueCcEmailAddresses = default!;
 #nullable restore
 #else
-        public List<string> CcEmailAddresses { get; set; }
+        public List<string> CcEmailAddresses { get => _explicitNullValueCcEmailAddresses; set { _explicitNullValueCcEmailAddresses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_email_addresses"); else _explicitNullProperties?.Remove("cc_email_addresses"); } }
+        private List<string> _explicitNullValueCcEmailAddresses = default!;
 #endif
         /// <summary>Client id of the app used to create the draft. Used to apply the branding and callback url defined for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientId { get; set; }
+        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        private string? _explicitNullValueClientId = default!;
 #nullable restore
 #else
-        public string ClientId { get; set; }
+        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        private string _explicitNullValueClientId = default!;
 #endif
         /// <summary>When used together with merge fields, `custom_fields` allows users to add pre-filled data to their signature requests.Pre-filled data can be used with &quot;send-once&quot; signature requests by adding merge fields with `form_fields_per_document` or [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) while passing values back with `custom_fields` together in one API call.For using pre-filled on repeatable signature requests, merge fields are added to templates in the Dropbox Sign UI or by calling [/template/create_embedded_draft](/api/reference/operation/templateCreateEmbeddedDraft) and then passing `custom_fields` on subsequent signature requests referencing that template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>? CustomFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField> CustomFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>This allows the requester to specify editor options when a preparing a document</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? EditorOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? _explicitNullValueEditorOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions EditorOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions _explicitNullValueEditorOptions = default!;
 #endif
         /// <summary>When the signature request will expire. Unsigned signatures will be moved to the expired status, and no longer signable. See [Signature Request Expiration Date](https://developers.hellosign.com/docs/signature-request/expiration/) for details.**NOTE:** This does not correspond to the **expires_at** returned in the response.</summary>
-        public int? ExpiresAt { get; set; }
+        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        private int? _explicitNullValueExpiresAt = default!;
         /// <summary>This allows the requester to specify field options for a signature request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions? FieldOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions? FieldOptions { get => _explicitNullValueFieldOptions; set { _explicitNullValueFieldOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_options"); else _explicitNullProperties?.Remove("field_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions? _explicitNullValueFieldOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions FieldOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions FieldOptions { get => _explicitNullValueFieldOptions; set { _explicitNullValueFieldOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("field_options"); else _explicitNullProperties?.Remove("field_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubFieldOptions _explicitNullValueFieldOptions = default!;
 #endif
         /// <summary>Use `files[]` to indicate the uploaded file(s) to send for signature.This endpoint requires either **files** or **file_urls[]**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<byte[]>? Files { get; set; }
+        public List<byte[]>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<byte[]>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<byte[]> Files { get; set; }
+        public List<byte[]> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<byte[]> _explicitNullValueFiles = default!;
 #endif
         /// <summary>Use `file_urls[]` to have Dropbox Sign download the file(s) to send for signature.This endpoint requires either **files** or **file_urls[]**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FileUrls { get; set; }
+        public List<string>? FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
+        private List<string>? _explicitNullValueFileUrls = default!;
 #nullable restore
 #else
-        public List<string> FileUrls { get; set; }
+        public List<string> FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
+        private List<string> _explicitNullValueFileUrls = default!;
 #endif
         /// <summary>Provide users the ability to review/edit the signers.</summary>
-        public bool? ForceSignerPage { get; set; }
+        public bool? ForceSignerPage { get => _explicitNullValueForceSignerPage; set { _explicitNullValueForceSignerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force_signer_page"); else _explicitNullProperties?.Remove("force_signer_page"); } }
+        private bool? _explicitNullValueForceSignerPage = default!;
         /// <summary>Provide users the ability to review/edit the subject and message.</summary>
-        public bool? ForceSubjectMessage { get; set; }
+        public bool? ForceSubjectMessage { get => _explicitNullValueForceSubjectMessage; set { _explicitNullValueForceSubjectMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force_subject_message"); else _explicitNullProperties?.Remove("force_subject_message"); } }
+        private bool? _explicitNullValueForceSubjectMessage = default!;
         /// <summary>Group information for fields defined in `form_fields_per_document`. String-indexed JSON array with `group_label` and `requirement` keys. `form_fields_per_document` must contain fields referencing a group defined in `form_field_groups`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>? FormFieldGroups { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>? FormFieldGroups { get => _explicitNullValueFormFieldGroups; set { _explicitNullValueFormFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_groups"); else _explicitNullProperties?.Remove("form_field_groups"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>? _explicitNullValueFormFieldGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup> FormFieldGroups { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup> FormFieldGroups { get => _explicitNullValueFormFieldGroups; set { _explicitNullValueFormFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_groups"); else _explicitNullProperties?.Remove("form_field_groups"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup> _explicitNullValueFormFieldGroups = default!;
 #endif
         /// <summary>Conditional Logic rules for fields defined in `form_fields_per_document`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule>? FormFieldRules { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule>? FormFieldRules { get => _explicitNullValueFormFieldRules; set { _explicitNullValueFormFieldRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_rules"); else _explicitNullProperties?.Remove("form_field_rules"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule>? _explicitNullValueFormFieldRules = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule> FormFieldRules { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule> FormFieldRules { get => _explicitNullValueFormFieldRules; set { _explicitNullValueFormFieldRules = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_rules"); else _explicitNullProperties?.Remove("form_field_rules"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRule> _explicitNullValueFormFieldRules = default!;
 #endif
         /// <summary>The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.* Text Field use `SubFormFieldsPerDocumentText`* Dropdown Field use `SubFormFieldsPerDocumentDropdown`* Hyperlink Field use `SubFormFieldsPerDocumentHyperlink`* Checkbox Field use `SubFormFieldsPerDocumentCheckbox`* Radio Field use `SubFormFieldsPerDocumentRadio`* Signature Field use `SubFormFieldsPerDocumentSignature`* Date Signed Field use `SubFormFieldsPerDocumentDateSigned`* Initials Field use `SubFormFieldsPerDocumentInitials`* Text Merge Field use `SubFormFieldsPerDocumentTextMerge`* Checkbox Merge Field use `SubFormFieldsPerDocumentCheckboxMerge`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>? FormFieldsPerDocument { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>? FormFieldsPerDocument { get => _explicitNullValueFormFieldsPerDocument; set { _explicitNullValueFormFieldsPerDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields_per_document"); else _explicitNullProperties?.Remove("form_fields_per_document"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>? _explicitNullValueFormFieldsPerDocument = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase> FormFieldsPerDocument { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase> FormFieldsPerDocument { get => _explicitNullValueFormFieldsPerDocument; set { _explicitNullValueFormFieldsPerDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields_per_document"); else _explicitNullProperties?.Remove("form_fields_per_document"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase> _explicitNullValueFormFieldsPerDocument = default!;
 #endif
         /// <summary>Send with a value of `true` if you wish to enable automatic Text Tag removal. Defaults to `false`. When using Text Tags it is preferred that you set this to `false` and hide your tags with white text or something similar because the automatic removal system can cause unwanted clipping. See the [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) walkthrough for more details.</summary>
-        public bool? HideTextTags { get; set; }
+        public bool? HideTextTags { get => _explicitNullValueHideTextTags; set { _explicitNullValueHideTextTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hide_text_tags"); else _explicitNullProperties?.Remove("hide_text_tags"); } }
+        private bool? _explicitNullValueHideTextTags = default!;
         /// <summary>The request from this draft will not automatically send to signers post-claim if set to `true`. Requester must [release](/api/reference/operation/signatureRequestReleaseHold/) the request from hold when ready to send. Defaults to `false`.</summary>
-        public bool? HoldRequest { get; set; }
+        public bool? HoldRequest { get => _explicitNullValueHoldRequest; set { _explicitNullValueHoldRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hold_request"); else _explicitNullProperties?.Remove("hold_request"); } }
+        private bool? _explicitNullValueHoldRequest = default!;
         /// <summary>Sent with a value of `true` to ignore the validation errors from text tags extraction. Defaults to `false`.</summary>
-        public bool? IgnoreTextTagsExtractionErrors { get; set; }
+        public bool? IgnoreTextTagsExtractionErrors { get => _explicitNullValueIgnoreTextTagsExtractionErrors; set { _explicitNullValueIgnoreTextTagsExtractionErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ignore_text_tags_extraction_errors"); else _explicitNullProperties?.Remove("ignore_text_tags_extraction_errors"); } }
+        private bool? _explicitNullValueIgnoreTextTagsExtractionErrors = default!;
         /// <summary>The request created from this draft will also be signable in embedded mode if set to `true`. Defaults to `false`.</summary>
-        public bool? IsForEmbeddedSigning { get; set; }
+        public bool? IsForEmbeddedSigning { get => _explicitNullValueIsForEmbeddedSigning; set { _explicitNullValueIsForEmbeddedSigning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_for_embedded_signing"); else _explicitNullProperties?.Remove("is_for_embedded_signing"); } }
+        private bool? _explicitNullValueIsForEmbeddedSigning = default!;
         /// <summary>The custom message in the email that will be sent to the signers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty? Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty Metadata { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Controls whether [auto fill fields](https://faq.hellosign.com/hc/en-us/articles/360051467511-Auto-Fill-Fields) can automatically populate a signer&apos;s information during signing.**NOTE:** Keep your signer&apos;s information safe by ensuring that the _signer on your signature request is the intended party_ before using this feature.</summary>
-        public bool? PopulateAutoFillFields { get; set; }
+        public bool? PopulateAutoFillFields { get => _explicitNullValuePopulateAutoFillFields; set { _explicitNullValuePopulateAutoFillFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("populate_auto_fill_fields"); else _explicitNullProperties?.Remove("populate_auto_fill_fields"); } }
+        private bool? _explicitNullValuePopulateAutoFillFields = default!;
         /// <summary>The email address of the user that should be designated as the requester of this draft, if the draft type is `request_signature`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequesterEmailAddress { get; set; }
+        public string? RequesterEmailAddress { get => _explicitNullValueRequesterEmailAddress; set { _explicitNullValueRequesterEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_email_address"); else _explicitNullProperties?.Remove("requester_email_address"); } }
+        private string? _explicitNullValueRequesterEmailAddress = default!;
 #nullable restore
 #else
-        public string RequesterEmailAddress { get; set; }
+        public string RequesterEmailAddress { get => _explicitNullValueRequesterEmailAddress; set { _explicitNullValueRequesterEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_email_address"); else _explicitNullProperties?.Remove("requester_email_address"); } }
+        private string _explicitNullValueRequesterEmailAddress = default!;
 #endif
         /// <summary>The URL you want signers redirected to after they successfully request a signature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestingRedirectUrl { get; set; }
+        public string? RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
+        private string? _explicitNullValueRequestingRedirectUrl = default!;
 #nullable restore
 #else
-        public string RequestingRedirectUrl { get; set; }
+        public string RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
+        private string _explicitNullValueRequestingRedirectUrl = default!;
 #endif
         /// <summary>This allows the requester to enable the editor/preview experience.- `show_preview=true`: Allows requesters to enable the editor/preview experience.- `show_preview=false`: Allows requesters to disable the editor/preview experience.</summary>
-        public bool? ShowPreview { get; set; }
+        public bool? ShowPreview { get => _explicitNullValueShowPreview; set { _explicitNullValueShowPreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_preview"); else _explicitNullProperties?.Remove("show_preview"); } }
+        private bool? _explicitNullValueShowPreview = default!;
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
-        public bool? ShowProgressStepper { get; set; }
+        public bool? ShowProgressStepper { get => _explicitNullValueShowProgressStepper; set { _explicitNullValueShowProgressStepper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_progress_stepper"); else _explicitNullProperties?.Remove("show_progress_stepper"); } }
+        private bool? _explicitNullValueShowProgressStepper = default!;
         /// <summary>Add Signers to your Unclaimed Draft Signature Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner>? Signers { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner>? _explicitNullValueSigners = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner> Signers { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubUnclaimedDraftSigner> _explicitNullValueSigners = default!;
 #endif
         /// <summary>This allows the requester to specify the types allowed for creating a signature and specify another signing options.**NOTE:** If `signing_options` are not defined in the request, the allowed types will default to those specified in the account settings.**NOTE:** If `force_advanced_signature_details` is set, allowed types has to be defined too.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions? SigningOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions? SigningOptions { get => _explicitNullValueSigningOptions; set { _explicitNullValueSigningOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_options"); else _explicitNullProperties?.Remove("signing_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions? _explicitNullValueSigningOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions SigningOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions SigningOptions { get => _explicitNullValueSigningOptions; set { _explicitNullValueSigningOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_options"); else _explicitNullProperties?.Remove("signing_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions _explicitNullValueSigningOptions = default!;
 #endif
         /// <summary>The URL you want signers redirected to after they successfully sign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SigningRedirectUrl { get; set; }
+        public string? SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        private string? _explicitNullValueSigningRedirectUrl = default!;
 #nullable restore
 #else
-        public string SigningRedirectUrl { get; set; }
+        public string SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        private string _explicitNullValueSigningRedirectUrl = default!;
 #endif
         /// <summary>Disables the &quot;Me (Now)&quot; option for the person preparing the document. Does not work with type `send_document`. Defaults to `false`.</summary>
-        public bool? SkipMeNow { get; set; }
+        public bool? SkipMeNow { get => _explicitNullValueSkipMeNow; set { _explicitNullValueSkipMeNow = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skip_me_now"); else _explicitNullProperties?.Remove("skip_me_now"); } }
+        private bool? _explicitNullValueSkipMeNow = default!;
         /// <summary>The subject in the email that will be sent to the signers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get; set; }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get; set; }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>Whether this is a test, the signature request created from this draft will not be legally binding if set to `true`. Defaults to `false`.</summary>
-        public bool? TestMode { get; set; }
+        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
+        private bool? _explicitNullValueTestMode = default!;
         /// <summary>The type of the draft. By default this is `request_signature`, but you can set it to `send_document` if you want to self sign a document and download it.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestType? Type { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestType? _explicitNullValueType = default!;
         /// <summary>Set `use_text_tags` to `true` to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or `false`). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`). Currently we only support use of either `use_text_tags` or `use_preexisting_fields` parameter, not both.</summary>
-        public bool? UsePreexistingFields { get; set; }
+        public bool? UsePreexistingFields { get => _explicitNullValueUsePreexistingFields; set { _explicitNullValueUsePreexistingFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_preexisting_fields"); else _explicitNullProperties?.Remove("use_preexisting_fields"); } }
+        private bool? _explicitNullValueUsePreexistingFields = default!;
         /// <summary>Set `use_text_tags` to `true` to enable [Text Tags](https://app.hellosign.com/api/textTagsWalkthrough#TextTagIntro) parsing in your document (defaults to disabled, or `false`). Alternatively, if your PDF contains pre-defined fields, enable the detection of these fields by setting the `use_preexisting_fields` to `true` (defaults to disabled, or `false`). Currently we only support use of either `use_text_tags` or `use_preexisting_fields` parameter, not both.</summary>
-        public bool? UseTextTags { get; set; }
+        public bool? UseTextTags { get => _explicitNullValueUseTextTags; set { _explicitNullValueUseTextTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("use_text_tags"); else _explicitNullProperties?.Remove("use_text_tags"); } }
+        private bool? _explicitNullValueUseTextTags = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest"/> and sets the default values.
         /// </summary>
@@ -232,7 +332,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -325,6 +425,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftCreateEmbeddedRequestType>("type", Type);
             writer.WriteBoolValue("use_preexisting_fields", UsePreexistingFields);
             writer.WriteBoolValue("use_text_tags", UseTextTags);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

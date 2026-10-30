@@ -13,62 +13,96 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class SubFormFieldsPerDocumentText : global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase, IParsable
     {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            base.CaptureExplicitNulls(parseNode);
+            if (parseNode.GetChildNode("auto_fill_type") is { } nullNodeAutoFillType && nullNodeAutoFillType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoFillType = null;
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("font_family") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("font_size") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+            if (parseNode.GetChildNode("link_id") is { } nullNodeLinkId && nullNodeLinkId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkId = null;
+            if (parseNode.GetChildNode("masked") is { } nullNodeMasked && nullNodeMasked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Masked = null;
+            if (parseNode.GetChildNode("placeholder") is { } nullNodePlaceholder && nullNodePlaceholder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Placeholder = null;
+            if (parseNode.GetChildNode("validation_custom_regex") is { } nullNodeValidationCustomRegex && nullNodeValidationCustomRegex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationCustomRegex = null;
+            if (parseNode.GetChildNode("validation_custom_regex_format_label") is { } nullNodeValidationCustomRegexFormatLabel && nullNodeValidationCustomRegexFormatLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationCustomRegexFormatLabel = null;
+            if (parseNode.GetChildNode("validation_type") is { } nullNodeValidationType && nullNodeValidationType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidationType = null;
+        }
+
         /// <summary>Auto fill type for populating fields automatically. Check out the list of [auto fill types](/api/reference/constants/#auto-fill-types) to learn more about the possible values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AutoFillType { get; set; }
+        public string? AutoFillType { get => _explicitNullValueAutoFillType; set { _explicitNullValueAutoFillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_fill_type"); else _explicitNullProperties?.Remove("auto_fill_type"); } }
+        private string? _explicitNullValueAutoFillType = default!;
 #nullable restore
 #else
-        public string AutoFillType { get; set; }
+        public string AutoFillType { get => _explicitNullValueAutoFillType; set { _explicitNullValueAutoFillType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("auto_fill_type"); else _explicitNullProperties?.Remove("auto_fill_type"); } }
+        private string _explicitNullValueAutoFillType = default!;
 #endif
         /// <summary>Content of a `me_now` text field</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string _explicitNullValueContent = default!;
 #endif
         /// <summary>Font family for the field.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextFontFamily? FontFamily { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextFontFamily? FontFamily { get => _explicitNullValueFontFamily; set { _explicitNullValueFontFamily = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font_family"); else _explicitNullProperties?.Remove("font_family"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextFontFamily? _explicitNullValueFontFamily = default!;
         /// <summary>The initial px font size for the field contents. Can be any integer value between `7` and `49`.**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.</summary>
-        public int? FontSize { get; set; }
+        public int? FontSize { get => _explicitNullValueFontSize; set { _explicitNullValueFontSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("font_size"); else _explicitNullProperties?.Remove("font_size"); } }
+        private int? _explicitNullValueFontSize = default!;
         /// <summary>Link two or more text fields. Enter data into one linked text field, which automatically fill all other linked text fields.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkId { get; set; }
+        public string? LinkId { get => _explicitNullValueLinkId; set { _explicitNullValueLinkId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_id"); else _explicitNullProperties?.Remove("link_id"); } }
+        private string? _explicitNullValueLinkId = default!;
 #nullable restore
 #else
-        public string LinkId { get; set; }
+        public string LinkId { get => _explicitNullValueLinkId; set { _explicitNullValueLinkId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_id"); else _explicitNullProperties?.Remove("link_id"); } }
+        private string _explicitNullValueLinkId = default!;
 #endif
         /// <summary>Masks entered data. For more information see [Masking sensitive information](https://faq.hellosign.com/hc/en-us/articles/360040742811-Masking-sensitive-information). `true` for masking the data in a text field, otherwise `false`.</summary>
-        public bool? Masked { get; set; }
+        public bool? Masked { get => _explicitNullValueMasked; set { _explicitNullValueMasked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("masked"); else _explicitNullProperties?.Remove("masked"); } }
+        private bool? _explicitNullValueMasked = default!;
         /// <summary>Placeholder value for text field.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Placeholder { get; set; }
+        public string? Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private string? _explicitNullValuePlaceholder = default!;
 #nullable restore
 #else
-        public string Placeholder { get; set; }
+        public string Placeholder { get => _explicitNullValuePlaceholder; set { _explicitNullValuePlaceholder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("placeholder"); else _explicitNullProperties?.Remove("placeholder"); } }
+        private string _explicitNullValuePlaceholder = default!;
 #endif
         /// <summary>The validation_custom_regex property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidationCustomRegex { get; set; }
+        public string? ValidationCustomRegex { get => _explicitNullValueValidationCustomRegex; set { _explicitNullValueValidationCustomRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_custom_regex"); else _explicitNullProperties?.Remove("validation_custom_regex"); } }
+        private string? _explicitNullValueValidationCustomRegex = default!;
 #nullable restore
 #else
-        public string ValidationCustomRegex { get; set; }
+        public string ValidationCustomRegex { get => _explicitNullValueValidationCustomRegex; set { _explicitNullValueValidationCustomRegex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_custom_regex"); else _explicitNullProperties?.Remove("validation_custom_regex"); } }
+        private string _explicitNullValueValidationCustomRegex = default!;
 #endif
         /// <summary>The validation_custom_regex_format_label property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ValidationCustomRegexFormatLabel { get; set; }
+        public string? ValidationCustomRegexFormatLabel { get => _explicitNullValueValidationCustomRegexFormatLabel; set { _explicitNullValueValidationCustomRegexFormatLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_custom_regex_format_label"); else _explicitNullProperties?.Remove("validation_custom_regex_format_label"); } }
+        private string? _explicitNullValueValidationCustomRegexFormatLabel = default!;
 #nullable restore
 #else
-        public string ValidationCustomRegexFormatLabel { get; set; }
+        public string ValidationCustomRegexFormatLabel { get => _explicitNullValueValidationCustomRegexFormatLabel; set { _explicitNullValueValidationCustomRegexFormatLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_custom_regex_format_label"); else _explicitNullProperties?.Remove("validation_custom_regex_format_label"); } }
+        private string _explicitNullValueValidationCustomRegexFormatLabel = default!;
 #endif
         /// <summary>Each text field may contain a `validation_type` parameter. Check out the list of [validation types](https://faq.hellosign.com/hc/en-us/articles/217115577) to learn more about the possible values.**NOTE:** When using `custom_regex` you are required to pass a second parameter `validation_custom_regex` and you can optionally provide `validation_custom_regex_format_label` for the error message the user will see in case of an invalid value.</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType? ValidationType { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType? ValidationType { get => _explicitNullValueValidationType; set { _explicitNullValueValidationType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validation_type"); else _explicitNullProperties?.Remove("validation_type"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType? _explicitNullValueValidationType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText"/> and sets the default values.
         /// </summary>
@@ -85,7 +119,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentText(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,7 +158,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("placeholder", Placeholder);
             writer.WriteStringValue("validation_custom_regex", ValidationCustomRegex);
             writer.WriteStringValue("validation_custom_regex_format_label", ValidationCustomRegexFormatLabel);
-            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType>("validation_type", ValidationType);
+            writer.WriteEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentTextValidationType>("validation_type", ValidationType);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

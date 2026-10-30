@@ -11,47 +11,77 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class EmbeddedEditUrlRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allow_edit_ccs") is { } nullNodeAllowEditCcs && nullNodeAllowEditCcs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEditCcs = null;
+            if (parseNode.GetChildNode("cc_roles") is { } nullNodeCcRoles && nullNodeCcRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CcRoles = null;
+            if (parseNode.GetChildNode("editor_options") is { } nullNodeEditorOptions && nullNodeEditorOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditorOptions = null;
+            if (parseNode.GetChildNode("force_signer_roles") is { } nullNodeForceSignerRoles && nullNodeForceSignerRoles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceSignerRoles = null;
+            if (parseNode.GetChildNode("force_subject_message") is { } nullNodeForceSubjectMessage && nullNodeForceSubjectMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceSubjectMessage = null;
+            if (parseNode.GetChildNode("merge_fields") is { } nullNodeMergeFields && nullNodeMergeFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeFields = null;
+            if (parseNode.GetChildNode("preview_only") is { } nullNodePreviewOnly && nullNodePreviewOnly.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PreviewOnly = null;
+            if (parseNode.GetChildNode("show_preview") is { } nullNodeShowPreview && nullNodeShowPreview.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowPreview = null;
+            if (parseNode.GetChildNode("show_progress_stepper") is { } nullNodeShowProgressStepper && nullNodeShowProgressStepper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowProgressStepper = null;
+            if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>This allows the requester to enable/disable to add or change CC roles when editing the template.</summary>
-        public bool? AllowEditCcs { get; set; }
+        public bool? AllowEditCcs { get => _explicitNullValueAllowEditCcs; set { _explicitNullValueAllowEditCcs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_edit_ccs"); else _explicitNullProperties?.Remove("allow_edit_ccs"); } }
+        private bool? _explicitNullValueAllowEditCcs = default!;
         /// <summary>The CC roles that must be assigned when using the template to send a signature request. To remove all CC roles, pass in a single role with no name. For use in a POST request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? CcRoles { get; set; }
+        public List<string>? CcRoles { get => _explicitNullValueCcRoles; set { _explicitNullValueCcRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_roles"); else _explicitNullProperties?.Remove("cc_roles"); } }
+        private List<string>? _explicitNullValueCcRoles = default!;
 #nullable restore
 #else
-        public List<string> CcRoles { get; set; }
+        public List<string> CcRoles { get => _explicitNullValueCcRoles; set { _explicitNullValueCcRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cc_roles"); else _explicitNullProperties?.Remove("cc_roles"); } }
+        private List<string> _explicitNullValueCcRoles = default!;
 #endif
         /// <summary>This allows the requester to specify editor options when a preparing a document</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? EditorOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? _explicitNullValueEditorOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions EditorOptions { get; set; }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
+        private global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions _explicitNullValueEditorOptions = default!;
 #endif
         /// <summary>Provide users the ability to review/edit the template signer roles.</summary>
-        public bool? ForceSignerRoles { get; set; }
+        public bool? ForceSignerRoles { get => _explicitNullValueForceSignerRoles; set { _explicitNullValueForceSignerRoles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force_signer_roles"); else _explicitNullProperties?.Remove("force_signer_roles"); } }
+        private bool? _explicitNullValueForceSignerRoles = default!;
         /// <summary>Provide users the ability to review/edit the template subject and message.</summary>
-        public bool? ForceSubjectMessage { get; set; }
+        public bool? ForceSubjectMessage { get => _explicitNullValueForceSubjectMessage; set { _explicitNullValueForceSubjectMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force_subject_message"); else _explicitNullProperties?.Remove("force_subject_message"); } }
+        private bool? _explicitNullValueForceSubjectMessage = default!;
         /// <summary>Add additional merge fields to the template, which can be used used to pre-fill data by passing values into signature requests made with that template.Remove all merge fields on the template by passing an empty array `[]`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>? MergeFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>? MergeFields { get => _explicitNullValueMergeFields; set { _explicitNullValueMergeFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_fields"); else _explicitNullProperties?.Remove("merge_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField>? _explicitNullValueMergeFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField> MergeFields { get; set; }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField> MergeFields { get => _explicitNullValueMergeFields; set { _explicitNullValueMergeFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("merge_fields"); else _explicitNullProperties?.Remove("merge_fields"); } }
+        private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubMergeField> _explicitNullValueMergeFields = default!;
 #endif
         /// <summary>This allows the requester to enable the preview experience (i.e. does not allow the requester&apos;s end user to add any additional fields via the editor).**NOTE:** This parameter overwrites `show_preview=true` (if set).</summary>
-        public bool? PreviewOnly { get; set; }
+        public bool? PreviewOnly { get => _explicitNullValuePreviewOnly; set { _explicitNullValuePreviewOnly = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("preview_only"); else _explicitNullProperties?.Remove("preview_only"); } }
+        private bool? _explicitNullValuePreviewOnly = default!;
         /// <summary>This allows the requester to enable the editor/preview experience.</summary>
-        public bool? ShowPreview { get; set; }
+        public bool? ShowPreview { get => _explicitNullValueShowPreview; set { _explicitNullValueShowPreview = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_preview"); else _explicitNullProperties?.Remove("show_preview"); } }
+        private bool? _explicitNullValueShowPreview = default!;
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
-        public bool? ShowProgressStepper { get; set; }
+        public bool? ShowProgressStepper { get => _explicitNullValueShowProgressStepper; set { _explicitNullValueShowProgressStepper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_progress_stepper"); else _explicitNullProperties?.Remove("show_progress_stepper"); } }
+        private bool? _explicitNullValueShowProgressStepper = default!;
         /// <summary>Whether this is a test, locked templates will only be available for editing if this is set to `true`. Defaults to `false`.</summary>
-        public bool? TestMode { get; set; }
+        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
+        private bool? _explicitNullValueTestMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.EmbeddedEditUrlRequest"/> and sets the default values.
         /// </summary>
@@ -74,7 +104,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public static global::Soenneker.DropboxSign.OpenApiClient.Models.EmbeddedEditUrlRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.DropboxSign.OpenApiClient.Models.EmbeddedEditUrlRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.DropboxSign.OpenApiClient.Models.EmbeddedEditUrlRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -113,6 +143,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteBoolValue("show_preview", ShowPreview);
             writer.WriteBoolValue("show_progress_stepper", ShowProgressStepper);
             writer.WriteBoolValue("test_mode", TestMode);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

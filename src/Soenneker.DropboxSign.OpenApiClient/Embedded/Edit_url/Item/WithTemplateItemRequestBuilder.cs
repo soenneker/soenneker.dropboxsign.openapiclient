@@ -55,6 +55,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Embedded.Edit_url.Item
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.DropboxSign.OpenApiClient.Models.EmbeddedEditUrlResponse>(requestInfo, global::Soenneker.DropboxSign.OpenApiClient.Models.EmbeddedEditUrlResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

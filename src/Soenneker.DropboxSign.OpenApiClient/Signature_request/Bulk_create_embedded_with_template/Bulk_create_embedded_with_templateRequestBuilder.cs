@@ -55,6 +55,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Signature_request.Bulk_create_embe
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "4XX", global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponse.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobSendResponse>(requestInfo, global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobSendResponse.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
