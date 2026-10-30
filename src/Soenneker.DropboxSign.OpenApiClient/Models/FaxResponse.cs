@@ -17,126 +17,138 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("fax_id") is { } nullNodeFaxId && nullNodeFaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxId = null;
-            if (parseNode.GetChildNode("files_url") is { } nullNodeFilesUrl && nullNodeFilesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesUrl = null;
-            if (parseNode.GetChildNode("final_copy_uri") is { } nullNodeFinalCopyUri && nullNodeFinalCopyUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalCopyUri = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("original_title") is { } nullNodeOriginalTitle && nullNodeOriginalTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTitle = null;
-            if (parseNode.GetChildNode("sender") is { } nullNodeSender && nullNodeSender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sender = null;
-            if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
-            if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
-            if (parseNode.GetChildNode("transmissions") is { } nullNodeTransmissions && nullNodeTransmissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transmissions = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("fax_id") is null) { _explicitNullValueFaxId = default!; _explicitNullProperties?.Remove("fax_id"); }
+            else if (parseNode.GetChildNode("fax_id") is { } nullNodeFaxId && nullNodeFaxId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxId = null;
+            if (parseNode.GetChildNode("files_url") is null) { _explicitNullValueFilesUrl = default!; _explicitNullProperties?.Remove("files_url"); }
+            else if (parseNode.GetChildNode("files_url") is { } nullNodeFilesUrl && nullNodeFilesUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesUrl = null;
+            if (parseNode.GetChildNode("final_copy_uri") is null) { _explicitNullValueFinalCopyUri = default!; _explicitNullProperties?.Remove("final_copy_uri"); }
+            else if (parseNode.GetChildNode("final_copy_uri") is { } nullNodeFinalCopyUri && nullNodeFinalCopyUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinalCopyUri = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("original_title") is null) { _explicitNullValueOriginalTitle = default!; _explicitNullProperties?.Remove("original_title"); }
+            else if (parseNode.GetChildNode("original_title") is { } nullNodeOriginalTitle && nullNodeOriginalTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OriginalTitle = null;
+            if (parseNode.GetChildNode("sender") is null) { _explicitNullValueSender = default!; _explicitNullProperties?.Remove("sender"); }
+            else if (parseNode.GetChildNode("sender") is { } nullNodeSender && nullNodeSender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sender = null;
+            if (parseNode.GetChildNode("subject") is null) { _explicitNullValueSubject = default!; _explicitNullProperties?.Remove("subject"); }
+            else if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("test_mode") is null) { _explicitNullValueTestMode = default!; _explicitNullProperties?.Remove("test_mode"); }
+            else if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("transmissions") is null) { _explicitNullValueTransmissions = default!; _explicitNullProperties?.Remove("transmissions"); }
+            else if (parseNode.GetChildNode("transmissions") is { } nullNodeTransmissions && nullNodeTransmissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Transmissions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Fax Created At Timestamp</summary>
-        public int? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public int? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private int? _explicitNullValueCreatedAt = default!;
         /// <summary>Fax ID</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FaxId { get => _explicitNullValueFaxId; set { _explicitNullValueFaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_id"); else _explicitNullProperties?.Remove("fax_id"); } }
+        public string? FaxId { get => _explicitNullValueFaxId; set { _explicitNullValueFaxId = value; AdditionalData?.Remove("fax_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_id"); else _explicitNullProperties?.Remove("fax_id"); } }
         private string? _explicitNullValueFaxId = default!;
 #nullable restore
 #else
-        public string FaxId { get => _explicitNullValueFaxId; set { _explicitNullValueFaxId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_id"); else _explicitNullProperties?.Remove("fax_id"); } }
+        public string FaxId { get => _explicitNullValueFaxId; set { _explicitNullValueFaxId = value; AdditionalData?.Remove("fax_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_id"); else _explicitNullProperties?.Remove("fax_id"); } }
         private string _explicitNullValueFaxId = default!;
 #endif
         /// <summary>Fax Files URL</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FilesUrl { get => _explicitNullValueFilesUrl; set { _explicitNullValueFilesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_url"); else _explicitNullProperties?.Remove("files_url"); } }
+        public string? FilesUrl { get => _explicitNullValueFilesUrl; set { _explicitNullValueFilesUrl = value; AdditionalData?.Remove("files_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_url"); else _explicitNullProperties?.Remove("files_url"); } }
         private string? _explicitNullValueFilesUrl = default!;
 #nullable restore
 #else
-        public string FilesUrl { get => _explicitNullValueFilesUrl; set { _explicitNullValueFilesUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_url"); else _explicitNullProperties?.Remove("files_url"); } }
+        public string FilesUrl { get => _explicitNullValueFilesUrl; set { _explicitNullValueFilesUrl = value; AdditionalData?.Remove("files_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files_url"); else _explicitNullProperties?.Remove("files_url"); } }
         private string _explicitNullValueFilesUrl = default!;
 #endif
         /// <summary>The path where the completed document can be downloaded</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? FinalCopyUri { get => _explicitNullValueFinalCopyUri; set { _explicitNullValueFinalCopyUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_copy_uri"); else _explicitNullProperties?.Remove("final_copy_uri"); } }
+        public string? FinalCopyUri { get => _explicitNullValueFinalCopyUri; set { _explicitNullValueFinalCopyUri = value; AdditionalData?.Remove("final_copy_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_copy_uri"); else _explicitNullProperties?.Remove("final_copy_uri"); } }
         private string? _explicitNullValueFinalCopyUri = default!;
 #nullable restore
 #else
-        public string FinalCopyUri { get => _explicitNullValueFinalCopyUri; set { _explicitNullValueFinalCopyUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_copy_uri"); else _explicitNullProperties?.Remove("final_copy_uri"); } }
+        public string FinalCopyUri { get => _explicitNullValueFinalCopyUri; set { _explicitNullValueFinalCopyUri = value; AdditionalData?.Remove("final_copy_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("final_copy_uri"); else _explicitNullProperties?.Remove("final_copy_uri"); } }
         private string _explicitNullValueFinalCopyUri = default!;
 #endif
         /// <summary>Fax Message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>Fax Metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Fax Original Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OriginalTitle { get => _explicitNullValueOriginalTitle; set { _explicitNullValueOriginalTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_title"); else _explicitNullProperties?.Remove("original_title"); } }
+        public string? OriginalTitle { get => _explicitNullValueOriginalTitle; set { _explicitNullValueOriginalTitle = value; AdditionalData?.Remove("original_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_title"); else _explicitNullProperties?.Remove("original_title"); } }
         private string? _explicitNullValueOriginalTitle = default!;
 #nullable restore
 #else
-        public string OriginalTitle { get => _explicitNullValueOriginalTitle; set { _explicitNullValueOriginalTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_title"); else _explicitNullProperties?.Remove("original_title"); } }
+        public string OriginalTitle { get => _explicitNullValueOriginalTitle; set { _explicitNullValueOriginalTitle = value; AdditionalData?.Remove("original_title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("original_title"); else _explicitNullProperties?.Remove("original_title"); } }
         private string _explicitNullValueOriginalTitle = default!;
 #endif
         /// <summary>Fax Sender Email</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
+        public string? Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; AdditionalData?.Remove("sender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
         private string? _explicitNullValueSender = default!;
 #nullable restore
 #else
-        public string Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
+        public string Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; AdditionalData?.Remove("sender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
         private string _explicitNullValueSender = default!;
 #endif
         /// <summary>Fax Subject</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
         private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
         private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>Whether this is a test fax. Test faxes are not delivered to the recipient. Defaults to `false`.</summary>
-        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
+        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; AdditionalData?.Remove("test_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
         private bool? _explicitNullValueTestMode = default!;
         /// <summary>Fax Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>Fax Transmissions List</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission>? Transmissions { get => _explicitNullValueTransmissions; set { _explicitNullValueTransmissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmissions"); else _explicitNullProperties?.Remove("transmissions"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission>? Transmissions { get => _explicitNullValueTransmissions; set { _explicitNullValueTransmissions = value; AdditionalData?.Remove("transmissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmissions"); else _explicitNullProperties?.Remove("transmissions"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission>? _explicitNullValueTransmissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission> Transmissions { get => _explicitNullValueTransmissions; set { _explicitNullValueTransmissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmissions"); else _explicitNullProperties?.Remove("transmissions"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission> Transmissions { get => _explicitNullValueTransmissions; set { _explicitNullValueTransmissions = value; AdditionalData?.Remove("transmissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("transmissions"); else _explicitNullProperties?.Remove("transmissions"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission> _explicitNullValueTransmissions = default!;
 #endif
         /// <summary>

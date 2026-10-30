@@ -17,7 +17,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("area_codes") is { } nullNodeAreaCodes && nullNodeAreaCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreaCodes = null;
+            if (parseNode.GetChildNode("area_codes") is null) { _explicitNullValueAreaCodes = default!; _explicitNullProperties?.Remove("area_codes"); }
+            else if (parseNode.GetChildNode("area_codes") is { } nullNodeAreaCodes && nullNodeAreaCodes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreaCodes = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The area_codes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<int?>? AreaCodes { get => _explicitNullValueAreaCodes; set { _explicitNullValueAreaCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("area_codes"); else _explicitNullProperties?.Remove("area_codes"); } }
+        public List<int?>? AreaCodes { get => _explicitNullValueAreaCodes; set { _explicitNullValueAreaCodes = value; AdditionalData?.Remove("area_codes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("area_codes"); else _explicitNullProperties?.Remove("area_codes"); } }
         private List<int?>? _explicitNullValueAreaCodes = default!;
 #nullable restore
 #else
-        public List<int?> AreaCodes { get => _explicitNullValueAreaCodes; set { _explicitNullValueAreaCodes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("area_codes"); else _explicitNullProperties?.Remove("area_codes"); } }
+        public List<int?> AreaCodes { get => _explicitNullValueAreaCodes; set { _explicitNullValueAreaCodes = value; AdditionalData?.Remove("area_codes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("area_codes"); else _explicitNullProperties?.Remove("area_codes"); } }
         private List<int?> _explicitNullValueAreaCodes = default!;
 #endif
         /// <summary>

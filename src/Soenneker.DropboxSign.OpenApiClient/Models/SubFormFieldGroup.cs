@@ -17,9 +17,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
-            if (parseNode.GetChildNode("group_label") is { } nullNodeGroupLabel && nullNodeGroupLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupLabel = null;
-            if (parseNode.GetChildNode("requirement") is { } nullNodeRequirement && nullNodeRequirement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Requirement = null;
+            if (parseNode.GetChildNode("group_id") is null) { _explicitNullValueGroupId = default!; _explicitNullProperties?.Remove("group_id"); }
+            else if (parseNode.GetChildNode("group_id") is { } nullNodeGroupId && nullNodeGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupId = null;
+            if (parseNode.GetChildNode("group_label") is null) { _explicitNullValueGroupLabel = default!; _explicitNullProperties?.Remove("group_label"); }
+            else if (parseNode.GetChildNode("group_label") is { } nullNodeGroupLabel && nullNodeGroupLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GroupLabel = null;
+            if (parseNode.GetChildNode("requirement") is null) { _explicitNullValueRequirement = default!; _explicitNullProperties?.Remove("requirement"); }
+            else if (parseNode.GetChildNode("requirement") is { } nullNodeRequirement && nullNodeRequirement.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Requirement = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>ID of group. Use this to reference a specific group from the `group` value in `form_fields_per_document`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        public string? GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private string? _explicitNullValueGroupId = default!;
 #nullable restore
 #else
-        public string GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
+        public string GroupId { get => _explicitNullValueGroupId; set { _explicitNullValueGroupId = value; AdditionalData?.Remove("group_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_id"); else _explicitNullProperties?.Remove("group_id"); } }
         private string _explicitNullValueGroupId = default!;
 #endif
         /// <summary>Name of the group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GroupLabel { get => _explicitNullValueGroupLabel; set { _explicitNullValueGroupLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_label"); else _explicitNullProperties?.Remove("group_label"); } }
+        public string? GroupLabel { get => _explicitNullValueGroupLabel; set { _explicitNullValueGroupLabel = value; AdditionalData?.Remove("group_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_label"); else _explicitNullProperties?.Remove("group_label"); } }
         private string? _explicitNullValueGroupLabel = default!;
 #nullable restore
 #else
-        public string GroupLabel { get => _explicitNullValueGroupLabel; set { _explicitNullValueGroupLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_label"); else _explicitNullProperties?.Remove("group_label"); } }
+        public string GroupLabel { get => _explicitNullValueGroupLabel; set { _explicitNullValueGroupLabel = value; AdditionalData?.Remove("group_label"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group_label"); else _explicitNullProperties?.Remove("group_label"); } }
         private string _explicitNullValueGroupLabel = default!;
 #endif
         /// <summary>Examples: `require_0-1` `require_1` `require_1-ormore`- Check out the list of [acceptable `requirement` checkbox type values](/api/reference/constants/#checkbox-field-grouping).- Check out the list of [acceptable `requirement` radio type fields](/api/reference/constants/#radio-field-grouping).- Radio groups require **at least** two fields per group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Requirement { get => _explicitNullValueRequirement; set { _explicitNullValueRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement"); else _explicitNullProperties?.Remove("requirement"); } }
+        public string? Requirement { get => _explicitNullValueRequirement; set { _explicitNullValueRequirement = value; AdditionalData?.Remove("requirement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement"); else _explicitNullProperties?.Remove("requirement"); } }
         private string? _explicitNullValueRequirement = default!;
 #nullable restore
 #else
-        public string Requirement { get => _explicitNullValueRequirement; set { _explicitNullValueRequirement = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement"); else _explicitNullProperties?.Remove("requirement"); } }
+        public string Requirement { get => _explicitNullValueRequirement; set { _explicitNullValueRequirement = value; AdditionalData?.Remove("requirement"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requirement"); else _explicitNullProperties?.Remove("requirement"); } }
         private string _explicitNullValueRequirement = default!;
 #endif
         /// <summary>

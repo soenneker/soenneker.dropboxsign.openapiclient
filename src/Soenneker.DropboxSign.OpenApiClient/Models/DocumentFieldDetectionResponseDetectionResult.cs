@@ -17,104 +17,114 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("detected_at") is { } nullNodeDetectedAt && nullNodeDetectedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectedAt = null;
-            if (parseNode.GetChildNode("detection_mode") is { } nullNodeDetectionMode && nullNodeDetectionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectionMode = null;
-            if (parseNode.GetChildNode("document_hash") is { } nullNodeDocumentHash && nullNodeDocumentHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentHash = null;
-            if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
-            if (parseNode.GetChildNode("form_field_groups") is { } nullNodeFormFieldGroups && nullNodeFormFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFieldGroups = null;
-            if (parseNode.GetChildNode("form_fields_per_document") is { } nullNodeFormFieldsPerDocument && nullNodeFormFieldsPerDocument.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFieldsPerDocument = null;
-            if (parseNode.GetChildNode("page_count") is { } nullNodePageCount && nullNodePageCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageCount = null;
-            if (parseNode.GetChildNode("pages_analyzed") is { } nullNodePagesAnalyzed && nullNodePagesAnalyzed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesAnalyzed = null;
-            if (parseNode.GetChildNode("suggestions") is { } nullNodeSuggestions && nullNodeSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suggestions = null;
-            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+            if (parseNode.GetChildNode("detected_at") is null) { _explicitNullValueDetectedAt = default!; _explicitNullProperties?.Remove("detected_at"); }
+            else if (parseNode.GetChildNode("detected_at") is { } nullNodeDetectedAt && nullNodeDetectedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectedAt = null;
+            if (parseNode.GetChildNode("detection_mode") is null) { _explicitNullValueDetectionMode = default!; _explicitNullProperties?.Remove("detection_mode"); }
+            else if (parseNode.GetChildNode("detection_mode") is { } nullNodeDetectionMode && nullNodeDetectionMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DetectionMode = null;
+            if (parseNode.GetChildNode("document_hash") is null) { _explicitNullValueDocumentHash = default!; _explicitNullProperties?.Remove("document_hash"); }
+            else if (parseNode.GetChildNode("document_hash") is { } nullNodeDocumentHash && nullNodeDocumentHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DocumentHash = null;
+            if (parseNode.GetChildNode("errors") is null) { _explicitNullValueErrors = default!; _explicitNullProperties?.Remove("errors"); }
+            else if (parseNode.GetChildNode("errors") is { } nullNodeErrors && nullNodeErrors.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Errors = null;
+            if (parseNode.GetChildNode("form_field_groups") is null) { _explicitNullValueFormFieldGroups = default!; _explicitNullProperties?.Remove("form_field_groups"); }
+            else if (parseNode.GetChildNode("form_field_groups") is { } nullNodeFormFieldGroups && nullNodeFormFieldGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFieldGroups = null;
+            if (parseNode.GetChildNode("form_fields_per_document") is null) { _explicitNullValueFormFieldsPerDocument = default!; _explicitNullProperties?.Remove("form_fields_per_document"); }
+            else if (parseNode.GetChildNode("form_fields_per_document") is { } nullNodeFormFieldsPerDocument && nullNodeFormFieldsPerDocument.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FormFieldsPerDocument = null;
+            if (parseNode.GetChildNode("page_count") is null) { _explicitNullValuePageCount = default!; _explicitNullProperties?.Remove("page_count"); }
+            else if (parseNode.GetChildNode("page_count") is { } nullNodePageCount && nullNodePageCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageCount = null;
+            if (parseNode.GetChildNode("pages_analyzed") is null) { _explicitNullValuePagesAnalyzed = default!; _explicitNullProperties?.Remove("pages_analyzed"); }
+            else if (parseNode.GetChildNode("pages_analyzed") is { } nullNodePagesAnalyzed && nullNodePagesAnalyzed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PagesAnalyzed = null;
+            if (parseNode.GetChildNode("suggestions") is null) { _explicitNullValueSuggestions = default!; _explicitNullProperties?.Remove("suggestions"); }
+            else if (parseNode.GetChildNode("suggestions") is { } nullNodeSuggestions && nullNodeSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suggestions = null;
+            if (parseNode.GetChildNode("warnings") is null) { _explicitNullValueWarnings = default!; _explicitNullProperties?.Remove("warnings"); }
+            else if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The Unix timestamp when the field detection result was generated.</summary>
-        public long? DetectedAt { get => _explicitNullValueDetectedAt; set { _explicitNullValueDetectedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detected_at"); else _explicitNullProperties?.Remove("detected_at"); } }
+        public long? DetectedAt { get => _explicitNullValueDetectedAt; set { _explicitNullValueDetectedAt = value; AdditionalData?.Remove("detected_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detected_at"); else _explicitNullProperties?.Remove("detected_at"); } }
         private long? _explicitNullValueDetectedAt = default!;
         /// <summary>The field detection method used to analyze the document: `annotations` or `text_tags`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponseDetectionResultDetectionMode? DetectionMode { get => _explicitNullValueDetectionMode; set { _explicitNullValueDetectionMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detection_mode"); else _explicitNullProperties?.Remove("detection_mode"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponseDetectionResultDetectionMode? DetectionMode { get => _explicitNullValueDetectionMode; set { _explicitNullValueDetectionMode = value; AdditionalData?.Remove("detection_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detection_mode"); else _explicitNullProperties?.Remove("detection_mode"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponseDetectionResultDetectionMode? _explicitNullValueDetectionMode = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponseDetectionResultDetectionMode DetectionMode { get => _explicitNullValueDetectionMode; set { _explicitNullValueDetectionMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detection_mode"); else _explicitNullProperties?.Remove("detection_mode"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponseDetectionResultDetectionMode DetectionMode { get => _explicitNullValueDetectionMode; set { _explicitNullValueDetectionMode = value; AdditionalData?.Remove("detection_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("detection_mode"); else _explicitNullProperties?.Remove("detection_mode"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.DocumentFieldDetectionResponseDetectionResultDetectionMode _explicitNullValueDetectionMode = default!;
 #endif
         /// <summary>The SHA-256 hash of the analyzed document.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DocumentHash { get => _explicitNullValueDocumentHash; set { _explicitNullValueDocumentHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_hash"); else _explicitNullProperties?.Remove("document_hash"); } }
+        public string? DocumentHash { get => _explicitNullValueDocumentHash; set { _explicitNullValueDocumentHash = value; AdditionalData?.Remove("document_hash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_hash"); else _explicitNullProperties?.Remove("document_hash"); } }
         private string? _explicitNullValueDocumentHash = default!;
 #nullable restore
 #else
-        public string DocumentHash { get => _explicitNullValueDocumentHash; set { _explicitNullValueDocumentHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_hash"); else _explicitNullProperties?.Remove("document_hash"); } }
+        public string DocumentHash { get => _explicitNullValueDocumentHash; set { _explicitNullValueDocumentHash = value; AdditionalData?.Remove("document_hash"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("document_hash"); else _explicitNullProperties?.Remove("document_hash"); } }
         private string _explicitNullValueDocumentHash = default!;
 #endif
         /// <summary>Errors encountered during field detection. Successfully detected fields may still be included in the response.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponseError>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponseError>? Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponseError>? _explicitNullValueErrors = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponseError> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponseError> Errors { get => _explicitNullValueErrors; set { _explicitNullValueErrors = value; AdditionalData?.Remove("errors"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errors"); else _explicitNullProperties?.Remove("errors"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.ErrorResponseError> _explicitNullValueErrors = default!;
 #endif
         /// <summary>Group information for fields defined in `form_fields_per_document`. String-indexed JSON array with `group_label` and `requirement` keys. `form_fields_per_document` must contain fields referencing a group defined in `form_field_groups`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>? FormFieldGroups { get => _explicitNullValueFormFieldGroups; set { _explicitNullValueFormFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_groups"); else _explicitNullProperties?.Remove("form_field_groups"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>? FormFieldGroups { get => _explicitNullValueFormFieldGroups; set { _explicitNullValueFormFieldGroups = value; AdditionalData?.Remove("form_field_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_groups"); else _explicitNullProperties?.Remove("form_field_groups"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup>? _explicitNullValueFormFieldGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup> FormFieldGroups { get => _explicitNullValueFormFieldGroups; set { _explicitNullValueFormFieldGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_groups"); else _explicitNullProperties?.Remove("form_field_groups"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup> FormFieldGroups { get => _explicitNullValueFormFieldGroups; set { _explicitNullValueFormFieldGroups = value; AdditionalData?.Remove("form_field_groups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_field_groups"); else _explicitNullProperties?.Remove("form_field_groups"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldGroup> _explicitNullValueFormFieldGroups = default!;
 #endif
         /// <summary>The fields that should appear on the document, expressed as an array of objects. (For more details you can read about it here: [Using Form Fields per Document](/docs/openapi/form-fields-per-document).)**NOTE:** Fields like **text**, **dropdown**, **checkbox**, **radio**, and **hyperlink** have additional required and optional parameters. Check out the list of [additional parameters](/api/reference/constants/#form-fields-per-document) for these field types.* Text Field use `SubFormFieldsPerDocumentText`* Dropdown Field use `SubFormFieldsPerDocumentDropdown`* Hyperlink Field use `SubFormFieldsPerDocumentHyperlink`* Checkbox Field use `SubFormFieldsPerDocumentCheckbox`* Radio Field use `SubFormFieldsPerDocumentRadio`* Signature Field use `SubFormFieldsPerDocumentSignature`* Date Signed Field use `SubFormFieldsPerDocumentDateSigned`* Initials Field use `SubFormFieldsPerDocumentInitials`* Text Merge Field use `SubFormFieldsPerDocumentTextMerge`* Checkbox Merge Field use `SubFormFieldsPerDocumentCheckboxMerge`</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>? FormFieldsPerDocument { get => _explicitNullValueFormFieldsPerDocument; set { _explicitNullValueFormFieldsPerDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields_per_document"); else _explicitNullProperties?.Remove("form_fields_per_document"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>? FormFieldsPerDocument { get => _explicitNullValueFormFieldsPerDocument; set { _explicitNullValueFormFieldsPerDocument = value; AdditionalData?.Remove("form_fields_per_document"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields_per_document"); else _explicitNullProperties?.Remove("form_fields_per_document"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase>? _explicitNullValueFormFieldsPerDocument = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase> FormFieldsPerDocument { get => _explicitNullValueFormFieldsPerDocument; set { _explicitNullValueFormFieldsPerDocument = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields_per_document"); else _explicitNullProperties?.Remove("form_fields_per_document"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase> FormFieldsPerDocument { get => _explicitNullValueFormFieldsPerDocument; set { _explicitNullValueFormFieldsPerDocument = value; AdditionalData?.Remove("form_fields_per_document"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("form_fields_per_document"); else _explicitNullProperties?.Remove("form_fields_per_document"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldsPerDocumentBase> _explicitNullValueFormFieldsPerDocument = default!;
 #endif
         /// <summary>The total number of pages in the document.</summary>
-        public int? PageCount { get => _explicitNullValuePageCount; set { _explicitNullValuePageCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_count"); else _explicitNullProperties?.Remove("page_count"); } }
+        public int? PageCount { get => _explicitNullValuePageCount; set { _explicitNullValuePageCount = value; AdditionalData?.Remove("page_count"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_count"); else _explicitNullProperties?.Remove("page_count"); } }
         private int? _explicitNullValuePageCount = default!;
         /// <summary>The zero-based page indexes analyzed, represented by the requested `page_range`, or `all` when every page was analyzed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PagesAnalyzed { get => _explicitNullValuePagesAnalyzed; set { _explicitNullValuePagesAnalyzed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_analyzed"); else _explicitNullProperties?.Remove("pages_analyzed"); } }
+        public string? PagesAnalyzed { get => _explicitNullValuePagesAnalyzed; set { _explicitNullValuePagesAnalyzed = value; AdditionalData?.Remove("pages_analyzed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_analyzed"); else _explicitNullProperties?.Remove("pages_analyzed"); } }
         private string? _explicitNullValuePagesAnalyzed = default!;
 #nullable restore
 #else
-        public string PagesAnalyzed { get => _explicitNullValuePagesAnalyzed; set { _explicitNullValuePagesAnalyzed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_analyzed"); else _explicitNullProperties?.Remove("pages_analyzed"); } }
+        public string PagesAnalyzed { get => _explicitNullValuePagesAnalyzed; set { _explicitNullValuePagesAnalyzed = value; AdditionalData?.Remove("pages_analyzed"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pages_analyzed"); else _explicitNullProperties?.Remove("pages_analyzed"); } }
         private string _explicitNullValuePagesAnalyzed = default!;
 #endif
         /// <summary>Suggestions for improving the field detection results.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
+        public List<string>? Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
         private List<string>? _explicitNullValueSuggestions = default!;
 #nullable restore
 #else
-        public List<string> Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
+        public List<string> Suggestions { get => _explicitNullValueSuggestions; set { _explicitNullValueSuggestions = value; AdditionalData?.Remove("suggestions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suggestions"); else _explicitNullProperties?.Remove("suggestions"); } }
         private List<string> _explicitNullValueSuggestions = default!;
 #endif
         /// <summary>Non-fatal issues encountered during field detection.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse>? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse> _explicitNullValueWarnings = default!;
 #endif
         /// <summary>

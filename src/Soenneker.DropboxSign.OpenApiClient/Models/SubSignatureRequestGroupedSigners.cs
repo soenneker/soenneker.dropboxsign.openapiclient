@@ -17,9 +17,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
-            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
-            if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
+            if (parseNode.GetChildNode("group") is null) { _explicitNullValueGroup = default!; _explicitNullProperties?.Remove("group"); }
+            else if (parseNode.GetChildNode("group") is { } nullNodeGroup && nullNodeGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Group = null;
+            if (parseNode.GetChildNode("order") is null) { _explicitNullValueOrder = default!; _explicitNullProperties?.Remove("order"); }
+            else if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("signers") is null) { _explicitNullValueSigners = default!; _explicitNullProperties?.Remove("signers"); }
+            else if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,24 +30,24 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The name of the group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        public string? Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; AdditionalData?.Remove("group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
         private string? _explicitNullValueGroup = default!;
 #nullable restore
 #else
-        public string Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
+        public string Group { get => _explicitNullValueGroup; set { _explicitNullValueGroup = value; AdditionalData?.Remove("group"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("group"); else _explicitNullProperties?.Remove("group"); } }
         private string _explicitNullValueGroup = default!;
 #endif
         /// <summary>The order the group is required to sign in. Use this instead of Signer-level `order`.</summary>
-        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private int? _explicitNullValueOrder = default!;
         /// <summary>Signers belonging to this Group.**NOTE:** Only `name`, `email_address`, and `pin` are available to Grouped Signers. We will ignore all other properties, even though they are listed below.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; AdditionalData?.Remove("signers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner>? _explicitNullValueSigners = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; AdditionalData?.Remove("signers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner> _explicitNullValueSigners = default!;
 #endif
         /// <summary>

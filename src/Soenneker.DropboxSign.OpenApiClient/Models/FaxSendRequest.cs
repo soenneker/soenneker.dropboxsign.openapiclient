@@ -17,15 +17,24 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cover_page_from") is { } nullNodeCoverPageFrom && nullNodeCoverPageFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverPageFrom = null;
-            if (parseNode.GetChildNode("cover_page_message") is { } nullNodeCoverPageMessage && nullNodeCoverPageMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverPageMessage = null;
-            if (parseNode.GetChildNode("cover_page_to") is { } nullNodeCoverPageTo && nullNodeCoverPageTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverPageTo = null;
-            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
-            if (parseNode.GetChildNode("file_urls") is { } nullNodeFileUrls && nullNodeFileUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileUrls = null;
-            if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
-            if (parseNode.GetChildNode("sender") is { } nullNodeSender && nullNodeSender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sender = null;
-            if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("cover_page_from") is null) { _explicitNullValueCoverPageFrom = default!; _explicitNullProperties?.Remove("cover_page_from"); }
+            else if (parseNode.GetChildNode("cover_page_from") is { } nullNodeCoverPageFrom && nullNodeCoverPageFrom.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverPageFrom = null;
+            if (parseNode.GetChildNode("cover_page_message") is null) { _explicitNullValueCoverPageMessage = default!; _explicitNullProperties?.Remove("cover_page_message"); }
+            else if (parseNode.GetChildNode("cover_page_message") is { } nullNodeCoverPageMessage && nullNodeCoverPageMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverPageMessage = null;
+            if (parseNode.GetChildNode("cover_page_to") is null) { _explicitNullValueCoverPageTo = default!; _explicitNullProperties?.Remove("cover_page_to"); }
+            else if (parseNode.GetChildNode("cover_page_to") is { } nullNodeCoverPageTo && nullNodeCoverPageTo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CoverPageTo = null;
+            if (parseNode.GetChildNode("files") is null) { _explicitNullValueFiles = default!; _explicitNullProperties?.Remove("files"); }
+            else if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("file_urls") is null) { _explicitNullValueFileUrls = default!; _explicitNullProperties?.Remove("file_urls"); }
+            else if (parseNode.GetChildNode("file_urls") is { } nullNodeFileUrls && nullNodeFileUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileUrls = null;
+            if (parseNode.GetChildNode("recipient") is null) { _explicitNullValueRecipient = default!; _explicitNullProperties?.Remove("recipient"); }
+            else if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
+            if (parseNode.GetChildNode("sender") is null) { _explicitNullValueSender = default!; _explicitNullProperties?.Remove("sender"); }
+            else if (parseNode.GetChildNode("sender") is { } nullNodeSender && nullNodeSender.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sender = null;
+            if (parseNode.GetChildNode("test_mode") is null) { _explicitNullValueTestMode = default!; _explicitNullProperties?.Remove("test_mode"); }
+            else if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -33,84 +42,84 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Fax cover page sender information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CoverPageFrom { get => _explicitNullValueCoverPageFrom; set { _explicitNullValueCoverPageFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_from"); else _explicitNullProperties?.Remove("cover_page_from"); } }
+        public string? CoverPageFrom { get => _explicitNullValueCoverPageFrom; set { _explicitNullValueCoverPageFrom = value; AdditionalData?.Remove("cover_page_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_from"); else _explicitNullProperties?.Remove("cover_page_from"); } }
         private string? _explicitNullValueCoverPageFrom = default!;
 #nullable restore
 #else
-        public string CoverPageFrom { get => _explicitNullValueCoverPageFrom; set { _explicitNullValueCoverPageFrom = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_from"); else _explicitNullProperties?.Remove("cover_page_from"); } }
+        public string CoverPageFrom { get => _explicitNullValueCoverPageFrom; set { _explicitNullValueCoverPageFrom = value; AdditionalData?.Remove("cover_page_from"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_from"); else _explicitNullProperties?.Remove("cover_page_from"); } }
         private string _explicitNullValueCoverPageFrom = default!;
 #endif
         /// <summary>Fax Cover Page Message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CoverPageMessage { get => _explicitNullValueCoverPageMessage; set { _explicitNullValueCoverPageMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_message"); else _explicitNullProperties?.Remove("cover_page_message"); } }
+        public string? CoverPageMessage { get => _explicitNullValueCoverPageMessage; set { _explicitNullValueCoverPageMessage = value; AdditionalData?.Remove("cover_page_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_message"); else _explicitNullProperties?.Remove("cover_page_message"); } }
         private string? _explicitNullValueCoverPageMessage = default!;
 #nullable restore
 #else
-        public string CoverPageMessage { get => _explicitNullValueCoverPageMessage; set { _explicitNullValueCoverPageMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_message"); else _explicitNullProperties?.Remove("cover_page_message"); } }
+        public string CoverPageMessage { get => _explicitNullValueCoverPageMessage; set { _explicitNullValueCoverPageMessage = value; AdditionalData?.Remove("cover_page_message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_message"); else _explicitNullProperties?.Remove("cover_page_message"); } }
         private string _explicitNullValueCoverPageMessage = default!;
 #endif
         /// <summary>Fax cover page recipient information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CoverPageTo { get => _explicitNullValueCoverPageTo; set { _explicitNullValueCoverPageTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_to"); else _explicitNullProperties?.Remove("cover_page_to"); } }
+        public string? CoverPageTo { get => _explicitNullValueCoverPageTo; set { _explicitNullValueCoverPageTo = value; AdditionalData?.Remove("cover_page_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_to"); else _explicitNullProperties?.Remove("cover_page_to"); } }
         private string? _explicitNullValueCoverPageTo = default!;
 #nullable restore
 #else
-        public string CoverPageTo { get => _explicitNullValueCoverPageTo; set { _explicitNullValueCoverPageTo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_to"); else _explicitNullProperties?.Remove("cover_page_to"); } }
+        public string CoverPageTo { get => _explicitNullValueCoverPageTo; set { _explicitNullValueCoverPageTo = value; AdditionalData?.Remove("cover_page_to"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cover_page_to"); else _explicitNullProperties?.Remove("cover_page_to"); } }
         private string _explicitNullValueCoverPageTo = default!;
 #endif
         /// <summary>Use `files[]` to indicate the uploaded file(s) to faxThis endpoint requires either **files** or **file_urls[]**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<byte[]>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        public List<byte[]>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
         private List<byte[]>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<byte[]> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        public List<byte[]> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
         private List<byte[]> _explicitNullValueFiles = default!;
 #endif
         /// <summary>Use `file_urls[]` to have Dropbox Fax download the file(s) to faxThis endpoint requires either **files** or **file_urls[]**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
+        public List<string>? FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; AdditionalData?.Remove("file_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
         private List<string>? _explicitNullValueFileUrls = default!;
 #nullable restore
 #else
-        public List<string> FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
+        public List<string> FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; AdditionalData?.Remove("file_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
         private List<string> _explicitNullValueFileUrls = default!;
 #endif
         /// <summary>Recipient of the fax Can be a phone number in E.164 format or email address</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string? _explicitNullValueRecipient = default!;
 #nullable restore
 #else
-        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string _explicitNullValueRecipient = default!;
 #endif
         /// <summary>Fax Send From Sender (used only with fax number)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
+        public string? Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; AdditionalData?.Remove("sender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
         private string? _explicitNullValueSender = default!;
 #nullable restore
 #else
-        public string Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
+        public string Sender { get => _explicitNullValueSender; set { _explicitNullValueSender = value; AdditionalData?.Remove("sender"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sender"); else _explicitNullProperties?.Remove("sender"); } }
         private string _explicitNullValueSender = default!;
 #endif
         /// <summary>API Test Mode Setting</summary>
-        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
+        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; AdditionalData?.Remove("test_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
         private bool? _explicitNullValueTestMode = default!;
         /// <summary>Fax Title</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
@@ -143,7 +152,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "cover_page_message", n => { CoverPageMessage = n.GetStringValue(); } },
                 { "cover_page_to", n => { CoverPageTo = n.GetStringValue(); } },
                 { "file_urls", n => { FileUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "files", n => { Files = n.GetCollectionOfPrimitiveValues<byte[]>()?.AsList(); } },
+                { "files", n => { Files = global::System.Linq.Enumerable.Select(n.GetCollectionOfPrimitiveValues<string>(), value => value == null ? null! : global::System.Convert.FromBase64String(value))?.AsList(); } },
                 { "recipient", n => { Recipient = n.GetStringValue(); } },
                 { "sender", n => { Sender = n.GetStringValue(); } },
                 { "test_mode", n => { TestMode = n.GetBoolValue(); } },
@@ -160,7 +169,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteStringValue("cover_page_from", CoverPageFrom);
             writer.WriteStringValue("cover_page_message", CoverPageMessage);
             writer.WriteStringValue("cover_page_to", CoverPageTo);
-            writer.WriteCollectionOfPrimitiveValues<byte[]>("files", Files);
+            writer.WriteCollectionOfPrimitiveValues<string>("files", Files == null ? null : global::System.Linq.Enumerable.Select(Files, value => value == null ? null! : global::System.Convert.ToBase64String(value)));
             writer.WriteCollectionOfPrimitiveValues<string>("file_urls", FileUrls);
             writer.WriteStringValue("recipient", Recipient);
             writer.WriteStringValue("sender", Sender);

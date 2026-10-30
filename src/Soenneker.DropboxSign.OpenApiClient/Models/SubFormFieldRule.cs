@@ -17,20 +17,24 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
-            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
-            if (parseNode.GetChildNode("trigger_operator") is { } nullNodeTriggerOperator && nullNodeTriggerOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerOperator = null;
-            if (parseNode.GetChildNode("triggers") is { } nullNodeTriggers && nullNodeTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Triggers = null;
+            if (parseNode.GetChildNode("actions") is null) { _explicitNullValueActions = default!; _explicitNullProperties?.Remove("actions"); }
+            else if (parseNode.GetChildNode("actions") is { } nullNodeActions && nullNodeActions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Actions = null;
+            if (parseNode.GetChildNode("id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("id"); }
+            else if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("trigger_operator") is null) { _explicitNullValueTriggerOperator = default!; _explicitNullProperties?.Remove("trigger_operator"); }
+            else if (parseNode.GetChildNode("trigger_operator") is { } nullNodeTriggerOperator && nullNodeTriggerOperator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TriggerOperator = null;
+            if (parseNode.GetChildNode("triggers") is null) { _explicitNullValueTriggers = default!; _explicitNullProperties?.Remove("triggers"); }
+            else if (parseNode.GetChildNode("triggers") is { } nullNodeTriggers && nullNodeTriggers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Triggers = null;
         }
 
         /// <summary>An array of action definitions, the &quot;then that&quot; part of &quot;if this, **then that**&quot;. Any number of actions may be attached to a single rule.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction>? Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; AdditionalData?.Remove("actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction>? _explicitNullValueActions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction> Actions { get => _explicitNullValueActions; set { _explicitNullValueActions = value; AdditionalData?.Remove("actions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("actions"); else _explicitNullProperties?.Remove("actions"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleAction> _explicitNullValueActions = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -38,31 +42,31 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Must be unique across all defined rules.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; AdditionalData?.Remove("id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
         private string _explicitNullValueId = default!;
 #endif
         /// <summary>Currently only `AND` is supported. Support for `OR` is being worked on.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TriggerOperator { get => _explicitNullValueTriggerOperator; set { _explicitNullValueTriggerOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_operator"); else _explicitNullProperties?.Remove("trigger_operator"); } }
+        public string? TriggerOperator { get => _explicitNullValueTriggerOperator; set { _explicitNullValueTriggerOperator = value; AdditionalData?.Remove("trigger_operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_operator"); else _explicitNullProperties?.Remove("trigger_operator"); } }
         private string? _explicitNullValueTriggerOperator = default!;
 #nullable restore
 #else
-        public string TriggerOperator { get => _explicitNullValueTriggerOperator; set { _explicitNullValueTriggerOperator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_operator"); else _explicitNullProperties?.Remove("trigger_operator"); } }
+        public string TriggerOperator { get => _explicitNullValueTriggerOperator; set { _explicitNullValueTriggerOperator = value; AdditionalData?.Remove("trigger_operator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trigger_operator"); else _explicitNullProperties?.Remove("trigger_operator"); } }
         private string _explicitNullValueTriggerOperator = default!;
 #endif
         /// <summary>An array of trigger definitions, the &quot;if this&quot; part of &quot;**if this**, then that&quot;. Currently only a single trigger per rule is allowed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger>? Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger>? Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; AdditionalData?.Remove("triggers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger>? _explicitNullValueTriggers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger> Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger> Triggers { get => _explicitNullValueTriggers; set { _explicitNullValueTriggers = value; AdditionalData?.Remove("triggers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("triggers"); else _explicitNullProperties?.Remove("triggers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubFormFieldRuleTrigger> _explicitNullValueTriggers = default!;
 #endif
         /// <summary>

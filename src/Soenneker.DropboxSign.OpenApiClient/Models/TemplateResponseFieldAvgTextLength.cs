@@ -18,17 +18,19 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("num_chars_per_line") is { } nullNodeNumCharsPerLine && nullNodeNumCharsPerLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumCharsPerLine = null;
-            if (parseNode.GetChildNode("num_lines") is { } nullNodeNumLines && nullNodeNumLines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumLines = null;
+            if (parseNode.GetChildNode("num_chars_per_line") is null) { _explicitNullValueNumCharsPerLine = default!; _explicitNullProperties?.Remove("num_chars_per_line"); }
+            else if (parseNode.GetChildNode("num_chars_per_line") is { } nullNodeNumCharsPerLine && nullNodeNumCharsPerLine.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumCharsPerLine = null;
+            if (parseNode.GetChildNode("num_lines") is null) { _explicitNullValueNumLines = default!; _explicitNullProperties?.Remove("num_lines"); }
+            else if (parseNode.GetChildNode("num_lines") is { } nullNodeNumLines && nullNodeNumLines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumLines = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of characters per line.</summary>
-        public int? NumCharsPerLine { get => _explicitNullValueNumCharsPerLine; set { _explicitNullValueNumCharsPerLine = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_chars_per_line"); else _explicitNullProperties?.Remove("num_chars_per_line"); } }
+        public int? NumCharsPerLine { get => _explicitNullValueNumCharsPerLine; set { _explicitNullValueNumCharsPerLine = value; AdditionalData?.Remove("num_chars_per_line"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_chars_per_line"); else _explicitNullProperties?.Remove("num_chars_per_line"); } }
         private int? _explicitNullValueNumCharsPerLine = default!;
         /// <summary>Number of lines.</summary>
-        public int? NumLines { get => _explicitNullValueNumLines; set { _explicitNullValueNumLines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_lines"); else _explicitNullProperties?.Remove("num_lines"); } }
+        public int? NumLines { get => _explicitNullValueNumLines; set { _explicitNullValueNumLines = value; AdditionalData?.Remove("num_lines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_lines"); else _explicitNullProperties?.Remove("num_lines"); } }
         private int? _explicitNullValueNumLines = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseFieldAvgTextLength"/> and sets the default values.

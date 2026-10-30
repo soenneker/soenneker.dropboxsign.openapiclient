@@ -18,10 +18,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bulk_send_job_id") is { } nullNodeBulkSendJobId && nullNodeBulkSendJobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkSendJobId = null;
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("is_creator") is { } nullNodeIsCreator && nullNodeIsCreator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCreator = null;
-            if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
+            if (parseNode.GetChildNode("bulk_send_job_id") is null) { _explicitNullValueBulkSendJobId = default!; _explicitNullProperties?.Remove("bulk_send_job_id"); }
+            else if (parseNode.GetChildNode("bulk_send_job_id") is { } nullNodeBulkSendJobId && nullNodeBulkSendJobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkSendJobId = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("is_creator") is null) { _explicitNullValueIsCreator = default!; _explicitNullProperties?.Remove("is_creator"); }
+            else if (parseNode.GetChildNode("is_creator") is { } nullNodeIsCreator && nullNodeIsCreator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCreator = null;
+            if (parseNode.GetChildNode("total") is null) { _explicitNullValueTotal = default!; _explicitNullProperties?.Remove("total"); }
+            else if (parseNode.GetChildNode("total") is { } nullNodeTotal && nullNodeTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Total = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,21 +33,21 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The id of the BulkSendJob.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? BulkSendJobId { get => _explicitNullValueBulkSendJobId; set { _explicitNullValueBulkSendJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job_id"); else _explicitNullProperties?.Remove("bulk_send_job_id"); } }
+        public string? BulkSendJobId { get => _explicitNullValueBulkSendJobId; set { _explicitNullValueBulkSendJobId = value; AdditionalData?.Remove("bulk_send_job_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job_id"); else _explicitNullProperties?.Remove("bulk_send_job_id"); } }
         private string? _explicitNullValueBulkSendJobId = default!;
 #nullable restore
 #else
-        public string BulkSendJobId { get => _explicitNullValueBulkSendJobId; set { _explicitNullValueBulkSendJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job_id"); else _explicitNullProperties?.Remove("bulk_send_job_id"); } }
+        public string BulkSendJobId { get => _explicitNullValueBulkSendJobId; set { _explicitNullValueBulkSendJobId = value; AdditionalData?.Remove("bulk_send_job_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job_id"); else _explicitNullProperties?.Remove("bulk_send_job_id"); } }
         private string _explicitNullValueBulkSendJobId = default!;
 #endif
         /// <summary>Time that the BulkSendJob was created.</summary>
-        public int? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public int? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private int? _explicitNullValueCreatedAt = default!;
         /// <summary>True if you are the owner of this BulkSendJob, false if it&apos;s been shared with you by a team member.</summary>
-        public bool? IsCreator { get => _explicitNullValueIsCreator; set { _explicitNullValueIsCreator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_creator"); else _explicitNullProperties?.Remove("is_creator"); } }
+        public bool? IsCreator { get => _explicitNullValueIsCreator; set { _explicitNullValueIsCreator = value; AdditionalData?.Remove("is_creator"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_creator"); else _explicitNullProperties?.Remove("is_creator"); } }
         private bool? _explicitNullValueIsCreator = default!;
         /// <summary>The total amount of Signature Requests queued for sending.</summary>
-        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
         private int? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse"/> and sets the default values.

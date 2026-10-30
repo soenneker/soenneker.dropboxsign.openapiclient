@@ -17,22 +17,28 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
-            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
-            if (parseNode.GetChildNode("is_locked") is { } nullNodeIsLocked && nullNodeIsLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocked = null;
-            if (parseNode.GetChildNode("is_paid_hf") is { } nullNodeIsPaidHf && nullNodeIsPaidHf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPaidHf = null;
-            if (parseNode.GetChildNode("is_paid_hs") is { } nullNodeIsPaidHs && nullNodeIsPaidHs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPaidHs = null;
-            if (parseNode.GetChildNode("quotas") is { } nullNodeQuotas && nullNodeQuotas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quotas = null;
+            if (parseNode.GetChildNode("account_id") is null) { _explicitNullValueAccountId = default!; _explicitNullProperties?.Remove("account_id"); }
+            else if (parseNode.GetChildNode("account_id") is { } nullNodeAccountId && nullNodeAccountId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AccountId = null;
+            if (parseNode.GetChildNode("email_address") is null) { _explicitNullValueEmailAddress = default!; _explicitNullProperties?.Remove("email_address"); }
+            else if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("is_locked") is null) { _explicitNullValueIsLocked = default!; _explicitNullProperties?.Remove("is_locked"); }
+            else if (parseNode.GetChildNode("is_locked") is { } nullNodeIsLocked && nullNodeIsLocked.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsLocked = null;
+            if (parseNode.GetChildNode("is_paid_hf") is null) { _explicitNullValueIsPaidHf = default!; _explicitNullProperties?.Remove("is_paid_hf"); }
+            else if (parseNode.GetChildNode("is_paid_hf") is { } nullNodeIsPaidHf && nullNodeIsPaidHf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPaidHf = null;
+            if (parseNode.GetChildNode("is_paid_hs") is null) { _explicitNullValueIsPaidHs = default!; _explicitNullProperties?.Remove("is_paid_hs"); }
+            else if (parseNode.GetChildNode("is_paid_hs") is { } nullNodeIsPaidHs && nullNodeIsPaidHs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPaidHs = null;
+            if (parseNode.GetChildNode("quotas") is null) { _explicitNullValueQuotas = default!; _explicitNullProperties?.Remove("quotas"); }
+            else if (parseNode.GetChildNode("quotas") is { } nullNodeQuotas && nullNodeQuotas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Quotas = null;
         }
 
         /// <summary>The id of the Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string? AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string? _explicitNullValueAccountId = default!;
 #nullable restore
 #else
-        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
+        public string AccountId { get => _explicitNullValueAccountId; set { _explicitNullValueAccountId = value; AdditionalData?.Remove("account_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("account_id"); else _explicitNullProperties?.Remove("account_id"); } }
         private string _explicitNullValueAccountId = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -40,30 +46,30 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The email address associated with the Account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>Returns `true` if the user has been locked out of their account by a team admin.</summary>
-        public bool? IsLocked { get => _explicitNullValueIsLocked; set { _explicitNullValueIsLocked = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_locked"); else _explicitNullProperties?.Remove("is_locked"); } }
+        public bool? IsLocked { get => _explicitNullValueIsLocked; set { _explicitNullValueIsLocked = value; AdditionalData?.Remove("is_locked"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_locked"); else _explicitNullProperties?.Remove("is_locked"); } }
         private bool? _explicitNullValueIsLocked = default!;
         /// <summary>Returns `true` if the user has a paid HelloFax account.</summary>
-        public bool? IsPaidHf { get => _explicitNullValueIsPaidHf; set { _explicitNullValueIsPaidHf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_paid_hf"); else _explicitNullProperties?.Remove("is_paid_hf"); } }
+        public bool? IsPaidHf { get => _explicitNullValueIsPaidHf; set { _explicitNullValueIsPaidHf = value; AdditionalData?.Remove("is_paid_hf"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_paid_hf"); else _explicitNullProperties?.Remove("is_paid_hf"); } }
         private bool? _explicitNullValueIsPaidHf = default!;
         /// <summary>Returns `true` if the user has a paid Dropbox Sign account.</summary>
-        public bool? IsPaidHs { get => _explicitNullValueIsPaidHs; set { _explicitNullValueIsPaidHs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_paid_hs"); else _explicitNullProperties?.Remove("is_paid_hs"); } }
+        public bool? IsPaidHs { get => _explicitNullValueIsPaidHs; set { _explicitNullValueIsPaidHs = value; AdditionalData?.Remove("is_paid_hs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_paid_hs"); else _explicitNullProperties?.Remove("is_paid_hs"); } }
         private bool? _explicitNullValueIsPaidHs = default!;
         /// <summary>An array of the designated CC roles that must be specified when sending a SignatureRequest using this Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota? Quotas { get => _explicitNullValueQuotas; set { _explicitNullValueQuotas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quotas"); else _explicitNullProperties?.Remove("quotas"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota? Quotas { get => _explicitNullValueQuotas; set { _explicitNullValueQuotas = value; AdditionalData?.Remove("quotas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quotas"); else _explicitNullProperties?.Remove("quotas"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota? _explicitNullValueQuotas = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota Quotas { get => _explicitNullValueQuotas; set { _explicitNullValueQuotas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quotas"); else _explicitNullProperties?.Remove("quotas"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota Quotas { get => _explicitNullValueQuotas; set { _explicitNullValueQuotas = value; AdditionalData?.Remove("quotas"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("quotas"); else _explicitNullProperties?.Remove("quotas"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseAccountQuota _explicitNullValueQuotas = default!;
 #endif
         /// <summary>

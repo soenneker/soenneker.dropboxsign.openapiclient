@@ -18,13 +18,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fax_pages_sent") is { } nullNodeFaxPagesSent && nullNodeFaxPagesSent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxPagesSent = null;
+            if (parseNode.GetChildNode("fax_pages_sent") is null) { _explicitNullValueFaxPagesSent = default!; _explicitNullProperties?.Remove("fax_pages_sent"); }
+            else if (parseNode.GetChildNode("fax_pages_sent") is { } nullNodeFaxPagesSent && nullNodeFaxPagesSent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxPagesSent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Number of fax pages sent</summary>
-        public int? FaxPagesSent { get => _explicitNullValueFaxPagesSent; set { _explicitNullValueFaxPagesSent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_pages_sent"); else _explicitNullProperties?.Remove("fax_pages_sent"); } }
+        public int? FaxPagesSent { get => _explicitNullValueFaxPagesSent; set { _explicitNullValueFaxPagesSent = value; AdditionalData?.Remove("fax_pages_sent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_pages_sent"); else _explicitNullProperties?.Remove("fax_pages_sent"); } }
         private int? _explicitNullValueFaxPagesSent = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponseUsage"/> and sets the default values.

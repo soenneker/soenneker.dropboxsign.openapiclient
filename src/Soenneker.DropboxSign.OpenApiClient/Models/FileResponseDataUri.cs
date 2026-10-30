@@ -17,7 +17,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("data_uri") is { } nullNodeDataUri && nullNodeDataUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataUri = null;
+            if (parseNode.GetChildNode("data_uri") is null) { _explicitNullValueDataUri = default!; _explicitNullProperties?.Remove("data_uri"); }
+            else if (parseNode.GetChildNode("data_uri") is { } nullNodeDataUri && nullNodeDataUri.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DataUri = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>File as base64 encoded string.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DataUri { get => _explicitNullValueDataUri; set { _explicitNullValueDataUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_uri"); else _explicitNullProperties?.Remove("data_uri"); } }
+        public string? DataUri { get => _explicitNullValueDataUri; set { _explicitNullValueDataUri = value; AdditionalData?.Remove("data_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_uri"); else _explicitNullProperties?.Remove("data_uri"); } }
         private string? _explicitNullValueDataUri = default!;
 #nullable restore
 #else
-        public string DataUri { get => _explicitNullValueDataUri; set { _explicitNullValueDataUri = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_uri"); else _explicitNullProperties?.Remove("data_uri"); } }
+        public string DataUri { get => _explicitNullValueDataUri; set { _explicitNullValueDataUri = value; AdditionalData?.Remove("data_uri"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("data_uri"); else _explicitNullProperties?.Remove("data_uri"); } }
         private string _explicitNullValueDataUri = default!;
 #endif
         /// <summary>

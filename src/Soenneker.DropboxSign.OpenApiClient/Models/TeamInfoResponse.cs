@@ -17,11 +17,16 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("num_members") is { } nullNodeNumMembers && nullNodeNumMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumMembers = null;
-            if (parseNode.GetChildNode("num_sub_teams") is { } nullNodeNumSubTeams && nullNodeNumSubTeams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumSubTeams = null;
-            if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
-            if (parseNode.GetChildNode("team_parent") is { } nullNodeTeamParent && nullNodeTeamParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamParent = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("num_members") is null) { _explicitNullValueNumMembers = default!; _explicitNullProperties?.Remove("num_members"); }
+            else if (parseNode.GetChildNode("num_members") is { } nullNodeNumMembers && nullNodeNumMembers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumMembers = null;
+            if (parseNode.GetChildNode("num_sub_teams") is null) { _explicitNullValueNumSubTeams = default!; _explicitNullProperties?.Remove("num_sub_teams"); }
+            else if (parseNode.GetChildNode("num_sub_teams") is { } nullNodeNumSubTeams && nullNodeNumSubTeams.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumSubTeams = null;
+            if (parseNode.GetChildNode("team_id") is null) { _explicitNullValueTeamId = default!; _explicitNullProperties?.Remove("team_id"); }
+            else if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
+            if (parseNode.GetChildNode("team_parent") is null) { _explicitNullValueTeamParent = default!; _explicitNullProperties?.Remove("team_parent"); }
+            else if (parseNode.GetChildNode("team_parent") is { } nullNodeTeamParent && nullNodeTeamParent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamParent = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,37 +34,37 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The name of a team</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>Number of members within a team</summary>
-        public int? NumMembers { get => _explicitNullValueNumMembers; set { _explicitNullValueNumMembers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_members"); else _explicitNullProperties?.Remove("num_members"); } }
+        public int? NumMembers { get => _explicitNullValueNumMembers; set { _explicitNullValueNumMembers = value; AdditionalData?.Remove("num_members"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_members"); else _explicitNullProperties?.Remove("num_members"); } }
         private int? _explicitNullValueNumMembers = default!;
         /// <summary>Number of sub teams within a team</summary>
-        public int? NumSubTeams { get => _explicitNullValueNumSubTeams; set { _explicitNullValueNumSubTeams = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_sub_teams"); else _explicitNullProperties?.Remove("num_sub_teams"); } }
+        public int? NumSubTeams { get => _explicitNullValueNumSubTeams; set { _explicitNullValueNumSubTeams = value; AdditionalData?.Remove("num_sub_teams"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num_sub_teams"); else _explicitNullProperties?.Remove("num_sub_teams"); } }
         private int? _explicitNullValueNumSubTeams = default!;
         /// <summary>The id of a team</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; AdditionalData?.Remove("team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
         private string? _explicitNullValueTeamId = default!;
 #nullable restore
 #else
-        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; AdditionalData?.Remove("team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
         private string _explicitNullValueTeamId = default!;
 #endif
         /// <summary>Information about the parent team if a team has one, set to `null` otherwise.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamParentResponse? TeamParent { get => _explicitNullValueTeamParent; set { _explicitNullValueTeamParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_parent"); else _explicitNullProperties?.Remove("team_parent"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamParentResponse? TeamParent { get => _explicitNullValueTeamParent; set { _explicitNullValueTeamParent = value; AdditionalData?.Remove("team_parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_parent"); else _explicitNullProperties?.Remove("team_parent"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.TeamParentResponse? _explicitNullValueTeamParent = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamParentResponse TeamParent { get => _explicitNullValueTeamParent; set { _explicitNullValueTeamParent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_parent"); else _explicitNullProperties?.Remove("team_parent"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.TeamParentResponse TeamParent { get => _explicitNullValueTeamParent; set { _explicitNullValueTeamParent = value; AdditionalData?.Remove("team_parent"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_parent"); else _explicitNullProperties?.Remove("team_parent"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.TeamParentResponse _explicitNullValueTeamParent = default!;
 #endif
         /// <summary>

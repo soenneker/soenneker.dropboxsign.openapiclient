@@ -17,8 +17,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
-            if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
+            if (parseNode.GetChildNode("custom_fields") is null) { _explicitNullValueCustomFields = default!; _explicitNullProperties?.Remove("custom_fields"); }
+            else if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("signers") is null) { _explicitNullValueSigners = default!; _explicitNullProperties?.Remove("signers"); }
+            else if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>An array of custom field values.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubBulkSignerListCustomField>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubBulkSignerListCustomField>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubBulkSignerListCustomField>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubBulkSignerListCustomField> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubBulkSignerListCustomField> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubBulkSignerListCustomField> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Add Signers to your Templated-based Signature Request. Allows the requester to specify editor options when a preparing a document.Currently only templates with a single role are supported. All signers must have the same `role` value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; AdditionalData?.Remove("signers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>? _explicitNullValueSigners = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; AdditionalData?.Remove("signers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner> _explicitNullValueSigners = default!;
 #endif
         /// <summary>

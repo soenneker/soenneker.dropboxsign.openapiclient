@@ -17,8 +17,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("bulk_send_job") is { } nullNodeBulkSendJob && nullNodeBulkSendJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkSendJob = null;
-            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+            if (parseNode.GetChildNode("bulk_send_job") is null) { _explicitNullValueBulkSendJob = default!; _explicitNullProperties?.Remove("bulk_send_job"); }
+            else if (parseNode.GetChildNode("bulk_send_job") is { } nullNodeBulkSendJob && nullNodeBulkSendJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BulkSendJob = null;
+            if (parseNode.GetChildNode("warnings") is null) { _explicitNullValueWarnings = default!; _explicitNullProperties?.Remove("warnings"); }
+            else if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Contains information about the BulkSendJob such as when it was created and how many signature requests are queued.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse? BulkSendJob { get => _explicitNullValueBulkSendJob; set { _explicitNullValueBulkSendJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job"); else _explicitNullProperties?.Remove("bulk_send_job"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse? BulkSendJob { get => _explicitNullValueBulkSendJob; set { _explicitNullValueBulkSendJob = value; AdditionalData?.Remove("bulk_send_job"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job"); else _explicitNullProperties?.Remove("bulk_send_job"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse? _explicitNullValueBulkSendJob = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse BulkSendJob { get => _explicitNullValueBulkSendJob; set { _explicitNullValueBulkSendJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job"); else _explicitNullProperties?.Remove("bulk_send_job"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse BulkSendJob { get => _explicitNullValueBulkSendJob; set { _explicitNullValueBulkSendJob = value; AdditionalData?.Remove("bulk_send_job"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bulk_send_job"); else _explicitNullProperties?.Remove("bulk_send_job"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse _explicitNullValueBulkSendJob = default!;
 #endif
         /// <summary>A list of warnings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse>? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse>? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse> Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse> _explicitNullValueWarnings = default!;
 #endif
         /// <summary>

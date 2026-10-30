@@ -17,9 +17,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
-            if (parseNode.GetChildNode("sent_at") is { } nullNodeSentAt && nullNodeSentAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentAt = null;
-            if (parseNode.GetChildNode("status_code") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
+            if (parseNode.GetChildNode("recipient") is null) { _explicitNullValueRecipient = default!; _explicitNullProperties?.Remove("recipient"); }
+            else if (parseNode.GetChildNode("recipient") is { } nullNodeRecipient && nullNodeRecipient.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Recipient = null;
+            if (parseNode.GetChildNode("sent_at") is null) { _explicitNullValueSentAt = default!; _explicitNullProperties?.Remove("sent_at"); }
+            else if (parseNode.GetChildNode("sent_at") is { } nullNodeSentAt && nullNodeSentAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SentAt = null;
+            if (parseNode.GetChildNode("status_code") is null) { _explicitNullValueStatusCode = default!; _explicitNullProperties?.Remove("status_code"); }
+            else if (parseNode.GetChildNode("status_code") is { } nullNodeStatusCode && nullNodeStatusCode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StatusCode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,18 +30,18 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Fax Transmission Recipient</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string? Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string? _explicitNullValueRecipient = default!;
 #nullable restore
 #else
-        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
+        public string Recipient { get => _explicitNullValueRecipient; set { _explicitNullValueRecipient = value; AdditionalData?.Remove("recipient"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("recipient"); else _explicitNullProperties?.Remove("recipient"); } }
         private string _explicitNullValueRecipient = default!;
 #endif
         /// <summary>Fax Transmission Sent Timestamp</summary>
-        public int? SentAt { get => _explicitNullValueSentAt; set { _explicitNullValueSentAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sent_at"); else _explicitNullProperties?.Remove("sent_at"); } }
+        public int? SentAt { get => _explicitNullValueSentAt; set { _explicitNullValueSentAt = value; AdditionalData?.Remove("sent_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sent_at"); else _explicitNullProperties?.Remove("sent_at"); } }
         private int? _explicitNullValueSentAt = default!;
         /// <summary>Fax Transmission Status Code</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode? StatusCode { get => _explicitNullValueStatusCode; set { _explicitNullValueStatusCode = value; AdditionalData?.Remove("status_code"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status_code"); else _explicitNullProperties?.Remove("status_code"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode? _explicitNullValueStatusCode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmission"/> and sets the default values.
@@ -67,7 +70,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             {
                 { "recipient", n => { Recipient = n.GetStringValue(); } },
                 { "sent_at", n => { SentAt = n.GetIntValue(); } },
-                { "status_code", n => { StatusCode = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode>(); } },
+                { "status_code", n => { var parsed = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxResponseTransmissionStatusCode>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatusCode = default; _explicitNullProperties?.Remove("status_code"); AdditionalData["status_code"] = unknown; } else { StatusCode = parsed; AdditionalData.Remove("status_code"); } } },
             };
         }
         /// <summary>

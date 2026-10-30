@@ -17,14 +17,22 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
-            if (parseNode.GetChildNode("editor_options") is { } nullNodeEditorOptions && nullNodeEditorOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditorOptions = null;
-            if (parseNode.GetChildNode("is_for_embedded_signing") is { } nullNodeIsForEmbeddedSigning && nullNodeIsForEmbeddedSigning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsForEmbeddedSigning = null;
-            if (parseNode.GetChildNode("requester_email_address") is { } nullNodeRequesterEmailAddress && nullNodeRequesterEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequesterEmailAddress = null;
-            if (parseNode.GetChildNode("requesting_redirect_url") is { } nullNodeRequestingRedirectUrl && nullNodeRequestingRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestingRedirectUrl = null;
-            if (parseNode.GetChildNode("show_progress_stepper") is { } nullNodeShowProgressStepper && nullNodeShowProgressStepper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowProgressStepper = null;
-            if (parseNode.GetChildNode("signing_redirect_url") is { } nullNodeSigningRedirectUrl && nullNodeSigningRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningRedirectUrl = null;
-            if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
+            if (parseNode.GetChildNode("client_id") is null) { _explicitNullValueClientId = default!; _explicitNullProperties?.Remove("client_id"); }
+            else if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
+            if (parseNode.GetChildNode("editor_options") is null) { _explicitNullValueEditorOptions = default!; _explicitNullProperties?.Remove("editor_options"); }
+            else if (parseNode.GetChildNode("editor_options") is { } nullNodeEditorOptions && nullNodeEditorOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EditorOptions = null;
+            if (parseNode.GetChildNode("is_for_embedded_signing") is null) { _explicitNullValueIsForEmbeddedSigning = default!; _explicitNullProperties?.Remove("is_for_embedded_signing"); }
+            else if (parseNode.GetChildNode("is_for_embedded_signing") is { } nullNodeIsForEmbeddedSigning && nullNodeIsForEmbeddedSigning.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsForEmbeddedSigning = null;
+            if (parseNode.GetChildNode("requester_email_address") is null) { _explicitNullValueRequesterEmailAddress = default!; _explicitNullProperties?.Remove("requester_email_address"); }
+            else if (parseNode.GetChildNode("requester_email_address") is { } nullNodeRequesterEmailAddress && nullNodeRequesterEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequesterEmailAddress = null;
+            if (parseNode.GetChildNode("requesting_redirect_url") is null) { _explicitNullValueRequestingRedirectUrl = default!; _explicitNullProperties?.Remove("requesting_redirect_url"); }
+            else if (parseNode.GetChildNode("requesting_redirect_url") is { } nullNodeRequestingRedirectUrl && nullNodeRequestingRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestingRedirectUrl = null;
+            if (parseNode.GetChildNode("show_progress_stepper") is null) { _explicitNullValueShowProgressStepper = default!; _explicitNullProperties?.Remove("show_progress_stepper"); }
+            else if (parseNode.GetChildNode("show_progress_stepper") is { } nullNodeShowProgressStepper && nullNodeShowProgressStepper.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShowProgressStepper = null;
+            if (parseNode.GetChildNode("signing_redirect_url") is null) { _explicitNullValueSigningRedirectUrl = default!; _explicitNullProperties?.Remove("signing_redirect_url"); }
+            else if (parseNode.GetChildNode("signing_redirect_url") is { } nullNodeSigningRedirectUrl && nullNodeSigningRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningRedirectUrl = null;
+            if (parseNode.GetChildNode("test_mode") is null) { _explicitNullValueTestMode = default!; _explicitNullProperties?.Remove("test_mode"); }
+            else if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -32,61 +40,61 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Client id of the app used to create the draft. Used to apply the branding and callback url defined for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string? _explicitNullValueClientId = default!;
 #nullable restore
 #else
-        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string _explicitNullValueClientId = default!;
 #endif
         /// <summary>This allows the requester to specify editor options when a preparing a document</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; AdditionalData?.Remove("editor_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions? _explicitNullValueEditorOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions EditorOptions { get => _explicitNullValueEditorOptions; set { _explicitNullValueEditorOptions = value; AdditionalData?.Remove("editor_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("editor_options"); else _explicitNullProperties?.Remove("editor_options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions _explicitNullValueEditorOptions = default!;
 #endif
         /// <summary>The request created from this draft will also be signable in embedded mode if set to `true`.</summary>
-        public bool? IsForEmbeddedSigning { get => _explicitNullValueIsForEmbeddedSigning; set { _explicitNullValueIsForEmbeddedSigning = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_for_embedded_signing"); else _explicitNullProperties?.Remove("is_for_embedded_signing"); } }
+        public bool? IsForEmbeddedSigning { get => _explicitNullValueIsForEmbeddedSigning; set { _explicitNullValueIsForEmbeddedSigning = value; AdditionalData?.Remove("is_for_embedded_signing"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_for_embedded_signing"); else _explicitNullProperties?.Remove("is_for_embedded_signing"); } }
         private bool? _explicitNullValueIsForEmbeddedSigning = default!;
         /// <summary>The email address of the user that should be designated as the requester of this draft. If not set, original requester&apos;s email address will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequesterEmailAddress { get => _explicitNullValueRequesterEmailAddress; set { _explicitNullValueRequesterEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_email_address"); else _explicitNullProperties?.Remove("requester_email_address"); } }
+        public string? RequesterEmailAddress { get => _explicitNullValueRequesterEmailAddress; set { _explicitNullValueRequesterEmailAddress = value; AdditionalData?.Remove("requester_email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_email_address"); else _explicitNullProperties?.Remove("requester_email_address"); } }
         private string? _explicitNullValueRequesterEmailAddress = default!;
 #nullable restore
 #else
-        public string RequesterEmailAddress { get => _explicitNullValueRequesterEmailAddress; set { _explicitNullValueRequesterEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_email_address"); else _explicitNullProperties?.Remove("requester_email_address"); } }
+        public string RequesterEmailAddress { get => _explicitNullValueRequesterEmailAddress; set { _explicitNullValueRequesterEmailAddress = value; AdditionalData?.Remove("requester_email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requester_email_address"); else _explicitNullProperties?.Remove("requester_email_address"); } }
         private string _explicitNullValueRequesterEmailAddress = default!;
 #endif
         /// <summary>The URL you want signers redirected to after they successfully request a signature.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
+        public string? RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; AdditionalData?.Remove("requesting_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
         private string? _explicitNullValueRequestingRedirectUrl = default!;
 #nullable restore
 #else
-        public string RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
+        public string RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; AdditionalData?.Remove("requesting_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
         private string _explicitNullValueRequestingRedirectUrl = default!;
 #endif
         /// <summary>When only one step remains in the signature request process and this parameter is set to `false` then the progress stepper will be hidden.</summary>
-        public bool? ShowProgressStepper { get => _explicitNullValueShowProgressStepper; set { _explicitNullValueShowProgressStepper = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_progress_stepper"); else _explicitNullProperties?.Remove("show_progress_stepper"); } }
+        public bool? ShowProgressStepper { get => _explicitNullValueShowProgressStepper; set { _explicitNullValueShowProgressStepper = value; AdditionalData?.Remove("show_progress_stepper"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("show_progress_stepper"); else _explicitNullProperties?.Remove("show_progress_stepper"); } }
         private bool? _explicitNullValueShowProgressStepper = default!;
         /// <summary>The URL you want signers redirected to after they successfully sign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        public string? SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; AdditionalData?.Remove("signing_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
         private string? _explicitNullValueSigningRedirectUrl = default!;
 #nullable restore
 #else
-        public string SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        public string SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; AdditionalData?.Remove("signing_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
         private string _explicitNullValueSigningRedirectUrl = default!;
 #endif
         /// <summary>Whether this is a test, the signature request created from this draft will not be legally binding if set to `true`. Defaults to `false`.</summary>
-        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
+        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; AdditionalData?.Remove("test_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
         private bool? _explicitNullValueTestMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftEditAndResendRequest"/> and sets the default values.

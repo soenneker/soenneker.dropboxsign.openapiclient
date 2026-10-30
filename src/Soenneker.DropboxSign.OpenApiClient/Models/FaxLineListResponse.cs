@@ -17,9 +17,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("fax_lines") is { } nullNodeFaxLines && nullNodeFaxLines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxLines = null;
-            if (parseNode.GetChildNode("list_info") is { } nullNodeListInfo && nullNodeListInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListInfo = null;
-            if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
+            if (parseNode.GetChildNode("fax_lines") is null) { _explicitNullValueFaxLines = default!; _explicitNullProperties?.Remove("fax_lines"); }
+            else if (parseNode.GetChildNode("fax_lines") is { } nullNodeFaxLines && nullNodeFaxLines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FaxLines = null;
+            if (parseNode.GetChildNode("list_info") is null) { _explicitNullValueListInfo = default!; _explicitNullProperties?.Remove("list_info"); }
+            else if (parseNode.GetChildNode("list_info") is { } nullNodeListInfo && nullNodeListInfo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ListInfo = null;
+            if (parseNode.GetChildNode("warnings") is null) { _explicitNullValueWarnings = default!; _explicitNullProperties?.Remove("warnings"); }
+            else if (parseNode.GetChildNode("warnings") is { } nullNodeWarnings && nullNodeWarnings.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Warnings = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The fax_lines property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponseFaxLine>? FaxLines { get => _explicitNullValueFaxLines; set { _explicitNullValueFaxLines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_lines"); else _explicitNullProperties?.Remove("fax_lines"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponseFaxLine>? FaxLines { get => _explicitNullValueFaxLines; set { _explicitNullValueFaxLines = value; AdditionalData?.Remove("fax_lines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_lines"); else _explicitNullProperties?.Remove("fax_lines"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponseFaxLine>? _explicitNullValueFaxLines = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponseFaxLine> FaxLines { get => _explicitNullValueFaxLines; set { _explicitNullValueFaxLines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_lines"); else _explicitNullProperties?.Remove("fax_lines"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponseFaxLine> FaxLines { get => _explicitNullValueFaxLines; set { _explicitNullValueFaxLines = value; AdditionalData?.Remove("fax_lines"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fax_lines"); else _explicitNullProperties?.Remove("fax_lines"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.FaxLineResponseFaxLine> _explicitNullValueFaxLines = default!;
 #endif
         /// <summary>Contains pagination information about the data returned.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse? ListInfo { get => _explicitNullValueListInfo; set { _explicitNullValueListInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_info"); else _explicitNullProperties?.Remove("list_info"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse? ListInfo { get => _explicitNullValueListInfo; set { _explicitNullValueListInfo = value; AdditionalData?.Remove("list_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_info"); else _explicitNullProperties?.Remove("list_info"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse? _explicitNullValueListInfo = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse ListInfo { get => _explicitNullValueListInfo; set { _explicitNullValueListInfo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_info"); else _explicitNullProperties?.Remove("list_info"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse ListInfo { get => _explicitNullValueListInfo; set { _explicitNullValueListInfo = value; AdditionalData?.Remove("list_info"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("list_info"); else _explicitNullProperties?.Remove("list_info"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse _explicitNullValueListInfo = default!;
 #endif
         /// <summary>A list of warnings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse? Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse? _explicitNullValueWarnings = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse Warnings { get => _explicitNullValueWarnings; set { _explicitNullValueWarnings = value; AdditionalData?.Remove("warnings"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warnings"); else _explicitNullProperties?.Remove("warnings"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.WarningResponse _explicitNullValueWarnings = default!;
 #endif
         /// <summary>

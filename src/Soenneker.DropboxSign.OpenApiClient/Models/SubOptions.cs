@@ -18,13 +18,14 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("can_insert_everywhere") is { } nullNodeCanInsertEverywhere && nullNodeCanInsertEverywhere.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanInsertEverywhere = null;
+            if (parseNode.GetChildNode("can_insert_everywhere") is null) { _explicitNullValueCanInsertEverywhere = default!; _explicitNullProperties?.Remove("can_insert_everywhere"); }
+            else if (parseNode.GetChildNode("can_insert_everywhere") is { } nullNodeCanInsertEverywhere && nullNodeCanInsertEverywhere.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanInsertEverywhere = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Determines if signers can use &quot;Insert Everywhere&quot; when signing a document.</summary>
-        public bool? CanInsertEverywhere { get => _explicitNullValueCanInsertEverywhere; set { _explicitNullValueCanInsertEverywhere = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_insert_everywhere"); else _explicitNullProperties?.Remove("can_insert_everywhere"); } }
+        public bool? CanInsertEverywhere { get => _explicitNullValueCanInsertEverywhere; set { _explicitNullValueCanInsertEverywhere = value; AdditionalData?.Remove("can_insert_everywhere"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("can_insert_everywhere"); else _explicitNullProperties?.Remove("can_insert_everywhere"); } }
         private bool? _explicitNullValueCanInsertEverywhere = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubOptions"/> and sets the default values.

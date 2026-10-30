@@ -18,17 +18,19 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allow_edit_documents") is { } nullNodeAllowEditDocuments && nullNodeAllowEditDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEditDocuments = null;
-            if (parseNode.GetChildNode("allow_edit_signers") is { } nullNodeAllowEditSigners && nullNodeAllowEditSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEditSigners = null;
+            if (parseNode.GetChildNode("allow_edit_documents") is null) { _explicitNullValueAllowEditDocuments = default!; _explicitNullProperties?.Remove("allow_edit_documents"); }
+            else if (parseNode.GetChildNode("allow_edit_documents") is { } nullNodeAllowEditDocuments && nullNodeAllowEditDocuments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEditDocuments = null;
+            if (parseNode.GetChildNode("allow_edit_signers") is null) { _explicitNullValueAllowEditSigners = default!; _explicitNullProperties?.Remove("allow_edit_signers"); }
+            else if (parseNode.GetChildNode("allow_edit_signers") is { } nullNodeAllowEditSigners && nullNodeAllowEditSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowEditSigners = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allows requesters to edit documents, including delete and add</summary>
-        public bool? AllowEditDocuments { get => _explicitNullValueAllowEditDocuments; set { _explicitNullValueAllowEditDocuments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_edit_documents"); else _explicitNullProperties?.Remove("allow_edit_documents"); } }
+        public bool? AllowEditDocuments { get => _explicitNullValueAllowEditDocuments; set { _explicitNullValueAllowEditDocuments = value; AdditionalData?.Remove("allow_edit_documents"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_edit_documents"); else _explicitNullProperties?.Remove("allow_edit_documents"); } }
         private bool? _explicitNullValueAllowEditDocuments = default!;
         /// <summary>Allows requesters to edit the list of signers</summary>
-        public bool? AllowEditSigners { get => _explicitNullValueAllowEditSigners; set { _explicitNullValueAllowEditSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_edit_signers"); else _explicitNullProperties?.Remove("allow_edit_signers"); } }
+        public bool? AllowEditSigners { get => _explicitNullValueAllowEditSigners; set { _explicitNullValueAllowEditSigners = value; AdditionalData?.Remove("allow_edit_signers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_edit_signers"); else _explicitNullProperties?.Remove("allow_edit_signers"); } }
         private bool? _explicitNullValueAllowEditSigners = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubEditorOptions"/> and sets the default values.

@@ -18,12 +18,18 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("claim_url") is { } nullNodeClaimUrl && nullNodeClaimUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClaimUrl = null;
-            if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
-            if (parseNode.GetChildNode("requesting_redirect_url") is { } nullNodeRequestingRedirectUrl && nullNodeRequestingRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestingRedirectUrl = null;
-            if (parseNode.GetChildNode("signature_request_id") is { } nullNodeSignatureRequestId && nullNodeSignatureRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureRequestId = null;
-            if (parseNode.GetChildNode("signing_redirect_url") is { } nullNodeSigningRedirectUrl && nullNodeSigningRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningRedirectUrl = null;
-            if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
+            if (parseNode.GetChildNode("claim_url") is null) { _explicitNullValueClaimUrl = default!; _explicitNullProperties?.Remove("claim_url"); }
+            else if (parseNode.GetChildNode("claim_url") is { } nullNodeClaimUrl && nullNodeClaimUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClaimUrl = null;
+            if (parseNode.GetChildNode("expires_at") is null) { _explicitNullValueExpiresAt = default!; _explicitNullProperties?.Remove("expires_at"); }
+            else if (parseNode.GetChildNode("expires_at") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("requesting_redirect_url") is null) { _explicitNullValueRequestingRedirectUrl = default!; _explicitNullProperties?.Remove("requesting_redirect_url"); }
+            else if (parseNode.GetChildNode("requesting_redirect_url") is { } nullNodeRequestingRedirectUrl && nullNodeRequestingRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestingRedirectUrl = null;
+            if (parseNode.GetChildNode("signature_request_id") is null) { _explicitNullValueSignatureRequestId = default!; _explicitNullProperties?.Remove("signature_request_id"); }
+            else if (parseNode.GetChildNode("signature_request_id") is { } nullNodeSignatureRequestId && nullNodeSignatureRequestId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SignatureRequestId = null;
+            if (parseNode.GetChildNode("signing_redirect_url") is null) { _explicitNullValueSigningRedirectUrl = default!; _explicitNullProperties?.Remove("signing_redirect_url"); }
+            else if (parseNode.GetChildNode("signing_redirect_url") is { } nullNodeSigningRedirectUrl && nullNodeSigningRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningRedirectUrl = null;
+            if (parseNode.GetChildNode("test_mode") is null) { _explicitNullValueTestMode = default!; _explicitNullProperties?.Remove("test_mode"); }
+            else if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -31,48 +37,48 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The URL to be used to claim this UnclaimedDraft.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClaimUrl { get => _explicitNullValueClaimUrl; set { _explicitNullValueClaimUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claim_url"); else _explicitNullProperties?.Remove("claim_url"); } }
+        public string? ClaimUrl { get => _explicitNullValueClaimUrl; set { _explicitNullValueClaimUrl = value; AdditionalData?.Remove("claim_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claim_url"); else _explicitNullProperties?.Remove("claim_url"); } }
         private string? _explicitNullValueClaimUrl = default!;
 #nullable restore
 #else
-        public string ClaimUrl { get => _explicitNullValueClaimUrl; set { _explicitNullValueClaimUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claim_url"); else _explicitNullProperties?.Remove("claim_url"); } }
+        public string ClaimUrl { get => _explicitNullValueClaimUrl; set { _explicitNullValueClaimUrl = value; AdditionalData?.Remove("claim_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claim_url"); else _explicitNullProperties?.Remove("claim_url"); } }
         private string _explicitNullValueClaimUrl = default!;
 #endif
         /// <summary>When the link expires.</summary>
-        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
+        public int? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; AdditionalData?.Remove("expires_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_at"); else _explicitNullProperties?.Remove("expires_at"); } }
         private int? _explicitNullValueExpiresAt = default!;
         /// <summary>The URL you want signers redirected to after they successfully request a signature (Will only be returned in the response if it is applicable to the request.).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
+        public string? RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; AdditionalData?.Remove("requesting_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
         private string? _explicitNullValueRequestingRedirectUrl = default!;
 #nullable restore
 #else
-        public string RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
+        public string RequestingRedirectUrl { get => _explicitNullValueRequestingRedirectUrl; set { _explicitNullValueRequestingRedirectUrl = value; AdditionalData?.Remove("requesting_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requesting_redirect_url"); else _explicitNullProperties?.Remove("requesting_redirect_url"); } }
         private string _explicitNullValueRequestingRedirectUrl = default!;
 #endif
         /// <summary>The ID of the signature request that is represented by this UnclaimedDraft.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SignatureRequestId { get => _explicitNullValueSignatureRequestId; set { _explicitNullValueSignatureRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_request_id"); else _explicitNullProperties?.Remove("signature_request_id"); } }
+        public string? SignatureRequestId { get => _explicitNullValueSignatureRequestId; set { _explicitNullValueSignatureRequestId = value; AdditionalData?.Remove("signature_request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_request_id"); else _explicitNullProperties?.Remove("signature_request_id"); } }
         private string? _explicitNullValueSignatureRequestId = default!;
 #nullable restore
 #else
-        public string SignatureRequestId { get => _explicitNullValueSignatureRequestId; set { _explicitNullValueSignatureRequestId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_request_id"); else _explicitNullProperties?.Remove("signature_request_id"); } }
+        public string SignatureRequestId { get => _explicitNullValueSignatureRequestId; set { _explicitNullValueSignatureRequestId = value; AdditionalData?.Remove("signature_request_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signature_request_id"); else _explicitNullProperties?.Remove("signature_request_id"); } }
         private string _explicitNullValueSignatureRequestId = default!;
 #endif
         /// <summary>The URL you want signers redirected to after they successfully sign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        public string? SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; AdditionalData?.Remove("signing_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
         private string? _explicitNullValueSigningRedirectUrl = default!;
 #nullable restore
 #else
-        public string SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        public string SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; AdditionalData?.Remove("signing_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
         private string _explicitNullValueSigningRedirectUrl = default!;
 #endif
         /// <summary>Whether this is a test draft. Signature requests made from test drafts have no legal value.</summary>
-        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
+        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; AdditionalData?.Remove("test_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
         private bool? _explicitNullValueTestMode = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.UnclaimedDraftResponse"/> and sets the default values.

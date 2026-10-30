@@ -129,7 +129,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax_line
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.DELETE, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.DELETE, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.hellosign.com/v3", "/fax_line", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -149,7 +149,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax_line
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.DropboxSign.OpenApiClient.Fax_line.Fax_lineRequestBuilder.Fax_lineRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, "{+baseurl}/fax_line?number={number}", PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve("{+baseurl}/fax_line?number={number}", RequestAdapter.BaseUrl, "https://api.hellosign.com/v3", "/fax_line", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

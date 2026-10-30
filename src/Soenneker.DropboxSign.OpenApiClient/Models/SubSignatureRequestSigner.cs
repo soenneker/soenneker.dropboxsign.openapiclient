@@ -17,12 +17,18 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
-            if (parseNode.GetChildNode("pin") is { } nullNodePin && nullNodePin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pin = null;
-            if (parseNode.GetChildNode("sms_phone_number") is { } nullNodeSmsPhoneNumber && nullNodeSmsPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPhoneNumber = null;
-            if (parseNode.GetChildNode("sms_phone_number_type") is { } nullNodeSmsPhoneNumberType && nullNodeSmsPhoneNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPhoneNumberType = null;
+            if (parseNode.GetChildNode("email_address") is null) { _explicitNullValueEmailAddress = default!; _explicitNullProperties?.Remove("email_address"); }
+            else if (parseNode.GetChildNode("email_address") is { } nullNodeEmailAddress && nullNodeEmailAddress.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmailAddress = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("order") is null) { _explicitNullValueOrder = default!; _explicitNullProperties?.Remove("order"); }
+            else if (parseNode.GetChildNode("order") is { } nullNodeOrder && nullNodeOrder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Order = null;
+            if (parseNode.GetChildNode("pin") is null) { _explicitNullValuePin = default!; _explicitNullProperties?.Remove("pin"); }
+            else if (parseNode.GetChildNode("pin") is { } nullNodePin && nullNodePin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pin = null;
+            if (parseNode.GetChildNode("sms_phone_number") is null) { _explicitNullValueSmsPhoneNumber = default!; _explicitNullProperties?.Remove("sms_phone_number"); }
+            else if (parseNode.GetChildNode("sms_phone_number") is { } nullNodeSmsPhoneNumber && nullNodeSmsPhoneNumber.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPhoneNumber = null;
+            if (parseNode.GetChildNode("sms_phone_number_type") is null) { _explicitNullValueSmsPhoneNumberType = default!; _explicitNullProperties?.Remove("sms_phone_number_type"); }
+            else if (parseNode.GetChildNode("sms_phone_number_type") is { } nullNodeSmsPhoneNumberType && nullNodeSmsPhoneNumberType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SmsPhoneNumberType = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -30,48 +36,48 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The email address of the signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string? EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string? _explicitNullValueEmailAddress = default!;
 #nullable restore
 #else
-        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
+        public string EmailAddress { get => _explicitNullValueEmailAddress; set { _explicitNullValueEmailAddress = value; AdditionalData?.Remove("email_address"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email_address"); else _explicitNullProperties?.Remove("email_address"); } }
         private string _explicitNullValueEmailAddress = default!;
 #endif
         /// <summary>The name of the signer.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>The order the signer is required to sign in.</summary>
-        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
+        public int? Order { get => _explicitNullValueOrder; set { _explicitNullValueOrder = value; AdditionalData?.Remove("order"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("order"); else _explicitNullProperties?.Remove("order"); } }
         private int? _explicitNullValueOrder = default!;
         /// <summary>The 4- to 12-character access code that will secure this signer&apos;s signature page.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
+        public string? Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; AdditionalData?.Remove("pin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
         private string? _explicitNullValuePin = default!;
 #nullable restore
 #else
-        public string Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
+        public string Pin { get => _explicitNullValuePin; set { _explicitNullValuePin = value; AdditionalData?.Remove("pin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pin"); else _explicitNullProperties?.Remove("pin"); } }
         private string _explicitNullValuePin = default!;
 #endif
         /// <summary>An E.164 formatted phone number.By using the feature, you agree you are responsible for obtaining a signer&apos;s consent to receive text messages from Dropbox Sign related to this signature request and confirm you have obtained such consent from all signers prior to enabling SMS delivery for this signature request. [Learn more](https://faq.hellosign.com/hc/en-us/articles/15815316468877-Dropbox-Sign-SMS-tools-add-on).**NOTE:** Not available in test mode and requires a Standard plan or higher.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SmsPhoneNumber { get => _explicitNullValueSmsPhoneNumber; set { _explicitNullValueSmsPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number"); else _explicitNullProperties?.Remove("sms_phone_number"); } }
+        public string? SmsPhoneNumber { get => _explicitNullValueSmsPhoneNumber; set { _explicitNullValueSmsPhoneNumber = value; AdditionalData?.Remove("sms_phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number"); else _explicitNullProperties?.Remove("sms_phone_number"); } }
         private string? _explicitNullValueSmsPhoneNumber = default!;
 #nullable restore
 #else
-        public string SmsPhoneNumber { get => _explicitNullValueSmsPhoneNumber; set { _explicitNullValueSmsPhoneNumber = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number"); else _explicitNullProperties?.Remove("sms_phone_number"); } }
+        public string SmsPhoneNumber { get => _explicitNullValueSmsPhoneNumber; set { _explicitNullValueSmsPhoneNumber = value; AdditionalData?.Remove("sms_phone_number"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number"); else _explicitNullProperties?.Remove("sms_phone_number"); } }
         private string _explicitNullValueSmsPhoneNumber = default!;
 #endif
         /// <summary>Specifies the feature used with the `sms_phone_number`. Default `authentication`.If `authentication`, signer is sent a verification code via SMS that is required to access the document.If `delivery`, a link to complete the signature request is delivered via SMS (_and_ email).</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSignerSmsPhoneNumberType? SmsPhoneNumberType { get => _explicitNullValueSmsPhoneNumberType; set { _explicitNullValueSmsPhoneNumberType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number_type"); else _explicitNullProperties?.Remove("sms_phone_number_type"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSignerSmsPhoneNumberType? SmsPhoneNumberType { get => _explicitNullValueSmsPhoneNumberType; set { _explicitNullValueSmsPhoneNumberType = value; AdditionalData?.Remove("sms_phone_number_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sms_phone_number_type"); else _explicitNullProperties?.Remove("sms_phone_number_type"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSignerSmsPhoneNumberType? _explicitNullValueSmsPhoneNumberType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSigner"/> and sets the default values.
@@ -103,7 +109,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "order", n => { Order = n.GetIntValue(); } },
                 { "pin", n => { Pin = n.GetStringValue(); } },
                 { "sms_phone_number", n => { SmsPhoneNumber = n.GetStringValue(); } },
-                { "sms_phone_number_type", n => { SmsPhoneNumberType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSignerSmsPhoneNumberType>(); } },
+                { "sms_phone_number_type", n => { var parsed = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestSignerSmsPhoneNumberType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueSmsPhoneNumberType = default; _explicitNullProperties?.Remove("sms_phone_number_type"); AdditionalData["sms_phone_number_type"] = unknown; } else { SmsPhoneNumberType = parsed; AdditionalData.Remove("sms_phone_number_type"); } } },
             };
         }
         /// <summary>

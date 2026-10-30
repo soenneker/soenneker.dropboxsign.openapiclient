@@ -18,20 +18,34 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("header_background_color") is { } nullNodeHeaderBackgroundColor && nullNodeHeaderBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderBackgroundColor = null;
-            if (parseNode.GetChildNode("legal_version") is { } nullNodeLegalVersion && nullNodeLegalVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalVersion = null;
-            if (parseNode.GetChildNode("link_color") is { } nullNodeLinkColor && nullNodeLinkColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkColor = null;
-            if (parseNode.GetChildNode("page_background_color") is { } nullNodePageBackgroundColor && nullNodePageBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageBackgroundColor = null;
-            if (parseNode.GetChildNode("primary_button_color") is { } nullNodePrimaryButtonColor && nullNodePrimaryButtonColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonColor = null;
-            if (parseNode.GetChildNode("primary_button_color_hover") is { } nullNodePrimaryButtonColorHover && nullNodePrimaryButtonColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonColorHover = null;
-            if (parseNode.GetChildNode("primary_button_text_color") is { } nullNodePrimaryButtonTextColor && nullNodePrimaryButtonTextColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonTextColor = null;
-            if (parseNode.GetChildNode("primary_button_text_color_hover") is { } nullNodePrimaryButtonTextColorHover && nullNodePrimaryButtonTextColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonTextColorHover = null;
-            if (parseNode.GetChildNode("secondary_button_color") is { } nullNodeSecondaryButtonColor && nullNodeSecondaryButtonColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonColor = null;
-            if (parseNode.GetChildNode("secondary_button_color_hover") is { } nullNodeSecondaryButtonColorHover && nullNodeSecondaryButtonColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonColorHover = null;
-            if (parseNode.GetChildNode("secondary_button_text_color") is { } nullNodeSecondaryButtonTextColor && nullNodeSecondaryButtonTextColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonTextColor = null;
-            if (parseNode.GetChildNode("secondary_button_text_color_hover") is { } nullNodeSecondaryButtonTextColorHover && nullNodeSecondaryButtonTextColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonTextColorHover = null;
-            if (parseNode.GetChildNode("text_color1") is { } nullNodeTextColor1 && nullNodeTextColor1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextColor1 = null;
-            if (parseNode.GetChildNode("text_color2") is { } nullNodeTextColor2 && nullNodeTextColor2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextColor2 = null;
+            if (parseNode.GetChildNode("header_background_color") is null) { _explicitNullValueHeaderBackgroundColor = default!; _explicitNullProperties?.Remove("header_background_color"); }
+            else if (parseNode.GetChildNode("header_background_color") is { } nullNodeHeaderBackgroundColor && nullNodeHeaderBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeaderBackgroundColor = null;
+            if (parseNode.GetChildNode("legal_version") is null) { _explicitNullValueLegalVersion = default!; _explicitNullProperties?.Remove("legal_version"); }
+            else if (parseNode.GetChildNode("legal_version") is { } nullNodeLegalVersion && nullNodeLegalVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LegalVersion = null;
+            if (parseNode.GetChildNode("link_color") is null) { _explicitNullValueLinkColor = default!; _explicitNullProperties?.Remove("link_color"); }
+            else if (parseNode.GetChildNode("link_color") is { } nullNodeLinkColor && nullNodeLinkColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LinkColor = null;
+            if (parseNode.GetChildNode("page_background_color") is null) { _explicitNullValuePageBackgroundColor = default!; _explicitNullProperties?.Remove("page_background_color"); }
+            else if (parseNode.GetChildNode("page_background_color") is { } nullNodePageBackgroundColor && nullNodePageBackgroundColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PageBackgroundColor = null;
+            if (parseNode.GetChildNode("primary_button_color") is null) { _explicitNullValuePrimaryButtonColor = default!; _explicitNullProperties?.Remove("primary_button_color"); }
+            else if (parseNode.GetChildNode("primary_button_color") is { } nullNodePrimaryButtonColor && nullNodePrimaryButtonColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonColor = null;
+            if (parseNode.GetChildNode("primary_button_color_hover") is null) { _explicitNullValuePrimaryButtonColorHover = default!; _explicitNullProperties?.Remove("primary_button_color_hover"); }
+            else if (parseNode.GetChildNode("primary_button_color_hover") is { } nullNodePrimaryButtonColorHover && nullNodePrimaryButtonColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonColorHover = null;
+            if (parseNode.GetChildNode("primary_button_text_color") is null) { _explicitNullValuePrimaryButtonTextColor = default!; _explicitNullProperties?.Remove("primary_button_text_color"); }
+            else if (parseNode.GetChildNode("primary_button_text_color") is { } nullNodePrimaryButtonTextColor && nullNodePrimaryButtonTextColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonTextColor = null;
+            if (parseNode.GetChildNode("primary_button_text_color_hover") is null) { _explicitNullValuePrimaryButtonTextColorHover = default!; _explicitNullProperties?.Remove("primary_button_text_color_hover"); }
+            else if (parseNode.GetChildNode("primary_button_text_color_hover") is { } nullNodePrimaryButtonTextColorHover && nullNodePrimaryButtonTextColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryButtonTextColorHover = null;
+            if (parseNode.GetChildNode("secondary_button_color") is null) { _explicitNullValueSecondaryButtonColor = default!; _explicitNullProperties?.Remove("secondary_button_color"); }
+            else if (parseNode.GetChildNode("secondary_button_color") is { } nullNodeSecondaryButtonColor && nullNodeSecondaryButtonColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonColor = null;
+            if (parseNode.GetChildNode("secondary_button_color_hover") is null) { _explicitNullValueSecondaryButtonColorHover = default!; _explicitNullProperties?.Remove("secondary_button_color_hover"); }
+            else if (parseNode.GetChildNode("secondary_button_color_hover") is { } nullNodeSecondaryButtonColorHover && nullNodeSecondaryButtonColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonColorHover = null;
+            if (parseNode.GetChildNode("secondary_button_text_color") is null) { _explicitNullValueSecondaryButtonTextColor = default!; _explicitNullProperties?.Remove("secondary_button_text_color"); }
+            else if (parseNode.GetChildNode("secondary_button_text_color") is { } nullNodeSecondaryButtonTextColor && nullNodeSecondaryButtonTextColor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonTextColor = null;
+            if (parseNode.GetChildNode("secondary_button_text_color_hover") is null) { _explicitNullValueSecondaryButtonTextColorHover = default!; _explicitNullProperties?.Remove("secondary_button_text_color_hover"); }
+            else if (parseNode.GetChildNode("secondary_button_text_color_hover") is { } nullNodeSecondaryButtonTextColorHover && nullNodeSecondaryButtonTextColorHover.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecondaryButtonTextColorHover = null;
+            if (parseNode.GetChildNode("text_color1") is null) { _explicitNullValueTextColor1 = default!; _explicitNullProperties?.Remove("text_color1"); }
+            else if (parseNode.GetChildNode("text_color1") is { } nullNodeTextColor1 && nullNodeTextColor1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextColor1 = null;
+            if (parseNode.GetChildNode("text_color2") is null) { _explicitNullValueTextColor2 = default!; _explicitNullProperties?.Remove("text_color2"); }
+            else if (parseNode.GetChildNode("text_color2") is { } nullNodeTextColor2 && nullNodeTextColor2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TextColor2 = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,141 +53,141 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The header_background_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeaderBackgroundColor { get => _explicitNullValueHeaderBackgroundColor; set { _explicitNullValueHeaderBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_background_color"); else _explicitNullProperties?.Remove("header_background_color"); } }
+        public string? HeaderBackgroundColor { get => _explicitNullValueHeaderBackgroundColor; set { _explicitNullValueHeaderBackgroundColor = value; AdditionalData?.Remove("header_background_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_background_color"); else _explicitNullProperties?.Remove("header_background_color"); } }
         private string? _explicitNullValueHeaderBackgroundColor = default!;
 #nullable restore
 #else
-        public string HeaderBackgroundColor { get => _explicitNullValueHeaderBackgroundColor; set { _explicitNullValueHeaderBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_background_color"); else _explicitNullProperties?.Remove("header_background_color"); } }
+        public string HeaderBackgroundColor { get => _explicitNullValueHeaderBackgroundColor; set { _explicitNullValueHeaderBackgroundColor = value; AdditionalData?.Remove("header_background_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("header_background_color"); else _explicitNullProperties?.Remove("header_background_color"); } }
         private string _explicitNullValueHeaderBackgroundColor = default!;
 #endif
         /// <summary>The legal_version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LegalVersion { get => _explicitNullValueLegalVersion; set { _explicitNullValueLegalVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_version"); else _explicitNullProperties?.Remove("legal_version"); } }
+        public string? LegalVersion { get => _explicitNullValueLegalVersion; set { _explicitNullValueLegalVersion = value; AdditionalData?.Remove("legal_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_version"); else _explicitNullProperties?.Remove("legal_version"); } }
         private string? _explicitNullValueLegalVersion = default!;
 #nullable restore
 #else
-        public string LegalVersion { get => _explicitNullValueLegalVersion; set { _explicitNullValueLegalVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_version"); else _explicitNullProperties?.Remove("legal_version"); } }
+        public string LegalVersion { get => _explicitNullValueLegalVersion; set { _explicitNullValueLegalVersion = value; AdditionalData?.Remove("legal_version"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("legal_version"); else _explicitNullProperties?.Remove("legal_version"); } }
         private string _explicitNullValueLegalVersion = default!;
 #endif
         /// <summary>The link_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LinkColor { get => _explicitNullValueLinkColor; set { _explicitNullValueLinkColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_color"); else _explicitNullProperties?.Remove("link_color"); } }
+        public string? LinkColor { get => _explicitNullValueLinkColor; set { _explicitNullValueLinkColor = value; AdditionalData?.Remove("link_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_color"); else _explicitNullProperties?.Remove("link_color"); } }
         private string? _explicitNullValueLinkColor = default!;
 #nullable restore
 #else
-        public string LinkColor { get => _explicitNullValueLinkColor; set { _explicitNullValueLinkColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_color"); else _explicitNullProperties?.Remove("link_color"); } }
+        public string LinkColor { get => _explicitNullValueLinkColor; set { _explicitNullValueLinkColor = value; AdditionalData?.Remove("link_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("link_color"); else _explicitNullProperties?.Remove("link_color"); } }
         private string _explicitNullValueLinkColor = default!;
 #endif
         /// <summary>The page_background_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PageBackgroundColor { get => _explicitNullValuePageBackgroundColor; set { _explicitNullValuePageBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_background_color"); else _explicitNullProperties?.Remove("page_background_color"); } }
+        public string? PageBackgroundColor { get => _explicitNullValuePageBackgroundColor; set { _explicitNullValuePageBackgroundColor = value; AdditionalData?.Remove("page_background_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_background_color"); else _explicitNullProperties?.Remove("page_background_color"); } }
         private string? _explicitNullValuePageBackgroundColor = default!;
 #nullable restore
 #else
-        public string PageBackgroundColor { get => _explicitNullValuePageBackgroundColor; set { _explicitNullValuePageBackgroundColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_background_color"); else _explicitNullProperties?.Remove("page_background_color"); } }
+        public string PageBackgroundColor { get => _explicitNullValuePageBackgroundColor; set { _explicitNullValuePageBackgroundColor = value; AdditionalData?.Remove("page_background_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("page_background_color"); else _explicitNullProperties?.Remove("page_background_color"); } }
         private string _explicitNullValuePageBackgroundColor = default!;
 #endif
         /// <summary>The primary_button_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryButtonColor { get => _explicitNullValuePrimaryButtonColor; set { _explicitNullValuePrimaryButtonColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color"); else _explicitNullProperties?.Remove("primary_button_color"); } }
+        public string? PrimaryButtonColor { get => _explicitNullValuePrimaryButtonColor; set { _explicitNullValuePrimaryButtonColor = value; AdditionalData?.Remove("primary_button_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color"); else _explicitNullProperties?.Remove("primary_button_color"); } }
         private string? _explicitNullValuePrimaryButtonColor = default!;
 #nullable restore
 #else
-        public string PrimaryButtonColor { get => _explicitNullValuePrimaryButtonColor; set { _explicitNullValuePrimaryButtonColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color"); else _explicitNullProperties?.Remove("primary_button_color"); } }
+        public string PrimaryButtonColor { get => _explicitNullValuePrimaryButtonColor; set { _explicitNullValuePrimaryButtonColor = value; AdditionalData?.Remove("primary_button_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color"); else _explicitNullProperties?.Remove("primary_button_color"); } }
         private string _explicitNullValuePrimaryButtonColor = default!;
 #endif
         /// <summary>The primary_button_color_hover property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryButtonColorHover { get => _explicitNullValuePrimaryButtonColorHover; set { _explicitNullValuePrimaryButtonColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color_hover"); else _explicitNullProperties?.Remove("primary_button_color_hover"); } }
+        public string? PrimaryButtonColorHover { get => _explicitNullValuePrimaryButtonColorHover; set { _explicitNullValuePrimaryButtonColorHover = value; AdditionalData?.Remove("primary_button_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color_hover"); else _explicitNullProperties?.Remove("primary_button_color_hover"); } }
         private string? _explicitNullValuePrimaryButtonColorHover = default!;
 #nullable restore
 #else
-        public string PrimaryButtonColorHover { get => _explicitNullValuePrimaryButtonColorHover; set { _explicitNullValuePrimaryButtonColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color_hover"); else _explicitNullProperties?.Remove("primary_button_color_hover"); } }
+        public string PrimaryButtonColorHover { get => _explicitNullValuePrimaryButtonColorHover; set { _explicitNullValuePrimaryButtonColorHover = value; AdditionalData?.Remove("primary_button_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_color_hover"); else _explicitNullProperties?.Remove("primary_button_color_hover"); } }
         private string _explicitNullValuePrimaryButtonColorHover = default!;
 #endif
         /// <summary>The primary_button_text_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryButtonTextColor { get => _explicitNullValuePrimaryButtonTextColor; set { _explicitNullValuePrimaryButtonTextColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color"); else _explicitNullProperties?.Remove("primary_button_text_color"); } }
+        public string? PrimaryButtonTextColor { get => _explicitNullValuePrimaryButtonTextColor; set { _explicitNullValuePrimaryButtonTextColor = value; AdditionalData?.Remove("primary_button_text_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color"); else _explicitNullProperties?.Remove("primary_button_text_color"); } }
         private string? _explicitNullValuePrimaryButtonTextColor = default!;
 #nullable restore
 #else
-        public string PrimaryButtonTextColor { get => _explicitNullValuePrimaryButtonTextColor; set { _explicitNullValuePrimaryButtonTextColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color"); else _explicitNullProperties?.Remove("primary_button_text_color"); } }
+        public string PrimaryButtonTextColor { get => _explicitNullValuePrimaryButtonTextColor; set { _explicitNullValuePrimaryButtonTextColor = value; AdditionalData?.Remove("primary_button_text_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color"); else _explicitNullProperties?.Remove("primary_button_text_color"); } }
         private string _explicitNullValuePrimaryButtonTextColor = default!;
 #endif
         /// <summary>The primary_button_text_color_hover property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrimaryButtonTextColorHover { get => _explicitNullValuePrimaryButtonTextColorHover; set { _explicitNullValuePrimaryButtonTextColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color_hover"); else _explicitNullProperties?.Remove("primary_button_text_color_hover"); } }
+        public string? PrimaryButtonTextColorHover { get => _explicitNullValuePrimaryButtonTextColorHover; set { _explicitNullValuePrimaryButtonTextColorHover = value; AdditionalData?.Remove("primary_button_text_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color_hover"); else _explicitNullProperties?.Remove("primary_button_text_color_hover"); } }
         private string? _explicitNullValuePrimaryButtonTextColorHover = default!;
 #nullable restore
 #else
-        public string PrimaryButtonTextColorHover { get => _explicitNullValuePrimaryButtonTextColorHover; set { _explicitNullValuePrimaryButtonTextColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color_hover"); else _explicitNullProperties?.Remove("primary_button_text_color_hover"); } }
+        public string PrimaryButtonTextColorHover { get => _explicitNullValuePrimaryButtonTextColorHover; set { _explicitNullValuePrimaryButtonTextColorHover = value; AdditionalData?.Remove("primary_button_text_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primary_button_text_color_hover"); else _explicitNullProperties?.Remove("primary_button_text_color_hover"); } }
         private string _explicitNullValuePrimaryButtonTextColorHover = default!;
 #endif
         /// <summary>The secondary_button_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryButtonColor { get => _explicitNullValueSecondaryButtonColor; set { _explicitNullValueSecondaryButtonColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color"); else _explicitNullProperties?.Remove("secondary_button_color"); } }
+        public string? SecondaryButtonColor { get => _explicitNullValueSecondaryButtonColor; set { _explicitNullValueSecondaryButtonColor = value; AdditionalData?.Remove("secondary_button_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color"); else _explicitNullProperties?.Remove("secondary_button_color"); } }
         private string? _explicitNullValueSecondaryButtonColor = default!;
 #nullable restore
 #else
-        public string SecondaryButtonColor { get => _explicitNullValueSecondaryButtonColor; set { _explicitNullValueSecondaryButtonColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color"); else _explicitNullProperties?.Remove("secondary_button_color"); } }
+        public string SecondaryButtonColor { get => _explicitNullValueSecondaryButtonColor; set { _explicitNullValueSecondaryButtonColor = value; AdditionalData?.Remove("secondary_button_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color"); else _explicitNullProperties?.Remove("secondary_button_color"); } }
         private string _explicitNullValueSecondaryButtonColor = default!;
 #endif
         /// <summary>The secondary_button_color_hover property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryButtonColorHover { get => _explicitNullValueSecondaryButtonColorHover; set { _explicitNullValueSecondaryButtonColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color_hover"); else _explicitNullProperties?.Remove("secondary_button_color_hover"); } }
+        public string? SecondaryButtonColorHover { get => _explicitNullValueSecondaryButtonColorHover; set { _explicitNullValueSecondaryButtonColorHover = value; AdditionalData?.Remove("secondary_button_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color_hover"); else _explicitNullProperties?.Remove("secondary_button_color_hover"); } }
         private string? _explicitNullValueSecondaryButtonColorHover = default!;
 #nullable restore
 #else
-        public string SecondaryButtonColorHover { get => _explicitNullValueSecondaryButtonColorHover; set { _explicitNullValueSecondaryButtonColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color_hover"); else _explicitNullProperties?.Remove("secondary_button_color_hover"); } }
+        public string SecondaryButtonColorHover { get => _explicitNullValueSecondaryButtonColorHover; set { _explicitNullValueSecondaryButtonColorHover = value; AdditionalData?.Remove("secondary_button_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_color_hover"); else _explicitNullProperties?.Remove("secondary_button_color_hover"); } }
         private string _explicitNullValueSecondaryButtonColorHover = default!;
 #endif
         /// <summary>The secondary_button_text_color property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryButtonTextColor { get => _explicitNullValueSecondaryButtonTextColor; set { _explicitNullValueSecondaryButtonTextColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color"); else _explicitNullProperties?.Remove("secondary_button_text_color"); } }
+        public string? SecondaryButtonTextColor { get => _explicitNullValueSecondaryButtonTextColor; set { _explicitNullValueSecondaryButtonTextColor = value; AdditionalData?.Remove("secondary_button_text_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color"); else _explicitNullProperties?.Remove("secondary_button_text_color"); } }
         private string? _explicitNullValueSecondaryButtonTextColor = default!;
 #nullable restore
 #else
-        public string SecondaryButtonTextColor { get => _explicitNullValueSecondaryButtonTextColor; set { _explicitNullValueSecondaryButtonTextColor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color"); else _explicitNullProperties?.Remove("secondary_button_text_color"); } }
+        public string SecondaryButtonTextColor { get => _explicitNullValueSecondaryButtonTextColor; set { _explicitNullValueSecondaryButtonTextColor = value; AdditionalData?.Remove("secondary_button_text_color"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color"); else _explicitNullProperties?.Remove("secondary_button_text_color"); } }
         private string _explicitNullValueSecondaryButtonTextColor = default!;
 #endif
         /// <summary>The secondary_button_text_color_hover property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SecondaryButtonTextColorHover { get => _explicitNullValueSecondaryButtonTextColorHover; set { _explicitNullValueSecondaryButtonTextColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color_hover"); else _explicitNullProperties?.Remove("secondary_button_text_color_hover"); } }
+        public string? SecondaryButtonTextColorHover { get => _explicitNullValueSecondaryButtonTextColorHover; set { _explicitNullValueSecondaryButtonTextColorHover = value; AdditionalData?.Remove("secondary_button_text_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color_hover"); else _explicitNullProperties?.Remove("secondary_button_text_color_hover"); } }
         private string? _explicitNullValueSecondaryButtonTextColorHover = default!;
 #nullable restore
 #else
-        public string SecondaryButtonTextColorHover { get => _explicitNullValueSecondaryButtonTextColorHover; set { _explicitNullValueSecondaryButtonTextColorHover = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color_hover"); else _explicitNullProperties?.Remove("secondary_button_text_color_hover"); } }
+        public string SecondaryButtonTextColorHover { get => _explicitNullValueSecondaryButtonTextColorHover; set { _explicitNullValueSecondaryButtonTextColorHover = value; AdditionalData?.Remove("secondary_button_text_color_hover"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secondary_button_text_color_hover"); else _explicitNullProperties?.Remove("secondary_button_text_color_hover"); } }
         private string _explicitNullValueSecondaryButtonTextColorHover = default!;
 #endif
         /// <summary>The text_color1 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextColor1 { get => _explicitNullValueTextColor1; set { _explicitNullValueTextColor1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color1"); else _explicitNullProperties?.Remove("text_color1"); } }
+        public string? TextColor1 { get => _explicitNullValueTextColor1; set { _explicitNullValueTextColor1 = value; AdditionalData?.Remove("text_color1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color1"); else _explicitNullProperties?.Remove("text_color1"); } }
         private string? _explicitNullValueTextColor1 = default!;
 #nullable restore
 #else
-        public string TextColor1 { get => _explicitNullValueTextColor1; set { _explicitNullValueTextColor1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color1"); else _explicitNullProperties?.Remove("text_color1"); } }
+        public string TextColor1 { get => _explicitNullValueTextColor1; set { _explicitNullValueTextColor1 = value; AdditionalData?.Remove("text_color1"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color1"); else _explicitNullProperties?.Remove("text_color1"); } }
         private string _explicitNullValueTextColor1 = default!;
 #endif
         /// <summary>The text_color2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TextColor2 { get => _explicitNullValueTextColor2; set { _explicitNullValueTextColor2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color2"); else _explicitNullProperties?.Remove("text_color2"); } }
+        public string? TextColor2 { get => _explicitNullValueTextColor2; set { _explicitNullValueTextColor2 = value; AdditionalData?.Remove("text_color2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color2"); else _explicitNullProperties?.Remove("text_color2"); } }
         private string? _explicitNullValueTextColor2 = default!;
 #nullable restore
 #else
-        public string TextColor2 { get => _explicitNullValueTextColor2; set { _explicitNullValueTextColor2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color2"); else _explicitNullProperties?.Remove("text_color2"); } }
+        public string TextColor2 { get => _explicitNullValueTextColor2; set { _explicitNullValueTextColor2 = value; AdditionalData?.Remove("text_color2"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("text_color2"); else _explicitNullProperties?.Remove("text_color2"); } }
         private string _explicitNullValueTextColor2 = default!;
 #endif
         /// <summary>

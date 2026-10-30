@@ -18,16 +18,26 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("callback_url") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
-            if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
-            if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
-            if (parseNode.GetChildNode("domains") is { } nullNodeDomains && nullNodeDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domains = null;
-            if (parseNode.GetChildNode("is_approved") is { } nullNodeIsApproved && nullNodeIsApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsApproved = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
-            if (parseNode.GetChildNode("oauth") is { } nullNodeOauth && nullNodeOauth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Oauth = null;
-            if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
-            if (parseNode.GetChildNode("owner_account") is { } nullNodeOwnerAccount && nullNodeOwnerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerAccount = null;
-            if (parseNode.GetChildNode("white_labeling_options") is { } nullNodeWhiteLabelingOptions && nullNodeWhiteLabelingOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelingOptions = null;
+            if (parseNode.GetChildNode("callback_url") is null) { _explicitNullValueCallbackUrl = default!; _explicitNullProperties?.Remove("callback_url"); }
+            else if (parseNode.GetChildNode("callback_url") is { } nullNodeCallbackUrl && nullNodeCallbackUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CallbackUrl = null;
+            if (parseNode.GetChildNode("client_id") is null) { _explicitNullValueClientId = default!; _explicitNullProperties?.Remove("client_id"); }
+            else if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
+            if (parseNode.GetChildNode("created_at") is null) { _explicitNullValueCreatedAt = default!; _explicitNullProperties?.Remove("created_at"); }
+            else if (parseNode.GetChildNode("created_at") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("domains") is null) { _explicitNullValueDomains = default!; _explicitNullProperties?.Remove("domains"); }
+            else if (parseNode.GetChildNode("domains") is { } nullNodeDomains && nullNodeDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domains = null;
+            if (parseNode.GetChildNode("is_approved") is null) { _explicitNullValueIsApproved = default!; _explicitNullProperties?.Remove("is_approved"); }
+            else if (parseNode.GetChildNode("is_approved") is { } nullNodeIsApproved && nullNodeIsApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsApproved = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("oauth") is null) { _explicitNullValueOauth = default!; _explicitNullProperties?.Remove("oauth"); }
+            else if (parseNode.GetChildNode("oauth") is { } nullNodeOauth && nullNodeOauth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Oauth = null;
+            if (parseNode.GetChildNode("options") is null) { _explicitNullValueOptions = default!; _explicitNullProperties?.Remove("options"); }
+            else if (parseNode.GetChildNode("options") is { } nullNodeOptions && nullNodeOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Options = null;
+            if (parseNode.GetChildNode("owner_account") is null) { _explicitNullValueOwnerAccount = default!; _explicitNullProperties?.Remove("owner_account"); }
+            else if (parseNode.GetChildNode("owner_account") is { } nullNodeOwnerAccount && nullNodeOwnerAccount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OwnerAccount = null;
+            if (parseNode.GetChildNode("white_labeling_options") is null) { _explicitNullValueWhiteLabelingOptions = default!; _explicitNullProperties?.Remove("white_labeling_options"); }
+            else if (parseNode.GetChildNode("white_labeling_options") is { } nullNodeWhiteLabelingOptions && nullNodeWhiteLabelingOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WhiteLabelingOptions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -35,87 +45,87 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>The app&apos;s callback URL (for events)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
+        public string? CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
         private string? _explicitNullValueCallbackUrl = default!;
 #nullable restore
 #else
-        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
+        public string CallbackUrl { get => _explicitNullValueCallbackUrl; set { _explicitNullValueCallbackUrl = value; AdditionalData?.Remove("callback_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("callback_url"); else _explicitNullProperties?.Remove("callback_url"); } }
         private string _explicitNullValueCallbackUrl = default!;
 #endif
         /// <summary>The app&apos;s client id</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string? _explicitNullValueClientId = default!;
 #nullable restore
 #else
-        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string _explicitNullValueClientId = default!;
 #endif
         /// <summary>The time that the app was created</summary>
-        public int? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
+        public int? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; AdditionalData?.Remove("created_at"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("created_at"); else _explicitNullProperties?.Remove("created_at"); } }
         private int? _explicitNullValueCreatedAt = default!;
         /// <summary>The domain name(s) associated with the app</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        public List<string>? Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; AdditionalData?.Remove("domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
         private List<string>? _explicitNullValueDomains = default!;
 #nullable restore
 #else
-        public List<string> Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        public List<string> Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; AdditionalData?.Remove("domains"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
         private List<string> _explicitNullValueDomains = default!;
 #endif
         /// <summary>Boolean to indicate if the app has been approved</summary>
-        public bool? IsApproved { get => _explicitNullValueIsApproved; set { _explicitNullValueIsApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_approved"); else _explicitNullProperties?.Remove("is_approved"); } }
+        public bool? IsApproved { get => _explicitNullValueIsApproved; set { _explicitNullValueIsApproved = value; AdditionalData?.Remove("is_approved"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_approved"); else _explicitNullProperties?.Remove("is_approved"); } }
         private bool? _explicitNullValueIsApproved = default!;
         /// <summary>The name of the app</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>An object describing the app&apos;s OAuth properties, or null if OAuth is not configured for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOAuth? Oauth { get => _explicitNullValueOauth; set { _explicitNullValueOauth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth"); else _explicitNullProperties?.Remove("oauth"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOAuth? Oauth { get => _explicitNullValueOauth; set { _explicitNullValueOauth = value; AdditionalData?.Remove("oauth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth"); else _explicitNullProperties?.Remove("oauth"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOAuth? _explicitNullValueOauth = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOAuth Oauth { get => _explicitNullValueOauth; set { _explicitNullValueOauth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth"); else _explicitNullProperties?.Remove("oauth"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOAuth Oauth { get => _explicitNullValueOauth; set { _explicitNullValueOauth = value; AdditionalData?.Remove("oauth"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauth"); else _explicitNullProperties?.Remove("oauth"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOAuth _explicitNullValueOauth = default!;
 #endif
         /// <summary>An object with options that override account settings.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOptions? Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOptions? _explicitNullValueOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOptions Options { get => _explicitNullValueOptions; set { _explicitNullValueOptions = value; AdditionalData?.Remove("options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("options"); else _explicitNullProperties?.Remove("options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOptions _explicitNullValueOptions = default!;
 #endif
         /// <summary>An object describing the app&apos;s owner</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOwnerAccount? OwnerAccount { get => _explicitNullValueOwnerAccount; set { _explicitNullValueOwnerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_account"); else _explicitNullProperties?.Remove("owner_account"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOwnerAccount? OwnerAccount { get => _explicitNullValueOwnerAccount; set { _explicitNullValueOwnerAccount = value; AdditionalData?.Remove("owner_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_account"); else _explicitNullProperties?.Remove("owner_account"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOwnerAccount? _explicitNullValueOwnerAccount = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOwnerAccount OwnerAccount { get => _explicitNullValueOwnerAccount; set { _explicitNullValueOwnerAccount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_account"); else _explicitNullProperties?.Remove("owner_account"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOwnerAccount OwnerAccount { get => _explicitNullValueOwnerAccount; set { _explicitNullValueOwnerAccount = value; AdditionalData?.Remove("owner_account"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner_account"); else _explicitNullProperties?.Remove("owner_account"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseOwnerAccount _explicitNullValueOwnerAccount = default!;
 #endif
         /// <summary>An object with options to customize the app&apos;s signer page</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseWhiteLabelingOptions? WhiteLabelingOptions { get => _explicitNullValueWhiteLabelingOptions; set { _explicitNullValueWhiteLabelingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("white_labeling_options"); else _explicitNullProperties?.Remove("white_labeling_options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseWhiteLabelingOptions? WhiteLabelingOptions { get => _explicitNullValueWhiteLabelingOptions; set { _explicitNullValueWhiteLabelingOptions = value; AdditionalData?.Remove("white_labeling_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("white_labeling_options"); else _explicitNullProperties?.Remove("white_labeling_options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseWhiteLabelingOptions? _explicitNullValueWhiteLabelingOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseWhiteLabelingOptions WhiteLabelingOptions { get => _explicitNullValueWhiteLabelingOptions; set { _explicitNullValueWhiteLabelingOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("white_labeling_options"); else _explicitNullProperties?.Remove("white_labeling_options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseWhiteLabelingOptions WhiteLabelingOptions { get => _explicitNullValueWhiteLabelingOptions; set { _explicitNullValueWhiteLabelingOptions = value; AdditionalData?.Remove("white_labeling_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("white_labeling_options"); else _explicitNullProperties?.Remove("white_labeling_options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.ApiAppResponseWhiteLabelingOptions _explicitNullValueWhiteLabelingOptions = default!;
 #endif
         /// <summary>

@@ -17,163 +17,179 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allow_decline") is { } nullNodeAllowDecline && nullNodeAllowDecline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowDecline = null;
-            if (parseNode.GetChildNode("ccs") is { } nullNodeCcs && nullNodeCcs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ccs = null;
-            if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
-            if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
-            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
-            if (parseNode.GetChildNode("file_urls") is { } nullNodeFileUrls && nullNodeFileUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileUrls = null;
-            if (parseNode.GetChildNode("is_eid") is { } nullNodeIsEid && nullNodeIsEid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEid = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
-            if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
-            if (parseNode.GetChildNode("signing_options") is { } nullNodeSigningOptions && nullNodeSigningOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningOptions = null;
-            if (parseNode.GetChildNode("signing_redirect_url") is { } nullNodeSigningRedirectUrl && nullNodeSigningRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningRedirectUrl = null;
-            if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
-            if (parseNode.GetChildNode("template_ids") is { } nullNodeTemplateIds && nullNodeTemplateIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateIds = null;
-            if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
-            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+            if (parseNode.GetChildNode("allow_decline") is null) { _explicitNullValueAllowDecline = default!; _explicitNullProperties?.Remove("allow_decline"); }
+            else if (parseNode.GetChildNode("allow_decline") is { } nullNodeAllowDecline && nullNodeAllowDecline.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowDecline = null;
+            if (parseNode.GetChildNode("ccs") is null) { _explicitNullValueCcs = default!; _explicitNullProperties?.Remove("ccs"); }
+            else if (parseNode.GetChildNode("ccs") is { } nullNodeCcs && nullNodeCcs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ccs = null;
+            if (parseNode.GetChildNode("client_id") is null) { _explicitNullValueClientId = default!; _explicitNullProperties?.Remove("client_id"); }
+            else if (parseNode.GetChildNode("client_id") is { } nullNodeClientId && nullNodeClientId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClientId = null;
+            if (parseNode.GetChildNode("custom_fields") is null) { _explicitNullValueCustomFields = default!; _explicitNullProperties?.Remove("custom_fields"); }
+            else if (parseNode.GetChildNode("custom_fields") is { } nullNodeCustomFields && nullNodeCustomFields.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CustomFields = null;
+            if (parseNode.GetChildNode("files") is null) { _explicitNullValueFiles = default!; _explicitNullProperties?.Remove("files"); }
+            else if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("file_urls") is null) { _explicitNullValueFileUrls = default!; _explicitNullProperties?.Remove("file_urls"); }
+            else if (parseNode.GetChildNode("file_urls") is { } nullNodeFileUrls && nullNodeFileUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FileUrls = null;
+            if (parseNode.GetChildNode("is_eid") is null) { _explicitNullValueIsEid = default!; _explicitNullProperties?.Remove("is_eid"); }
+            else if (parseNode.GetChildNode("is_eid") is { } nullNodeIsEid && nullNodeIsEid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsEid = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("metadata") is null) { _explicitNullValueMetadata = default!; _explicitNullProperties?.Remove("metadata"); }
+            else if (parseNode.GetChildNode("metadata") is { } nullNodeMetadata && nullNodeMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Metadata = null;
+            if (parseNode.GetChildNode("signers") is null) { _explicitNullValueSigners = default!; _explicitNullProperties?.Remove("signers"); }
+            else if (parseNode.GetChildNode("signers") is { } nullNodeSigners && nullNodeSigners.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Signers = null;
+            if (parseNode.GetChildNode("signing_options") is null) { _explicitNullValueSigningOptions = default!; _explicitNullProperties?.Remove("signing_options"); }
+            else if (parseNode.GetChildNode("signing_options") is { } nullNodeSigningOptions && nullNodeSigningOptions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningOptions = null;
+            if (parseNode.GetChildNode("signing_redirect_url") is null) { _explicitNullValueSigningRedirectUrl = default!; _explicitNullProperties?.Remove("signing_redirect_url"); }
+            else if (parseNode.GetChildNode("signing_redirect_url") is { } nullNodeSigningRedirectUrl && nullNodeSigningRedirectUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SigningRedirectUrl = null;
+            if (parseNode.GetChildNode("subject") is null) { _explicitNullValueSubject = default!; _explicitNullProperties?.Remove("subject"); }
+            else if (parseNode.GetChildNode("subject") is { } nullNodeSubject && nullNodeSubject.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Subject = null;
+            if (parseNode.GetChildNode("template_ids") is null) { _explicitNullValueTemplateIds = default!; _explicitNullProperties?.Remove("template_ids"); }
+            else if (parseNode.GetChildNode("template_ids") is { } nullNodeTemplateIds && nullNodeTemplateIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TemplateIds = null;
+            if (parseNode.GetChildNode("test_mode") is null) { _explicitNullValueTestMode = default!; _explicitNullProperties?.Remove("test_mode"); }
+            else if (parseNode.GetChildNode("test_mode") is { } nullNodeTestMode && nullNodeTestMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TestMode = null;
+            if (parseNode.GetChildNode("title") is null) { _explicitNullValueTitle = default!; _explicitNullProperties?.Remove("title"); }
+            else if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allows signers to decline to sign a document if `true`. Defaults to `false`.</summary>
-        public bool? AllowDecline { get => _explicitNullValueAllowDecline; set { _explicitNullValueAllowDecline = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_decline"); else _explicitNullProperties?.Remove("allow_decline"); } }
+        public bool? AllowDecline { get => _explicitNullValueAllowDecline; set { _explicitNullValueAllowDecline = value; AdditionalData?.Remove("allow_decline"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allow_decline"); else _explicitNullProperties?.Remove("allow_decline"); } }
         private bool? _explicitNullValueAllowDecline = default!;
         /// <summary>Add CC email recipients. Required when a CC role exists for the Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>? Ccs { get => _explicitNullValueCcs; set { _explicitNullValueCcs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccs"); else _explicitNullProperties?.Remove("ccs"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>? Ccs { get => _explicitNullValueCcs; set { _explicitNullValueCcs = value; AdditionalData?.Remove("ccs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccs"); else _explicitNullProperties?.Remove("ccs"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>? _explicitNullValueCcs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc> Ccs { get => _explicitNullValueCcs; set { _explicitNullValueCcs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccs"); else _explicitNullProperties?.Remove("ccs"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc> Ccs { get => _explicitNullValueCcs; set { _explicitNullValueCcs = value; AdditionalData?.Remove("ccs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ccs"); else _explicitNullProperties?.Remove("ccs"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc> _explicitNullValueCcs = default!;
 #endif
         /// <summary>Client id of the app to associate with the signature request. Used to apply the branding and callback url defined for the app.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string? ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string? _explicitNullValueClientId = default!;
 #nullable restore
 #else
-        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
+        public string ClientId { get => _explicitNullValueClientId; set { _explicitNullValueClientId = value; AdditionalData?.Remove("client_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("client_id"); else _explicitNullProperties?.Remove("client_id"); } }
         private string _explicitNullValueClientId = default!;
 #endif
         /// <summary>An array defining values and options for custom fields. Required when a custom field exists in the Template.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>? CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>? _explicitNullValueCustomFields = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField> CustomFields { get => _explicitNullValueCustomFields; set { _explicitNullValueCustomFields = value; AdditionalData?.Remove("custom_fields"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("custom_fields"); else _explicitNullProperties?.Remove("custom_fields"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField> _explicitNullValueCustomFields = default!;
 #endif
         /// <summary>Use `files[]` to indicate the uploaded file(s) to send for signature.This endpoint requires either **files** or **file_urls[]**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<byte[]>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        public List<byte[]>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
         private List<byte[]>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<byte[]> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        public List<byte[]> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
         private List<byte[]> _explicitNullValueFiles = default!;
 #endif
         /// <summary>Use `file_urls[]` to have Dropbox Sign download the file(s) to send for signature.This endpoint requires either **files** or **file_urls[]**, but not both.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
+        public List<string>? FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; AdditionalData?.Remove("file_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
         private List<string>? _explicitNullValueFileUrls = default!;
 #nullable restore
 #else
-        public List<string> FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
+        public List<string> FileUrls { get => _explicitNullValueFileUrls; set { _explicitNullValueFileUrls = value; AdditionalData?.Remove("file_urls"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("file_urls"); else _explicitNullProperties?.Remove("file_urls"); } }
         private List<string> _explicitNullValueFileUrls = default!;
 #endif
         /// <summary>Send with a value of `true` if you wish to enable[electronic identification (eID)](https://www.hellosign.com/features/electronic-id),which requires the signer to verify their identity with an eID provider to sign a document.&lt;br&gt;**NOTE:** You need the eID add-on to use this feature. Please [contact sales](https://sign.dropbox.com/form/contact-sales) for more information. Cannot be used in `test_mode`. Only works on requests with one signer.</summary>
-        public bool? IsEid { get => _explicitNullValueIsEid; set { _explicitNullValueIsEid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eid"); else _explicitNullProperties?.Remove("is_eid"); } }
+        public bool? IsEid { get => _explicitNullValueIsEid; set { _explicitNullValueIsEid = value; AdditionalData?.Remove("is_eid"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("is_eid"); else _explicitNullProperties?.Remove("is_eid"); } }
         private bool? _explicitNullValueIsEid = default!;
         /// <summary>The custom message in the email that will be sent to the signers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; AdditionalData?.Remove("message"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
         private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer&apos;s order number for look up when receiving events for the signature request.Each request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty? Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty? _explicitNullValueMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty Metadata { get => _explicitNullValueMetadata; set { _explicitNullValueMetadata = value; AdditionalData?.Remove("metadata"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("metadata"); else _explicitNullProperties?.Remove("metadata"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty _explicitNullValueMetadata = default!;
 #endif
         /// <summary>Add Signers to your Templated-based Signature Request.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>? Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; AdditionalData?.Remove("signers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner>? _explicitNullValueSigners = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner> Signers { get => _explicitNullValueSigners; set { _explicitNullValueSigners = value; AdditionalData?.Remove("signers"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signers"); else _explicitNullProperties?.Remove("signers"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSignatureRequestTemplateSigner> _explicitNullValueSigners = default!;
 #endif
         /// <summary>This allows the requester to specify the types allowed for creating a signature and specify another signing options.**NOTE:** If `signing_options` are not defined in the request, the allowed types will default to those specified in the account settings.**NOTE:** If `force_advanced_signature_details` is set, allowed types has to be defined too.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions? SigningOptions { get => _explicitNullValueSigningOptions; set { _explicitNullValueSigningOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_options"); else _explicitNullProperties?.Remove("signing_options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions? SigningOptions { get => _explicitNullValueSigningOptions; set { _explicitNullValueSigningOptions = value; AdditionalData?.Remove("signing_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_options"); else _explicitNullProperties?.Remove("signing_options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions? _explicitNullValueSigningOptions = default!;
 #nullable restore
 #else
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions SigningOptions { get => _explicitNullValueSigningOptions; set { _explicitNullValueSigningOptions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_options"); else _explicitNullProperties?.Remove("signing_options"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions SigningOptions { get => _explicitNullValueSigningOptions; set { _explicitNullValueSigningOptions = value; AdditionalData?.Remove("signing_options"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_options"); else _explicitNullProperties?.Remove("signing_options"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions _explicitNullValueSigningOptions = default!;
 #endif
         /// <summary>The URL you want signers redirected to after they successfully sign.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        public string? SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; AdditionalData?.Remove("signing_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
         private string? _explicitNullValueSigningRedirectUrl = default!;
 #nullable restore
 #else
-        public string SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
+        public string SigningRedirectUrl { get => _explicitNullValueSigningRedirectUrl; set { _explicitNullValueSigningRedirectUrl = value; AdditionalData?.Remove("signing_redirect_url"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("signing_redirect_url"); else _explicitNullProperties?.Remove("signing_redirect_url"); } }
         private string _explicitNullValueSigningRedirectUrl = default!;
 #endif
         /// <summary>The subject in the email that will be sent to the signers.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        public string? Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
         private string? _explicitNullValueSubject = default!;
 #nullable restore
 #else
-        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
+        public string Subject { get => _explicitNullValueSubject; set { _explicitNullValueSubject = value; AdditionalData?.Remove("subject"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("subject"); else _explicitNullProperties?.Remove("subject"); } }
         private string _explicitNullValueSubject = default!;
 #endif
         /// <summary>Use `template_ids` to create a SignatureRequest from one or more templates, in the order in which the template will be used.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
+        public List<string>? TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; AdditionalData?.Remove("template_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
         private List<string>? _explicitNullValueTemplateIds = default!;
 #nullable restore
 #else
-        public List<string> TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
+        public List<string> TemplateIds { get => _explicitNullValueTemplateIds; set { _explicitNullValueTemplateIds = value; AdditionalData?.Remove("template_ids"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template_ids"); else _explicitNullProperties?.Remove("template_ids"); } }
         private List<string> _explicitNullValueTemplateIds = default!;
 #endif
         /// <summary>Whether this is a test, the signature request will not be legally binding if set to `true`. Defaults to `false`.</summary>
-        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
+        public bool? TestMode { get => _explicitNullValueTestMode; set { _explicitNullValueTestMode = value; AdditionalData?.Remove("test_mode"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("test_mode"); else _explicitNullProperties?.Remove("test_mode"); } }
         private bool? _explicitNullValueTestMode = default!;
         /// <summary>The title you want to assign to the SignatureRequest.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; AdditionalData?.Remove("title"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
         private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
@@ -209,7 +225,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "client_id", n => { ClientId = n.GetStringValue(); } },
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "file_urls", n => { FileUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "files", n => { Files = n.GetCollectionOfPrimitiveValues<byte[]>()?.AsList(); } },
+                { "files", n => { Files = global::System.Linq.Enumerable.Select(n.GetCollectionOfPrimitiveValues<string>(), value => value == null ? null! : global::System.Convert.FromBase64String(value))?.AsList(); } },
                 { "is_eid", n => { IsEid = n.GetBoolValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "metadata", n => { Metadata = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty>(global::Soenneker.DropboxSign.OpenApiClient.Models.SignatureRequestEditWithTemplateRequestMetadataProperty.CreateFromDiscriminatorValue); } },
@@ -233,7 +249,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCc>("ccs", Ccs);
             writer.WriteStringValue("client_id", ClientId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubCustomField>("custom_fields", CustomFields);
-            writer.WriteCollectionOfPrimitiveValues<byte[]>("files", Files);
+            writer.WriteCollectionOfPrimitiveValues<string>("files", Files == null ? null : global::System.Linq.Enumerable.Select(Files, value => value == null ? null! : global::System.Convert.ToBase64String(value)));
             writer.WriteCollectionOfPrimitiveValues<string>("file_urls", FileUrls);
             writer.WriteBoolValue("is_eid", IsEid);
             writer.WriteStringValue("message", Message);

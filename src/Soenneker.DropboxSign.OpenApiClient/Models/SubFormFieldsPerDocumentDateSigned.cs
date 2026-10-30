@@ -19,8 +19,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public override void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
             base.CaptureExplicitNulls(parseNode);
-            if (parseNode.GetChildNode("font_family") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
-            if (parseNode.GetChildNode("font_size") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
+            if (parseNode.GetChildNode("font_family") is null) { _explicitNullValueFontFamily = default!; _explicitNullProperties?.Remove("font_family"); }
+            else if (parseNode.GetChildNode("font_family") is { } nullNodeFontFamily && nullNodeFontFamily.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontFamily = null;
+            if (parseNode.GetChildNode("font_size") is null) { _explicitNullValueFontSize = default!; _explicitNullProperties?.Remove("font_size"); }
+            else if (parseNode.GetChildNode("font_size") is { } nullNodeFontSize && nullNodeFontSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FontSize = null;
         }
 
         /// <summary>Font family for the field.</summary>

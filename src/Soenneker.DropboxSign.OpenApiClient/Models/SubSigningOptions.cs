@@ -18,33 +18,39 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("default_type") is { } nullNodeDefaultType && nullNodeDefaultType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultType = null;
-            if (parseNode.GetChildNode("draw") is { } nullNodeDraw && nullNodeDraw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Draw = null;
-            if (parseNode.GetChildNode("force_advanced_signature_details") is { } nullNodeForceAdvancedSignatureDetails && nullNodeForceAdvancedSignatureDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceAdvancedSignatureDetails = null;
-            if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
-            if (parseNode.GetChildNode("upload") is { } nullNodeUpload && nullNodeUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Upload = null;
+            if (parseNode.GetChildNode("default_type") is null) { _explicitNullValueDefaultType = default!; _explicitNullProperties?.Remove("default_type"); }
+            else if (parseNode.GetChildNode("default_type") is { } nullNodeDefaultType && nullNodeDefaultType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DefaultType = null;
+            if (parseNode.GetChildNode("draw") is null) { _explicitNullValueDraw = default!; _explicitNullProperties?.Remove("draw"); }
+            else if (parseNode.GetChildNode("draw") is { } nullNodeDraw && nullNodeDraw.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Draw = null;
+            if (parseNode.GetChildNode("force_advanced_signature_details") is null) { _explicitNullValueForceAdvancedSignatureDetails = default!; _explicitNullProperties?.Remove("force_advanced_signature_details"); }
+            else if (parseNode.GetChildNode("force_advanced_signature_details") is { } nullNodeForceAdvancedSignatureDetails && nullNodeForceAdvancedSignatureDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ForceAdvancedSignatureDetails = null;
+            if (parseNode.GetChildNode("phone") is null) { _explicitNullValuePhone = default!; _explicitNullProperties?.Remove("phone"); }
+            else if (parseNode.GetChildNode("phone") is { } nullNodePhone && nullNodePhone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Phone = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("upload") is null) { _explicitNullValueUpload = default!; _explicitNullProperties?.Remove("upload"); }
+            else if (parseNode.GetChildNode("upload") is { } nullNodeUpload && nullNodeUpload.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Upload = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The default type shown (limited to the listed types)</summary>
-        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType? DefaultType { get => _explicitNullValueDefaultType; set { _explicitNullValueDefaultType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_type"); else _explicitNullProperties?.Remove("default_type"); } }
+        public global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType? DefaultType { get => _explicitNullValueDefaultType; set { _explicitNullValueDefaultType = value; AdditionalData?.Remove("default_type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("default_type"); else _explicitNullProperties?.Remove("default_type"); } }
         private global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType? _explicitNullValueDefaultType = default!;
         /// <summary>Allows drawing the signature</summary>
-        public bool? Draw { get => _explicitNullValueDraw; set { _explicitNullValueDraw = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("draw"); else _explicitNullProperties?.Remove("draw"); } }
+        public bool? Draw { get => _explicitNullValueDraw; set { _explicitNullValueDraw = value; AdditionalData?.Remove("draw"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("draw"); else _explicitNullProperties?.Remove("draw"); } }
         private bool? _explicitNullValueDraw = default!;
         /// <summary>Turning on advanced signature details for the signature request</summary>
-        public bool? ForceAdvancedSignatureDetails { get => _explicitNullValueForceAdvancedSignatureDetails; set { _explicitNullValueForceAdvancedSignatureDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force_advanced_signature_details"); else _explicitNullProperties?.Remove("force_advanced_signature_details"); } }
+        public bool? ForceAdvancedSignatureDetails { get => _explicitNullValueForceAdvancedSignatureDetails; set { _explicitNullValueForceAdvancedSignatureDetails = value; AdditionalData?.Remove("force_advanced_signature_details"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("force_advanced_signature_details"); else _explicitNullProperties?.Remove("force_advanced_signature_details"); } }
         private bool? _explicitNullValueForceAdvancedSignatureDetails = default!;
         /// <summary>Allows using a smartphone to email the signature</summary>
-        public bool? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
+        public bool? Phone { get => _explicitNullValuePhone; set { _explicitNullValuePhone = value; AdditionalData?.Remove("phone"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("phone"); else _explicitNullProperties?.Remove("phone"); } }
         private bool? _explicitNullValuePhone = default!;
         /// <summary>Allows typing the signature</summary>
-        public bool? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public bool? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private bool? _explicitNullValueType = default!;
         /// <summary>Allows uploading the signature</summary>
-        public bool? Upload { get => _explicitNullValueUpload; set { _explicitNullValueUpload = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload"); else _explicitNullProperties?.Remove("upload"); } }
+        public bool? Upload { get => _explicitNullValueUpload; set { _explicitNullValueUpload = value; AdditionalData?.Remove("upload"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("upload"); else _explicitNullProperties?.Remove("upload"); } }
         private bool? _explicitNullValueUpload = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptions"/> and sets the default values.
@@ -76,7 +82,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "default_type", n => { DefaultType = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType>(); } },
+                { "default_type", n => { var parsed = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultType = default; _explicitNullProperties?.Remove("default_type"); AdditionalData["default_type"] = unknown; } else { DefaultType = parsed; AdditionalData.Remove("default_type"); } } },
                 { "draw", n => { Draw = n.GetBoolValue(); } },
                 { "force_advanced_signature_details", n => { ForceAdvancedSignatureDetails = n.GetBoolValue(); } },
                 { "phone", n => { Phone = n.GetBoolValue(); } },

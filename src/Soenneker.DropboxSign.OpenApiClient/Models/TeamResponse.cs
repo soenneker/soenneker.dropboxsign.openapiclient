@@ -18,20 +18,24 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
-            if (parseNode.GetChildNode("invited_accounts") is { } nullNodeInvitedAccounts && nullNodeInvitedAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedAccounts = null;
-            if (parseNode.GetChildNode("invited_emails") is { } nullNodeInvitedEmails && nullNodeInvitedEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedEmails = null;
-            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("accounts") is null) { _explicitNullValueAccounts = default!; _explicitNullProperties?.Remove("accounts"); }
+            else if (parseNode.GetChildNode("accounts") is { } nullNodeAccounts && nullNodeAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accounts = null;
+            if (parseNode.GetChildNode("invited_accounts") is null) { _explicitNullValueInvitedAccounts = default!; _explicitNullProperties?.Remove("invited_accounts"); }
+            else if (parseNode.GetChildNode("invited_accounts") is { } nullNodeInvitedAccounts && nullNodeInvitedAccounts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedAccounts = null;
+            if (parseNode.GetChildNode("invited_emails") is null) { _explicitNullValueInvitedEmails = default!; _explicitNullProperties?.Remove("invited_emails"); }
+            else if (parseNode.GetChildNode("invited_emails") is { } nullNodeInvitedEmails && nullNodeInvitedEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedEmails = null;
+            if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
+            else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
         }
 
         /// <summary>The accounts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>? Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; AdditionalData?.Remove("accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>? _explicitNullValueAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse> Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse> Accounts { get => _explicitNullValueAccounts; set { _explicitNullValueAccounts = value; AdditionalData?.Remove("accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accounts"); else _explicitNullProperties?.Remove("accounts"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse> _explicitNullValueAccounts = default!;
 #endif
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -39,31 +43,31 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>A list of all Accounts that have an outstanding invitation to join your Team. Note that this response is a subset of the response parameters found in `GET /account`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>? InvitedAccounts { get => _explicitNullValueInvitedAccounts; set { _explicitNullValueInvitedAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_accounts"); else _explicitNullProperties?.Remove("invited_accounts"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>? InvitedAccounts { get => _explicitNullValueInvitedAccounts; set { _explicitNullValueInvitedAccounts = value; AdditionalData?.Remove("invited_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_accounts"); else _explicitNullProperties?.Remove("invited_accounts"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>? _explicitNullValueInvitedAccounts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse> InvitedAccounts { get => _explicitNullValueInvitedAccounts; set { _explicitNullValueInvitedAccounts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_accounts"); else _explicitNullProperties?.Remove("invited_accounts"); } }
+        public List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse> InvitedAccounts { get => _explicitNullValueInvitedAccounts; set { _explicitNullValueInvitedAccounts = value; AdditionalData?.Remove("invited_accounts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_accounts"); else _explicitNullProperties?.Remove("invited_accounts"); } }
         private List<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse> _explicitNullValueInvitedAccounts = default!;
 #endif
         /// <summary>A list of email addresses that have an outstanding invitation to join your Team and do not yet have a Dropbox Sign account.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? InvitedEmails { get => _explicitNullValueInvitedEmails; set { _explicitNullValueInvitedEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_emails"); else _explicitNullProperties?.Remove("invited_emails"); } }
+        public List<string>? InvitedEmails { get => _explicitNullValueInvitedEmails; set { _explicitNullValueInvitedEmails = value; AdditionalData?.Remove("invited_emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_emails"); else _explicitNullProperties?.Remove("invited_emails"); } }
         private List<string>? _explicitNullValueInvitedEmails = default!;
 #nullable restore
 #else
-        public List<string> InvitedEmails { get => _explicitNullValueInvitedEmails; set { _explicitNullValueInvitedEmails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_emails"); else _explicitNullProperties?.Remove("invited_emails"); } }
+        public List<string> InvitedEmails { get => _explicitNullValueInvitedEmails; set { _explicitNullValueInvitedEmails = value; AdditionalData?.Remove("invited_emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invited_emails"); else _explicitNullProperties?.Remove("invited_emails"); } }
         private List<string> _explicitNullValueInvitedEmails = default!;
 #endif
         /// <summary>The name of your Team</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
         /// <summary>

@@ -18,9 +18,12 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("error_msg") is { } nullNodeErrorMsg && nullNodeErrorMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMsg = null;
-            if (parseNode.GetChildNode("error_name") is { } nullNodeErrorName && nullNodeErrorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorName = null;
-            if (parseNode.GetChildNode("error_path") is { } nullNodeErrorPath && nullNodeErrorPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorPath = null;
+            if (parseNode.GetChildNode("error_msg") is null) { _explicitNullValueErrorMsg = default!; _explicitNullProperties?.Remove("error_msg"); }
+            else if (parseNode.GetChildNode("error_msg") is { } nullNodeErrorMsg && nullNodeErrorMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMsg = null;
+            if (parseNode.GetChildNode("error_name") is null) { _explicitNullValueErrorName = default!; _explicitNullProperties?.Remove("error_name"); }
+            else if (parseNode.GetChildNode("error_name") is { } nullNodeErrorName && nullNodeErrorName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorName = null;
+            if (parseNode.GetChildNode("error_path") is null) { _explicitNullValueErrorPath = default!; _explicitNullProperties?.Remove("error_path"); }
+            else if (parseNode.GetChildNode("error_path") is { } nullNodeErrorPath && nullNodeErrorPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorPath = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -28,31 +31,31 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Message describing an error.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMsg { get => _explicitNullValueErrorMsg; set { _explicitNullValueErrorMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_msg"); else _explicitNullProperties?.Remove("error_msg"); } }
+        public string? ErrorMsg { get => _explicitNullValueErrorMsg; set { _explicitNullValueErrorMsg = value; AdditionalData?.Remove("error_msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_msg"); else _explicitNullProperties?.Remove("error_msg"); } }
         private string? _explicitNullValueErrorMsg = default!;
 #nullable restore
 #else
-        public string ErrorMsg { get => _explicitNullValueErrorMsg; set { _explicitNullValueErrorMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_msg"); else _explicitNullProperties?.Remove("error_msg"); } }
+        public string ErrorMsg { get => _explicitNullValueErrorMsg; set { _explicitNullValueErrorMsg = value; AdditionalData?.Remove("error_msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_msg"); else _explicitNullProperties?.Remove("error_msg"); } }
         private string _explicitNullValueErrorMsg = default!;
 #endif
         /// <summary>Name of the error. See the `x-error-codes` catalog in openapi file for a complete list of possible error codes with detailed information including HTTP status codes, causes, remediation steps, and retry guidance.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorName { get => _explicitNullValueErrorName; set { _explicitNullValueErrorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_name"); else _explicitNullProperties?.Remove("error_name"); } }
+        public string? ErrorName { get => _explicitNullValueErrorName; set { _explicitNullValueErrorName = value; AdditionalData?.Remove("error_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_name"); else _explicitNullProperties?.Remove("error_name"); } }
         private string? _explicitNullValueErrorName = default!;
 #nullable restore
 #else
-        public string ErrorName { get => _explicitNullValueErrorName; set { _explicitNullValueErrorName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_name"); else _explicitNullProperties?.Remove("error_name"); } }
+        public string ErrorName { get => _explicitNullValueErrorName; set { _explicitNullValueErrorName = value; AdditionalData?.Remove("error_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_name"); else _explicitNullProperties?.Remove("error_name"); } }
         private string _explicitNullValueErrorName = default!;
 #endif
         /// <summary>Path at which an error occurred.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorPath { get => _explicitNullValueErrorPath; set { _explicitNullValueErrorPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_path"); else _explicitNullProperties?.Remove("error_path"); } }
+        public string? ErrorPath { get => _explicitNullValueErrorPath; set { _explicitNullValueErrorPath = value; AdditionalData?.Remove("error_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_path"); else _explicitNullProperties?.Remove("error_path"); } }
         private string? _explicitNullValueErrorPath = default!;
 #nullable restore
 #else
-        public string ErrorPath { get => _explicitNullValueErrorPath; set { _explicitNullValueErrorPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_path"); else _explicitNullProperties?.Remove("error_path"); } }
+        public string ErrorPath { get => _explicitNullValueErrorPath; set { _explicitNullValueErrorPath = value; AdditionalData?.Remove("error_path"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("error_path"); else _explicitNullProperties?.Remove("error_path"); } }
         private string _explicitNullValueErrorPath = default!;
 #endif
         /// <summary>

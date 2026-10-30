@@ -18,8 +18,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("warning_msg") is { } nullNodeWarningMsg && nullNodeWarningMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningMsg = null;
-            if (parseNode.GetChildNode("warning_name") is { } nullNodeWarningName && nullNodeWarningName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningName = null;
+            if (parseNode.GetChildNode("warning_msg") is null) { _explicitNullValueWarningMsg = default!; _explicitNullProperties?.Remove("warning_msg"); }
+            else if (parseNode.GetChildNode("warning_msg") is { } nullNodeWarningMsg && nullNodeWarningMsg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningMsg = null;
+            if (parseNode.GetChildNode("warning_name") is null) { _explicitNullValueWarningName = default!; _explicitNullProperties?.Remove("warning_name"); }
+            else if (parseNode.GetChildNode("warning_name") is { } nullNodeWarningName && nullNodeWarningName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WarningName = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,21 +29,21 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <summary>Warning message</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarningMsg { get => _explicitNullValueWarningMsg; set { _explicitNullValueWarningMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_msg"); else _explicitNullProperties?.Remove("warning_msg"); } }
+        public string? WarningMsg { get => _explicitNullValueWarningMsg; set { _explicitNullValueWarningMsg = value; AdditionalData?.Remove("warning_msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_msg"); else _explicitNullProperties?.Remove("warning_msg"); } }
         private string? _explicitNullValueWarningMsg = default!;
 #nullable restore
 #else
-        public string WarningMsg { get => _explicitNullValueWarningMsg; set { _explicitNullValueWarningMsg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_msg"); else _explicitNullProperties?.Remove("warning_msg"); } }
+        public string WarningMsg { get => _explicitNullValueWarningMsg; set { _explicitNullValueWarningMsg = value; AdditionalData?.Remove("warning_msg"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_msg"); else _explicitNullProperties?.Remove("warning_msg"); } }
         private string _explicitNullValueWarningMsg = default!;
 #endif
         /// <summary>Warning name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? WarningName { get => _explicitNullValueWarningName; set { _explicitNullValueWarningName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_name"); else _explicitNullProperties?.Remove("warning_name"); } }
+        public string? WarningName { get => _explicitNullValueWarningName; set { _explicitNullValueWarningName = value; AdditionalData?.Remove("warning_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_name"); else _explicitNullProperties?.Remove("warning_name"); } }
         private string? _explicitNullValueWarningName = default!;
 #nullable restore
 #else
-        public string WarningName { get => _explicitNullValueWarningName; set { _explicitNullValueWarningName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_name"); else _explicitNullProperties?.Remove("warning_name"); } }
+        public string WarningName { get => _explicitNullValueWarningName; set { _explicitNullValueWarningName = value; AdditionalData?.Remove("warning_name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("warning_name"); else _explicitNullProperties?.Remove("warning_name"); } }
         private string _explicitNullValueWarningName = default!;
 #endif
         /// <summary>

@@ -18,14 +18,15 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("date_format") is { } nullNodeDateFormat && nullNodeDateFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateFormat = null;
+            if (parseNode.GetChildNode("date_format") is null) { _explicitNullValueDateFormat = default!; _explicitNullProperties?.Remove("date_format"); }
+            else if (parseNode.GetChildNode("date_format") is { } nullNodeDateFormat && nullNodeDateFormat.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DateFormat = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Allows requester to specify the date format (see list of allowed [formats](/api/reference/constants/#date-formats))**NOTE:** Only available for Premium and higher.</summary>
 #nullable enable
-        public string? DateFormat { get => _explicitNullValueDateFormat; set { _explicitNullValueDateFormat = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_format"); else _explicitNullProperties?.Remove("date_format"); } }
+        public string? DateFormat { get => _explicitNullValueDateFormat; set { _explicitNullValueDateFormat = value; AdditionalData?.Remove("date_format"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("date_format"); else _explicitNullProperties?.Remove("date_format"); } }
         private string? _explicitNullValueDateFormat = default!;
 #nullable restore
         /// <summary>
