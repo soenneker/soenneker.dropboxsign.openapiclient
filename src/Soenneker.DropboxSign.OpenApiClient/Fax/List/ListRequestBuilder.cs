@@ -71,7 +71,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Fax.List
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.DropboxSign.OpenApiClient.Fax.List.ListRequestBuilder.ListRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.hellosign.com/v3", "/fax/list", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

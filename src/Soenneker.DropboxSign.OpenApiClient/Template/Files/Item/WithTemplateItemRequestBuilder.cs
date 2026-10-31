@@ -71,7 +71,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Template.Files.Item
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.DropboxSign.OpenApiClient.Template.Files.Item.WithTemplateItemRequestBuilder.WithTemplateItemRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://api.hellosign.com/v3", "/template/files/{templateId}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/pdf, application/zip, application/json");
             return requestInfo;
