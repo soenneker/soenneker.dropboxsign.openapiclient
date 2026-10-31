@@ -720,6 +720,33 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiAppGetResponse"
+                },
+                "examples": {
+                  "example": {
+                    "$ref": "#/components/examples/ApiAppCreateResponse"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [
@@ -8961,6 +8988,33 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamGetResponse"
+                },
+                "examples": {
+                  "example": {
+                    "$ref": "#/components/examples/TeamRemoveMemberResponse"
+                  }
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": [

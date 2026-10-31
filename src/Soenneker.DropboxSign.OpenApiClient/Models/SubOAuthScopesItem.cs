@@ -8,7 +8,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
     public enum SubOAuthScopesItem
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "")]
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
         EmptyString,
 
         [EnumMember(Value = "request_signature")]
