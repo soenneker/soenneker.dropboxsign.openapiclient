@@ -11754,7 +11754,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address which will be associated with the new Account.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "locale": {
             "type": "string",
@@ -11789,7 +11789,7 @@
           "email_address": {
             "type": "string",
             "description": "Email address to run the verification for.",
-            "format": "email"
+            "x-client-original-format": "email"
           }
         }
       },
@@ -11882,7 +11882,7 @@
           "file_url": {
             "type": "string",
             "description": "The URL of the PDF file to analyze.\n\nThis endpoint requires either \u0060file\u0060 or \u0060file_url\u0060, but not both.",
-            "format": "uri"
+            "x-client-original-format": "uri"
           },
           "detection_mode": {
             "$ref": "#/components/schemas/DocumentFieldDetectionRequestDetectionMode"
@@ -11970,376 +11970,8 @@
           "email_address": {
             "type": "string",
             "description": "Email address",
-            "format": "email"
+            "x-client-original-format": "email"
           }
-        }
-      },
-      "FaxLineAreaCodeGetStateEnum": {
-        "enum": [
-          "AK",
-          "AL",
-          "AR",
-          "AZ",
-          "CA",
-          "CO",
-          "CT",
-          "DC",
-          "DE",
-          "FL",
-          "GA",
-          "HI",
-          "IA",
-          "ID",
-          "IL",
-          "IN",
-          "KS",
-          "KY",
-          "LA",
-          "MA",
-          "MD",
-          "ME",
-          "MI",
-          "MN",
-          "MO",
-          "MS",
-          "MT",
-          "NC",
-          "ND",
-          "NE",
-          "NH",
-          "NJ",
-          "NM",
-          "NV",
-          "NY",
-          "OH",
-          "OK",
-          "OR",
-          "PA",
-          "RI",
-          "SC",
-          "SD",
-          "TN",
-          "TX",
-          "UT",
-          "VA",
-          "VT",
-          "WA",
-          "WI",
-          "WV",
-          "WY"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "FaxLineAreaCodeGetStateEnum",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "AK",
-              "name": "Ak"
-            },
-            {
-              "value": "AL",
-              "name": "Al"
-            },
-            {
-              "value": "AR",
-              "name": "Ar"
-            },
-            {
-              "value": "AZ",
-              "name": "Az"
-            },
-            {
-              "value": "CA",
-              "name": "Ca"
-            },
-            {
-              "value": "CO",
-              "name": "Co"
-            },
-            {
-              "value": "CT",
-              "name": "Ct"
-            },
-            {
-              "value": "DC",
-              "name": "Dc"
-            },
-            {
-              "value": "DE",
-              "name": "De"
-            },
-            {
-              "value": "FL",
-              "name": "Fl"
-            },
-            {
-              "value": "GA",
-              "name": "Ga"
-            },
-            {
-              "value": "HI",
-              "name": "Hi"
-            },
-            {
-              "value": "IA",
-              "name": "Ia"
-            },
-            {
-              "value": "ID",
-              "name": "Id"
-            },
-            {
-              "value": "IL",
-              "name": "Il"
-            },
-            {
-              "value": "IN",
-              "name": "InValue"
-            },
-            {
-              "value": "KS",
-              "name": "Ks"
-            },
-            {
-              "value": "KY",
-              "name": "Ky"
-            },
-            {
-              "value": "LA",
-              "name": "La"
-            },
-            {
-              "value": "MA",
-              "name": "Ma"
-            },
-            {
-              "value": "MD",
-              "name": "Md"
-            },
-            {
-              "value": "ME",
-              "name": "Me"
-            },
-            {
-              "value": "MI",
-              "name": "Mi"
-            },
-            {
-              "value": "MN",
-              "name": "Mn"
-            },
-            {
-              "value": "MO",
-              "name": "Mo"
-            },
-            {
-              "value": "MS",
-              "name": "Ms"
-            },
-            {
-              "value": "MT",
-              "name": "Mt"
-            },
-            {
-              "value": "NC",
-              "name": "Nc"
-            },
-            {
-              "value": "ND",
-              "name": "Nd"
-            },
-            {
-              "value": "NE",
-              "name": "Ne"
-            },
-            {
-              "value": "NH",
-              "name": "Nh"
-            },
-            {
-              "value": "NJ",
-              "name": "Nj"
-            },
-            {
-              "value": "NM",
-              "name": "Nm"
-            },
-            {
-              "value": "NV",
-              "name": "Nv"
-            },
-            {
-              "value": "NY",
-              "name": "Ny"
-            },
-            {
-              "value": "OH",
-              "name": "Oh"
-            },
-            {
-              "value": "OK",
-              "name": "Ok"
-            },
-            {
-              "value": "OR",
-              "name": "Or"
-            },
-            {
-              "value": "PA",
-              "name": "Pa"
-            },
-            {
-              "value": "RI",
-              "name": "Ri"
-            },
-            {
-              "value": "SC",
-              "name": "Sc"
-            },
-            {
-              "value": "SD",
-              "name": "Sd"
-            },
-            {
-              "value": "TN",
-              "name": "Tn"
-            },
-            {
-              "value": "TX",
-              "name": "Tx"
-            },
-            {
-              "value": "UT",
-              "name": "Ut"
-            },
-            {
-              "value": "VA",
-              "name": "Va"
-            },
-            {
-              "value": "VT",
-              "name": "Vt"
-            },
-            {
-              "value": "WA",
-              "name": "Wa"
-            },
-            {
-              "value": "WI",
-              "name": "Wi"
-            },
-            {
-              "value": "WV",
-              "name": "Wv"
-            },
-            {
-              "value": "WY",
-              "name": "Wy"
-            }
-          ]
-        }
-      },
-      "FaxLineAreaCodeGetProvinceEnum": {
-        "enum": [
-          "AB",
-          "BC",
-          "MB",
-          "NB",
-          "NL",
-          "NT",
-          "NS",
-          "NU",
-          "ON",
-          "PE",
-          "QC",
-          "SK",
-          "YT"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "FaxLineAreaCodeGetProvinceEnum",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "AB",
-              "name": "Ab"
-            },
-            {
-              "value": "BC",
-              "name": "Bc"
-            },
-            {
-              "value": "MB",
-              "name": "Mb"
-            },
-            {
-              "value": "NB",
-              "name": "Nb"
-            },
-            {
-              "value": "NL",
-              "name": "Nl"
-            },
-            {
-              "value": "NT",
-              "name": "Nt"
-            },
-            {
-              "value": "NS",
-              "name": "Ns"
-            },
-            {
-              "value": "NU",
-              "name": "Nu"
-            },
-            {
-              "value": "ON",
-              "name": "On"
-            },
-            {
-              "value": "PE",
-              "name": "Pe"
-            },
-            {
-              "value": "QC",
-              "name": "Qc"
-            },
-            {
-              "value": "SK",
-              "name": "Sk"
-            },
-            {
-              "value": "YT",
-              "name": "Yt"
-            }
-          ]
-        }
-      },
-      "FaxLineAreaCodeGetCountryEnum": {
-        "enum": [
-          "CA",
-          "US",
-          "UK"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "FaxLineAreaCodeGetCountryEnum",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "CA",
-              "name": "Ca"
-            },
-            {
-              "value": "US",
-              "name": "Us"
-            },
-            {
-              "value": "UK",
-              "name": "Uk"
-            }
-          ]
         }
       },
       "FaxLineCreateRequest": {
@@ -12397,7 +12029,7 @@
           "email_address": {
             "type": "string",
             "description": "Email address of the user to remove access",
-            "format": "email"
+            "x-client-original-format": "email"
           }
         }
       },
@@ -12766,7 +12398,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "format": "email"
+              "x-client-original-format": "email"
             },
             "description": "The email addresses that should be CCed."
           },
@@ -13009,7 +12641,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "format": "email"
+              "x-client-original-format": "email"
             },
             "description": "The email addresses that should be CCed."
           },
@@ -13161,7 +12793,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "format": "email"
+              "x-client-original-format": "email"
             },
             "description": "The email addresses that should be CCed."
           },
@@ -13452,7 +13084,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address of the signer to send a reminder to.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "name": {
             "type": "string",
@@ -13513,7 +13145,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "format": "email"
+              "x-client-original-format": "email"
             },
             "description": "The email addresses that should be CCed."
           },
@@ -13732,7 +13364,7 @@
           "email_address": {
             "type": "string",
             "description": "The new email address for the recipient.\n\nThis will generate a new \u0060signature_id\u0060 value.\n\n**NOTE:** Optional if \u0060name\u0060 is provided.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "name": {
             "type": "string",
@@ -13825,7 +13457,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address of the CC recipient.",
-            "format": "email"
+            "x-client-original-format": "email"
           }
         }
       },
@@ -14295,158 +13927,6 @@
         },
         "description": "This class extends \u0060SubFormFieldsPerDocumentBase\u0060."
       },
-      "SubFormFieldsPerDocumentTypeEnum": {
-        "enum": [
-          "checkbox",
-          "checkbox-merge",
-          "date_signed",
-          "dropdown",
-          "hyperlink",
-          "initials",
-          "signature",
-          "radio",
-          "text",
-          "text-merge"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "SubFormFieldsPerDocumentTypeEnum",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "checkbox",
-              "name": "Checkbox"
-            },
-            {
-              "value": "checkbox-merge",
-              "name": "CheckboxMerge"
-            },
-            {
-              "value": "date_signed",
-              "name": "DateSigned"
-            },
-            {
-              "value": "dropdown",
-              "name": "Dropdown"
-            },
-            {
-              "value": "hyperlink",
-              "name": "Hyperlink"
-            },
-            {
-              "value": "initials",
-              "name": "Initials"
-            },
-            {
-              "value": "signature",
-              "name": "Signature"
-            },
-            {
-              "value": "radio",
-              "name": "Radio"
-            },
-            {
-              "value": "text",
-              "name": "Text"
-            },
-            {
-              "value": "text-merge",
-              "name": "TextMerge"
-            }
-          ]
-        }
-      },
-      "SubFormFieldsPerDocumentFontEnum": {
-        "enum": [
-          "helvetica",
-          "arial",
-          "courier",
-          "calibri",
-          "cambria",
-          "georgia",
-          "times",
-          "trebuchet",
-          "verdana",
-          "roboto",
-          "robotoMono",
-          "notoSans",
-          "notoSerif",
-          "notoCJK-JP-Regular",
-          "notoHebrew-Regular",
-          "notoSanThaiMerged"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "SubFormFieldsPerDocumentFontEnum",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "helvetica",
-              "name": "Helvetica"
-            },
-            {
-              "value": "arial",
-              "name": "Arial"
-            },
-            {
-              "value": "courier",
-              "name": "Courier"
-            },
-            {
-              "value": "calibri",
-              "name": "Calibri"
-            },
-            {
-              "value": "cambria",
-              "name": "Cambria"
-            },
-            {
-              "value": "georgia",
-              "name": "Georgia"
-            },
-            {
-              "value": "times",
-              "name": "Times"
-            },
-            {
-              "value": "trebuchet",
-              "name": "Trebuchet"
-            },
-            {
-              "value": "verdana",
-              "name": "Verdana"
-            },
-            {
-              "value": "roboto",
-              "name": "Roboto"
-            },
-            {
-              "value": "robotoMono",
-              "name": "RobotoMono"
-            },
-            {
-              "value": "notoSans",
-              "name": "NotoSans"
-            },
-            {
-              "value": "notoSerif",
-              "name": "NotoSerif"
-            },
-            {
-              "value": "notoCJK-JP-Regular",
-              "name": "NotoCjkJpRegular"
-            },
-            {
-              "value": "notoHebrew-Regular",
-              "name": "NotoHebrewRegular"
-            },
-            {
-              "value": "notoSanThaiMerged",
-              "name": "NotoSanThaiMerged"
-            }
-          ]
-        }
-      },
       "SubFormFieldsPerDocumentBase": {
         "required": [
           "document_index",
@@ -14609,7 +14089,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address of the signer.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "order": {
             "type": "integer",
@@ -14650,7 +14130,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address of the signer.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "pin": {
             "maxLength": 12,
@@ -14677,7 +14157,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address of the signer.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "name": {
             "type": "string",
@@ -14709,7 +14189,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address of the signer filling the role of \u0060role\u0060.",
-            "format": "email"
+            "x-client-original-format": "email"
           }
         }
       },
@@ -14839,7 +14319,7 @@
           "email_address": {
             "type": "string",
             "description": "\u0060account_id\u0060 or \u0060email_address\u0060 is required, If both are provided, the account id prevails.\n\nEmail address of the user to invite to your Team.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "role": {
             "$ref": "#/components/schemas/TeamAddMemberRequestRole"
@@ -14866,12 +14346,12 @@
           "email_address": {
             "type": "string",
             "description": "**account_id** or **email_address** is required. If both are provided, the account id prevails.\n\nEmail address of the Account to remove from your Team.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "new_owner_email_address": {
             "type": "string",
             "description": "The email address of an Account on this Team to receive all documents, templates, and API apps (if applicable) from the removed Account. If not provided, and on an Enterprise plan, this data will remain with the removed Account.\n\n**NOTE:** Only available for Enterprise plans.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "new_team_id": {
             "type": "string",
@@ -14901,7 +14381,7 @@
           "email_address": {
             "type": "string",
             "description": "The email address of the Account to give access to the Template.\n**NOTE:** The account id prevails if it is also provided.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "skip_notification": {
             "type": "boolean",
@@ -15186,7 +14666,7 @@
           "email_address": {
             "type": "string",
             "description": "The id or email address of the Account to remove access to the Template. The account id prevails if both are provided.",
-            "format": "email"
+            "x-client-original-format": "email"
           }
         }
       },
@@ -15266,7 +14746,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "format": "email"
+              "x-client-original-format": "email"
             },
             "description": "The email addresses that should be CCed."
           },
@@ -15421,7 +14901,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "format": "email"
+              "x-client-original-format": "email"
             },
             "description": "The email addresses that should be CCed."
           },
@@ -15499,7 +14979,7 @@
           "requester_email_address": {
             "type": "string",
             "description": "The email address of the user that should be designated as the requester of this draft, if the draft type is \u0060request_signature\u0060.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "requesting_redirect_url": {
             "type": "string",
@@ -15667,7 +15147,7 @@
           "requester_email_address": {
             "type": "string",
             "description": "The email address of the user that should be designated as the requester of this draft.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "requesting_redirect_url": {
             "type": "string",
@@ -15756,7 +15236,7 @@
           "requester_email_address": {
             "type": "string",
             "description": "The email address of the user that should be designated as the requester of this draft. If not set, original requester\u0027s email address will be used.",
-            "format": "email"
+            "x-client-original-format": "email"
           },
           "requesting_redirect_url": {
             "type": "string",
@@ -17237,27 +16717,6 @@
         },
         "description": "This class extends \u0060SignatureRequestResponseCustomFieldBase\u0060."
       },
-      "SignatureRequestResponseCustomFieldTypeEnum": {
-        "enum": [
-          "text",
-          "checkbox"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "SignatureRequestResponseCustomFieldTypeEnum",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "text",
-              "name": "Text"
-            },
-            {
-              "value": "checkbox",
-              "name": "Checkbox"
-            }
-          ]
-        }
-      },
       "SignatureRequestResponseDataBase": {
         "required": [
           "type"
@@ -17301,62 +16760,6 @@
         },
         "x-internal-class": true,
         "x-base-class": true
-      },
-      "SignatureRequestResponseDataTypeEnum": {
-        "enum": [
-          "text",
-          "checkbox",
-          "date_signed",
-          "dropdown",
-          "initials",
-          "radio",
-          "signature",
-          "text-merge",
-          "checkbox-merge"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "SignatureRequestResponseDataTypeEnum",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "text",
-              "name": "Text"
-            },
-            {
-              "value": "checkbox",
-              "name": "Checkbox"
-            },
-            {
-              "value": "date_signed",
-              "name": "DateSigned"
-            },
-            {
-              "value": "dropdown",
-              "name": "Dropdown"
-            },
-            {
-              "value": "initials",
-              "name": "Initials"
-            },
-            {
-              "value": "radio",
-              "name": "Radio"
-            },
-            {
-              "value": "signature",
-              "name": "Signature"
-            },
-            {
-              "value": "text-merge",
-              "name": "TextMerge"
-            },
-            {
-              "value": "checkbox-merge",
-              "name": "CheckboxMerge"
-            }
-          ]
-        }
       },
       "SignatureRequestResponseDataValueCheckbox": {
         "type": "object",
@@ -19078,10 +18481,6 @@
           "events"
         ]
       },
-      "EventCallbackResponseResponsePlain": {
-        "type": "string",
-        "default": "Hello API Event Received"
-      },
       "DocumentFieldDetectionRequestDetectionMode": {
         "type": "string",
         "oneOf": [
@@ -19097,260 +18496,6 @@
           }
         ],
         "description": "The field detection method to use. Set to \u0060annotations\u0060 to detect PDF form annotations or \u0060text_tags\u0060 to detect Dropbox Sign text tags."
-      },
-      "SubFormFieldsPerDocumentCheckboxAllOf2": {
-        "required": [
-          "type",
-          "is_checked"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A yes/no checkbox. Use the \u0060SubFormFieldsPerDocumentCheckbox\u0060 class.",
-            "default": "checkbox"
-          },
-          "group": {
-            "type": "string",
-            "description": "String referencing group defined in \u0060form_field_groups\u0060 parameter."
-          },
-          "is_checked": {
-            "type": "boolean",
-            "description": "\u0060true\u0060 for checking the checkbox field by default, otherwise \u0060false\u0060."
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentCheckboxMergeAllOf2": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A checkbox field that has default value set using pre-filled data. Use the \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060 class.",
-            "default": "checkbox-merge"
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentDateSignedAllOf2": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A date. Use the \u0060SubFormFieldsPerDocumentDateSigned\u0060 class.",
-            "default": "date_signed"
-          },
-          "font_family": {
-            "$ref": "#/components/schemas/SubFormFieldsPerDocumentDateSignedFontFamily"
-          },
-          "font_size": {
-            "type": "integer",
-            "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-            "default": 12
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentDropdownAllOf2": {
-        "required": [
-          "type",
-          "options"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "An input field for dropdowns. Use the \u0060SubFormFieldsPerDocumentDropdown\u0060 class.",
-            "default": "dropdown"
-          },
-          "options": {
-            "minItems": 1,
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Array of string values representing dropdown values."
-          },
-          "content": {
-            "type": "string",
-            "description": "Selected value in \u0060options\u0060 array. Value must exist in array."
-          },
-          "font_family": {
-            "$ref": "#/components/schemas/SubFormFieldsPerDocumentDropdownFontFamily"
-          },
-          "font_size": {
-            "type": "integer",
-            "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-            "default": 12
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentHyperlinkAllOf2": {
-        "required": [
-          "type",
-          "content",
-          "content_url"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A hyperlink field. Use the \u0060SubFormFieldsPerDocumentHyperlink\u0060 class.",
-            "default": "hyperlink"
-          },
-          "content": {
-            "type": "string",
-            "description": "Link Text."
-          },
-          "content_url": {
-            "type": "string",
-            "description": "Link URL."
-          },
-          "font_family": {
-            "$ref": "#/components/schemas/SubFormFieldsPerDocumentHyperlinkFontFamily"
-          },
-          "font_size": {
-            "type": "integer",
-            "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-            "default": 12
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentInitialsAllOf2": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "An input field for initials. Use the \u0060SubFormFieldsPerDocumentInitials\u0060 class.",
-            "default": "initials"
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentRadioAllOf2": {
-        "required": [
-          "type",
-          "group",
-          "is_checked"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "An input field for radios. Use the \u0060SubFormFieldsPerDocumentRadio\u0060 class.",
-            "default": "radio"
-          },
-          "group": {
-            "type": "string",
-            "description": "String referencing group defined in \u0060form_field_groups\u0060 parameter."
-          },
-          "is_checked": {
-            "type": "boolean",
-            "description": "\u0060true\u0060 for checking the radio field by default, otherwise \u0060false\u0060. Only one radio field per group can be \u0060true\u0060."
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentSignatureAllOf2": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A signature input field. Use the \u0060SubFormFieldsPerDocumentSignature\u0060 class.",
-            "default": "signature"
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentTextAllOf2": {
-        "required": [
-          "type",
-          "options"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A text input field. Use the \u0060SubFormFieldsPerDocumentText\u0060 class.",
-            "default": "text"
-          },
-          "placeholder": {
-            "type": "string",
-            "description": "Placeholder value for text field."
-          },
-          "auto_fill_type": {
-            "type": "string",
-            "description": "Auto fill type for populating fields automatically. Check out the list of [auto fill types](/api/reference/constants/#auto-fill-types) to learn more about the possible values."
-          },
-          "link_id": {
-            "type": "string",
-            "description": "Link two or more text fields. Enter data into one linked text field, which automatically fill all other linked text fields."
-          },
-          "masked": {
-            "type": "boolean",
-            "description": "Masks entered data. For more information see [Masking sensitive information](https://faq.hellosign.com/hc/en-us/articles/360040742811-Masking-sensitive-information). \u0060true\u0060 for masking the data in a text field, otherwise \u0060false\u0060."
-          },
-          "validation_type": {
-            "$ref": "#/components/schemas/SubFormFieldsPerDocumentTextValidationType"
-          },
-          "validation_custom_regex": {
-            "type": "string"
-          },
-          "validation_custom_regex_format_label": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string",
-            "description": "Content of a \u0060me_now\u0060 text field"
-          },
-          "font_family": {
-            "$ref": "#/components/schemas/SubFormFieldsPerDocumentTextFontFamily"
-          },
-          "font_size": {
-            "type": "integer",
-            "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-            "default": 12
-          }
-        }
-      },
-      "SubFormFieldsPerDocumentTextMergeAllOf2": {
-        "required": [
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A text field that has default text set using pre-filled data. Use the \u0060SubFormFieldsPerDocumentTextMerge\u0060 class.",
-            "default": "text-merge"
-          },
-          "font_family": {
-            "$ref": "#/components/schemas/SubFormFieldsPerDocumentTextMergeFontFamily"
-          },
-          "font_size": {
-            "type": "integer",
-            "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
-            "default": 12
-          }
-        }
-      },
-      "BulkSendJobGetResponseSignatureRequestsAllOf2": {
-        "type": "object",
-        "properties": {
-          "bulk_send_job_id": {
-            "type": "string",
-            "description": "The id of the BulkSendJob."
-          },
-          "metadata": {
-            "$ref": "#/components/schemas/BulkSendJobGetResponseSignatureRequestsAllOf2MetadataProperty"
-          }
-        }
       },
       "DocumentFieldDetectionResponseDetectionResultDetectionMode": {
         "type": "string",
@@ -19368,605 +18513,7 @@
         ],
         "description": "The field detection method used to analyze the document: \u0060annotations\u0060 or \u0060text_tags\u0060."
       },
-      "SignatureRequestResponseCustomFieldCheckboxAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this Custom Field. Only \u0027text\u0027 and \u0027checkbox\u0027 are currently supported.",
-            "default": "checkbox"
-          },
-          "value": {
-            "type": "boolean",
-            "description": "A true/false for checkbox fields"
-          }
-        }
-      },
-      "SignatureRequestResponseCustomFieldTextAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this Custom Field. Only \u0027text\u0027 and \u0027checkbox\u0027 are currently supported.",
-            "default": "text"
-          },
-          "value": {
-            "type": "string",
-            "description": "A text string for text fields"
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueCheckboxAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A yes/no checkbox",
-            "default": "checkbox"
-          },
-          "value": {
-            "type": "boolean",
-            "description": "The value of the form field."
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueCheckboxMergeAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A checkbox field that has default value set by the api",
-            "default": "checkbox-merge"
-          },
-          "value": {
-            "type": "string",
-            "description": "The value of the form field."
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueDateSignedAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A date",
-            "default": "date_signed"
-          },
-          "value": {
-            "type": "string",
-            "description": "The value of the form field."
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueDropdownAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "An input field for dropdowns",
-            "default": "dropdown"
-          },
-          "value": {
-            "type": "string",
-            "description": "The value of the form field."
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueInitialsAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "An input field for initials",
-            "default": "initials"
-          },
-          "value": {
-            "type": "string",
-            "description": "The value of the form field."
-          },
-          "is_signed": {
-            "type": "boolean",
-            "description": "This field contains the boolean true if the field is signed.",
-            "nullable": true
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueRadioAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "An input field for radios",
-            "default": "radio"
-          },
-          "value": {
-            "type": "boolean",
-            "description": "The value of the form field."
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueSignatureAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A signature input field",
-            "default": "signature"
-          },
-          "value": {
-            "type": "string",
-            "description": "The value of the form field."
-          },
-          "is_signed": {
-            "type": "boolean",
-            "description": "This field contains the boolean true if the field is signed.",
-            "nullable": true
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueTextAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A text input field",
-            "default": "text"
-          },
-          "value": {
-            "type": "string",
-            "description": "The value of the form field."
-          }
-        }
-      },
-      "SignatureRequestResponseDataValueTextMergeAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "A text field that has default text set by the api",
-            "default": "text-merge"
-          },
-          "value": {
-            "type": "string",
-            "description": "The value of the form field."
-          }
-        }
-      },
-      "TemplateResponseDocumentCustomFieldCheckboxAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this Custom Field. Only \u0060text\u0060 and \u0060checkbox\u0060 are currently supported.\n\n* Text uses \u0060TemplateResponseDocumentCustomFieldText\u0060\n* Checkbox uses \u0060TemplateResponseDocumentCustomFieldCheckbox\u0060",
-            "default": "checkbox"
-          }
-        }
-      },
-      "TemplateResponseDocumentCustomFieldTextAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this Custom Field. Only \u0060text\u0060 and \u0060checkbox\u0060 are currently supported.\n\n* Text uses \u0060TemplateResponseDocumentCustomFieldText\u0060\n* Checkbox uses \u0060TemplateResponseDocumentCustomFieldCheckbox\u0060",
-            "default": "text"
-          },
-          "avg_text_length": {
-            "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
-          },
-          "isMultiline": {
-            "type": "boolean",
-            "description": "Whether this form field is multiline text."
-          },
-          "originalFontSize": {
-            "type": "integer",
-            "description": "Original font size used in this form field\u0027s text."
-          },
-          "fontFamily": {
-            "type": "string",
-            "description": "Font family used in this form field\u0027s text."
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldCheckboxAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "checkbox"
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
-            "nullable": true
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldDateSignedAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "date_signed"
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
-            "nullable": true
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldDropdownAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "dropdown"
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
-            "nullable": true
-          },
-          "options": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "The options available for this dropdown form field."
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldHyperlinkAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "hyperlink"
-          },
-          "avg_text_length": {
-            "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
-          },
-          "isMultiline": {
-            "type": "boolean",
-            "description": "Whether this form field is multiline text."
-          },
-          "originalFontSize": {
-            "type": "integer",
-            "description": "Original font size used in this form field\u0027s text."
-          },
-          "fontFamily": {
-            "type": "string",
-            "description": "Font family used in this form field\u0027s text."
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
-            "nullable": true
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldInitialsAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "initials"
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
-            "nullable": true
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldRadioAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "radio"
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields."
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldSignatureAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "signature"
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
-            "nullable": true
-          }
-        }
-      },
-      "TemplateResponseDocumentFormFieldTextAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
-            "default": "text"
-          },
-          "avg_text_length": {
-            "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
-          },
-          "isMultiline": {
-            "type": "boolean",
-            "description": "Whether this form field is multiline text."
-          },
-          "originalFontSize": {
-            "type": "integer",
-            "description": "Original font size used in this form field\u0027s text."
-          },
-          "fontFamily": {
-            "type": "string",
-            "description": "Font family used in this form field\u0027s text."
-          },
-          "validation_type": {
-            "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldTextValidationType"
-          },
-          "validation_custom_regex": {
-            "type": "string",
-            "description": "When \u0060validation_type\u0060 is set to \u0060custom_regex\u0060, this specifies the custom regular expression pattern that will be used to validate the text field.",
-            "nullable": true
-          },
-          "validation_custom_regex_format_label": {
-            "type": "string",
-            "description": "When \u0060validation_type\u0060 is set to \u0060custom_regex\u0060, this specifies the error message displayed to the signer when the text does not match the provided regex pattern.",
-            "nullable": true
-          },
-          "group": {
-            "type": "string",
-            "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
-            "nullable": true
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldCheckboxAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "checkbox"
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldDateSignedAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "date_signed"
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldDropdownAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "dropdown"
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldHyperlinkAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "hyperlink"
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldInitialsAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "initials"
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldRadioAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "radio"
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldSignatureAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "signature"
-          }
-        }
-      },
-      "TemplateResponseDocumentStaticFieldTextAllOf2": {
-        "type": "object",
-        "properties": {
-          "type": {
-            "type": "string",
-            "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
-            "default": "text"
-          }
-        }
-      },
-      "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestBulkSendWithTemplateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestCreateEmbeddedRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestCreateEmbeddedWithTemplateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestEditRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestEditEmbeddedRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestEditEmbeddedWithTemplateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestEditWithTemplateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestSendRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "SignatureRequestSendWithTemplateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "TemplateCreateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "TemplateCreateEmbeddedDraftRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "UnclaimedDraftCreateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "UnclaimedDraftCreateEmbeddedRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadata": {
-        "maxItems": 10,
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
-      },
-      "FaxResponseMetadata": {
-        "type": "object",
-        "additionalProperties": {},
-        "description": "Fax Metadata"
-      },
-      "SignatureRequestResponseMetadata": {
-        "type": "object",
-        "additionalProperties": {},
-        "description": "The metadata attached to the signature request."
-      },
-      "TemplateResponseMetadata": {
-        "type": "object",
-        "additionalProperties": {},
-        "description": "The metadata attached to the template."
-      },
-      "BulkSendJobGetResponseSignatureRequestsAllOf2Metadata": {
-        "type": "object",
-        "additionalProperties": {},
-        "description": "The metadata attached to the signature request."
-      },
-      "FaxFiles200PdfResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "SignatureRequestFiles200PdfResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "SignatureRequestFiles200ZipResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "TemplateFiles200PdfResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "TemplateFiles200ZipResponse": {
-        "type": "string",
-        "format": "binary"
-      },
-      "ExamplePayload": {
-        "type": "object",
-        "description": "Placeholder schema for path example refs"
-      },
       "FaxFiles200PdfResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "SignatureRequestFiles200PdfResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "SignatureRequestFiles200ZipResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "TemplateFiles200PdfResponseSchema": {
-        "type": "string",
-        "format": "binary"
-      },
-      "TemplateFiles200ZipResponseSchema": {
         "type": "string",
         "format": "binary"
       },
@@ -20096,11 +18643,6 @@
         "type": "object",
         "additionalProperties": {},
         "description": "The metadata attached to the template."
-      },
-      "BulkSendJobGetResponseSignatureRequestsAllOf2MetadataProperty": {
-        "type": "object",
-        "additionalProperties": {},
-        "description": "The metadata attached to the signature request."
       },
       "FaxLineCreateRequestCountry": {
         "enum": [
@@ -23224,6 +21766,1466 @@
       "cause": "The embedded sign_url is no longer valid (e.g. expired).",
       "remediation": "Generate a fresh embedded sign_url via the embedded sign URL endpoint.",
       "retryable": "yes"
+    }
+  },
+  "x-client-unused-schemas": {
+    "FaxLineAreaCodeGetStateEnum": {
+      "enum": [
+        "AK",
+        "AL",
+        "AR",
+        "AZ",
+        "CA",
+        "CO",
+        "CT",
+        "DC",
+        "DE",
+        "FL",
+        "GA",
+        "HI",
+        "IA",
+        "ID",
+        "IL",
+        "IN",
+        "KS",
+        "KY",
+        "LA",
+        "MA",
+        "MD",
+        "ME",
+        "MI",
+        "MN",
+        "MO",
+        "MS",
+        "MT",
+        "NC",
+        "ND",
+        "NE",
+        "NH",
+        "NJ",
+        "NM",
+        "NV",
+        "NY",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UT",
+        "VA",
+        "VT",
+        "WA",
+        "WI",
+        "WV",
+        "WY"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "FaxLineAreaCodeGetStateEnum",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "AK",
+            "name": "Ak"
+          },
+          {
+            "value": "AL",
+            "name": "Al"
+          },
+          {
+            "value": "AR",
+            "name": "Ar"
+          },
+          {
+            "value": "AZ",
+            "name": "Az"
+          },
+          {
+            "value": "CA",
+            "name": "Ca"
+          },
+          {
+            "value": "CO",
+            "name": "Co"
+          },
+          {
+            "value": "CT",
+            "name": "Ct"
+          },
+          {
+            "value": "DC",
+            "name": "Dc"
+          },
+          {
+            "value": "DE",
+            "name": "De"
+          },
+          {
+            "value": "FL",
+            "name": "Fl"
+          },
+          {
+            "value": "GA",
+            "name": "Ga"
+          },
+          {
+            "value": "HI",
+            "name": "Hi"
+          },
+          {
+            "value": "IA",
+            "name": "Ia"
+          },
+          {
+            "value": "ID",
+            "name": "Id"
+          },
+          {
+            "value": "IL",
+            "name": "Il"
+          },
+          {
+            "value": "IN",
+            "name": "InValue"
+          },
+          {
+            "value": "KS",
+            "name": "Ks"
+          },
+          {
+            "value": "KY",
+            "name": "Ky"
+          },
+          {
+            "value": "LA",
+            "name": "La"
+          },
+          {
+            "value": "MA",
+            "name": "Ma"
+          },
+          {
+            "value": "MD",
+            "name": "Md"
+          },
+          {
+            "value": "ME",
+            "name": "Me"
+          },
+          {
+            "value": "MI",
+            "name": "Mi"
+          },
+          {
+            "value": "MN",
+            "name": "Mn"
+          },
+          {
+            "value": "MO",
+            "name": "Mo"
+          },
+          {
+            "value": "MS",
+            "name": "Ms"
+          },
+          {
+            "value": "MT",
+            "name": "Mt"
+          },
+          {
+            "value": "NC",
+            "name": "Nc"
+          },
+          {
+            "value": "ND",
+            "name": "Nd"
+          },
+          {
+            "value": "NE",
+            "name": "Ne"
+          },
+          {
+            "value": "NH",
+            "name": "Nh"
+          },
+          {
+            "value": "NJ",
+            "name": "Nj"
+          },
+          {
+            "value": "NM",
+            "name": "Nm"
+          },
+          {
+            "value": "NV",
+            "name": "Nv"
+          },
+          {
+            "value": "NY",
+            "name": "Ny"
+          },
+          {
+            "value": "OH",
+            "name": "Oh"
+          },
+          {
+            "value": "OK",
+            "name": "Ok"
+          },
+          {
+            "value": "OR",
+            "name": "Or"
+          },
+          {
+            "value": "PA",
+            "name": "Pa"
+          },
+          {
+            "value": "RI",
+            "name": "Ri"
+          },
+          {
+            "value": "SC",
+            "name": "Sc"
+          },
+          {
+            "value": "SD",
+            "name": "Sd"
+          },
+          {
+            "value": "TN",
+            "name": "Tn"
+          },
+          {
+            "value": "TX",
+            "name": "Tx"
+          },
+          {
+            "value": "UT",
+            "name": "Ut"
+          },
+          {
+            "value": "VA",
+            "name": "Va"
+          },
+          {
+            "value": "VT",
+            "name": "Vt"
+          },
+          {
+            "value": "WA",
+            "name": "Wa"
+          },
+          {
+            "value": "WI",
+            "name": "Wi"
+          },
+          {
+            "value": "WV",
+            "name": "Wv"
+          },
+          {
+            "value": "WY",
+            "name": "Wy"
+          }
+        ]
+      }
+    },
+    "FaxLineAreaCodeGetProvinceEnum": {
+      "enum": [
+        "AB",
+        "BC",
+        "MB",
+        "NB",
+        "NL",
+        "NT",
+        "NS",
+        "NU",
+        "ON",
+        "PE",
+        "QC",
+        "SK",
+        "YT"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "FaxLineAreaCodeGetProvinceEnum",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "AB",
+            "name": "Ab"
+          },
+          {
+            "value": "BC",
+            "name": "Bc"
+          },
+          {
+            "value": "MB",
+            "name": "Mb"
+          },
+          {
+            "value": "NB",
+            "name": "Nb"
+          },
+          {
+            "value": "NL",
+            "name": "Nl"
+          },
+          {
+            "value": "NT",
+            "name": "Nt"
+          },
+          {
+            "value": "NS",
+            "name": "Ns"
+          },
+          {
+            "value": "NU",
+            "name": "Nu"
+          },
+          {
+            "value": "ON",
+            "name": "On"
+          },
+          {
+            "value": "PE",
+            "name": "Pe"
+          },
+          {
+            "value": "QC",
+            "name": "Qc"
+          },
+          {
+            "value": "SK",
+            "name": "Sk"
+          },
+          {
+            "value": "YT",
+            "name": "Yt"
+          }
+        ]
+      }
+    },
+    "FaxLineAreaCodeGetCountryEnum": {
+      "enum": [
+        "CA",
+        "US",
+        "UK"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "FaxLineAreaCodeGetCountryEnum",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "CA",
+            "name": "Ca"
+          },
+          {
+            "value": "US",
+            "name": "Us"
+          },
+          {
+            "value": "UK",
+            "name": "Uk"
+          }
+        ]
+      }
+    },
+    "SubFormFieldsPerDocumentTypeEnum": {
+      "enum": [
+        "checkbox",
+        "checkbox-merge",
+        "date_signed",
+        "dropdown",
+        "hyperlink",
+        "initials",
+        "signature",
+        "radio",
+        "text",
+        "text-merge"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "SubFormFieldsPerDocumentTypeEnum",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "checkbox",
+            "name": "Checkbox"
+          },
+          {
+            "value": "checkbox-merge",
+            "name": "CheckboxMerge"
+          },
+          {
+            "value": "date_signed",
+            "name": "DateSigned"
+          },
+          {
+            "value": "dropdown",
+            "name": "Dropdown"
+          },
+          {
+            "value": "hyperlink",
+            "name": "Hyperlink"
+          },
+          {
+            "value": "initials",
+            "name": "Initials"
+          },
+          {
+            "value": "signature",
+            "name": "Signature"
+          },
+          {
+            "value": "radio",
+            "name": "Radio"
+          },
+          {
+            "value": "text",
+            "name": "Text"
+          },
+          {
+            "value": "text-merge",
+            "name": "TextMerge"
+          }
+        ]
+      }
+    },
+    "SubFormFieldsPerDocumentFontEnum": {
+      "enum": [
+        "helvetica",
+        "arial",
+        "courier",
+        "calibri",
+        "cambria",
+        "georgia",
+        "times",
+        "trebuchet",
+        "verdana",
+        "roboto",
+        "robotoMono",
+        "notoSans",
+        "notoSerif",
+        "notoCJK-JP-Regular",
+        "notoHebrew-Regular",
+        "notoSanThaiMerged"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "SubFormFieldsPerDocumentFontEnum",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "helvetica",
+            "name": "Helvetica"
+          },
+          {
+            "value": "arial",
+            "name": "Arial"
+          },
+          {
+            "value": "courier",
+            "name": "Courier"
+          },
+          {
+            "value": "calibri",
+            "name": "Calibri"
+          },
+          {
+            "value": "cambria",
+            "name": "Cambria"
+          },
+          {
+            "value": "georgia",
+            "name": "Georgia"
+          },
+          {
+            "value": "times",
+            "name": "Times"
+          },
+          {
+            "value": "trebuchet",
+            "name": "Trebuchet"
+          },
+          {
+            "value": "verdana",
+            "name": "Verdana"
+          },
+          {
+            "value": "roboto",
+            "name": "Roboto"
+          },
+          {
+            "value": "robotoMono",
+            "name": "RobotoMono"
+          },
+          {
+            "value": "notoSans",
+            "name": "NotoSans"
+          },
+          {
+            "value": "notoSerif",
+            "name": "NotoSerif"
+          },
+          {
+            "value": "notoCJK-JP-Regular",
+            "name": "NotoCjkJpRegular"
+          },
+          {
+            "value": "notoHebrew-Regular",
+            "name": "NotoHebrewRegular"
+          },
+          {
+            "value": "notoSanThaiMerged",
+            "name": "NotoSanThaiMerged"
+          }
+        ]
+      }
+    },
+    "SignatureRequestResponseCustomFieldTypeEnum": {
+      "enum": [
+        "text",
+        "checkbox"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "SignatureRequestResponseCustomFieldTypeEnum",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "text",
+            "name": "Text"
+          },
+          {
+            "value": "checkbox",
+            "name": "Checkbox"
+          }
+        ]
+      }
+    },
+    "SignatureRequestResponseDataTypeEnum": {
+      "enum": [
+        "text",
+        "checkbox",
+        "date_signed",
+        "dropdown",
+        "initials",
+        "radio",
+        "signature",
+        "text-merge",
+        "checkbox-merge"
+      ],
+      "type": "string",
+      "x-ms-enum": {
+        "name": "SignatureRequestResponseDataTypeEnum",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "text",
+            "name": "Text"
+          },
+          {
+            "value": "checkbox",
+            "name": "Checkbox"
+          },
+          {
+            "value": "date_signed",
+            "name": "DateSigned"
+          },
+          {
+            "value": "dropdown",
+            "name": "Dropdown"
+          },
+          {
+            "value": "initials",
+            "name": "Initials"
+          },
+          {
+            "value": "radio",
+            "name": "Radio"
+          },
+          {
+            "value": "signature",
+            "name": "Signature"
+          },
+          {
+            "value": "text-merge",
+            "name": "TextMerge"
+          },
+          {
+            "value": "checkbox-merge",
+            "name": "CheckboxMerge"
+          }
+        ]
+      }
+    },
+    "EventCallbackResponseResponsePlain": {
+      "type": "string",
+      "default": "Hello API Event Received"
+    },
+    "SubFormFieldsPerDocumentCheckboxAllOf2": {
+      "required": [
+        "type",
+        "is_checked"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A yes/no checkbox. Use the \u0060SubFormFieldsPerDocumentCheckbox\u0060 class.",
+          "default": "checkbox"
+        },
+        "group": {
+          "type": "string",
+          "description": "String referencing group defined in \u0060form_field_groups\u0060 parameter."
+        },
+        "is_checked": {
+          "type": "boolean",
+          "description": "\u0060true\u0060 for checking the checkbox field by default, otherwise \u0060false\u0060."
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentCheckboxMergeAllOf2": {
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A checkbox field that has default value set using pre-filled data. Use the \u0060SubFormFieldsPerDocumentCheckboxMerge\u0060 class.",
+          "default": "checkbox-merge"
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentDateSignedAllOf2": {
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A date. Use the \u0060SubFormFieldsPerDocumentDateSigned\u0060 class.",
+          "default": "date_signed"
+        },
+        "font_family": {
+          "$ref": "#/components/schemas/SubFormFieldsPerDocumentDateSignedFontFamily"
+        },
+        "font_size": {
+          "type": "integer",
+          "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+          "default": 12
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentDropdownAllOf2": {
+      "required": [
+        "type",
+        "options"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "An input field for dropdowns. Use the \u0060SubFormFieldsPerDocumentDropdown\u0060 class.",
+          "default": "dropdown"
+        },
+        "options": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of string values representing dropdown values."
+        },
+        "content": {
+          "type": "string",
+          "description": "Selected value in \u0060options\u0060 array. Value must exist in array."
+        },
+        "font_family": {
+          "$ref": "#/components/schemas/SubFormFieldsPerDocumentDropdownFontFamily"
+        },
+        "font_size": {
+          "type": "integer",
+          "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+          "default": 12
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentHyperlinkAllOf2": {
+      "required": [
+        "type",
+        "content",
+        "content_url"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A hyperlink field. Use the \u0060SubFormFieldsPerDocumentHyperlink\u0060 class.",
+          "default": "hyperlink"
+        },
+        "content": {
+          "type": "string",
+          "description": "Link Text."
+        },
+        "content_url": {
+          "type": "string",
+          "description": "Link URL."
+        },
+        "font_family": {
+          "$ref": "#/components/schemas/SubFormFieldsPerDocumentHyperlinkFontFamily"
+        },
+        "font_size": {
+          "type": "integer",
+          "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+          "default": 12
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentInitialsAllOf2": {
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "An input field for initials. Use the \u0060SubFormFieldsPerDocumentInitials\u0060 class.",
+          "default": "initials"
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentRadioAllOf2": {
+      "required": [
+        "type",
+        "group",
+        "is_checked"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "An input field for radios. Use the \u0060SubFormFieldsPerDocumentRadio\u0060 class.",
+          "default": "radio"
+        },
+        "group": {
+          "type": "string",
+          "description": "String referencing group defined in \u0060form_field_groups\u0060 parameter."
+        },
+        "is_checked": {
+          "type": "boolean",
+          "description": "\u0060true\u0060 for checking the radio field by default, otherwise \u0060false\u0060. Only one radio field per group can be \u0060true\u0060."
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentSignatureAllOf2": {
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A signature input field. Use the \u0060SubFormFieldsPerDocumentSignature\u0060 class.",
+          "default": "signature"
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentTextAllOf2": {
+      "required": [
+        "type",
+        "options"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A text input field. Use the \u0060SubFormFieldsPerDocumentText\u0060 class.",
+          "default": "text"
+        },
+        "placeholder": {
+          "type": "string",
+          "description": "Placeholder value for text field."
+        },
+        "auto_fill_type": {
+          "type": "string",
+          "description": "Auto fill type for populating fields automatically. Check out the list of [auto fill types](/api/reference/constants/#auto-fill-types) to learn more about the possible values."
+        },
+        "link_id": {
+          "type": "string",
+          "description": "Link two or more text fields. Enter data into one linked text field, which automatically fill all other linked text fields."
+        },
+        "masked": {
+          "type": "boolean",
+          "description": "Masks entered data. For more information see [Masking sensitive information](https://faq.hellosign.com/hc/en-us/articles/360040742811-Masking-sensitive-information). \u0060true\u0060 for masking the data in a text field, otherwise \u0060false\u0060."
+        },
+        "validation_type": {
+          "$ref": "#/components/schemas/SubFormFieldsPerDocumentTextValidationType"
+        },
+        "validation_custom_regex": {
+          "type": "string"
+        },
+        "validation_custom_regex_format_label": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string",
+          "description": "Content of a \u0060me_now\u0060 text field"
+        },
+        "font_family": {
+          "$ref": "#/components/schemas/SubFormFieldsPerDocumentTextFontFamily"
+        },
+        "font_size": {
+          "type": "integer",
+          "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+          "default": 12
+        }
+      }
+    },
+    "SubFormFieldsPerDocumentTextMergeAllOf2": {
+      "required": [
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A text field that has default text set using pre-filled data. Use the \u0060SubFormFieldsPerDocumentTextMerge\u0060 class.",
+          "default": "text-merge"
+        },
+        "font_family": {
+          "$ref": "#/components/schemas/SubFormFieldsPerDocumentTextMergeFontFamily"
+        },
+        "font_size": {
+          "type": "integer",
+          "description": "The initial px font size for the field contents. Can be any integer value between \u00607\u0060 and \u006049\u0060.\n\n**NOTE:** Font size may be reduced during processing in order to fit the contents within the dimensions of the field.",
+          "default": 12
+        }
+      }
+    },
+    "BulkSendJobGetResponseSignatureRequestsAllOf2": {
+      "type": "object",
+      "properties": {
+        "bulk_send_job_id": {
+          "type": "string",
+          "description": "The id of the BulkSendJob."
+        },
+        "metadata": {
+          "$ref": "#/components/schemas/BulkSendJobGetResponseSignatureRequestsAllOf2MetadataProperty"
+        }
+      }
+    },
+    "SignatureRequestResponseCustomFieldCheckboxAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this Custom Field. Only \u0027text\u0027 and \u0027checkbox\u0027 are currently supported.",
+          "default": "checkbox"
+        },
+        "value": {
+          "type": "boolean",
+          "description": "A true/false for checkbox fields"
+        }
+      }
+    },
+    "SignatureRequestResponseCustomFieldTextAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this Custom Field. Only \u0027text\u0027 and \u0027checkbox\u0027 are currently supported.",
+          "default": "text"
+        },
+        "value": {
+          "type": "string",
+          "description": "A text string for text fields"
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueCheckboxAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A yes/no checkbox",
+          "default": "checkbox"
+        },
+        "value": {
+          "type": "boolean",
+          "description": "The value of the form field."
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueCheckboxMergeAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A checkbox field that has default value set by the api",
+          "default": "checkbox-merge"
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the form field."
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueDateSignedAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A date",
+          "default": "date_signed"
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the form field."
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueDropdownAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "An input field for dropdowns",
+          "default": "dropdown"
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the form field."
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueInitialsAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "An input field for initials",
+          "default": "initials"
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the form field."
+        },
+        "is_signed": {
+          "type": "boolean",
+          "description": "This field contains the boolean true if the field is signed.",
+          "nullable": true
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueRadioAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "An input field for radios",
+          "default": "radio"
+        },
+        "value": {
+          "type": "boolean",
+          "description": "The value of the form field."
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueSignatureAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A signature input field",
+          "default": "signature"
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the form field."
+        },
+        "is_signed": {
+          "type": "boolean",
+          "description": "This field contains the boolean true if the field is signed.",
+          "nullable": true
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueTextAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A text input field",
+          "default": "text"
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the form field."
+        }
+      }
+    },
+    "SignatureRequestResponseDataValueTextMergeAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "A text field that has default text set by the api",
+          "default": "text-merge"
+        },
+        "value": {
+          "type": "string",
+          "description": "The value of the form field."
+        }
+      }
+    },
+    "TemplateResponseDocumentCustomFieldCheckboxAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this Custom Field. Only \u0060text\u0060 and \u0060checkbox\u0060 are currently supported.\n\n* Text uses \u0060TemplateResponseDocumentCustomFieldText\u0060\n* Checkbox uses \u0060TemplateResponseDocumentCustomFieldCheckbox\u0060",
+          "default": "checkbox"
+        }
+      }
+    },
+    "TemplateResponseDocumentCustomFieldTextAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this Custom Field. Only \u0060text\u0060 and \u0060checkbox\u0060 are currently supported.\n\n* Text uses \u0060TemplateResponseDocumentCustomFieldText\u0060\n* Checkbox uses \u0060TemplateResponseDocumentCustomFieldCheckbox\u0060",
+          "default": "text"
+        },
+        "avg_text_length": {
+          "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
+        },
+        "isMultiline": {
+          "type": "boolean",
+          "description": "Whether this form field is multiline text."
+        },
+        "originalFontSize": {
+          "type": "integer",
+          "description": "Original font size used in this form field\u0027s text."
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family used in this form field\u0027s text."
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldCheckboxAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "checkbox"
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
+          "nullable": true
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldDateSignedAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "date_signed"
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
+          "nullable": true
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldDropdownAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "dropdown"
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
+          "nullable": true
+        },
+        "options": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "The options available for this dropdown form field."
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldHyperlinkAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "hyperlink"
+        },
+        "avg_text_length": {
+          "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
+        },
+        "isMultiline": {
+          "type": "boolean",
+          "description": "Whether this form field is multiline text."
+        },
+        "originalFontSize": {
+          "type": "integer",
+          "description": "Original font size used in this form field\u0027s text."
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family used in this form field\u0027s text."
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
+          "nullable": true
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldInitialsAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "initials"
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
+          "nullable": true
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldRadioAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "radio"
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields."
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldSignatureAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "signature"
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
+          "nullable": true
+        }
+      }
+    },
+    "TemplateResponseDocumentFormFieldTextAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this form field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentFormFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentFormFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentFormFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentFormFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentFormFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentFormFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentFormFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentFormFieldInitials\u0060",
+          "default": "text"
+        },
+        "avg_text_length": {
+          "$ref": "#/components/schemas/TemplateResponseFieldAvgTextLength"
+        },
+        "isMultiline": {
+          "type": "boolean",
+          "description": "Whether this form field is multiline text."
+        },
+        "originalFontSize": {
+          "type": "integer",
+          "description": "Original font size used in this form field\u0027s text."
+        },
+        "fontFamily": {
+          "type": "string",
+          "description": "Font family used in this form field\u0027s text."
+        },
+        "validation_type": {
+          "$ref": "#/components/schemas/TemplateResponseDocumentFormFieldTextValidationType"
+        },
+        "validation_custom_regex": {
+          "type": "string",
+          "description": "When \u0060validation_type\u0060 is set to \u0060custom_regex\u0060, this specifies the custom regular expression pattern that will be used to validate the text field.",
+          "nullable": true
+        },
+        "validation_custom_regex_format_label": {
+          "type": "string",
+          "description": "When \u0060validation_type\u0060 is set to \u0060custom_regex\u0060, this specifies the error message displayed to the signer when the text does not match the provided regex pattern.",
+          "nullable": true
+        },
+        "group": {
+          "type": "string",
+          "description": "The name of the group this field is in. If this field is not a group, this defaults to \u0060null\u0060 except for Radio fields.",
+          "nullable": true
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldCheckboxAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "checkbox"
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldDateSignedAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "date_signed"
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldDropdownAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "dropdown"
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldHyperlinkAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "hyperlink"
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldInitialsAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "initials"
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldRadioAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "radio"
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldSignatureAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "signature"
+        }
+      }
+    },
+    "TemplateResponseDocumentStaticFieldTextAllOf2": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of this static field. See [field types](/api/reference/constants/#field-types).\n\n* Text Field uses \u0060TemplateResponseDocumentStaticFieldText\u0060\n* Dropdown Field uses \u0060TemplateResponseDocumentStaticFieldDropdown\u0060\n* Hyperlink Field uses \u0060TemplateResponseDocumentStaticFieldHyperlink\u0060\n* Checkbox Field uses \u0060TemplateResponseDocumentStaticFieldCheckbox\u0060\n* Radio Field uses \u0060TemplateResponseDocumentStaticFieldRadio\u0060\n* Signature Field uses \u0060TemplateResponseDocumentStaticFieldSignature\u0060\n* Date Signed Field uses \u0060TemplateResponseDocumentStaticFieldDateSigned\u0060\n* Initials Field uses \u0060TemplateResponseDocumentStaticFieldInitials\u0060",
+          "default": "text"
+        }
+      }
+    },
+    "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestBulkSendWithTemplateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestCreateEmbeddedRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestCreateEmbeddedWithTemplateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestEditRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestEditEmbeddedRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestEditEmbeddedWithTemplateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestEditWithTemplateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestSendRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SignatureRequestSendWithTemplateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "TemplateCreateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "TemplateCreateEmbeddedDraftRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "UnclaimedDraftCreateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "UnclaimedDraftCreateEmbeddedRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "UnclaimedDraftCreateEmbeddedWithTemplateRequestMetadata": {
+      "maxItems": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "FaxResponseMetadata": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Fax Metadata"
+    },
+    "SignatureRequestResponseMetadata": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "The metadata attached to the signature request."
+    },
+    "TemplateResponseMetadata": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "The metadata attached to the template."
+    },
+    "BulkSendJobGetResponseSignatureRequestsAllOf2Metadata": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "The metadata attached to the signature request."
+    },
+    "FaxFiles200PdfResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "SignatureRequestFiles200PdfResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "SignatureRequestFiles200ZipResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "TemplateFiles200PdfResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "TemplateFiles200ZipResponse": {
+      "type": "string",
+      "format": "binary"
+    },
+    "ExamplePayload": {
+      "type": "object",
+      "description": "Placeholder schema for path example refs"
+    },
+    "SignatureRequestFiles200PdfResponseSchema": {
+      "type": "string",
+      "format": "binary"
+    },
+    "SignatureRequestFiles200ZipResponseSchema": {
+      "type": "string",
+      "format": "binary"
+    },
+    "TemplateFiles200PdfResponseSchema": {
+      "type": "string",
+      "format": "binary"
+    },
+    "TemplateFiles200ZipResponseSchema": {
+      "type": "string",
+      "format": "binary"
+    },
+    "BulkSendJobGetResponseSignatureRequestsAllOf2MetadataProperty": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "The metadata attached to the signature request."
     }
   }
 }
