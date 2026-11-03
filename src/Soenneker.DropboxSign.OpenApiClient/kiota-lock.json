@@ -2,7 +2,7 @@
   "descriptionHash": "187FED459A2611A67B3EAC9347D93C479A7DBDC7A1BD7DA756F32D0E841066E994F42BB5737106FDCC7D51209CC13E45756B46DD99815B3276F958AA63DEF068",
   "descriptionLocation": "../../fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.37.0",
+  "kiotaVersion": "1.38.0",
   "clientClassName": "DropboxSignOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.DropboxSign.OpenApiClient",
