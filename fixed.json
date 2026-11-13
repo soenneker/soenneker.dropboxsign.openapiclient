@@ -480,6 +480,305 @@
         }
       }
     },
+    "/account/settings": {
+      "get": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Get account settings",
+        "description": "account_id is an optional query parameter and defaults to the authenticated account. A team admin can specify another account on a team they administer.",
+        "operationId": "AccountSettingsGet",
+        "parameters": [
+          {
+            "name": "account_id",
+            "in": "query",
+            "description": "Optional account ID. Defaults to the authenticated account. A team admin can specify another account on a team they administer.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "ab55cd14a97219e36b5ff5fe23f2f9329b0c1e97"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountSettingsResponse"
+                }
+              }
+            }
+          },
+          "4XX": {
+            "description": "failed_operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "400_example": {
+                    "$ref": "#/components/examples/Error400Response"
+                  },
+                  "401_example": {
+                    "$ref": "#/components/examples/Error401Response"
+                  },
+                  "402_example": {
+                    "$ref": "#/components/examples/Error402Response"
+                  },
+                  "403_example": {
+                    "$ref": "#/components/examples/Error403Response"
+                  },
+                  "429_example": {
+                    "$ref": "#/components/examples/Error429Response"
+                  },
+                  "404_example": {
+                    "$ref": "#/components/examples/Error404Response"
+                  },
+                  "4XX_example": {
+                    "$ref": "#/components/examples/Error4XXResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          },
+          {
+            "oauth2": [
+              "account_access"
+            ]
+          }
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "PHP",
+            "label": "PHP",
+            "source": {
+              "$ref": "examples/AccountSettingsGetExample.php"
+            }
+          },
+          {
+            "lang": "C#",
+            "label": "C#",
+            "source": {
+              "$ref": "examples/AccountSettingsGetExample.cs"
+            }
+          },
+          {
+            "lang": "TypeScript",
+            "label": "TypeScript",
+            "source": {
+              "$ref": "examples/AccountSettingsGetExample.ts"
+            }
+          },
+          {
+            "lang": "Java",
+            "label": "Java",
+            "source": {
+              "$ref": "examples/AccountSettingsGetExample.java"
+            }
+          },
+          {
+            "lang": "Ruby",
+            "label": "Ruby",
+            "source": {
+              "$ref": "examples/AccountSettingsGetExample.rb"
+            }
+          },
+          {
+            "lang": "Python",
+            "label": "Python",
+            "source": {
+              "$ref": "examples/AccountSettingsGetExample.py"
+            }
+          },
+          {
+            "lang": "cURL",
+            "label": "cURL",
+            "source": {
+              "$ref": "examples/AccountSettingsGetExample.sh"
+            }
+          }
+        ],
+        "x-meta": {
+          "seo": {
+            "title": "Get Account Settings | API Documentation | Dropbox Sign for Developers",
+            "description": "account_id is an optional query parameter and defaults to the authenticated account. A team admin can specify another account on a team they administer."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Account"
+        ],
+        "summary": "Modify account settings",
+        "description": "account_id is an optional query parameter and defaults to the authenticated account. A team admin can specify another account on a team they administer.",
+        "operationId": "AccountSettingsUpdate",
+        "parameters": [
+          {
+            "name": "account_id",
+            "in": "query",
+            "description": "Optional account ID. Defaults to the authenticated account. A team admin can specify another account on a team they administer.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "ab55cd14a97219e36b5ff5fe23f2f9329b0c1e97"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccountSettingsUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AccountSettingsResponse"
+                }
+              }
+            }
+          },
+          "4XX": {
+            "description": "failed_operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "400_example": {
+                    "$ref": "#/components/examples/Error400Response"
+                  },
+                  "401_example": {
+                    "$ref": "#/components/examples/Error401Response"
+                  },
+                  "402_example": {
+                    "$ref": "#/components/examples/Error402Response"
+                  },
+                  "403_example": {
+                    "$ref": "#/components/examples/Error403Response"
+                  },
+                  "429_example": {
+                    "$ref": "#/components/examples/Error429Response"
+                  },
+                  "404_example": {
+                    "$ref": "#/components/examples/Error404Response"
+                  },
+                  "409_example": {
+                    "$ref": "#/components/examples/Error409Response"
+                  },
+                  "4XX_example": {
+                    "$ref": "#/components/examples/Error4XXResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          },
+          {
+            "oauth2": [
+              "account_access"
+            ]
+          }
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "PHP",
+            "label": "PHP",
+            "source": {
+              "$ref": "examples/AccountSettingsUpdateExample.php"
+            }
+          },
+          {
+            "lang": "C#",
+            "label": "C#",
+            "source": {
+              "$ref": "examples/AccountSettingsUpdateExample.cs"
+            }
+          },
+          {
+            "lang": "TypeScript",
+            "label": "TypeScript",
+            "source": {
+              "$ref": "examples/AccountSettingsUpdateExample.ts"
+            }
+          },
+          {
+            "lang": "Java",
+            "label": "Java",
+            "source": {
+              "$ref": "examples/AccountSettingsUpdateExample.java"
+            }
+          },
+          {
+            "lang": "Ruby",
+            "label": "Ruby",
+            "source": {
+              "$ref": "examples/AccountSettingsUpdateExample.rb"
+            }
+          },
+          {
+            "lang": "Python",
+            "label": "Python",
+            "source": {
+              "$ref": "examples/AccountSettingsUpdateExample.py"
+            }
+          },
+          {
+            "lang": "cURL",
+            "label": "cURL",
+            "source": {
+              "$ref": "examples/AccountSettingsUpdateExample.sh"
+            }
+          }
+        ],
+        "x-meta": {
+          "seo": {
+            "title": "Update Account Settings | API Documentation | Dropbox Sign for Developers",
+            "description": "account_id is an optional query parameter and defaults to the authenticated account. A team admin can specify another account on a team they administer."
+          }
+        }
+      }
+    },
     "/account/verify": {
       "post": {
         "tags": [
@@ -9086,6 +9385,305 @@
         }
       }
     },
+    "/team/settings": {
+      "get": {
+        "tags": [
+          "Team"
+        ],
+        "summary": "Get team settings",
+        "description": "team_id is an optional query parameter and defaults to the authenticated account\u0027s team. An organization admin can specify a subteam.",
+        "operationId": "TeamSettingsGet",
+        "parameters": [
+          {
+            "name": "team_id",
+            "in": "query",
+            "description": "Optional team ID. Defaults to the authenticated account\u0027s team. An organization admin can specify a subteam.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "4fea99bfcf2b26bfccf6cea3e127fb8bb74d8d9c"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamSettingsResponse"
+                }
+              }
+            }
+          },
+          "4XX": {
+            "description": "failed_operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "400_example": {
+                    "$ref": "#/components/examples/Error400Response"
+                  },
+                  "401_example": {
+                    "$ref": "#/components/examples/Error401Response"
+                  },
+                  "402_example": {
+                    "$ref": "#/components/examples/Error402Response"
+                  },
+                  "403_example": {
+                    "$ref": "#/components/examples/Error403Response"
+                  },
+                  "429_example": {
+                    "$ref": "#/components/examples/Error429Response"
+                  },
+                  "404_example": {
+                    "$ref": "#/components/examples/Error404Response"
+                  },
+                  "4XX_example": {
+                    "$ref": "#/components/examples/Error4XXResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          },
+          {
+            "oauth2": [
+              "team_access"
+            ]
+          }
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "PHP",
+            "label": "PHP",
+            "source": {
+              "$ref": "examples/TeamSettingsGetExample.php"
+            }
+          },
+          {
+            "lang": "C#",
+            "label": "C#",
+            "source": {
+              "$ref": "examples/TeamSettingsGetExample.cs"
+            }
+          },
+          {
+            "lang": "TypeScript",
+            "label": "TypeScript",
+            "source": {
+              "$ref": "examples/TeamSettingsGetExample.ts"
+            }
+          },
+          {
+            "lang": "Java",
+            "label": "Java",
+            "source": {
+              "$ref": "examples/TeamSettingsGetExample.java"
+            }
+          },
+          {
+            "lang": "Ruby",
+            "label": "Ruby",
+            "source": {
+              "$ref": "examples/TeamSettingsGetExample.rb"
+            }
+          },
+          {
+            "lang": "Python",
+            "label": "Python",
+            "source": {
+              "$ref": "examples/TeamSettingsGetExample.py"
+            }
+          },
+          {
+            "lang": "cURL",
+            "label": "cURL",
+            "source": {
+              "$ref": "examples/TeamSettingsGetExample.sh"
+            }
+          }
+        ],
+        "x-meta": {
+          "seo": {
+            "title": "Get Team Settings | API Documentation | Dropbox Sign for Developers",
+            "description": "team_id is an optional query parameter and defaults to the authenticated account\u0027s team. An organization admin can specify a subteam."
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Team"
+        ],
+        "summary": "Modify team settings",
+        "description": "team_id is an optional query parameter and defaults to the authenticated account\u0027s team. An organization admin can specify a subteam.",
+        "operationId": "TeamSettingsUpdate",
+        "parameters": [
+          {
+            "name": "team_id",
+            "in": "query",
+            "description": "Optional team ID. Defaults to the authenticated account\u0027s team. An organization admin can specify a subteam.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "4fea99bfcf2b26bfccf6cea3e127fb8bb74d8d9c"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TeamSettingsUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "headers": {
+              "X-RateLimit-Limit": {
+                "$ref": "#/components/headers/X-RateLimit-Limit"
+              },
+              "X-RateLimit-Remaining": {
+                "$ref": "#/components/headers/X-RateLimit-Remaining"
+              },
+              "X-Ratelimit-Reset": {
+                "$ref": "#/components/headers/X-Ratelimit-Reset"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TeamSettingsResponse"
+                }
+              }
+            }
+          },
+          "4XX": {
+            "description": "failed_operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "examples": {
+                  "400_example": {
+                    "$ref": "#/components/examples/Error400Response"
+                  },
+                  "401_example": {
+                    "$ref": "#/components/examples/Error401Response"
+                  },
+                  "402_example": {
+                    "$ref": "#/components/examples/Error402Response"
+                  },
+                  "403_example": {
+                    "$ref": "#/components/examples/Error403Response"
+                  },
+                  "429_example": {
+                    "$ref": "#/components/examples/Error429Response"
+                  },
+                  "404_example": {
+                    "$ref": "#/components/examples/Error404Response"
+                  },
+                  "409_example": {
+                    "$ref": "#/components/examples/Error409Response"
+                  },
+                  "4XX_example": {
+                    "$ref": "#/components/examples/Error4XXResponse"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          },
+          {
+            "oauth2": [
+              "team_access"
+            ]
+          }
+        ],
+        "x-codeSamples": [
+          {
+            "lang": "PHP",
+            "label": "PHP",
+            "source": {
+              "$ref": "examples/TeamSettingsUpdateExample.php"
+            }
+          },
+          {
+            "lang": "C#",
+            "label": "C#",
+            "source": {
+              "$ref": "examples/TeamSettingsUpdateExample.cs"
+            }
+          },
+          {
+            "lang": "TypeScript",
+            "label": "TypeScript",
+            "source": {
+              "$ref": "examples/TeamSettingsUpdateExample.ts"
+            }
+          },
+          {
+            "lang": "Java",
+            "label": "Java",
+            "source": {
+              "$ref": "examples/TeamSettingsUpdateExample.java"
+            }
+          },
+          {
+            "lang": "Ruby",
+            "label": "Ruby",
+            "source": {
+              "$ref": "examples/TeamSettingsUpdateExample.rb"
+            }
+          },
+          {
+            "lang": "Python",
+            "label": "Python",
+            "source": {
+              "$ref": "examples/TeamSettingsUpdateExample.py"
+            }
+          },
+          {
+            "lang": "cURL",
+            "label": "cURL",
+            "source": {
+              "$ref": "examples/TeamSettingsUpdateExample.sh"
+            }
+          }
+        ],
+        "x-meta": {
+          "seo": {
+            "title": "Update Team Settings | API Documentation | Dropbox Sign for Developers",
+            "description": "team_id is an optional query parameter and defaults to the authenticated account\u0027s team. An organization admin can specify a subteam."
+          }
+        }
+      }
+    },
     "/team/sub_teams/{teamId}": {
       "get": {
         "tags": [
@@ -11762,6 +12360,23 @@
           }
         }
       },
+      "AccountSettingsUpdateRequest": {
+        "minProperties": 1,
+        "type": "object",
+        "properties": {
+          "set": {
+            "$ref": "#/components/schemas/AccountSettingsUpdateRequestSetProperty"
+          },
+          "unset": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Any setting that can be set can also be unset. Unset clears the stored value so it is inherited. A listed name cannot also be set or locked in the same request."
+          }
+        },
+        "additionalProperties": false
+      },
       "AccountUpdateRequest": {
         "type": "object",
         "properties": {
@@ -13423,6 +14038,9 @@
               "$ref": "#/components/schemas/SubSignatureRequestTemplateSigner"
             },
             "description": "Add Signers to your Templated-based Signature Request. Allows the requester to specify editor options when a preparing a document.\n\nCurrently only templates with a single role are supported. All signers must have the same \u0060role\u0060 value."
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/SubBulkSignerListMetadataProperty"
           }
         }
       },
@@ -14244,6 +14862,33 @@
         },
         "description": "This allows the requester to specify the types allowed for creating a signature and specify another signing options.\n\n**NOTE:** If \u0060signing_options\u0060 are not defined in the request, the allowed types will default to those specified in the account settings.\n\n**NOTE:** If \u0060force_advanced_signature_details\u0060 is set, allowed types has to be defined too."
       },
+      "TeamSettingLock": {
+        "enum": [
+          "organization_admins",
+          "team_admins",
+          "members"
+        ],
+        "type": "string",
+        "description": "Who can change a locked team setting. Every property in \u0060lock\u0060 accepts these values. \u0060organization_admins\u0060 prevents subteams and accounts from overriding the value. \u0060team_admins\u0060 lets admins of that team and its subteams set their own value. \u0060members\u0060 lets each account set its own value.",
+        "x-ms-enum": {
+          "name": "TeamSettingLock",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "organization_admins",
+              "name": "OrganizationAdmins"
+            },
+            {
+              "value": "team_admins",
+              "name": "TeamAdmins"
+            },
+            {
+              "value": "members",
+              "name": "Members"
+            }
+          ]
+        }
+      },
       "SubWhiteLabelingOptions": {
         "type": "object",
         "properties": {
@@ -14333,6 +14978,11 @@
             "type": "string",
             "description": "The name of your Team.",
             "default": "Untitled Team"
+          },
+          "parent_team_id": {
+            "type": "string",
+            "description": "Id of an existing team to create this team under. Omit it to create a root team. Creating a subteam requires an organization admin.",
+            "example": "4fea99bfcf2b26bfccf6cea3e127fb8bb74d8d9c"
           }
         }
       },
@@ -14361,6 +15011,26 @@
             "$ref": "#/components/schemas/TeamRemoveMemberRequestNewRole"
           }
         }
+      },
+      "TeamSettingsUpdateRequest": {
+        "minProperties": 1,
+        "type": "object",
+        "properties": {
+          "set": {
+            "$ref": "#/components/schemas/TeamSettingsUpdateRequestSetProperty"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/TeamSettingsUpdateRequestLockProperty"
+          },
+          "unset": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Any setting that can be set can also be unset. Unset clears the stored value and its lock so both are inherited. A listed name cannot also be set or locked in the same request."
+          }
+        },
+        "additionalProperties": false
       },
       "TeamUpdateRequest": {
         "type": "object",
@@ -15299,6 +15969,29 @@
         },
         "x-internal-class": true
       },
+      "AccountSettingsResponse": {
+        "required": [
+          "account_id",
+          "settings"
+        ],
+        "type": "object",
+        "properties": {
+          "account_id": {
+            "type": "string"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettings"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WarningResponse"
+            },
+            "description": "A list of warnings."
+          }
+        },
+        "x-internal-class": true
+      },
       "AccountVerifyResponse": {
         "type": "object",
         "properties": {
@@ -15824,6 +16517,119 @@
           }
         },
         "description": "Subset of configured settings",
+        "x-internal-class": true
+      },
+      "AccountSettingsResponseSettings": {
+        "required": [
+          "company",
+          "custom_signing_redirect_enabled",
+          "custom_signing_redirect_url",
+          "custom_tagline",
+          "date_format",
+          "is_signature_reminders_enabled",
+          "request_email_from",
+          "request_email_signature",
+          "required_signature_types",
+          "should_enable_tamper_proof",
+          "should_include_distinct_pdfs",
+          "should_offer_signer_access_code",
+          "should_offer_signer_sms_authentication",
+          "should_remove_document_id",
+          "is_notify_on_sign_enabled",
+          "is_notify_on_view_enabled",
+          "should_autocomplete",
+          "should_include_requested_pdfs",
+          "should_include_requested_pdfs_for_others",
+          "should_include_sent_doc_pdfs",
+          "should_include_sent_doc_pdfs_for_others",
+          "should_send_daily_summary",
+          "should_send_embedded_signature_conf_emails",
+          "should_send_ordered_sr_email",
+          "should_send_outbound_conf_emails",
+          "template_link_signature_emails_enabled"
+        ],
+        "type": "object",
+        "properties": {
+          "company": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsCompany"
+          },
+          "custom_signing_redirect_enabled": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsCustomSigningRedirectEnabled"
+          },
+          "custom_signing_redirect_url": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsCustomSigningRedirectUrl"
+          },
+          "custom_tagline": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsCustomTagline"
+          },
+          "date_format": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsDateFormat"
+          },
+          "is_signature_reminders_enabled": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsIsSignatureRemindersEnabled"
+          },
+          "request_email_from": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsRequestEmailFrom"
+          },
+          "request_email_signature": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsRequestEmailSignature"
+          },
+          "required_signature_types": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsRequiredSignatureTypes"
+          },
+          "should_enable_tamper_proof": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldEnableTamperProof"
+          },
+          "should_include_distinct_pdfs": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldIncludeDistinctPdfs"
+          },
+          "should_offer_signer_access_code": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldOfferSignerAccessCode"
+          },
+          "should_offer_signer_sms_authentication": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldOfferSignerSmsAuthentication"
+          },
+          "should_remove_document_id": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldRemoveDocumentId"
+          },
+          "is_notify_on_sign_enabled": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsIsNotifyOnSignEnabled"
+          },
+          "is_notify_on_view_enabled": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsIsNotifyOnViewEnabled"
+          },
+          "should_autocomplete": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldAutocomplete"
+          },
+          "should_include_requested_pdfs": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldIncludeRequestedPdfs"
+          },
+          "should_include_requested_pdfs_for_others": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldIncludeRequestedPdfsForOthers"
+          },
+          "should_include_sent_doc_pdfs": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldIncludeSentDocPdfs"
+          },
+          "should_include_sent_doc_pdfs_for_others": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldIncludeSentDocPdfsForOthers"
+          },
+          "should_send_daily_summary": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldSendDailySummary"
+          },
+          "should_send_embedded_signature_conf_emails": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldSendEmbeddedSignatureConfEmails"
+          },
+          "should_send_ordered_sr_email": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldSendOrderedSrEmail"
+          },
+          "should_send_outbound_conf_emails": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsShouldSendOutboundConfEmails"
+          },
+          "template_link_signature_emails_enabled": {
+            "$ref": "#/components/schemas/AccountSettingsResponseSettingsTemplateLinkSignatureEmailsEnabled"
+          }
+        },
+        "additionalProperties": false,
         "x-internal-class": true
       },
       "AccountResponseUsage": {
@@ -16454,6 +17260,22 @@
         "description": "Contains information about the report request.",
         "x-internal-class": true
       },
+      "SettingLockResponse": {
+        "required": [
+          "mode",
+          "source"
+        ],
+        "type": "object",
+        "properties": {
+          "mode": {
+            "$ref": "#/components/schemas/TeamSettingLock"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingLockResponseSource"
+          }
+        },
+        "x-internal-class": true
+      },
       "SignatureRequestResponse": {
         "type": "object",
         "properties": {
@@ -17066,6 +17888,15 @@
               "type": "string"
             },
             "description": "A list of email addresses that have an outstanding invitation to join your Team and do not yet have a Dropbox Sign account."
+          },
+          "team_id": {
+            "type": "string",
+            "description": "The id of a team"
+          },
+          "parent_team_id": {
+            "type": "string",
+            "description": "The id of this team\u0027s parent team. \u0060null\u0060 when the team has no parent.",
+            "nullable": true
           }
         },
         "description": "Contains information about your team and its members",
@@ -17158,6 +17989,143 @@
         },
         "description": "Information about the parent team if a team has one, set to \u0060null\u0060 otherwise.",
         "nullable": true,
+        "x-internal-class": true
+      },
+      "TeamSettingsResponseSettings": {
+        "required": [
+          "company",
+          "custom_signing_redirect_enabled",
+          "custom_signing_redirect_url",
+          "custom_tagline",
+          "date_format",
+          "is_signature_reminders_enabled",
+          "request_email_from",
+          "request_email_signature",
+          "required_signature_types",
+          "should_enable_tamper_proof",
+          "should_include_distinct_pdfs",
+          "should_offer_signer_access_code",
+          "should_offer_signer_sms_authentication",
+          "should_remove_document_id",
+          "data_residency",
+          "allow_team_delete_document_for_everyone",
+          "allow_team_download_csv",
+          "lock_team_template_creation",
+          "lock_team_template_gallery",
+          "self_sign_message",
+          "self_sign_title",
+          "signature_request_message",
+          "signature_request_title",
+          "multifactor_auth_app",
+          "multifactor_auth_sms",
+          "qualified_esignature_enabled",
+          "sms_signature_delivery",
+          "nom151_enabled",
+          "should_enable_in_person_signing",
+          "everyone_has_signed_email",
+          "timezone",
+          "notify_cc_recipients_setting"
+        ],
+        "type": "object",
+        "properties": {
+          "company": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsCompany"
+          },
+          "custom_signing_redirect_enabled": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsCustomSigningRedirectEnabled"
+          },
+          "custom_signing_redirect_url": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsCustomSigningRedirectUrl"
+          },
+          "custom_tagline": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsCustomTagline"
+          },
+          "date_format": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsDateFormat"
+          },
+          "is_signature_reminders_enabled": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsIsSignatureRemindersEnabled"
+          },
+          "request_email_from": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsRequestEmailFrom"
+          },
+          "request_email_signature": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsRequestEmailSignature"
+          },
+          "required_signature_types": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsRequiredSignatureTypes"
+          },
+          "should_enable_tamper_proof": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsShouldEnableTamperProof"
+          },
+          "should_include_distinct_pdfs": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsShouldIncludeDistinctPdfs"
+          },
+          "should_offer_signer_access_code": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsShouldOfferSignerAccessCode"
+          },
+          "should_offer_signer_sms_authentication": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsShouldOfferSignerSmsAuthentication"
+          },
+          "should_remove_document_id": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsShouldRemoveDocumentId"
+          },
+          "data_residency": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsDataResidency"
+          },
+          "allow_team_delete_document_for_everyone": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsAllowTeamDeleteDocumentForEveryone"
+          },
+          "allow_team_download_csv": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsAllowTeamDownloadCsv"
+          },
+          "lock_team_template_creation": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsLockTeamTemplateCreation"
+          },
+          "lock_team_template_gallery": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsLockTeamTemplateGallery"
+          },
+          "self_sign_message": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsSelfSignMessage"
+          },
+          "self_sign_title": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsSelfSignTitle"
+          },
+          "signature_request_message": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsSignatureRequestMessage"
+          },
+          "signature_request_title": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsSignatureRequestTitle"
+          },
+          "multifactor_auth_app": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsMultifactorAuthApp"
+          },
+          "multifactor_auth_sms": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsMultifactorAuthSms"
+          },
+          "qualified_esignature_enabled": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsQualifiedEsignatureEnabled"
+          },
+          "sms_signature_delivery": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsSmsSignatureDelivery"
+          },
+          "nom151_enabled": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsNom151Enabled"
+          },
+          "should_enable_in_person_signing": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsShouldEnableInPersonSigning"
+          },
+          "everyone_has_signed_email": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsEveryoneHasSignedEmail"
+          },
+          "timezone": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsTimezone"
+          },
+          "notify_cc_recipients_setting": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettingsNotifyCcRecipientsSetting"
+          }
+        },
+        "additionalProperties": false,
         "x-internal-class": true
       },
       "SubTeamResponse": {
@@ -18259,6 +19227,29 @@
         },
         "x-internal-class": true
       },
+      "TeamSettingsResponse": {
+        "required": [
+          "team_id",
+          "settings"
+        ],
+        "type": "object",
+        "properties": {
+          "team_id": {
+            "type": "string"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/TeamSettingsResponseSettings"
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/WarningResponse"
+            },
+            "description": "A list of warnings."
+          }
+        },
+        "x-internal-class": true
+      },
       "TeamSubTeamsResponse": {
         "required": [
           "sub_teams",
@@ -18497,6 +19488,864 @@
         ],
         "description": "The field detection method to use. Set to \u0060annotations\u0060 to detect PDF form annotations or \u0060text_tags\u0060 to detect Dropbox Sign text tags."
       },
+      "AccountSettingsResponseSettingsCompany": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Company name associated with this account or team."
+      },
+      "AccountSettingsResponseSettingsCustomSigningRedirectEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether signers are redirected to a custom webpage after they sign. Setting this to \u0060false\u0060 clears the stored custom signing redirect URL override, reverting it to the inherited value. A URL supplied in the same update is ignored."
+      },
+      "AccountSettingsResponseSettingsCustomSigningRedirectUrl": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Webpage where signers are redirected after they sign, when custom redirects are enabled."
+      },
+      "AccountSettingsResponseSettingsCustomTagline": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Company tagline shown with the account or team branding."
+      },
+      "AccountSettingsResponseSettingsDateFormat": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Default date format in the editor and in the audit trail. Senders can still choose a different format for an individual date field."
+      },
+      "AccountSettingsResponseSettingsIsSignatureRemindersEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether reminder emails are sent to signers 3 days and 7 days after a signature request is sent."
+      },
+      "AccountSettingsResponseSettingsRequestEmailFrom": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Name shown in the From field of signature request emails. When unset, each user\u0027s first and last name is shown."
+      },
+      "AccountSettingsResponseSettingsRequestEmailSignature": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Text appended to the end of signature request emails."
+      },
+      "AccountSettingsResponseSettingsRequiredSignatureTypes": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Signature creation methods a signer is allowed to use."
+      },
+      "AccountSettingsResponseSettingsShouldEnableTamperProof": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether a tamper-proof seal is applied to sent signature requests."
+      },
+      "AccountSettingsResponseSettingsShouldIncludeDistinctPdfs": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether completed documents remain as separate PDF files instead of being merged into one PDF."
+      },
+      "AccountSettingsResponseSettingsShouldOfferSignerAccessCode": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether senders can require a custom access code before a signer can open a document."
+      },
+      "AccountSettingsResponseSettingsShouldOfferSignerSmsAuthentication": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether senders can require a text-message verification code before a signer can open a document."
+      },
+      "AccountSettingsResponseSettingsShouldRemoveDocumentId": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether the document ID is removed from all pages of sent documents."
+      },
+      "AccountSettingsResponseSettingsIsNotifyOnSignEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to notify the account when someone signs a document it sent."
+      },
+      "AccountSettingsResponseSettingsIsNotifyOnViewEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to notify the account when someone opens a document it sent."
+      },
+      "AccountSettingsResponseSettingsShouldAutocomplete": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether values entered in text fields are saved and suggested for future signature requests."
+      },
+      "AccountSettingsResponseSettingsShouldIncludeRequestedPdfs": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to email the account a PDF copy when a signature request it sent is completed."
+      },
+      "AccountSettingsResponseSettingsShouldIncludeRequestedPdfsForOthers": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to email a PDF copy to the other signers and CC recipients when a signature request is completed."
+      },
+      "AccountSettingsResponseSettingsShouldIncludeSentDocPdfs": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to email the account a PDF copy when it sends a document."
+      },
+      "AccountSettingsResponseSettingsShouldIncludeSentDocPdfsForOthers": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to email recipients a PDF copy, instead of only a link, when the account sends a document."
+      },
+      "AccountSettingsResponseSettingsShouldSendDailySummary": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to send the account a daily email summarizing outstanding signature requests."
+      },
+      "AccountSettingsResponseSettingsShouldSendEmbeddedSignatureConfEmails": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to notify the account when it signs a document on a third-party site."
+      },
+      "AccountSettingsResponseSettingsShouldSendOrderedSrEmail": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to notify all parties when an ordered signature request starts."
+      },
+      "AccountSettingsResponseSettingsShouldSendOutboundConfEmails": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to notify the account when it signs and sends a document."
+      },
+      "AccountSettingsResponseSettingsTemplateLinkSignatureEmailsEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether to notify the account when someone signs a document sent by its team through a template link."
+      },
       "DocumentFieldDetectionResponseDetectionResultDetectionMode": {
         "type": "string",
         "oneOf": [
@@ -18512,6 +20361,1062 @@
           }
         ],
         "description": "The field detection method used to analyze the document: \u0060annotations\u0060 or \u0060text_tags\u0060."
+      },
+      "TeamSettingsResponseSettingsCompany": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Company name associated with this account or team."
+      },
+      "TeamSettingsResponseSettingsCustomSigningRedirectEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether signers are redirected to a custom webpage after they sign. Setting this to \u0060false\u0060 clears the stored custom signing redirect URL override, reverting it to the inherited value. A URL supplied in the same update is ignored."
+      },
+      "TeamSettingsResponseSettingsCustomSigningRedirectUrl": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Webpage where signers are redirected after they sign, when custom redirects are enabled."
+      },
+      "TeamSettingsResponseSettingsCustomTagline": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Company tagline shown with the account or team branding."
+      },
+      "TeamSettingsResponseSettingsDateFormat": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Default date format in the editor and in the audit trail. Senders can still choose a different format for an individual date field."
+      },
+      "TeamSettingsResponseSettingsIsSignatureRemindersEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether reminder emails are sent to signers 3 days and 7 days after a signature request is sent."
+      },
+      "TeamSettingsResponseSettingsRequestEmailFrom": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Name shown in the From field of signature request emails. When unset, each user\u0027s first and last name is shown."
+      },
+      "TeamSettingsResponseSettingsRequestEmailSignature": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Text appended to the end of signature request emails."
+      },
+      "TeamSettingsResponseSettingsRequiredSignatureTypes": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Signature creation methods a signer is allowed to use."
+      },
+      "TeamSettingsResponseSettingsShouldEnableTamperProof": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether a tamper-proof seal is applied to sent signature requests."
+      },
+      "TeamSettingsResponseSettingsShouldIncludeDistinctPdfs": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether completed documents remain as separate PDF files instead of being merged into one PDF."
+      },
+      "TeamSettingsResponseSettingsShouldOfferSignerAccessCode": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether senders can require a custom access code before a signer can open a document."
+      },
+      "TeamSettingsResponseSettingsShouldOfferSignerSmsAuthentication": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether senders can require a text-message verification code before a signer can open a document."
+      },
+      "TeamSettingsResponseSettingsShouldRemoveDocumentId": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether the document ID is removed from all pages of sent documents."
+      },
+      "TeamSettingsResponseSettingsDataResidency": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Region where the team\u0027s documents are stored at rest."
+      },
+      "TeamSettingsResponseSettingsAllowTeamDeleteDocumentForEveryone": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether the sender, in addition to admins, can permanently delete a document from Dropbox Sign and from every participant account."
+      },
+      "TeamSettingsResponseSettingsAllowTeamDownloadCsv": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether the sender, in addition to admins, can download document data as a CSV."
+      },
+      "TeamSettingsResponseSettingsLockTeamTemplateCreation": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "When enabled, only admins can create and edit templates and template links."
+      },
+      "TeamSettingsResponseSettingsLockTeamTemplateGallery": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "When enabled, only admins can access and use the template gallery."
+      },
+      "TeamSettingsResponseSettingsSelfSignMessage": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Default message for self-signed documents created by team members. Lock this setting to prevent members from changing it."
+      },
+      "TeamSettingsResponseSettingsSelfSignTitle": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Default document title for self-signed documents created by team members. Lock this setting to prevent members from changing it."
+      },
+      "TeamSettingsResponseSettingsSignatureRequestMessage": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Default email message for signature requests created by team members. Lock this setting to prevent members from changing it."
+      },
+      "TeamSettingsResponseSettingsSignatureRequestTitle": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Default document title for signature requests created by team members. Lock this setting to prevent members from changing it."
+      },
+      "TeamSettingsResponseSettingsMultifactorAuthApp": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether an authenticator app is an allowed multifactor authentication method for the team. Enabling either method requires members to set it up at their next sign-in."
+      },
+      "TeamSettingsResponseSettingsMultifactorAuthSms": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether SMS verification is an allowed multifactor authentication method for the team. Enabling either method requires members to set it up at their next sign-in. SMS is the fallback when an authenticator app is also enabled."
+      },
+      "TeamSettingsResponseSettingsQualifiedEsignatureEnabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether qualified electronic signatures are enabled for the team."
+      },
+      "TeamSettingsResponseSettingsSmsSignatureDelivery": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether signature requests can be delivered by SMS."
+      },
+      "TeamSettingsResponseSettingsNom151Enabled": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether NOM-151 compliance is enabled for the team."
+      },
+      "TeamSettingsResponseSettingsShouldEnableInPersonSigning": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Whether in-person signing is enabled for the team."
+      },
+      "TeamSettingsResponseSettingsEveryoneHasSignedEmail": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Email address notified when everyone has signed."
+      },
+      "TeamSettingsResponseSettingsTimezone": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "The team\u0027s time zone identifier."
+      },
+      "TeamSettingsResponseSettingsNotifyCcRecipientsSetting": {
+        "required": [
+          "value",
+          "is_inherited",
+          "source",
+          "type",
+          "writable",
+          "lock"
+        ],
+        "type": "object",
+        "properties": {
+          "value": {
+            "description": "Current value of the setting. Null when the setting has no value.",
+            "nullable": true
+          },
+          "is_inherited": {
+            "type": "boolean"
+          },
+          "source": {
+            "$ref": "#/components/schemas/SettingResponseSource"
+          },
+          "type": {
+            "$ref": "#/components/schemas/SettingResponseType"
+          },
+          "writable": {
+            "type": "boolean"
+          },
+          "lock": {
+            "$ref": "#/components/schemas/SettingLockResponse"
+          }
+        },
+        "description": "Events for which CC recipients receive notifications."
       },
       "FaxFiles200PdfResponseSchema": {
         "type": "string",
@@ -18539,14 +21444,19 @@
         "type": "string",
         "description": "The ID of the Bulk Send job which sent the signature request, if applicable."
       },
+      "AccountSettingsUpdateRequestSetProperty": {
+        "type": "object",
+        "additionalProperties": {},
+        "description": "Values to store, keyed by setting name. A name in \u0060set\u0060 cannot also appear in \u0060unset\u0060."
+      },
       "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadataProperty": {
-        "maxItems": 10,
+        "maxProperties": 10,
         "type": "object",
         "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
       },
       "SignatureRequestBulkSendWithTemplateRequestMetadataProperty": {
-        "maxItems": 10,
+        "maxProperties": 10,
         "type": "object",
         "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
@@ -18598,6 +21508,24 @@
         "type": "object",
         "additionalProperties": {},
         "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "SubBulkSignerListMetadataProperty": {
+        "maxProperties": 10,
+        "type": "object",
+        "additionalProperties": {},
+        "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+      },
+      "TeamSettingsUpdateRequestSetProperty": {
+        "type": "object",
+        "additionalProperties": {},
+        "description": "Values to store, keyed by setting name. A name in \u0060set\u0060 cannot also appear in \u0060unset\u0060."
+      },
+      "TeamSettingsUpdateRequestLockProperty": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/TeamSettingLock"
+        },
+        "description": "Lock a setting to prevent subteams or accounts from overriding it. A team admin can set a lock on their own team. An organization admin can set a lock on the organization or on a subteam. \u0060organization_admins\u0060 prevents subteams and accounts from overriding the value. \u0060team_admins\u0060 lets admins of that team and its subteams set their own value. \u0060members\u0060 lets each account set its own value. A name in \u0060lock\u0060 cannot also appear in \u0060unset\u0060."
       },
       "TemplateCreateRequestMetadataProperty": {
         "maxItems": 10,
@@ -19669,6 +22597,94 @@
             {
               "value": "fax_usage",
               "name": "FaxUsage"
+            }
+          ]
+        }
+      },
+      "SettingResponseSource": {
+        "enum": [
+          "account",
+          "team",
+          "parent_team",
+          "default"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "SettingResponseSource",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "account",
+              "name": "Account"
+            },
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "parent_team",
+              "name": "ParentTeam"
+            },
+            {
+              "value": "default",
+              "name": "DefaultValue"
+            }
+          ]
+        }
+      },
+      "SettingResponseType": {
+        "enum": [
+          "boolean",
+          "integer",
+          "string",
+          "array"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "SettingResponseType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "boolean",
+              "name": "Boolean"
+            },
+            {
+              "value": "integer",
+              "name": "Integer"
+            },
+            {
+              "value": "string",
+              "name": "StringValue"
+            },
+            {
+              "value": "array",
+              "name": "Array"
+            }
+          ]
+        }
+      },
+      "SettingLockResponseSource": {
+        "enum": [
+          "team",
+          "parent_team",
+          "default"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "SettingLockResponseSource",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "parent_team",
+              "name": "ParentTeam"
+            },
+            {
+              "value": "default",
+              "name": "DefaultValue"
             }
           ]
         }
@@ -22137,6 +25153,75 @@
         ]
       }
     },
+    "DataResidency": {
+      "enum": [
+        "us",
+        "eu",
+        "au",
+        "jp",
+        "uk",
+        "ca"
+      ],
+      "type": "string",
+      "description": "Region where the team\u0027s documents are stored at rest.",
+      "x-ms-enum": {
+        "name": "DataResidency",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "us",
+            "name": "Us"
+          },
+          {
+            "value": "eu",
+            "name": "Eu"
+          },
+          {
+            "value": "au",
+            "name": "Au"
+          },
+          {
+            "value": "jp",
+            "name": "Jp"
+          },
+          {
+            "value": "uk",
+            "name": "Uk"
+          },
+          {
+            "value": "ca",
+            "name": "Ca"
+          }
+        ]
+      }
+    },
+    "DateFormat": {
+      "enum": [
+        "MM/DD/YYYY",
+        "DD/MM/YYYY",
+        "YYYY/MM/DD"
+      ],
+      "type": "string",
+      "description": "Default date format in the editor and in the audit trail. Senders can still choose a different format for an individual date field.",
+      "x-ms-enum": {
+        "name": "DateFormat",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "MM/DD/YYYY",
+            "name": "MmDdYyyy"
+          },
+          {
+            "value": "DD/MM/YYYY",
+            "name": "DdMmYyyy"
+          },
+          {
+            "value": "YYYY/MM/DD",
+            "name": "YyyyMmDd"
+          }
+        ]
+      }
+    },
     "SubFormFieldsPerDocumentTypeEnum": {
       "enum": [
         "checkbox",
@@ -22288,6 +25373,108 @@
           }
         ]
       }
+    },
+    "NotifyCcRecipientEvent": {
+      "enum": [
+        "send",
+        "complete",
+        "view",
+        "decline",
+        "delegate"
+      ],
+      "type": "string",
+      "description": "An event for which CC recipients can receive notifications.",
+      "x-ms-enum": {
+        "name": "NotifyCcRecipientEvent",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "send",
+            "name": "Send"
+          },
+          {
+            "value": "complete",
+            "name": "Complete"
+          },
+          {
+            "value": "view",
+            "name": "View"
+          },
+          {
+            "value": "decline",
+            "name": "Decline"
+          },
+          {
+            "value": "delegate",
+            "name": "DelegateValue"
+          }
+        ]
+      }
+    },
+    "RequiredSignatureType": {
+      "enum": [
+        "draw",
+        "phone",
+        "type",
+        "upload"
+      ],
+      "type": "string",
+      "description": "A signature creation method a signer may use.",
+      "x-ms-enum": {
+        "name": "RequiredSignatureType",
+        "modelAsString": false,
+        "values": [
+          {
+            "value": "draw",
+            "name": "Draw"
+          },
+          {
+            "value": "phone",
+            "name": "Phone"
+          },
+          {
+            "value": "type",
+            "name": "Type"
+          },
+          {
+            "value": "upload",
+            "name": "Upload"
+          }
+        ]
+      }
+    },
+    "SettingResponse": {
+      "required": [
+        "value",
+        "is_inherited",
+        "source",
+        "type",
+        "writable",
+        "lock"
+      ],
+      "type": "object",
+      "properties": {
+        "value": {
+          "description": "Current value of the setting. Null when the setting has no value.",
+          "nullable": true
+        },
+        "is_inherited": {
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/components/schemas/SettingResponseSource"
+        },
+        "type": {
+          "$ref": "#/components/schemas/SettingResponseType"
+        },
+        "writable": {
+          "type": "boolean"
+        },
+        "lock": {
+          "$ref": "#/components/schemas/SettingLockResponse"
+        }
+      },
+      "x-internal-class": true
     },
     "SignatureRequestResponseCustomFieldTypeEnum": {
       "enum": [
@@ -23072,14 +26259,19 @@
         }
       }
     },
+    "AccountSettingsUpdateRequestSet": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Values to store, keyed by setting name. A name in \u0060set\u0060 cannot also appear in \u0060unset\u0060."
+    },
     "SignatureRequestBulkCreateEmbeddedWithTemplateRequestMetadata": {
-      "maxItems": 10,
+      "maxProperties": 10,
       "type": "object",
       "additionalProperties": {},
       "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
     },
     "SignatureRequestBulkSendWithTemplateRequestMetadata": {
-      "maxItems": 10,
+      "maxProperties": 10,
       "type": "object",
       "additionalProperties": {},
       "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
@@ -23131,6 +26323,24 @@
       "type": "object",
       "additionalProperties": {},
       "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "SubBulkSignerListMetadata": {
+      "maxProperties": 10,
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Key-value data that should be attached to the signature request. This metadata is included in all API responses and events involving the signature request. For example, use the metadata field to store a signer\u0027s order number for look up when receiving events for the signature request.\n\nEach request can include up to 10 metadata keys (or 50 nested metadata keys), with key names up to 40 characters long and values up to 1000 characters long."
+    },
+    "TeamSettingsUpdateRequestSet": {
+      "type": "object",
+      "additionalProperties": {},
+      "description": "Values to store, keyed by setting name. A name in \u0060set\u0060 cannot also appear in \u0060unset\u0060."
+    },
+    "TeamSettingsUpdateRequestLock": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/TeamSettingLock"
+      },
+      "description": "Lock a setting to prevent subteams or accounts from overriding it. A team admin can set a lock on their own team. An organization admin can set a lock on the organization or on a subteam. \u0060organization_admins\u0060 prevents subteams and accounts from overriding the value. \u0060team_admins\u0060 lets admins of that team and its subteams set their own value. \u0060members\u0060 lets each account set its own value. A name in \u0060lock\u0060 cannot also appear in \u0060unset\u0060."
     },
     "TemplateCreateRequestMetadata": {
       "maxItems": 10,

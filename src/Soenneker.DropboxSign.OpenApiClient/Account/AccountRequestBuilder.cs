@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.DropboxSign.OpenApiClient.Account.Create;
+using Soenneker.DropboxSign.OpenApiClient.Account.Settings;
 using Soenneker.DropboxSign.OpenApiClient.Account.Verify;
 using Soenneker.DropboxSign.OpenApiClient.Models;
 using System.Collections.Generic;
@@ -23,6 +24,11 @@ namespace Soenneker.DropboxSign.OpenApiClient.Account
         public global::Soenneker.DropboxSign.OpenApiClient.Account.Create.CreateRequestBuilder Create
         {
             get => new global::Soenneker.DropboxSign.OpenApiClient.Account.Create.CreateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The settings property</summary>
+        public global::Soenneker.DropboxSign.OpenApiClient.Account.Settings.SettingsRequestBuilder Settings
+        {
+            get => new global::Soenneker.DropboxSign.OpenApiClient.Account.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The verify property</summary>
         public global::Soenneker.DropboxSign.OpenApiClient.Account.Verify.VerifyRequestBuilder Verify

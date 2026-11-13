@@ -11,6 +11,7 @@ using Soenneker.DropboxSign.OpenApiClient.Team.Info;
 using Soenneker.DropboxSign.OpenApiClient.Team.Invites;
 using Soenneker.DropboxSign.OpenApiClient.Team.Members;
 using Soenneker.DropboxSign.OpenApiClient.Team.Remove_member;
+using Soenneker.DropboxSign.OpenApiClient.Team.Settings;
 using Soenneker.DropboxSign.OpenApiClient.Team.Sub_teams;
 using System.Collections.Generic;
 using System.IO;
@@ -59,6 +60,11 @@ namespace Soenneker.DropboxSign.OpenApiClient.Team
         public global::Soenneker.DropboxSign.OpenApiClient.Team.Remove_member.Remove_memberRequestBuilder Remove_member
         {
             get => new global::Soenneker.DropboxSign.OpenApiClient.Team.Remove_member.Remove_memberRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The settings property</summary>
+        public global::Soenneker.DropboxSign.OpenApiClient.Team.Settings.SettingsRequestBuilder Settings
+        {
+            get => new global::Soenneker.DropboxSign.OpenApiClient.Team.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The sub_teams property</summary>
         public global::Soenneker.DropboxSign.OpenApiClient.Team.Sub_teams.Sub_teamsRequestBuilder Sub_teams

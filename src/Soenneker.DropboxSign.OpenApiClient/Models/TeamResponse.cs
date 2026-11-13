@@ -26,6 +26,10 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             else if (parseNode.GetChildNode("invited_emails") is { } nullNodeInvitedEmails && nullNodeInvitedEmails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InvitedEmails = null;
             if (parseNode.GetChildNode("name") is null) { _explicitNullValueName = default!; _explicitNullProperties?.Remove("name"); }
             else if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("parent_team_id") is null) { _explicitNullValueParentTeamId = default!; _explicitNullProperties?.Remove("parent_team_id"); }
+            else if (parseNode.GetChildNode("parent_team_id") is { } nullNodeParentTeamId && nullNodeParentTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParentTeamId = null;
+            if (parseNode.GetChildNode("team_id") is null) { _explicitNullValueTeamId = default!; _explicitNullProperties?.Remove("team_id"); }
+            else if (parseNode.GetChildNode("team_id") is { } nullNodeTeamId && nullNodeTeamId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TeamId = null;
         }
 
         /// <summary>The accounts property</summary>
@@ -70,6 +74,26 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; AdditionalData?.Remove("name"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
         private string _explicitNullValueName = default!;
 #endif
+        /// <summary>The id of this team&apos;s parent team. `null` when the team has no parent.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parent_team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_team_id"); else _explicitNullProperties?.Remove("parent_team_id"); } }
+        private string? _explicitNullValueParentTeamId = default!;
+#nullable restore
+#else
+        public string ParentTeamId { get => _explicitNullValueParentTeamId; set { _explicitNullValueParentTeamId = value; AdditionalData?.Remove("parent_team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parent_team_id"); else _explicitNullProperties?.Remove("parent_team_id"); } }
+        private string _explicitNullValueParentTeamId = default!;
+#endif
+        /// <summary>The id of a team</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; AdditionalData?.Remove("team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string? _explicitNullValueTeamId = default!;
+#nullable restore
+#else
+        public string TeamId { get => _explicitNullValueTeamId; set { _explicitNullValueTeamId = value; AdditionalData?.Remove("team_id"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("team_id"); else _explicitNullProperties?.Remove("team_id"); } }
+        private string _explicitNullValueTeamId = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.DropboxSign.OpenApiClient.Models.TeamResponse"/> and sets the default values.
         /// </summary>
@@ -99,6 +123,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
                 { "invited_accounts", n => { InvitedAccounts = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>(global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "invited_emails", n => { InvitedEmails = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
+                { "parent_team_id", n => { ParentTeamId = n.GetStringValue(); } },
+                { "team_id", n => { TeamId = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -112,6 +138,8 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountResponse>("invited_accounts", InvitedAccounts);
             writer.WriteCollectionOfPrimitiveValues<string>("invited_emails", InvitedEmails);
             writer.WriteStringValue("name", Name);
+            writer.WriteStringValue("parent_team_id", ParentTeamId);
+            writer.WriteStringValue("team_id", TeamId);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
