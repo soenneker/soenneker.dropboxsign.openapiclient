@@ -347,7 +347,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(26)
             {
                 { "company", n => { Company = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountSettingsResponseSettingsCompany>(global::Soenneker.DropboxSign.OpenApiClient.Models.AccountSettingsResponseSettingsCompany.CreateFromDiscriminatorValue); } },
                 { "custom_signing_redirect_enabled", n => { CustomSigningRedirectEnabled = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.AccountSettingsResponseSettingsCustomSigningRedirectEnabled>(global::Soenneker.DropboxSign.OpenApiClient.Models.AccountSettingsResponseSettingsCustomSigningRedirectEnabled.CreateFromDiscriminatorValue); } },

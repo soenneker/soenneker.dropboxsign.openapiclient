@@ -122,7 +122,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "allow_edit_ccs", n => { AllowEditCcs = n.GetBoolValue(); } },
                 { "cc_roles", n => { CcRoles = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

@@ -419,7 +419,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(32)
             {
                 { "allow_team_delete_document_for_everyone", n => { AllowTeamDeleteDocumentForEveryone = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamSettingsResponseSettingsAllowTeamDeleteDocumentForEveryone>(global::Soenneker.DropboxSign.OpenApiClient.Models.TeamSettingsResponseSettingsAllowTeamDeleteDocumentForEveryone.CreateFromDiscriminatorValue); } },
                 { "allow_team_download_csv", n => { AllowTeamDownloadCsv = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.TeamSettingsResponseSettingsAllowTeamDownloadCsv>(global::Soenneker.DropboxSign.OpenApiClient.Models.TeamSettingsResponseSettingsAllowTeamDownloadCsv.CreateFromDiscriminatorValue); } },

@@ -80,7 +80,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "default_type", n => { var parsed = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubSigningOptionsDefaultType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueDefaultType = default; _explicitNullProperties?.Remove("default_type"); AdditionalData["default_type"] = unknown; } else { DefaultType = parsed; AdditionalData.Remove("default_type"); } } },
                 { "draw", n => { Draw = n.GetBoolValue(); } },

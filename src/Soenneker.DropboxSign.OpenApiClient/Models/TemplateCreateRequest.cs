@@ -248,7 +248,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(19)
             {
                 { "allow_reassign", n => { AllowReassign = n.GetBoolValue(); } },
                 { "attachments", n => { Attachments = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment>(global::Soenneker.DropboxSign.OpenApiClient.Models.SubAttachment.CreateFromDiscriminatorValue)?.AsList(); } },

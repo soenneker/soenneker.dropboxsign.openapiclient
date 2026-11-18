@@ -224,7 +224,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(15)
             {
                 { "header_background_color", n => { HeaderBackgroundColor = n.GetStringValue(); } },
                 { "legal_version", n => { var parsed = n.GetEnumValue<global::Soenneker.DropboxSign.OpenApiClient.Models.SubWhiteLabelingOptionsLegalVersion>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueLegalVersion = default; _explicitNullProperties?.Remove("legal_version"); AdditionalData["legal_version"] = unknown; } else { LegalVersion = parsed; AdditionalData.Remove("legal_version"); } } },

@@ -92,7 +92,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "bulk_send_job", n => { BulkSendJob = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse>(global::Soenneker.DropboxSign.OpenApiClient.Models.BulkSendJobResponse.CreateFromDiscriminatorValue); } },
                 { "list_info", n => { ListInfo = n.GetObjectValue<global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse>(global::Soenneker.DropboxSign.OpenApiClient.Models.ListInfoResponse.CreateFromDiscriminatorValue); } },

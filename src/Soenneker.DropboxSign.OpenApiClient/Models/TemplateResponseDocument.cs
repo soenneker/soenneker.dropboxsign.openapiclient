@@ -109,7 +109,7 @@ namespace Soenneker.DropboxSign.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "custom_fields", n => { CustomFields = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentCustomFieldBase.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "field_groups", n => { FieldGroups = n.GetCollectionOfObjectValues<global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup>(global::Soenneker.DropboxSign.OpenApiClient.Models.TemplateResponseDocumentFieldGroup.CreateFromDiscriminatorValue)?.AsList(); } },
